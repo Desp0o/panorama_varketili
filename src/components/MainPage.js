@@ -3,6 +3,7 @@ import Flats from "./Flats/Flats";
 import WhyPanorama from './whyPanorama/WhyPanorama'
 import Features from "./features/Features";
 import Contact from './contact/Contact'
+import Footer from "./footer/Footer";
 
 import '../styles/navbar.css'
 import '../styles/slider.css'
@@ -37,7 +38,7 @@ const imgArr = [
         image: `${slider4}`,
         text: '88888888888888888'
     }
-  ]
+]
 
 export default function MainPage() {
 
@@ -103,10 +104,10 @@ export default function MainPage() {
             <img className="logo" src={logo} />
 
             <ul className="nav_menu">
-                <li className="active_page">მთავარი</li>
-                <li>ჩვენ შესახებ</li>
-                <li>პროექტების შესახებ</li>
-                <li>კონტაქტი</li>
+                <li className="menu_links active_page">მთავარი</li>
+                <li className="menu_links">ჩვენ შესახებ</li>
+                <li className="menu_links">პროექტების შესახებ</li>
+                <li className="menu_links">კონტაქტი</li>
             </ul>
 
             <div className="languages">
@@ -183,6 +184,8 @@ export default function MainPage() {
         <Features />
 
         <Contact />
+
+        <Footer />
         </>
     )
 }

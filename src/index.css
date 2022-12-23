@@ -18,6 +18,11 @@ code {
     monospace;
 }
 
+li{
+  list-style: none;
+  cursor: pointer;
+}
+
 @font-face {
   font-family: 'BPG Mrgvlovani';
   src: url('../src/fonts/bpg_mrgvlovani_caps_2010.ttf');

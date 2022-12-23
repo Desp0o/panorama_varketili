@@ -29,13 +29,13 @@
     gap: 60px; 
 }
 
-li{
+.menu_links{
     position: relative;
     list-style: none;
     cursor: pointer;
 }
 
-li::after{
+.menu_links::after{
     content: '';
     position: absolute;
     width: 0%;

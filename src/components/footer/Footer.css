@@ -1,0 +1,82 @@
+.footer{
+    padding-top: 53px;
+    padding-bottom: 85px;
+    width: 100%;
+    background-color: #D8E5D6;
+}
+
+.running_text{
+    display: flex;
+    gap: 85px;
+
+    animation-name: ticker;
+    -webkit-animation-iteration-count:infinite; 
+            animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+   -webkit-animation-name: ticker;
+           animation-name: ticker;
+    -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+}
+
+.running_text h1{
+    display: inline-block;
+    white-space: nowrap;
+    font-family: 'bpg web 001';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 61px;
+    /* identical to box height */
+    color: #171F17;
+
+    
+}
+
+@keyframes ticker {
+    0% {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
+    }
+  
+    100% {
+      -webkit-transform: translate3d(-30%, 0, 0);
+      transform: translate3d(-100%, 0, 0);
+    }
+
+  }
+
+  .footer_bottom{
+    display: flex;
+    width: 100%;
+    margin-top: 200px;
+
+    font-family: 'BPG Mrgvlovani';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #171F17;
+  }
+
+  .footer_bottom_links{
+    width: 50%;
+    padding-left: 73px;
+    display: flex;
+    gap: 123px;
+  }
+
+  .footer_bottom_links ul{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer_bottom_right{
+    width: 50%;
+    padding-right: 84px;
+    display: flex;
+    justify-content: flex-end;
+  }

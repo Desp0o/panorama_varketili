@@ -98,10 +98,16 @@ input:focus{
     border-radius: 15px;
     border: none;
     cursor: pointer;
-
+    box-sizing: border-box;
+    border: 1px solid #029FA0;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.4s ease;
+}
+
+.submit_btn button:hover{
+    background-color: #fff;
 }
 
 button span{
@@ -112,4 +118,9 @@ button span{
     line-height: 17px;
     margin-top: 8px;
     color: #F4F3E7;
+    transition: all 0.4s ease;
+}
+
+button:hover span{
+    color: #029FA0;
 }
