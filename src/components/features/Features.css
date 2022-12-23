@@ -1,0 +1,25 @@
+.features{
+    padding-top: 93px;
+}
+
+.features_header{
+    font-family: 'bpg web 001';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 29px;
+    margin-left: 75px;
+    color: #171F17;
+}
+
+.feature_bg{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 62px;
+}
+
+.feature_bg img{
+    width: 95%;
+}

@@ -14,11 +14,16 @@
   line-height: 20px;
 }
 
-
+.logo{
+    position: absolute;
+    left: 48px;
+    top: -2px;
+    cursor: pointer;
+}
 
 .nav_menu{
     position: fixed;
-    margin-left: 140px;
+    margin-left: 200px;
     top: 35px;
     display: flex;
     gap: 60px; 

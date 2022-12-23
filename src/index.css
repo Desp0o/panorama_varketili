@@ -23,3 +23,21 @@ code {
   src: url('../src/fonts/bpg_mrgvlovani_caps_2010.ttf');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'bpg web 001';
+  src: url('../src/fonts/bpg-web-001-caps-webfont.woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BPG Nino Mtavruli';
+  src: url('../src/fonts/bpg_nino_mtavruli_normal.otf');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'BPG Arial';
+  src: url('../src/fonts/bpg_aria.ttf');
+  font-display: swap;
+}

@@ -13,11 +13,14 @@
     object-position: center center;
     transition: all 1s ease;
     overflow-y: hidden;
+    transform: scale(1.1)
 }
 
 .slider_active{
     opacity: 1;
     overflow-y: hidden;
+    transform: scale(1);
+    transition: all 1s ease;
 }
 
 
@@ -126,3 +129,76 @@
     border-radius: 50%;
     cursor: pointer;
 }
+
+.slider_header{
+    position: absolute;
+    z-index: 1;
+    bottom: 210px;
+    left: 76.92px;
+
+    color: #F4F3E7;
+    font-family: 'bpg web 001';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 68px;
+    line-height: 79px;
+}
+
+.slider_paragraph{
+    position: absolute;
+    z-index: 1;
+    bottom: 140px;
+    left: 76.92px;
+
+    font-family: 'bpg web 001';
+    font-weight: 400;
+    font-size: 15px;
+
+    color: #F9F9F3;
+    opacity: 0;
+
+    transition: all 0.8s ease;
+}
+
+.text_active{
+    opacity: 1;
+    bottom: 178px;
+}
+
+.slider_btn{
+    position: absolute;
+    z-index: 1;
+    width: 233.18px;
+    height: 53.3px;
+    left: 76.92px;
+    bottom: 77px;
+
+    background: #029FA0;
+    border-radius: 20px;
+
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.slider_btn:hover{
+    background-color: #fff;
+}
+
+.slider_btn span{
+    position: absolute;
+    left: 55px;
+    bottom: 13px;
+    font-family: 'bpg web 001';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #F4F3E7;
+    transition: all 0.4s ease;
+}
+
+.slider_btn:hover span{
+    color: #029FA0;
+}
+

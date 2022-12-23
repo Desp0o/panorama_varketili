@@ -1,4 +1,7 @@
 import {React, useEffect, useState, useRef} from "react";
+import Flats from "./Flats/Flats";
+import WhyPanorama from './whyPanorama/WhyPanorama'
+import Features from "./features/Features";
 
 import '../styles/navbar.css'
 import '../styles/slider.css'
@@ -7,26 +10,31 @@ import slider1 from '../images/slider1.svg'
 import slider2 from '../images/slider2.jpg'
 import slider3 from '../images/slider3.jpg'
 import slider4 from '../images/slider4.jpg'
+import logo from '../images/logo.svg'
 
 const imgArr = [
     {
         id:1,
         image: `${slider1}`,
+        text: 'თბილისის ხედი შენი ხელის გულზე'
     },
   
     {
         id:2,
         image: `${slider2}`,
+        text: 'ხედი თბილისზე შენი სახლიდან'
     },
   
     {
         key:'c',
-        image: `${slider3}`  
+        image: `${slider3}`,
+        text: 'გამოცდილებით დაგეგმილი, კრეატიულად განხორციელებული'
     },
 
     {
         key:'c',
-        image: `${slider4}`  
+        image: `${slider4}`,
+        text: '88888888888888888'
     }
   ]
 
@@ -37,8 +45,6 @@ export default function MainPage() {
     const dot2 = useRef()
     const dot3 = useRef()
 
-    const [dotClass, setDotClass] = useState('dot')
-    const [dotNumber, setDotNumber] = useState(null)
 
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
@@ -92,7 +98,9 @@ export default function MainPage() {
 
     return(
         <>
-         <div className='Navbar'>
+        <div className='Navbar'>
+            <img className="logo" src={logo} />
+
             <ul className="nav_menu">
                 <li className="active_page">მთავარი</li>
                 <li>ჩვენ შესახებ</li>
@@ -107,10 +115,11 @@ export default function MainPage() {
                 <span>/</span>
                 <span>RU</span>
             </div>
-         </div>
+        </div>
 
-         <div className="slider">
+        <div className="slider">
 
+            {/* წინა ღილაკი */}
             <div className="prev_button" onClick={()=>prevSlide()}>
             <svg className="svg leftArrow" width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.6582 13.8254L7.6582 7.82538"  strokeWidth="2" strokeLinecap="round"/>
@@ -118,6 +127,7 @@ export default function MainPage() {
                 </svg>
             </div>
 
+            {/* შემდეგი ღილაკი */}
             <div className="next_button" onClick={()=>nextSlide()}>
                 <svg className="svg rightArrow" width="9" height="15" viewBox="0 0 9 15" xmlns="http://www.w3.org/2000/svg">
                     <path d="M1.6582 13.8254L7.6582 7.82538"  strokeWidth="2" strokeLinecap="round"/>
@@ -125,27 +135,51 @@ export default function MainPage() {
                 </svg>
             </div>
 
+            {/* წერტილები */}
             <div className="dots">
-                <span ref={dot0} className={dotClass} onClick={()=>dotHandler(0)}></span>
-                <span ref={dot1} className={dotClass} onClick={()=>dotHandler(1)}></span>
-                <span ref={dot2} className={dotClass} onClick={()=>dotHandler(2)}></span>
-                <span ref={dot3} className={dotClass} onClick={()=>dotHandler(3)}></span>
+                <span ref={dot0} className='dot' onClick={()=>dotHandler(0)}></span>
+                <span ref={dot1} className='dot' onClick={()=>dotHandler(1)}></span>
+                <span ref={dot2} className='dot' onClick={()=>dotHandler(2)}></span>
+                <span ref={dot3} className='dot' onClick={()=>dotHandler(3)}></span>
             </div>
 
-         {imgArr.map((slide, slideIndex)=>{
+            {/* სლაიდერის სათაური */}
+            <h1 className="slider_header">პანორამა ვარკეთილი</h1>
 
-            let slideClass = 'slide'
+            <div className="slider_btn">
+                <span>დაგვირეკე</span>
+            </div>
 
-            {index === slideIndex  ? slideClass = 'slider_img slider_active' : slideClass = 'slider_img'}
-            
-            return(
-                <div className='mapping-div' key={slideIndex}>
-                    <img  className={slideClass} src={slide.image}/>
-                </div>
-            )
-            })}
-            
-         </div>
+            {/* სლაიდერი */}
+            {imgArr.map((slide, slideIndex)=>{
+
+                let slideClass = 'slide'
+                let textClass = 'slider_paragraph'
+
+                {index === slideIndex  ? slideClass = 'slider_img slider_active' : slideClass = 'slider_img'}
+                {index === slideIndex  ? textClass = 'slider_paragraph text_active' : textClass = 'slider_paragraph'}
+                
+                return(
+                    <>
+                    <div className='mapping-div' key={slideIndex}>
+                        <img  className={slideClass} src={slide.image}/>
+                    </div>
+
+                    <div>
+                        <p className={textClass}>{slide.text}</p>
+                    </div>
+                    
+                    </>
+                )
+                })}
+                
+        </div>
+
+        <Flats />
+
+        <WhyPanorama />
+
+        <Features />
         </>
     )
 }
