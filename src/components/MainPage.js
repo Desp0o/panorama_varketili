@@ -47,9 +47,13 @@ export default function MainPage() {
     const dot2 = useRef()
     const dot3 = useRef()
 
-
+    const [isEng, setIsEng] = useState(false)
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
+
+    function makeENG() {
+        setIsEng(true)
+    }
 
     function nextSlide() {
         if(index === slideLength-1){
@@ -98,6 +102,10 @@ export default function MainPage() {
         }
     },[index])
 
+    useEffect(()=>{
+        console.log(isEng);
+    },[isEng])
+
     return(
         <>
         <div className='Navbar'>
@@ -113,7 +121,7 @@ export default function MainPage() {
             <div className="languages">
                 <span className="active_language">GE</span>
                 <span>/</span>
-                <span>EN</span>
+                <span onClick={()=> makeENG()}>EN</span>
                 <span>/</span>
                 <span>RU</span>
             </div>
@@ -162,7 +170,7 @@ export default function MainPage() {
                 {index === slideIndex  ? textClass = 'slider_paragraph text_active' : textClass = 'slider_paragraph'}
                 
                 return(
-                    <>
+                    <div key={slideIndex}>
                     <div className='mapping-div' key={slideIndex}>
                         <img  className={slideClass} src={slide.image}/>
                     </div>
@@ -171,7 +179,7 @@ export default function MainPage() {
                         <p className={textClass}>{slide.text}</p>
                     </div>
                     
-                    </>
+                    </div>
                 )
                 })}
                 

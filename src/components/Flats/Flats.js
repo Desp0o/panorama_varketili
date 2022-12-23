@@ -44,9 +44,9 @@ export default function Flats(){
 
             <div className="cards">
                 {
-                    renderArr.map((render)=>{
+                    renderArr.map((render, index)=>{
                         return(
-                            <div className="card">
+                            <div className="card" key={index}>
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />
                                 </div>
