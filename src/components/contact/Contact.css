@@ -2,6 +2,7 @@
     padding-top: 115px;
     padding-bottom: 93px;
     display: flex;
+    overflow-x: hidden;
 }
 
 .contact_left{

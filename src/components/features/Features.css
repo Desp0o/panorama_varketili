@@ -13,6 +13,7 @@
 }
 
 .feature_bg{
+    position: relative;
     width: 100%;
     display: flex;
     align-items: center;
@@ -22,4 +23,48 @@
 
 .feature_bg img{
     width: 95%;
+}
+
+/******************************/
+
+
+.expandMSG{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 10.95px;
+}
+
+.firstMSG{
+    left:650px
+}
+
+.secondMSG{
+    left: 150px;
+}
+
+.svgExpand{
+    cursor: pointer;
+}
+
+.messagebox{
+    padding: 0;
+    background-color: #171F17;
+    background: #E2E1D7;
+    opacity: 0.95;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    width: 0;
+    transition: all 0.4s ease;
+    position: relative;
+    opacity: 1;
+}
+
+.activeMSG{
+    padding: 14px 32px;
+    width: fit-content;
 }

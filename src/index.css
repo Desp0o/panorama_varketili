@@ -23,6 +23,14 @@ li{
   cursor: pointer;
 }
 
+::-webkit-scrollbar{
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #A9C1A9;
+}
+
 @font-face {
   font-family: 'BPG Mrgvlovani';
   src: url('../src/fonts/bpg_mrgvlovani_caps_2010.ttf');
