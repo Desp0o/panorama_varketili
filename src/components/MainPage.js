@@ -137,7 +137,7 @@ export default function MainPage() {
             <img className="logo" src={logo} />
 
             <ul className="nav_menu">
-                <li className="menu_links active_page">მთავარი</li>
+                <li className="menu_links">მთავარი</li>
                 <li className="menu_links">ჩვენ შესახებ</li>
                 <li className="menu_links">პროექტების შესახებ</li>
                 <li className="menu_links">კონტაქტი</li>
