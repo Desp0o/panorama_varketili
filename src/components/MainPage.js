@@ -2,6 +2,7 @@ import {React, useEffect, useState, useRef} from "react";
 import Flats from "./Flats/Flats";
 import WhyPanorama from './whyPanorama/WhyPanorama'
 import Features from "./features/Features";
+import Contact from './contact/Contact'
 
 import '../styles/navbar.css'
 import '../styles/slider.css'
@@ -180,6 +181,8 @@ export default function MainPage() {
         <WhyPanorama />
 
         <Features />
+
+        <Contact />
         </>
     )
 }
