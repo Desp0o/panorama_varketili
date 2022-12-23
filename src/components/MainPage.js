@@ -47,12 +47,31 @@ export default function MainPage() {
     const dot2 = useRef()
     const dot3 = useRef()
 
+    const [isGeo, setIsGeo] = useState(false)
+    const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
 
     function makeENG() {
         setIsEng(true)
+        setIsRus(false)
+        setIsGeo(false)
+        localStorage.setItem('language', 'eng')
+    }
+
+    function makeGEO() {
+        setIsEng(false)
+        setIsRus(false)
+        setIsGeo(true)
+        localStorage.removeItem('language')
+    }
+
+    function makeRUS() {
+        setIsEng(false)
+        setIsRus(true)
+        setIsGeo(false)
+        localStorage.setItem('language', 'rus')
     }
 
     function nextSlide() {
@@ -103,8 +122,14 @@ export default function MainPage() {
     },[index])
 
     useEffect(()=>{
-        console.log(isEng);
-    },[isEng])
+        console.log("ქართული არის " + isGeo);
+        
+        if(localStorage.language === 'eng'){
+            console.log("ინგლისური არის " + isEng);
+        }else if(localStorage.language === 'rus'){
+            console.log("რუსული არის " + isRus);
+        }
+    },[isEng, isGeo, isRus])
 
     return(
         <>
@@ -119,11 +144,11 @@ export default function MainPage() {
             </ul>
 
             <div className="languages">
-                <span className="active_language">GE</span>
+                <span className="active_language" onClick={()=> makeGEO()}>GE</span>
                 <span>/</span>
                 <span onClick={()=> makeENG()}>EN</span>
                 <span>/</span>
-                <span>RU</span>
+                <span onClick={()=> makeRUS()}>RU</span>
             </div>
         </div>
 
