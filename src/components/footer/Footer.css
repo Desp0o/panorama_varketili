@@ -62,7 +62,7 @@
   }
 
   .footer_bottom_links{
-    width: 50%;
+    width: 60%;
     padding-left: 73px;
     display: flex;
     gap: 123px;
@@ -75,7 +75,7 @@
   }
 
   .footer_bottom_right{
-    width: 50%;
+    width: 40%;
     padding-right: 84px;
     display: flex;
     justify-content: flex-end;
