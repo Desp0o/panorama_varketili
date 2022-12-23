@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/panorama_varketili/static/css/main.191d0b14.css",
+    "main.js": "/panorama_varketili/static/js/main.fd2b48b0.js",
+    "static/media/slider1.svg": "/panorama_varketili/static/media/slider1.f7dd8f85fb32754c76aa3f2c36b1793d.svg",
+    "static/media/slider2.jpg": "/panorama_varketili/static/media/slider2.f48995aadb6ed56b69ab.jpg",
+    "static/media/slider3.jpg": "/panorama_varketili/static/media/slider3.6a8d23bf948ef0db10a5.jpg",
+    "static/media/floatClif.png": "/panorama_varketili/static/media/floatClif.419e565ac4c9a219e15a.png",
+    "static/media/RenderB04.png": "/panorama_varketili/static/media/RenderB04.b7522993d173e57e15ae.png",
+    "static/media/RenderB02.png": "/panorama_varketili/static/media/RenderB02.c9ba1b420fbf9beffc90.png",
+    "static/media/RenderB03.png": "/panorama_varketili/static/media/RenderB03.6f2ac2a7191adc662357.png",
+    "static/media/slider4.jpg": "/panorama_varketili/static/media/slider4.1fe6567ff9ca8e2d67b8.jpg",
+    "static/media/bpg_mrgvlovani_caps_2010.ttf": "/panorama_varketili/static/media/bpg_mrgvlovani_caps_2010.e513097f7966a38f9d9f.ttf",
+    "static/media/logo.svg": "/panorama_varketili/static/media/logo.1d2af5545f088f21eca9cd244a5ae346.svg",
+    "static/media/bpg-web-001-caps-webfont.woff2": "/panorama_varketili/static/media/bpg-web-001-caps-webfont.8009ac15b515766a573f.woff2",
+    "static/media/bpg_nino_mtavruli_normal.otf": "/panorama_varketili/static/media/bpg_nino_mtavruli_normal.331736f59d5f0a121b51.otf",
+    "index.html": "/panorama_varketili/index.html",
+    "main.191d0b14.css.map": "/panorama_varketili/static/css/main.191d0b14.css.map",
+    "main.fd2b48b0.js.map": "/panorama_varketili/static/js/main.fd2b48b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.191d0b14.css",
+    "static/js/main.fd2b48b0.js"
+  ]
+}
