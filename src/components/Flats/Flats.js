@@ -30,9 +30,11 @@ const renderArr =[
     }
 ]
 
-export default function Flats(){
+export default function Flats(props){
     const ref = useRef()
     const floatButtonRef = useRef()
+    const flatsHeaderRef = useRef()
+    const seeMoreRef = useRef()
        
     const [floatBtnClass, setFloatBtnClass] = useState('call_float_btn')
 
@@ -54,14 +56,33 @@ export default function Flats(){
        
     },[])
 
+    useEffect(()=>{
+        flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
+        seeMoreRef.current.innerHTML = 'მეტი'
+
+
+        if(localStorage.language === 'eng'){
+
+            flatsHeaderRef.current.innerHTML = 'Choose your ideal apartment'
+            seeMoreRef.current.innerHTML = 'See More'
+
+        }else if(localStorage.language === 'rus'){
+            flatsHeaderRef.current.innerHTML = ''
+            seeMoreRef.current.innerHTML = ''
+        }
+
+        
+
+    },[props.iseng, props.isrus, props.isgeo])
+
 
     return(
         <div className="flats">
             <div className="headers_and_more">
-                <h2 className="flats_header">შეარჩიე სასურველი ბინა</h2>
+                <h2 className="flats_header" ref={flatsHeaderRef}>შეარჩიე სასურველი ბინა</h2>
 
                 <div className="flats_plus">
-                    <h2 className="more_flats">მეტი</h2>
+                    <h2 className="more_flats" ref={seeMoreRef}>მეტი</h2>
                     <svg className="svgPlus" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path className="plusPath" d="M4.12988 8.57489V5.29364H0.536133V3.57489H4.12988V0.29364H5.8584V3.57489H9.45215V5.29364H5.8584V8.57489H4.12988Z" />
                     </svg>

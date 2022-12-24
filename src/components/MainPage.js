@@ -47,6 +47,16 @@ export default function MainPage() {
     const dot2 = useRef()
     const dot3 = useRef()
 
+    const GeoLanguage = useRef()
+    const navbarLinkFlats = useRef()
+    const navbarLinkAboutUs = useRef()
+    const navbarLinkAboutProject = useRef()
+    const navbarLinkContact = useRef()
+    const sliderHeaderRef = useRef()
+    const EngLanguage = useRef()
+    const RusLanguage = useRef()
+    const sliderBtnRef = useRef()
+
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
@@ -124,12 +134,53 @@ export default function MainPage() {
     },[index])
 
     useEffect(()=>{
-        console.log("ქართული არის " + isGeo);
-        
+            setIsEng(false)
+            setIsGeo(true)
+            setIsRus(false)
+
+            GeoLanguage.current.style.color = '#029FA0'
+            EngLanguage.current.style.color = 'black'
+            RusLanguage.current.style.color = 'black'
+
+            navbarLinkFlats.current.innerHTML = 'ბინები'
+            navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
+            navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
+            navbarLinkContact.current.innerHTML = 'კონტაქტი'
+
+            sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
+            sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
+            
         if(localStorage.language === 'eng'){
-            console.log("ინგლისური არის " + isEng);
+            setIsEng(true)
+            setIsGeo(false)
+            setIsRus(false)
+
+            GeoLanguage.current.style.color = 'black'
+            EngLanguage.current.style.color = '#029FA0'
+            RusLanguage.current.style.color = 'black'
+
+            navbarLinkFlats.current.innerHTML = 'Apartments'
+            navbarLinkAboutUs.current.innerHTML = 'About Us'
+            navbarLinkAboutProject.current.innerHTML = 'About Project'
+            navbarLinkContact.current.innerHTML = 'Contact'
+            sliderHeaderRef.current.innerHTML = ''
+            sliderBtnRef.current.innerHTML = 'Contact Us'
+            
         }else if(localStorage.language === 'rus'){
-            console.log("რუსული არის " + isRus);
+            setIsEng(false)
+            setIsGeo(false)
+            setIsRus(true)
+
+            GeoLanguage.current.style.color = 'black'
+            EngLanguage.current.style.color = 'black'
+            RusLanguage.current.style.color = '#029FA0'
+
+            navbarLinkFlats.current.innerHTML = ''
+            navbarLinkAboutUs.current.innerHTML = ''
+            navbarLinkAboutProject.current.innerHTML = ''
+            navbarLinkContact.current.innerHTML = ''
+            sliderHeaderRef.current.innerHTML = ''
+            sliderBtnRef.current.innerHTML = ''
         }
     },[isEng, isGeo, isRus])
 
@@ -149,18 +200,18 @@ export default function MainPage() {
             <img className="logo" src={logo} />
 
             <ul className="nav_menu">
-                <li className="menu_links">ბინები</li>
-                <li className="menu_links">ჩვენ შესახებ</li>
-                <li className="menu_links">პროექტების შესახებ</li>
-                <li className="menu_links">კონტაქტი</li>
+                <li className="menu_links" ref={navbarLinkFlats}>ბინები</li>
+                <li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li>
+                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
+                <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
 
             <div className="languages">
-                <span className="active_language" onClick={()=> makeGEO()}>GE</span>
+                <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
                 <span>/</span>
-                <span onClick={()=> makeENG()}>EN</span>
+                <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
                 <span>/</span>
-                <span onClick={()=> makeRUS()}>RU</span>
+                <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
             </div>
         </div>
 
@@ -177,10 +228,10 @@ export default function MainPage() {
             </div>
 
             {/* სლაიდერის სათაური */}
-            <h1 className="slider_header">პანორამა ვარკეთილი</h1>
+            <h1 className="slider_header" ref={sliderHeaderRef}>პანორამა ვარკეთილი</h1>
 
             <div className="slider_btn">
-                <span>დაგვირეკე</span>
+                <span ref={sliderBtnRef}>დაგვირეკე</span>
             </div>
 
             {/* წინა ღილაკი */}
@@ -225,15 +276,15 @@ export default function MainPage() {
             </div>    
         </div>
 
-        <Flats />
+        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
-        <WhyPanorama />
+        <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
-        <Features />
+        <Features iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
-        <Contact />
+        <Contact iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
-        <Footer />
+        <Footer iseng={isEng} isgeo={isGeo} isrus={isRus}/>
         </>
     )
 }
