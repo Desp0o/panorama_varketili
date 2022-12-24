@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/panorama_varketili/static/css/main.377bd3aa.css",
-    "main.js": "/panorama_varketili/static/js/main.7c66a6b4.js",
+    "main.css": "/panorama_varketili/static/css/main.ea9a082e.css",
+    "main.js": "/panorama_varketili/static/js/main.abb2bb8b.js",
     "static/media/slider1.svg": "/panorama_varketili/static/media/slider1.f7dd8f85fb32754c76aa3f2c36b1793d.svg",
     "static/media/slider2.jpg": "/panorama_varketili/static/media/slider2.f48995aadb6ed56b69ab.jpg",
     "static/media/slider3.jpg": "/panorama_varketili/static/media/slider3.6a8d23bf948ef0db10a5.jpg",
@@ -17,11 +17,11 @@
     "static/media/bpg-web-001-caps-webfont.woff2": "/panorama_varketili/static/media/bpg-web-001-caps-webfont.8009ac15b515766a573f.woff2",
     "static/media/bpg_nino_mtavruli_normal.otf": "/panorama_varketili/static/media/bpg_nino_mtavruli_normal.331736f59d5f0a121b51.otf",
     "index.html": "/panorama_varketili/index.html",
-    "main.377bd3aa.css.map": "/panorama_varketili/static/css/main.377bd3aa.css.map",
-    "main.7c66a6b4.js.map": "/panorama_varketili/static/js/main.7c66a6b4.js.map"
+    "main.ea9a082e.css.map": "/panorama_varketili/static/css/main.ea9a082e.css.map",
+    "main.abb2bb8b.js.map": "/panorama_varketili/static/js/main.abb2bb8b.js.map"
   },
   "entrypoints": [
-    "static/css/main.377bd3aa.css",
-    "static/js/main.7c66a6b4.js"
+    "static/css/main.ea9a082e.css",
+    "static/js/main.abb2bb8b.js"
   ]
 }
