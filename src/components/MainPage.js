@@ -50,6 +50,8 @@ export default function MainPage() {
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
+    const [sliderClass, setSliderClass] = useState('slider_inner')
+
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
 
@@ -57,21 +59,21 @@ export default function MainPage() {
         setIsEng(true)
         setIsRus(false)
         setIsGeo(false)
-        sessionStorage.setItem('language', 'eng')
+        localStorage.setItem('language', 'eng')
     }
 
     function makeGEO() {
         setIsEng(false)
         setIsRus(false)
         setIsGeo(true)
-        sessionStorage.removeItem('language')
+        localStorage.removeItem('language')
     }
 
     function makeRUS() {
         setIsEng(false)
         setIsRus(true)
         setIsGeo(false)
-        sessionStorage.setItem('language', 'rus')
+        localStorage.setItem('language', 'rus')
     }
 
     function nextSlide() {
@@ -131,6 +133,16 @@ export default function MainPage() {
         }
     },[isEng, isGeo, isRus])
 
+    useEffect(()=>{
+        const sliderTimeOut = setTimeout(()=>{
+            setSliderClass('slider_inner act')
+        },500)
+
+        return()=>{
+            clearTimeout(sliderTimeOut)
+        }
+    },[])
+
     return(
         <>
         <div className='Navbar'>
@@ -153,6 +165,23 @@ export default function MainPage() {
         </div>
 
         <div className="slider">
+            <div className={sliderClass}>
+            
+
+            {/* წერტილები */}
+            <div className="dots">
+                <span ref={dot0} className='dot' onClick={()=>dotHandler(0)}></span>
+                <span ref={dot1} className='dot' onClick={()=>dotHandler(1)}></span>
+                <span ref={dot2} className='dot' onClick={()=>dotHandler(2)}></span>
+                <span ref={dot3} className='dot' onClick={()=>dotHandler(3)}></span>
+            </div>
+
+            {/* სლაიდერის სათაური */}
+            <h1 className="slider_header">პანორამა ვარკეთილი</h1>
+
+            <div className="slider_btn">
+                <span>დაგვირეკე</span>
+            </div>
 
             {/* წინა ღილაკი */}
             <div className="prev_button" onClick={()=>prevSlide()}>
@@ -168,21 +197,6 @@ export default function MainPage() {
                     <path d="M1.6582 13.8254L7.6582 7.82538"  strokeWidth="2" strokeLinecap="round"/>
                     <path d="M1.91113 1.58276L7.65826 7.8254"  strokeWidth="2" strokeLinecap="round"/>
                 </svg>
-            </div>
-
-            {/* წერტილები */}
-            <div className="dots">
-                <span ref={dot0} className='dot' onClick={()=>dotHandler(0)}></span>
-                <span ref={dot1} className='dot' onClick={()=>dotHandler(1)}></span>
-                <span ref={dot2} className='dot' onClick={()=>dotHandler(2)}></span>
-                <span ref={dot3} className='dot' onClick={()=>dotHandler(3)}></span>
-            </div>
-
-            {/* სლაიდერის სათაური */}
-            <h1 className="slider_header">პანორამა ვარკეთილი</h1>
-
-            <div className="slider_btn">
-                <span>დაგვირეკე</span>
             </div>
 
             {/* სლაიდერი */}
@@ -208,6 +222,7 @@ export default function MainPage() {
                 )
                 })}
                 
+            </div>    
         </div>
 
         <Flats />
