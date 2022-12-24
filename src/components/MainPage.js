@@ -57,21 +57,21 @@ export default function MainPage() {
         setIsEng(true)
         setIsRus(false)
         setIsGeo(false)
-        localStorage.setItem('language', 'eng')
+        sessionStorage.setItem('language', 'eng')
     }
 
     function makeGEO() {
         setIsEng(false)
         setIsRus(false)
         setIsGeo(true)
-        localStorage.removeItem('language')
+        sessionStorage.removeItem('language')
     }
 
     function makeRUS() {
         setIsEng(false)
         setIsRus(true)
         setIsGeo(false)
-        localStorage.setItem('language', 'rus')
+        sessionStorage.setItem('language', 'rus')
     }
 
     function nextSlide() {

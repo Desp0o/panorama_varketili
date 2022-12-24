@@ -3,6 +3,7 @@
     padding-bottom: 85px;
     width: 100%;
     background-color: #D8E5D6;
+    overflow: hidden;
 }
 
 .running_text{
