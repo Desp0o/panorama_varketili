@@ -81,3 +81,16 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  @media (max-width:769px) {
+    .footer_bottom{
+      flex-direction: column;
+    }
+
+    .footer_bottom_links{
+      flex-direction: column;
+    }
+    .running_text{
+      display: none;
+    }
+  }

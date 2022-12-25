@@ -126,9 +126,9 @@ export default function Apartments(){
         
             <div className="apartment_list">
                 {
-                    ApartmentsArr.map((render, index)=>{
+                    ApartmentsArr.map((render)=>{
                         return(
-                            <Link to={render.link}><div className="card" key={index}>
+                            <Link to={render.link} key={render.id}><div className="card">
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />
                                 </div>

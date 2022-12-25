@@ -61,7 +61,7 @@ const roomsArr = [
     }
 ]
 
-export default function Apartment102() {
+export default function Apartment75() {
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -187,7 +187,7 @@ export default function Apartment102() {
                 </div>
 
                 <div className="apartment_main_inner_right">
-                    <div className="apHeader">102.8 M2</div>
+                    <div className="apHeader">75 M2</div>
 
                     {
                         roomsArr.map((room)=>{

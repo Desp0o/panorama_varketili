@@ -216,3 +216,9 @@
     color: #029FA0;
 }
 
+
+@media (max-width:769px) {
+    .slider_header{
+        font-size: 30px;
+    }
+}

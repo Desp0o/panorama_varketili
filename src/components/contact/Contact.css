@@ -3,6 +3,7 @@
     padding-bottom: 93px;
     display: flex;
     overflow-x: hidden;
+    width: 100%;
 }
 
 .contact_left{
@@ -124,4 +125,10 @@ button span{
 
 button:hover span{
     color: #029FA0;
+}
+
+@media (max-width:769px) {
+    .contact{
+        flex-direction: column;
+    }
 }

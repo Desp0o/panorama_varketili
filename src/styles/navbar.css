@@ -81,3 +81,11 @@ li:hover:after{
 }
 
 
+@media (max-width:769px) {
+    .nav_menu{
+        display: none;
+    }
+    .languages{
+        display: none;
+    }
+}

@@ -80,3 +80,10 @@
     height: 600px;
     width: auto;
 }
+
+@media (max-width:769px) {
+    .why_panorama{
+        flex-direction: column;
+        height: fit-content;
+    }
+}

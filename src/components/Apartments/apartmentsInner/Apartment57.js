@@ -12,7 +12,7 @@ const roomsArr = [
         roomTypeGeo: 'ჰოლი',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
-        m2: '6.8 M2'      
+        m2: '4.5 M2'      
     },
 
     {   
@@ -21,7 +21,7 @@ const roomsArr = [
         roomTypeGeo: 'სააბაზანო',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
-        m2: '4.1 M2'
+        m2: '5.5 M2'
     },
 
     {
@@ -30,7 +30,7 @@ const roomsArr = [
         roomTypeGeo: 'საძინებელი 1',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
-        m2: '12 M2'
+        m2: '15.2 M2'
     },
 
     {
@@ -39,7 +39,7 @@ const roomsArr = [
         roomTypeGeo: 'საძინებელი 2',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
-        m2: '11.8 M2'
+        m2: '22.1 M2'
     },
 
     {
@@ -48,20 +48,11 @@ const roomsArr = [
         roomTypeGeo: 'სტუდიო',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
-        m2: '18.5 M2'
-    },
-
-    {
-        id: 6,
-        number:6,
-        roomTypeGeo: 'აივანი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '21.8 M2'
+        m2: '10.3 M2'
     }
 ]
 
-export default function Apartment102() {
+export default function Apartment57() {
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -187,7 +178,7 @@ export default function Apartment102() {
                 </div>
 
                 <div className="apartment_main_inner_right">
-                    <div className="apHeader">102.8 M2</div>
+                    <div className="apHeader">57.6 M2</div>
 
                     {
                         roomsArr.map((room)=>{

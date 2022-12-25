@@ -1,4 +1,5 @@
 import {React, useEffect, useState, useRef} from "react";
+import {Link} from  "react-router-dom";
 
 import renderB02 from '../../images/RenderB02.png'
 import renderB04 from '../../images/RenderB04.png'
@@ -12,21 +13,27 @@ import './Flats.css'
 
 const renderArr =[
     {
+        Id: 1,
         image: `${renderB02}`,
         text1: '/ 90 M2',
-        text2: '/ 2'
+        text2: '/ 2',
+        link: '/components/Apartments/apartmentsInner/Apartment90'
     },
 
     {
+        Id: 2,
         image: `${renderB04}`,
         text1: '/ 71.5 M2',
-        text2: '/ 2'
+        text2: '/ 2',
+        link: '/components/Apartments/apartmentsInner/Apartment71Sec'
     },
 
     {
+        Id: 3,
         image: `${renderB03}`,
         text1: '/ 76.6 M2',
-        text2: '/ 2'
+        text2: '/ 2',
+        link: '/components/Apartments/apartmentsInner/Apartment76'
     }
 ]
 
@@ -93,9 +100,10 @@ export default function Flats(props){
 
             <div className="cards">
                 {
-                    renderArr.map((render, index)=>{
+                    renderArr.map((render)=>{
                         return(
-                            <div ref={ref}  className="card" key={index}>
+                            <Link to={render.link} key={render.Id}>
+                            <div ref={ref}  className="card">
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />
                                 </div>
@@ -111,7 +119,8 @@ export default function Flats(props){
                                         <p className="card_inner_bottom_p">{render.text2}</p>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
+                            </Link>
                         )
                     })
                 }
