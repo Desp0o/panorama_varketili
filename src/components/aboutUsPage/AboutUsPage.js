@@ -2,6 +2,7 @@ import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
 import logo from '../../images/logo.svg'
 import aboutimage from '../../images/aboutimage.png'
+import '../../styles/navbar.css'
 
 import Footer from '../footer/Footer'
 
@@ -127,7 +128,7 @@ export default function AboutUsPage(){
             <Link to='../MainPage'><img className="logo" src={logo} /></Link>
 
             <ul className="nav_menu">
-                <li className="menu_links" ref={navbarLinkFlats}>ბინები</li>
+                <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to=''><li className="menu_links active_page" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
                 <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>

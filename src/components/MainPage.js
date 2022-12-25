@@ -188,7 +188,7 @@ export default function MainPage() {
     useEffect(()=>{
         const sliderTimeOut = setTimeout(()=>{
             setSliderClass('slider_inner act')
-        },500)
+        },300)
 
         return()=>{
             clearTimeout(sliderTimeOut)
@@ -201,7 +201,7 @@ export default function MainPage() {
             <img className="logo" src={logo} />
 
             <ul className="nav_menu">
-                <li className="menu_links" ref={navbarLinkFlats}>ბინები</li>
+                <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
                 <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
