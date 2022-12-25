@@ -1,0 +1,59 @@
+.about_us_page{
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+}
+
+.about_inner{
+    width: 100%;
+    background-color: #A9C1A9;
+    padding-top: 179px;
+    padding-bottom: 232px;
+    padding-left: 77px;
+
+    font-family: 'BPG Mrgvlovani';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 23px;
+
+    display: flex;
+
+    color: #171F17;
+}
+
+.about_inner_left{
+    width: 50%;
+}
+
+.about_inner_left_texts{
+    margin-top: 55px;
+    width: 560px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.about_us_list{
+    list-style:inside;
+}
+
+.about_inner_left_texts ul{
+    margin-left: 10px;
+}
+
+.about_inner_right{
+    width: 50%;
+    display: flex;
+}
+
+.aboutImage{
+    width: 80%;
+}
+
+.aboutImage img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}

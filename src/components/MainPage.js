@@ -1,4 +1,5 @@
 import {React, useEffect, useState, useRef} from "react";
+import {Link} from  "react-router-dom";
 import Flats from "./Flats/Flats";
 import WhyPanorama from './whyPanorama/WhyPanorama'
 import Features from "./features/Features";
@@ -201,7 +202,7 @@ export default function MainPage() {
 
             <ul className="nav_menu">
                 <li className="menu_links" ref={navbarLinkFlats}>ბინები</li>
-                <li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li>
+                <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
                 <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
