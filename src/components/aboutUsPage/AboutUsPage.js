@@ -19,11 +19,6 @@ export default function AboutUsPage(){
 
     const aboutPageHeader = useRef()
     const aboutPageP1 = useRef()
-    const aboutPageList1 = useRef()
-    const aboutPageList2 = useRef()
-    const aboutPageList3 = useRef()
-    const aboutPageList4 = useRef()
-    const aboutPageList5 = useRef()
     const aboutPageP2 = useRef()
     const aboutPageP3 = useRef()
     const aboutPageP4 = useRef()
@@ -39,7 +34,7 @@ export default function AboutUsPage(){
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
-        console.log(aboutPageList4 );
+
         GeoLanguage.current.style.color = '#029FA0'
         EngLanguage.current.style.color = 'black'
         RusLanguage.current.style.color = 'black'
@@ -133,7 +128,7 @@ export default function AboutUsPage(){
 
             <ul className="nav_menu">
                 <li className="menu_links" ref={navbarLinkFlats}>ბინები</li>
-                <Link to=''><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                <Link to=''><li className="menu_links active_page" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
                 <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
