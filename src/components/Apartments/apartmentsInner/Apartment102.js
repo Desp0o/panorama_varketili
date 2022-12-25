@@ -1,17 +1,67 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
-import Footer from '../footer/Footer'
-import logo from '../../images/logo.svg'
-import './Apartments.css'
+import Footer from '../../footer/Footer'
+import logo from '../../../images/logo.svg'
+import './ApartmentInnerCSS.css'
+import m102inner from '../../../images/m102inner.png'
 
-import { ApartmentsArr } from "./ApartmentsData";
+const roomsArr = [
+    {   
+        id: 1,
+        number:1,
+        roomTypeGeo: 'ჰოლი',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '6.8 M2'      
+    },
 
-import meterCoub from '../../images/meterCoube.png'
-import bed from '../../images/bed.png'
+    {   
+        id: 2,
+        number:2,
+        roomTypeGeo: 'სააბაზანო',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '4.1 M2'
+    },
 
-export default function Apartments(){
+    {
+        id: 3,
+        number:3,
+        roomTypeGeo: 'საძინებელი 1',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '12 M2'
+    },
 
-    const ApartmentRef = useRef()
+    {
+        id: 4,
+        number:4,
+        roomTypeGeo: 'საძინებელი 2',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '11.8 M2'
+    },
+
+    {
+        id: 5,
+        number:5,
+        roomTypeGeo: 'სტუდიო',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '18.5 M2'
+    },
+
+    {
+        id: 6,
+        number:6,
+        roomTypeGeo: 'აივანი',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '21.8 M2'
+    }
+]
+
+export default function Apartment102() {
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -21,14 +71,22 @@ export default function Apartments(){
     const EngLanguage = useRef()
     const RusLanguage = useRef()
 
+
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
+    const [roomGeo, setRoomGeo] = useState(null)
+    const [roomEng, setRoomEng] = useState(null)
+    const [roomRus, setRoomRus] = useState(null)
 
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
+
+        setRoomGeo(null)
+        setRoomEng('roomType')
+        setRoomRus('roomType')
 
         GeoLanguage.current.style.color = '#029FA0'
         EngLanguage.current.style.color = 'black'
@@ -38,30 +96,34 @@ export default function Apartments(){
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
         navbarLinkContact.current.innerHTML = 'კონტაქტი'
-
-        ApartmentRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
         setIsGeo(false)
         setIsRus(false)
 
+        setRoomGeo('roomType')
+        setRoomEng(null)
+        setRoomRus('roomType')
+
         GeoLanguage.current.style.color = 'black'
         EngLanguage.current.style.color = '#029FA0'
         RusLanguage.current.style.color = 'black'
-
-        ApartmentRef.current.innerHTML = 'Choose Your Apartment'
-
+        
         navbarLinkFlats.current.innerHTML = 'Apartments'
         navbarLinkAboutUs.current.innerHTML = 'About Us'
         navbarLinkAboutProject.current.innerHTML = 'About Project'
         navbarLinkContact.current.innerHTML = 'Contact'
-        
+
 
     }else if(localStorage.language === 'rus'){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
+
+        setRoomGeo('roomType')
+        setRoomEng('roomType')
+        setRoomRus(null)
 
         GeoLanguage.current.style.color = 'black'
         EngLanguage.current.style.color = 'black'
@@ -71,9 +133,6 @@ export default function Apartments(){
         navbarLinkAboutUs.current.innerHTML = ''
         navbarLinkAboutProject.current.innerHTML = ''
         navbarLinkContact.current.innerHTML = ''
-
-        ApartmentRef.current.innerHTML = ''
-
     }
     },[isEng, isGeo, isRus])
 
@@ -104,9 +163,9 @@ export default function Apartments(){
             <Link to='../MainPage'><img className="logo" src={logo} /></Link>
 
             <ul className="nav_menu">
-                <Link to=''><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
+                <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <Link to='/components/Apartments/apartmentsInner/Apartment102'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
+                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
                 <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
 
@@ -118,43 +177,44 @@ export default function Apartments(){
                 <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
             </div>
         </div>
-        
-        
-        <div className="apartments_page">
-    
-            <h1 className="apartment_header" ref={ApartmentRef}>შეარჩიე სასურველი ბინა</h1>
-        
-            <div className="apartment_list">
-                {
-                    ApartmentsArr.map((render, index)=>{
-                        return(
-                            <Link to={render.link}><div className="card" key={index}>
-                                <div className="card_inner_top">
-                                    <img className="card_render_main_screen" src={render.image} />
-                                </div>
 
-                                <div className="card_inner_bottom">
-                                    <div className="card_inner_bottom_left">
-                                        <img className="mc_Icon" src={meterCoub} />
-                                        <p className="card_inner_bottom_p">{render.text1}</p>
-                                    </div>
+        <div className="apartment_main">
 
-                                    <div className="card_inner_bottom_right">
-                                        <img className="bed_Icon" src={bed} />
-                                        <p className="card_inner_bottom_p">{render.text2}</p>
+            <div className="apartment_main_inner">
+
+                <div className="apartment_main_inner_left">
+                    <img src={m102inner} alt="m102inner" />
+                </div>
+
+                <div className="apartment_main_inner_right">
+                    <div className="apHeader">102.8 M2</div>
+
+                    {
+                        roomsArr.map((room)=>{
+                            return(
+                                <div className="apartment_rooms">
+                                    <div className="room">
+
+                                        <div className="number_name">
+                                            <div className="numberRounded">{room.number}</div>
+
+                                            <p className={roomGeo}>{room.roomTypeGeo}</p>
+                                            <p className={roomEng}>{room.roomTypeEng}</p>
+                                            <p className={roomRus}>{room.roomTypeRus}</p>
+                                        </div>
+
+                                        <p>{room.m2}</p>
                                     </div>
                                 </div>
-                            </div>  </Link>
-                        )
-                    })
-                }
+                            )
+                        })
+                    }
+                </div>
+
             </div>
-        
         </div>
 
         <Footer iseng={isEng} isgeo={isGeo} isrus={isRus}/>
-
         </>
-            
     )
 }

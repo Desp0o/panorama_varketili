@@ -89,6 +89,10 @@ export default function Footer(props){
                     <h1>დარჩენილია 54 ბინა</h1>
                     <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
                     <h1>დარჩენილია 54 ბინა</h1>
+                    <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
+                    <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
                 </div>
             </div>
 
@@ -102,11 +106,19 @@ export default function Footer(props){
                     <h1>დარჩენილია 54 ბინა</h1>
                     <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
                     <h1>დარჩენილია 54 ბინა</h1>
+                    <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
+                    <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
                 </div>
             </div>
 
             <div ref={rusRuningText}>
                 <div className="running_text">
+                    <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
+                    <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
+                    <h1>დარჩენილია 54 ბინა</h1>
                     <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
                     <h1>დარჩენილია 54 ბინა</h1>
                     <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>

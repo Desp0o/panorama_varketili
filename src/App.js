@@ -1,6 +1,7 @@
 import MainPage from './components/MainPage';
 import AboutUsPage from './components/aboutUsPage/AboutUsPage'
 import Apartments from  './components/Apartments/Apartments'
+import Apartment102 from './components/Apartments/apartmentsInner/Apartment102';
 import {Routes,Route} from "react-router-dom";
 import './App.css';
 
@@ -14,6 +15,7 @@ function App() {
       <Route exact path="*" element={<MainPage />} />
       <Route exact path="/components/aboutUsPage/AboutUsPage" element={<AboutUsPage />} />
       <Route exact path="/components/Apartments/Apartments" element={<Apartments />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment102" element={<Apartment102 />} />
       </Routes>
     </div>
   );

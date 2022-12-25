@@ -1,0 +1,84 @@
+.apartment_main{
+    width: 100%;
+    padding-top: 180px;
+}
+
+.apartment_main_inner{
+    width: 100%;
+    display: flex;
+    padding-bottom: 80px;
+}
+
+.apartment_main_inner_left{
+    width: 50%;
+}
+
+.apartment_main_inner_left img{
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+}
+
+.apartment_main_inner_right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apHeader{
+    padding-bottom: 45px;
+
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 46px;
+    color: #000000;
+}
+
+.numberRounded{
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    background-color: #029FA0;
+    
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 700;
+    font-size: 15px;
+
+    color: #F4F3E7;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.roomType{
+    display: none;
+}
+
+.room{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 160px;
+    margin-top: 20px;
+
+    font-family: 'BPG Mrgvlovani';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 27px;
+
+color: #000000;
+}
+
+.number_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
