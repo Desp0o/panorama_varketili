@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/panorama_varketili/static/css/main.f55f2162.css",
+    "main.css": "/panorama_varketili/static/css/main.f1832045.css",
     "main.js": "/panorama_varketili/static/js/main.5b18dc98.js",
     "static/media/slider1.svg": "/panorama_varketili/static/media/slider1.f7dd8f85fb32754c76aa3f2c36b1793d.svg",
     "static/media/aboutimage.png": "/panorama_varketili/static/media/aboutimage.1ee8130fb0f9513edb56.png",
@@ -28,11 +28,11 @@
     "static/media/bpg-web-001-caps-webfont.woff2": "/panorama_varketili/static/media/bpg-web-001-caps-webfont.8009ac15b515766a573f.woff2",
     "static/media/bpg_nino_mtavruli_normal.otf": "/panorama_varketili/static/media/bpg_nino_mtavruli_normal.331736f59d5f0a121b51.otf",
     "index.html": "/panorama_varketili/index.html",
-    "main.f55f2162.css.map": "/panorama_varketili/static/css/main.f55f2162.css.map",
+    "main.f1832045.css.map": "/panorama_varketili/static/css/main.f1832045.css.map",
     "main.5b18dc98.js.map": "/panorama_varketili/static/js/main.5b18dc98.js.map"
   },
   "entrypoints": [
-    "static/css/main.f55f2162.css",
+    "static/css/main.f1832045.css",
     "static/js/main.5b18dc98.js"
   ]
 }
