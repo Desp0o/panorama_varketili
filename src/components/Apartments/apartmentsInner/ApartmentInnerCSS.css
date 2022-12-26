@@ -114,12 +114,7 @@ color: #000000;
     text-align: center;
 }
 
-.pointer6{
-    left: 21%;
-    top: 63%;
-}
 
-.pointer5{
-    left: 36%;
-    top: 37%;
+.bold{
+    font-weight: 900;
 }
