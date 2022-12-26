@@ -1,9 +1,13 @@
 .flats{
     width: 100%;
+    max-width: 100%;
     padding-bottom: 126px;
+    overflow: hidden;
 }
 
 .headers_and_more{
+    width: 100%;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -74,6 +78,7 @@
 
 .cards{
     width: 100%;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -84,6 +89,7 @@
 .card{
     position: relative;
     width: 416px;
+    max-width: 90%;
     height: 417px;
     background: #F4F3E7;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -170,13 +176,10 @@
     .cards{
         flex-direction: column;
         align-items: center;
-        justify-content: unset !important;
     }
     .card{
-        width: 80%;
-        height: auto;
-        align-items: center;
-        justify-content: unset !important;
+        width: 90%;
+        margin: auto;
     }
     .card_render_main_screen{
         object-fit: scale-down;
@@ -185,12 +188,9 @@
         font-size: 18px;
     }
     .headers_and_more{
-        display: flex;
-        align-items: center;
+        width: 95%;
         justify-content: space-between;
         padding-left: 10px;
         padding-right: 10px;
-        margin-top: 91px;
-        flex-direction: column;
     }
 }

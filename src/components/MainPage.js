@@ -278,7 +278,7 @@ export default function MainPage() {
             </div>    
         </div>
 
-        {/* <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} /> */}
+        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
         <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} />
 

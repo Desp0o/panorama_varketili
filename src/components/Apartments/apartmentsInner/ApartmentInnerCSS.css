@@ -82,3 +82,12 @@ color: #000000;
     justify-content: center;
     gap: 30px;
 }
+
+
+@media (max-width:769px) {
+    
+    .apartment_main_inner{
+        flex-direction: column;
+    }
+    
+}
