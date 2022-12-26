@@ -107,10 +107,10 @@ export default function ContactPage(){
             <Link to='../MainPage'><img className="logo" src={logo} /></Link>
 
             <ul className="nav_menu">
-                <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
+                <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
-                <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
+                <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
+                <li className="menu_links  active_page" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
 
             <div className="languages">

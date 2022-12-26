@@ -79,7 +79,6 @@ export default function Apartment83() {
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
-        navbarLinkContact.current.innerHTML = 'კონტაქტი'
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
@@ -97,7 +96,6 @@ export default function Apartment83() {
         navbarLinkFlats.current.innerHTML = 'Apartments'
         navbarLinkAboutUs.current.innerHTML = 'About Us'
         navbarLinkAboutProject.current.innerHTML = 'About Project'
-        navbarLinkContact.current.innerHTML = 'Contact'
 
 
     }else if(localStorage.language === 'rus'){
@@ -116,7 +114,6 @@ export default function Apartment83() {
         navbarLinkFlats.current.innerHTML = ''
         navbarLinkAboutUs.current.innerHTML = ''
         navbarLinkAboutProject.current.innerHTML = ''
-        navbarLinkContact.current.innerHTML = ''
     }
     },[isEng, isGeo, isRus])
 
@@ -213,7 +210,6 @@ export default function Apartment83() {
                 <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
-                <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
             </ul>
 
             <div className="languages">

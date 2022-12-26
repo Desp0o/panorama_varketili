@@ -147,7 +147,6 @@ export default function MainPage() {
             navbarLinkFlats.current.innerHTML = 'ბინები'
             navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
             navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
-            navbarLinkContact.current.innerHTML = 'კონტაქტი'
 
             sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
             sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
@@ -164,7 +163,6 @@ export default function MainPage() {
             navbarLinkFlats.current.innerHTML = 'Apartments'
             navbarLinkAboutUs.current.innerHTML = 'About Us'
             navbarLinkAboutProject.current.innerHTML = 'About Project'
-            navbarLinkContact.current.innerHTML = 'Contact'
             sliderHeaderRef.current.innerHTML = ''
             sliderBtnRef.current.innerHTML = 'Contact Us'
             
@@ -180,7 +178,6 @@ export default function MainPage() {
             navbarLinkFlats.current.innerHTML = ''
             navbarLinkAboutUs.current.innerHTML = ''
             navbarLinkAboutProject.current.innerHTML = ''
-            navbarLinkContact.current.innerHTML = ''
             sliderHeaderRef.current.innerHTML = ''
             sliderBtnRef.current.innerHTML = ''
         }
@@ -204,8 +201,8 @@ export default function MainPage() {
             <ul className="nav_menu">
                 <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
-                <Link to='./components/contactPage/ContactPage'><li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li></Link>
+                <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
+                
             </ul>
 
             <div className="languages">

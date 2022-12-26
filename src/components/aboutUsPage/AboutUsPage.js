@@ -43,7 +43,6 @@ export default function AboutUsPage(){
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
-        navbarLinkContact.current.innerHTML = 'კონტაქტი'
 
         aboutPageHeader.current.innerHTML = 'თვინს დეველოპმენტი'
         aboutPageP1.current.innerHTML = 'Twins Development მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.'
@@ -66,7 +65,6 @@ export default function AboutUsPage(){
         navbarLinkFlats.current.innerHTML = 'Apartments'
         navbarLinkAboutUs.current.innerHTML = 'About Us'
         navbarLinkAboutProject.current.innerHTML = 'About Project'
-        navbarLinkContact.current.innerHTML = 'Contact'
         engListRef.current.style.display = 'block'
         rusListRef.current.style.display = 'none'
         geoListRef.current.style.display = 'none'
@@ -89,7 +87,6 @@ export default function AboutUsPage(){
         navbarLinkFlats.current.innerHTML = ''
         navbarLinkAboutUs.current.innerHTML = ''
         navbarLinkAboutProject.current.innerHTML = ''
-        navbarLinkContact.current.innerHTML = ''
         aboutPageHeader.current.innerHTML = ''
         aboutPageP1.current.innerHTML = ''
         engListRef.current.style.display = 'none'
@@ -130,8 +127,7 @@ export default function AboutUsPage(){
             <ul className="nav_menu">
                 <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to=''><li className="menu_links active_page" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
-                <Link to='/components/contactPage/ContactPage'><li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li></Link>
+                <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
             </ul>
 
             <div className="languages">

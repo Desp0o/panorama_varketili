@@ -2,6 +2,7 @@ import MainPage from './components/MainPage';
 import AboutUsPage from './components/aboutUsPage/AboutUsPage'
 import Apartments from  './components/Apartments/Apartments'
 import ContactPage from './components/contactPage/ContactPage';
+import AboutProject from './components/AboutProject/AboutProject';
 import Apartment102 from './components/Apartments/apartmentsInner/Apartment102';
 import Apartment90 from './components/Apartments/apartmentsInner/Apartment90';
 import Apartment83 from './components/Apartments/apartmentsInner/Apartment83';
@@ -24,6 +25,7 @@ function App() {
       <Route exact path="*" element={<MainPage />} />
       <Route exact path="/components/aboutUsPage/AboutUsPage" element={<AboutUsPage />} />
       <Route exact path="/components/Apartments/Apartments" element={<Apartments />} />
+      <Route exact path="/components/AboutProject/AboutProject" element={<AboutProject />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment102" element={<Apartment102 />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment90" element={<Apartment90 />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment83" element={<Apartment83 />} />
