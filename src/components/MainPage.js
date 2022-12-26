@@ -186,15 +186,15 @@ export default function MainPage() {
         }
     },[isEng, isGeo, isRus])
 
-    useEffect(()=>{
-        const sliderTimeOut = setTimeout(()=>{
-            setSliderClass('slider_inner act')
-        },300)
+    // useEffect(()=>{
+    //     const sliderTimeOut = setTimeout(()=>{
+    //         setSliderClass('slider_inner act')
+    //     },300)
 
-        return()=>{
-            clearTimeout(sliderTimeOut)
-        }
-    },[])
+    //     return()=>{
+    //         clearTimeout(sliderTimeOut)
+    //     }
+    // },[])
 
     return(
         <>
