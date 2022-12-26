@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/panorama_varketili/static/css/main.aae14b1e.css",
-    "main.js": "/panorama_varketili/static/js/main.8dabe868.js",
+    "main.css": "/panorama_varketili/static/css/main.8998efc7.css",
+    "main.js": "/panorama_varketili/static/js/main.71d52edc.js",
     "static/media/slider1.svg": "/panorama_varketili/static/media/slider1.f7dd8f85fb32754c76aa3f2c36b1793d.svg",
     "static/media/aboutimage.png": "/panorama_varketili/static/media/aboutimage.1ee8130fb0f9513edb56.png",
     "static/media/slider2.jpg": "/panorama_varketili/static/media/slider2.f48995aadb6ed56b69ab.jpg",
-    "static/media/m76inner.png": "/panorama_varketili/static/media/m76inner.8b233de4299c348f0d56.png",
-    "static/media/m71innerSec.png": "/panorama_varketili/static/media/m71innerSec.c0a1bcd121bc6f03bab6.png",
-    "static/media/m83inner.png": "/panorama_varketili/static/media/m83inner.eac52a895337d6365cc9.png",
+    "static/media/m76inner.png": "/panorama_varketili/static/media/m76inner.b5868e4dced649dd2b10.png",
+    "static/media/m71innerSec.png": "/panorama_varketili/static/media/m71innerSec.937ab1ec83361284af3f.png",
+    "static/media/m83inner.png": "/panorama_varketili/static/media/m83inner.5ad787430c3bd5b725dc.png",
+    "static/media/m57inner.png": "/panorama_varketili/static/media/m57inner.fcc826c5d2bf24c22748.png",
     "static/media/m102inner.png": "/panorama_varketili/static/media/m102inner.29583c843984b9f8fcb6.png",
-    "static/media/m57inner.png": "/panorama_varketili/static/media/m57inner.d995797f164d21abae0e.png",
-    "static/media/m71inner.png": "/panorama_varketili/static/media/m71inner.93c2f6975743d2eb7ccd.png",
-    "static/media/m60inner.png": "/panorama_varketili/static/media/m60inner.cbc40e017188897220a4.png",
-    "static/media/m90inner.png": "/panorama_varketili/static/media/m90inner.55aed5a894146ae1c8fb.png",
+    "static/media/m71inner.png": "/panorama_varketili/static/media/m71inner.96fb7ea2f8cc6204afff.png",
+    "static/media/m60inner.png": "/panorama_varketili/static/media/m60inner.c016b228b42894cf0b5e.png",
+    "static/media/m90inner.png": "/panorama_varketili/static/media/m90inner.5b6c62ef8157c2f5a359.png",
     "static/media/slider3.jpg": "/panorama_varketili/static/media/slider3.6a8d23bf948ef0db10a5.jpg",
     "static/media/floatClif.png": "/panorama_varketili/static/media/floatClif.419e565ac4c9a219e15a.png",
     "static/media/RenderB04.png": "/panorama_varketili/static/media/RenderB04.b7522993d173e57e15ae.png",
@@ -35,11 +35,11 @@
     "static/media/bpg-web-001-caps-webfont.woff2": "/panorama_varketili/static/media/bpg-web-001-caps-webfont.8009ac15b515766a573f.woff2",
     "static/media/bpg_nino_mtavruli_normal.otf": "/panorama_varketili/static/media/bpg_nino_mtavruli_normal.331736f59d5f0a121b51.otf",
     "index.html": "/panorama_varketili/index.html",
-    "main.aae14b1e.css.map": "/panorama_varketili/static/css/main.aae14b1e.css.map",
-    "main.8dabe868.js.map": "/panorama_varketili/static/js/main.8dabe868.js.map"
+    "main.8998efc7.css.map": "/panorama_varketili/static/css/main.8998efc7.css.map",
+    "main.71d52edc.js.map": "/panorama_varketili/static/js/main.71d52edc.js.map"
   },
   "entrypoints": [
-    "static/css/main.aae14b1e.css",
-    "static/js/main.8dabe868.js"
+    "static/css/main.8998efc7.css",
+    "static/js/main.71d52edc.js"
   ]
 }
