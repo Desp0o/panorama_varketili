@@ -5,61 +5,6 @@ import logo from '../../../images/logo.svg'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m102inner.png'
 
-const roomsArr = [
-    {   
-        id: 1,
-        number:1,
-        roomTypeGeo: 'ჰოლი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '6.8 M2'      
-    },
-
-    {   
-        id: 2,
-        number:2,
-        roomTypeGeo: 'სააბაზანო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '4.1 M2'
-    },
-
-    {
-        id: 3,
-        number:3,
-        roomTypeGeo: 'საძინებელი 1',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '12 M2'
-    },
-
-    {
-        id: 4,
-        number:4,
-        roomTypeGeo: 'საძინებელი 2',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '11.8 M2'
-    },
-
-    {
-        id: 5,
-        number:5,
-        roomTypeGeo: 'სტუდიო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '18.5 M2'
-    },
-
-    {
-        id: 6,
-        number:6,
-        roomTypeGeo: 'აივანი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '21.8 M2'
-    }
-]
 
 const pointerStyle6 ={
     left: '21%',
