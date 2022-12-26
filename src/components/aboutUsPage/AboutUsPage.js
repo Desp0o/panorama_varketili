@@ -131,7 +131,7 @@ export default function AboutUsPage(){
                 <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to=''><li className="menu_links active_page" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
                 <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
-                <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
+                <Link to='/components/contactPage/ContactPage'><li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li></Link>
             </ul>
 
             <div className="languages">

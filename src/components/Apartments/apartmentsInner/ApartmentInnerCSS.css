@@ -11,6 +11,7 @@
 
 .apartment_main_inner_left{
     width: 50%;
+    position: relative;
 }
 
 .apartment_main_inner_left img{
@@ -90,4 +91,33 @@ color: #000000;
         flex-direction: column;
     }
     
+}
+
+
+
+.pointers{
+    width: 31px;
+    height: 31px;
+    background-color: #029FA0;
+    position: absolute;
+    border-radius:50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+.pointer6{
+    left: 21%;
+    top: 63%;
+}
+
+.pointer5{
+    left: 36%;
+    top: 37%;
 }

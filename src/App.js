@@ -1,6 +1,7 @@
 import MainPage from './components/MainPage';
 import AboutUsPage from './components/aboutUsPage/AboutUsPage'
 import Apartments from  './components/Apartments/Apartments'
+import ContactPage from './components/contactPage/ContactPage';
 import Apartment102 from './components/Apartments/apartmentsInner/Apartment102';
 import Apartment90 from './components/Apartments/apartmentsInner/Apartment90';
 import Apartment83 from './components/Apartments/apartmentsInner/Apartment83';
@@ -32,6 +33,7 @@ function App() {
       <Route exact path="/components/Apartments/apartmentsInner/Apartment71Sec" element={<Apartment71Sec />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment60" element={<Apartment60 />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment57" element={<Apartment57 />} />
+      <Route exact path="/components/contactPage/ContactPage" element={<ContactPage />} />
       </Routes>
     </div>
   );

@@ -3,7 +3,7 @@ import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
 import logo from '../../../images/logo.svg'
 import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/m102inner.png'
+import m102inner from '../../../images/innerRenders/m102inner.png'
 
 const roomsArr = [
     {   
@@ -60,6 +60,36 @@ const roomsArr = [
         m2: '21.8 M2'
     }
 ]
+
+const pointerStyle6 ={
+    left: '21%',
+    top: '63%'
+}
+
+const pointerStyle5 ={
+    left: '36%',
+    top: '37%'
+}
+
+const pointerStyle4 ={
+    right: '26.5%',
+    top: '44.5%'
+}
+
+const pointerStyle3 ={
+    right: '42%',
+    top: '49%'
+}
+
+const pointerStyle2 ={
+    right: '45%',
+    top: '19%'
+}
+
+const pointerStyle1 ={
+    right: '33%',
+    top: '22%'
+}
 
 export default function Apartment102() {
 
@@ -184,6 +214,13 @@ export default function Apartment102() {
 
                 <div className="apartment_main_inner_left">
                     <img src={m102inner} alt="m102inner" />
+
+                    <span style={pointerStyle6} className="pointers">6</span>
+                    <span style={pointerStyle5} className="pointers">5</span>
+                    <span style={pointerStyle4} className="pointers">4</span>
+                    <span style={pointerStyle3} className="pointers">3</span>
+                    <span style={pointerStyle2} className="pointers">2</span>
+                    <span style={pointerStyle1} className="pointers">1</span>
                 </div>
 
                 <div className="apartment_main_inner_right">

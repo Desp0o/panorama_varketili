@@ -1,67 +1,13 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
-import Footer from '../../footer/Footer'
-import logo from '../../../images/logo.svg'
-import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/innerRenders/m71inner.png'
+import logo from '../../images/logo.svg'
+import './ContactPage.css'
 
-const roomsArr = [
-    {   
-        id: 1,
-        number:1,
-        roomTypeGeo: 'ჰოლი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '7.1 M2'      
-    },
+export default function ContactPage(){
 
-    {   
-        id: 2,
-        number:2,
-        roomTypeGeo: 'სააბაზანო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '4 M2'
-    },
-
-    {
-        id: 3,
-        number:3,
-        roomTypeGeo: 'საძინებელი 1',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '12.7 M2'
-    },
-
-    {
-        id: 4,
-        number:4,
-        roomTypeGeo: 'საძინებელი 2',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '13.5 M2'
-    },
-
-    {
-        id: 5,
-        number:5,
-        roomTypeGeo: 'სტუდიო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '20.4 M2'
-    },
-
-    {
-        id: 6,
-        number:6,
-        roomTypeGeo: 'აივანი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '13.8 M2'
-    }
-]
-
-export default function Apartment71() {
+    const contactPageHeader = useRef()
+    const contactPageSocialMedia = useRef()
+    const contactPagePhone = useRef()
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -75,18 +21,11 @@ export default function Apartment71() {
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
-    const [roomGeo, setRoomGeo] = useState(null)
-    const [roomEng, setRoomEng] = useState(null)
-    const [roomRus, setRoomRus] = useState(null)
 
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
-
-        setRoomGeo(null)
-        setRoomEng('roomType')
-        setRoomRus('roomType')
 
         GeoLanguage.current.style.color = '#029FA0'
         EngLanguage.current.style.color = 'black'
@@ -96,15 +35,15 @@ export default function Apartment71() {
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
         navbarLinkContact.current.innerHTML = 'კონტაქტი'
+
+        contactPageHeader.current.innerHTML = 'დაგვიკავშირდით, რათა დაგეხმაროთ სასურველი ბინის შერჩევაში'
+        contactPageSocialMedia.current.innerHTML = 'სოციალური მედია'
+        contactPagePhone.current.innerHTML = 'ტელეფონი'
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
         setIsGeo(false)
         setIsRus(false)
-
-        setRoomGeo('roomType')
-        setRoomEng(null)
-        setRoomRus('roomType')
 
         GeoLanguage.current.style.color = 'black'
         EngLanguage.current.style.color = '#029FA0'
@@ -115,15 +54,15 @@ export default function Apartment71() {
         navbarLinkAboutProject.current.innerHTML = 'About Project'
         navbarLinkContact.current.innerHTML = 'Contact'
 
+        contactPageHeader.current.innerHTML = ''
+        contactPageSocialMedia.current.innerHTML = 'Social Media'
+        contactPagePhone.current.innerHTML = 'Phone'
+
 
     }else if(localStorage.language === 'rus'){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
-
-        setRoomGeo('roomType')
-        setRoomEng('roomType')
-        setRoomRus(null)
 
         GeoLanguage.current.style.color = 'black'
         EngLanguage.current.style.color = 'black'
@@ -133,6 +72,10 @@ export default function Apartment71() {
         navbarLinkAboutUs.current.innerHTML = ''
         navbarLinkAboutProject.current.innerHTML = ''
         navbarLinkContact.current.innerHTML = ''
+
+        contactPageHeader.current.innerHTML = ''
+        contactPageSocialMedia.current.innerHTML = ''
+        contactPagePhone.current.innerHTML = ''
     }
     },[isEng, isGeo, isRus])
 
@@ -157,9 +100,10 @@ export default function Apartment71() {
         localStorage.setItem('language', 'rus')
     }
 
+
     return(
         <>
-        <div className='Navbar'  style={{backgroundColor:'#A9C1A9'}}>
+        <div className='Navbar'>
             <Link to='../MainPage'><img className="logo" src={logo} /></Link>
 
             <ul className="nav_menu">
@@ -178,43 +122,36 @@ export default function Apartment71() {
             </div>
         </div>
 
-        <div className="apartment_main">
+        <div className="contact_page_inner">
+            <div className="contact_page_inner_left">
 
-            <div className="apartment_main_inner">
+                <h1 className="contact_page_header" ref={contactPageHeader}>დაგვიკავშირდით, რათა დაგეხმაროთ სასურველი ბინის შერჩევაში</h1>
 
-                <div className="apartment_main_inner_left">
-                    <img src={m102inner} alt="m102inner" />
+                <div className="contact_p_h_and_li">
+                    <p className="contact_page_list_header" ref={contactPageSocialMedia}>სოციალური მედია</p>
+                    <ul className="contact_page_list">
+                        <li className="underline_contact_page">Facebook</li>
+                        <li className="underline_contact_page">Instagram</li>
+                        <li className="underline_contact_page">LinkedIn</li>
+                        <li className="underline_contact_page">Tik Tok</li>
+                    </ul>
                 </div>
 
-                <div className="apartment_main_inner_right">
-                    <div className="apHeader">71.5 M2</div>
-
-                    {
-                        roomsArr.map((room)=>{
-                            return(
-                                <div className="apartment_rooms" key={room.id}>
-                                    <div className="room">
-
-                                        <div className="number_name">
-                                            <div className="numberRounded">{room.number}</div>
-
-                                            <p className={roomGeo}>{room.roomTypeGeo}</p>
-                                            <p className={roomEng}>{room.roomTypeEng}</p>
-                                            <p className={roomRus}>{room.roomTypeRus}</p>
-                                        </div>
-
-                                        <p>{room.m2}</p>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
+                <div className="contact_phone_number">
+                    <p className="contact_page_phone_header" ref={contactPagePhone}>ტელეფონი</p>
+                    <p className="contact_page_number underline_contact_page">+ 995 593 123 123</p>
                 </div>
 
+                <div className="contact_page_email_div">
+                    <p className="contact_page_email_header">Email</p>
+                    <p className="contact_page_email underline_contact_page">+ 995 593 123 123</p>
+                </div>
+            </div>
+
+            <div className="contact_page_inner_right">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11911.02513073453!2d44.7838178!3d41.72577765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ska!2sge!4v1672038468905!5m2!1ska!2sge"  allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-
-        <Footer iseng={isEng} isgeo={isGeo} isrus={isRus}/>
         </>
     )
 }

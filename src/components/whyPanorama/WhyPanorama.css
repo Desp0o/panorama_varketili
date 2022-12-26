@@ -81,6 +81,10 @@
     width: auto;
 }
 
+.hidenspan{
+    display: none;
+}
+
 @media (max-width:769px) {
     .why_panorama{
         flex-direction: column-reverse;

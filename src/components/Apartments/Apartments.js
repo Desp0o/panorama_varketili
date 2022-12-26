@@ -106,8 +106,8 @@ export default function Apartments(){
             <ul className="nav_menu">
                 <Link to=''><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <Link to='/components/Apartments/apartmentsInner/Apartment102'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
-                <li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li>
+                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
+                <Link to='/components/contactPage/ContactPage'><li className="menu_links" ref={navbarLinkContact}>კონტაქტი</li></Link>
             </ul>
 
             <div className="languages">
@@ -128,7 +128,7 @@ export default function Apartments(){
                 {
                     ApartmentsArr.map((render)=>{
                         return(
-                            <Link to={render.link} key={render.id}><div className="card">
+                            <Link to={render.link} key={render.id}><div className="card cardinpage">
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />
                                 </div>
