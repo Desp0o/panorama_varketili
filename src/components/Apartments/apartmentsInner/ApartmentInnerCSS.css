@@ -90,7 +90,9 @@ color: #000000;
     .apartment_main_inner{
         flex-direction: column;
     }
-    
+    .apartment_main_inner_left{
+        width: 100%;
+    }
 }
 
 
