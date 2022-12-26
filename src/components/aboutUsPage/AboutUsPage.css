@@ -1,7 +1,7 @@
 .about_us_page{
-    background-color: black;
     width: 100%;
     height: 100vh;
+    overflow-x: hidden;
 }
 
 .about_inner{
@@ -28,7 +28,8 @@
 
 .about_inner_left_texts{
     margin-top: 55px;
-    width: 560px;
+    /* width: 560px; */
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -56,4 +57,35 @@
     height: 100%;
     object-fit: cover;
     border-radius: 20px;
+}
+
+@media (max-width:769px) {
+    .about_us_page{
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+    }
+    .about_inner{
+        width: 95%;
+        flex-direction: column;
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .about_inner_left{
+        width: 100%;
+    }
+    .about_inner_left_texts{
+        
+    }
+    .about_inner_right{
+        width: 100%;
+        display: flex;
+    }
+    .aboutImage{
+        width: 100%;
+    }
+    .about_us_header{
+        font-size: 26px;
+    }
 }

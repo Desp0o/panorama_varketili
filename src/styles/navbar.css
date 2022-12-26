@@ -88,4 +88,10 @@ li:hover:after{
     .languages{
        display: none;
     }
+    .logo{
+        position: absolute;
+        left: 0px;
+        top: -8px;
+        cursor: pointer;
+    }
 }

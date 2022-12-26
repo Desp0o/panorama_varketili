@@ -83,15 +83,25 @@
 
 @media (max-width:769px) {
     .why_panorama{
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: fit-content;
         gap: 0;
-        padding-left: 0;
+        padding-left: 10px;
+        padding-bottom: 50px;
         padding-right: 0;
     }
 
     .float_cliff{
         height: unset;
         width: 80%;
+    }
+
+    .why_panorama_h1{
+        font-family: 'BPG Arial';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height:normal;
+        color: #171F17;
     }
 }

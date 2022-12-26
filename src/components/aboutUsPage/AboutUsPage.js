@@ -146,7 +146,7 @@ export default function AboutUsPage(){
             <div className="about_inner">
 
                 <div className="about_inner_left">
-                    <h1 ref={aboutPageHeader}>თვინს დეველოპმენტი</h1>
+                    <h1 ref={aboutPageHeader} className="about_us_header">თვინს დეველოპმენტი</h1>
                     
                     <div className="about_inner_left_texts">
                     <p ref={aboutPageP1}>Twins Development მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
