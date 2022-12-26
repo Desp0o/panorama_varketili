@@ -128,7 +128,8 @@ export default function Apartments(){
                 {
                     ApartmentsArr.map((render)=>{
                         return(
-                            <Link to={render.link} key={render.id}><div className="card cardinpage">
+                            <div className="card cardinpage" key={render.id}>
+                                <Link to={render.link}>
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />
                                 </div>
@@ -144,7 +145,8 @@ export default function Apartments(){
                                         <p className="card_inner_bottom_p">{render.text2}</p>
                                     </div>
                                 </div>
-                            </div>  </Link>
+                                </Link>
+                            </div>  
                         )
                     })
                 }

@@ -28,10 +28,15 @@
 .apartment_list{
     width: 100%;
     padding-top: 80px;
-    padding-left: 30px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 20px;
+}
+
+@media (max-width:769px) {
+    .apartment_list{
+        padding-left: 0px;
+    }
 }

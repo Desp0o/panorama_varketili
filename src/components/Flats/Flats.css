@@ -119,7 +119,7 @@
     width: 100%;
     height: 100%;
     object-position: center center;
-    object-fit:cover;
+    object-fit:scale-down;
     transition: all 0.4s ease;
 }
 
