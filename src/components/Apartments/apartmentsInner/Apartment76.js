@@ -5,61 +5,35 @@ import logo from '../../../images/logo.svg'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m76inner.png'
 
-const roomsArr = [
-    {   
-        id: 1,
-        number:1,
-        roomTypeGeo: 'ჰოლი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '5.4 M2'      
-    },
+const pointerStyle6 ={
+    left: '45%',
+    top: '77%'
+}
 
-    {   
-        id: 2,
-        number:2,
-        roomTypeGeo: 'სააბაზანო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '5 M2'
-    },
+const pointerStyle5 ={
+    left: '33%',
+    top: '43%'
+}
 
-    {
-        id: 3,
-        number:3,
-        roomTypeGeo: 'საძინებელი 1',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '19.3 M2'
-    },
+const pointerStyle4 ={
+    right: '25%',
+    top: '45%'
+}
 
-    {
-        id: 4,
-        number:4,
-        roomTypeGeo: 'საძინებელი 2',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '6.9 M2'
-    },
+const pointerStyle3 ={
+    right: '41%',
+    top: '47%'
+}
 
-    {
-        id: 5,
-        number:5,
-        roomTypeGeo: 'სტუდიო',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '25s.9 M2'
-    },
+const pointerStyle2 ={
+    right: '44%',
+    top: '24%'
+}
 
-    {
-        id: 6,
-        number:6,
-        roomTypeGeo: 'აივანი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'aaaa',
-        m2: '10.3 M2'
-    }
-]
+const pointerStyle1 ={
+    right: '59%',
+    top: '28%'
+}
 
 export default function Apartment76() {
 
@@ -78,6 +52,14 @@ export default function Apartment76() {
     const [roomGeo, setRoomGeo] = useState(null)
     const [roomEng, setRoomEng] = useState(null)
     const [roomRus, setRoomRus] = useState(null)
+
+    const [ballNumber, setBallNumber] = useState(null)
+    const [ball1txt, setBall1txt] = useState(null)
+    const [ball2txt, setBall2txt] = useState(null)
+    const [ball3txt, setBall3txt] = useState(null)
+    const [ball4txt, setBall4txt] = useState(null)
+    const [ball5txt, setBall5txt] = useState(null)
+    const [ball6txt, setBall6txt] = useState(null)
 
     useEffect(()=>{
         setIsEng(false)
@@ -157,6 +139,71 @@ export default function Apartment76() {
         localStorage.setItem('language', 'rus')
     }
 
+    
+const roomsArr = [
+    {   
+        id: 1,
+        number:1,
+        roomTypeGeo: 'ჰოლი',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '5.4 M2',
+        forBold: `${ball1txt}`       
+    },
+
+    {   
+        id: 2,
+        number:2,
+        roomTypeGeo: 'სააბაზანო',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '5 M2',
+        forBold: `${ball2txt}` 
+    },
+
+    {
+        id: 3,
+        number:3,
+        roomTypeGeo: 'საძინებელი 1',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '19.3 M2',
+        forBold: `${ball3txt}` 
+    },
+
+    {
+        id: 4,
+        number:4,
+        roomTypeGeo: 'საძინებელი 2',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '6.9 M2',
+        forBold: `${ball4txt}` 
+    },
+
+    {
+        id: 5,
+        number:5,
+        roomTypeGeo: 'სტუდიო',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '25s.9 M2',
+        forBold: `${ball5txt}` 
+    },
+
+    {
+        id: 6,
+        number:6,
+        roomTypeGeo: 'აივანი',
+        roomTypeEng: 'Hall',
+        roomTypeRus: 'aaaa',
+        m2: '10.3 M2',
+        forBold: `${ball6txt}` 
+    }
+]
+
+    
+
     return(
         <>
         <div className='Navbar'  style={{backgroundColor:'#A9C1A9'}}>
@@ -184,6 +231,118 @@ export default function Apartment76() {
 
                 <div className="apartment_main_inner_left">
                     <img src={m102inner} alt="m102inner" />
+
+                    <span style={pointerStyle6} className="pointers"
+                        onClick={()=>{
+                            if(ballNumber === 6){
+                                setBallNumber(null)
+                                setBall6txt(null)
+                            }else{
+                                setBallNumber(6)
+                                setBall6txt('bold')
+
+                                setBall1txt(null)
+                                setBall2txt(null)
+                                setBall3txt(null)
+                                setBall4txt(null)
+                                setBall5txt(null)
+                            }
+                        }}
+                    >6</span>
+
+                    <span style={pointerStyle5} className="pointers"
+                        onClick={()=>{
+                            if(ballNumber === 5){
+                                setBallNumber(null)
+                                setBall5txt(null)
+                            }else{
+                                setBallNumber(5)
+                                setBall5txt('bold')
+
+                                setBall1txt(null)
+                                setBall2txt(null)
+                                setBall3txt(null)
+                                setBall4txt(null)
+                                setBall6txt(null)
+                            }
+                        }}
+                    >5</span>
+
+                    <span style={pointerStyle4} className="pointers"
+                        onClick={()=>{
+                            if(ballNumber === 4){
+                                setBallNumber(null)
+                                setBall4txt(null)
+                            }else{
+                                setBallNumber(4)
+                                setBall4txt('bold')
+
+                                setBall1txt(null)
+                                setBall2txt(null)
+                                setBall3txt(null)
+                                setBall5txt(null)
+                                setBall6txt(null)
+                            }
+                        }}
+                    >4</span>
+
+                    <span style={pointerStyle3} className="pointers"
+                        onClick={()=>{
+                            if(ballNumber === 3){
+                                setBallNumber(null)
+                                setBall3txt(null)
+                            }else{
+                                setBallNumber(3)
+                                setBall3txt('bold')
+
+                                setBall1txt(null)
+                                setBall2txt(null)
+                                setBall4txt(null)
+                                setBall5txt(null)
+                                setBall6txt(null)
+                            }
+                        }}
+                    >3</span>
+
+                    <span style={pointerStyle2} className="pointers"
+                    onClick={()=>{
+                        if(ballNumber === 2){
+                            setBallNumber(null)
+                            setBall2txt(null)
+                        }else{
+                            setBallNumber(2)
+                            setBall2txt('bold')
+                            
+                            setBall1txt(null)
+                            setBall3txt(null)
+                            setBall4txt(null)
+                            setBall5txt(null)
+                            setBall6txt(null)
+                        }
+                    }}
+                    >2</span>
+
+                    <span 
+                        style={pointerStyle1} 
+                        className="pointers" 
+                        onClick={()=> {
+                            if(ballNumber === 1){
+                                setBallNumber(null)
+                                setBall1txt(null)
+                            }else{
+                                setBallNumber(1)
+                                setBall1txt('bold')
+
+                                setBall2txt(null)
+                                setBall3txt(null)
+                                setBall4txt(null)
+                                setBall5txt(null)
+                                setBall6txt(null)
+                            }
+                        }
+                            
+                        }
+                        >1</span>
                 </div>
 
                 <div className="apartment_main_inner_right">
@@ -195,15 +354,15 @@ export default function Apartment76() {
                                 <div className="apartment_rooms" key={room.id}>
                                     <div className="room">
 
-                                        <div className="number_name">
+                                    <div className="number_name">
                                             <div className="numberRounded">{room.number}</div>
 
-                                            <p className={roomGeo}>{room.roomTypeGeo}</p>
-                                            <p className={roomEng}>{room.roomTypeEng}</p>
-                                            <p className={roomRus}>{room.roomTypeRus}</p>
+                                            <p className={roomGeo}><span className={room.forBold}>{room.roomTypeGeo}</span></p>
+                                            <p className={roomEng}><span className={room.forBold}>{room.roomTypeEng}</span></p>
+                                            <p className={roomRus}><span className={room.forBold}>{room.roomTypeRus}</span></p>
                                         </div>
 
-                                        <p>{room.m2}</p>
+                                        <p className={room.forBold}>{room.m2}</p>
                                     </div>
                                 </div>
                             )
