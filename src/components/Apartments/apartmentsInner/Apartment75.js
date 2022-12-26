@@ -351,7 +351,7 @@ export default function Apartment75() {
                                 <div className="apartment_rooms" key={room.id}>
                                     <div className="room">
 
-                                    <div className="number_name">
+                                        <div className="number_name">
                                             <div className="numberRounded">{room.number}</div>
 
                                             <p className={roomGeo}><span className={room.forBold}>{room.roomTypeGeo}</span></p>
