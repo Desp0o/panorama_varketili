@@ -90,7 +90,8 @@
     .footer_bottom_links{
       flex-direction: column;
     }
-    .running_text{
-      display: none;
+    .footer{
+      padding-top: 0px;
+      padding-bottom: 0px;
     }
   }

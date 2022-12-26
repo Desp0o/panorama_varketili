@@ -85,5 +85,13 @@
     .why_panorama{
         flex-direction: column;
         height: fit-content;
+        gap: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .float_cliff{
+        height: unset;
+        width: 80%;
     }
 }

@@ -131,4 +131,8 @@ button:hover span{
     .contact{
         flex-direction: column;
     }
+    .contact_right{
+        width: 80%;
+        padding-right: 0px;
+    }
 }

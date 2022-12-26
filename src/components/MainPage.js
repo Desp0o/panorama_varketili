@@ -8,6 +8,7 @@ import Footer from "./footer/Footer";
 
 import '../styles/navbar.css'
 import '../styles/slider.css'
+import '../index.css'
 
 import slider1 from '../images/slider1.svg'
 import slider2 from '../images/slider2.jpg'
@@ -277,7 +278,7 @@ export default function MainPage() {
             </div>    
         </div>
 
-        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} />
+        {/* <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} /> */}
 
         <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
