@@ -41,7 +41,7 @@ export default function Contact(props){
     const sendEmail = (e) => {
         e.preventDefault();
     
-        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
+        emailjs.sendForm('service_j7zw3pp', 'template_7suk37t', form.current, 'lf3j-nerT-hfKW-Fi')
           .then((result) => {
               console.log(result.text);
           }, (error) => {

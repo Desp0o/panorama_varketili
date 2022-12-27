@@ -2,7 +2,6 @@ import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
 import emailjs from '@emailjs/browser';
 import Flats from "./Flats/Flats";
-// import WhyPanorama from './whyPanorama/WhyPanorama'
 import Features from "./features/Features";
 import Contact from './contact/Contact'
 import Footer from "./footer/Footer";
@@ -51,21 +50,31 @@ const imgArr = [
 
 export default function MainPage() {
     //Floating Button Appear
-    const scrollRef = useRef()
+    const scrollRef = useRef(null)
     const floatButtonRef = useRef()
     const [floatBtnClass, setFloatBtnClass] = useState('call_float_btn')
+    const [addHeight, setAddHeight] = useState(200) 
+
+    function floatBtnHandler() {
+        if(scrollRef.current.getBoundingClientRect().width > 1300){
+            setAddHeight(0)
+        }
+
+        if(window.scrollY > scrollRef.current.getBoundingClientRect().height/2+addHeight){
+            setFloatBtnClass('call_float_btn call_float_btn_active')
+            
+        }else{
+            setFloatBtnClass('call_float_btn')
+        }
+    }
 
     useEffect(()=>{
-        window.addEventListener('scroll',()=>{
-            if(window.scrollY > scrollRef.current.offsetHeight/2+150){
-                setFloatBtnClass('call_float_btn call_float_btn_active')
-                
-            }else{
-                setFloatBtnClass('call_float_btn')
-            }
-        })
+        
+        window.addEventListener('scroll',floatBtnHandler)
 
-        return  
+        return () => {
+            window.removeEventListener('scroll',floatBtnHandler);
+          };
     },[window.scrollY])
     //End Floating Button Appear
 
@@ -375,8 +384,6 @@ export default function MainPage() {
         />
 
         <Flats iseng={isEng} isgeo={isGeo} isrus={isRus}  />
-
-        {/* <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} /> */}
 
         <div className='why_panorama' onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
             <div className="header_txt_btn">

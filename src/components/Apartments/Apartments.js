@@ -1,15 +1,63 @@
 import {React, useEffect, useState, useRef} from "react";
+import emailjs from '@emailjs/browser';
 import {Link} from  "react-router-dom";
 import Footer from '../footer/Footer'
 import logo from '../../images/logo.svg'
 import './Apartments.css'
+import '../../styles/PopUpMsg.css'
 
 import { ApartmentsArr } from "./ApartmentsData";
 
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
+import callFloatBtn from '../../images/callFloatBtn.png'
+import xMark from '../../images/close.png'
 
 export default function Apartments(){
+    //Floating Button Appear
+    const scrollRef = useRef(null)
+    const floatButtonRef = useRef()
+    const [floatBtnClass, setFloatBtnClass] = useState('call_float_btn')
+
+    function floatBtnHandler() {
+        if(window.scrollY > scrollRef.current.getBoundingClientRect().height/8){
+            setFloatBtnClass('call_float_btn call_float_btn_active')
+            
+        }else{
+            setFloatBtnClass('call_float_btn')
+        }
+    }
+
+    useEffect(()=>{
+    
+        window.addEventListener('scroll',floatBtnHandler)
+
+        return () => {
+            window.removeEventListener('scroll',floatBtnHandler);
+          };  
+    },[])
+    //End Floating Button Appear
+
+    // Email send Functionality
+    const form = useRef();
+    const inputNameRef = useRef()
+    const inputNumberRef = useRef()
+    const inputMailRef = useRef()
+    const inputSendref = useRef()
+    const [popUp, setPopUp] = useState('pop_up_msg')
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+            e.target.reset()
+    };
+    // End Of Email Functionality
 
     const ApartmentRef = useRef()
 
@@ -17,7 +65,6 @@ export default function Apartments(){
     const navbarLinkFlats = useRef()
     const navbarLinkAboutUs = useRef()
     const navbarLinkAboutProject = useRef()
-    const navbarLinkContact = useRef()
     const EngLanguage = useRef()
     const RusLanguage = useRef()
 
@@ -116,7 +163,7 @@ export default function Apartments(){
         </div>
         
         
-        <div className="apartments_page">
+        <div className="apartments_page" ref={scrollRef}>
     
             <h1 className="apartment_header" ref={ApartmentRef}>შეარჩიე სასურველი ბინა</h1>
         
@@ -148,6 +195,44 @@ export default function Apartments(){
                 }
             </div>
         
+        </div>
+
+        <img 
+            src={callFloatBtn} 
+            ref={floatButtonRef} 
+            className={floatBtnClass} 
+            onClick={()=> setPopUp('pop_up_msg pop_up_active')}
+        />
+
+        <div className={popUp}>
+            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+
+            <div className="pop_up_msg_inner">
+
+                <img src={xMark} className="xMark" alt="xmarkBtn" onClick={()=>setPopUp('pop_up_msg')}/>
+                
+                <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
+
+                <form ref={form} onSubmit={sendEmail}>
+                    <div className="pop_up_msg_inner_top">
+                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
+                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
+                    </div>
+
+                    <div className="pop_up_msg_inner_middle">
+                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა" important="true"/>
+                    </div>
+
+                    <div className="pop_up_msg_inner_bottom">
+                        <div className="pop_up_msg_inner_bottom submit_btn">
+                            <button type="submit">
+                                <span ref={inputSendref}>გაგზავნა</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
         </div>
 
         <Footer iseng={isEng} isgeo={isGeo} isrus={isRus}/>
