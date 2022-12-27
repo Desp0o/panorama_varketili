@@ -7,7 +7,6 @@ import renderB03 from '../../images/RenderB03.png'
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
 
-import callFloatBtn from '../../images/callFloatBtn.png'
 
 import './Flats.css'
 
@@ -38,31 +37,9 @@ const renderArr =[
 ]
 
 export default function Flats(props){
-    const ref = useRef()
-    const floatButtonRef = useRef()
     const flatsHeaderRef = useRef()
     const seeMoreRef = useRef()
        
-    const [floatBtnClass, setFloatBtnClass] = useState('call_float_btn')
-
-    
-    useEffect(()=>{
-       
-        const element = ref.current;
-        const topOffset = element.offsetTop;
-
-        window.addEventListener('scroll',()=>{
-            if(window.scrollY > (topOffset-60)){
-                setFloatBtnClass('call_float_btn call_float_btn_active')
-            }else{
-                setFloatBtnClass('call_float_btn')
-            }
-        })
-
-        return
-       
-    },[])
-
     useEffect(()=>{
         flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
         seeMoreRef.current.innerHTML = 'მეტი'
@@ -96,14 +73,13 @@ export default function Flats(props){
                 </div>
             </div>
 
-            <img src={callFloatBtn} ref={floatButtonRef} className={floatBtnClass} />
-
-            <div className="cards">
+           
+             <div className="cards">
                 {
                     renderArr.map((render)=>{
                         return(
                             
-                            <div ref={ref}  key={render.Id}  className="card">
+                            <div key={render.Id}  className="card">
                             <Link to={render.link}>
                                 <div className="card_inner_top">
                                     <img className="card_render_main_screen" src={render.image} />

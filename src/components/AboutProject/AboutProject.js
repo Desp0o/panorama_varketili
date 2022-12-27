@@ -13,7 +13,6 @@ export default function AboutProject(){
     const navbarLinkFlats = useRef()
     const navbarLinkAboutUs = useRef()
     const navbarLinkAboutProject = useRef()
-    const navbarLinkContact = useRef()
     const EngLanguage = useRef()
     const RusLanguage = useRef()
 
@@ -83,10 +82,8 @@ export default function AboutProject(){
     },[])
 
     useEffect(()=>{
-        console.log(data);
 
         if(data >= 6 && data <=12){
-            console.log('heyyyyyyyy');
             setbbb('line1 line_active')
         }else{
             setbbb('line1')

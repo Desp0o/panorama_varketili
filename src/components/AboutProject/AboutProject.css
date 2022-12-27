@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     padding-top: 70px;
+    overflow-x:hiddens;
 }
 
 .about_proj_page{
@@ -231,6 +232,9 @@
 
   /*************************/
   .ganvadeba{
+    overflow: hidden;
+    padding-top: 50px;
+    padding-bottom: 50px;
     width: 100%;
     margin-top: 196px;
     display: flex;
@@ -262,7 +266,7 @@
     font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 19px;
     line-height: 35px;
     /* or 175% */
     
@@ -271,5 +275,28 @@
   }
 
   .ganvadeba_right{
+    width: 50%;
+  }
 
+  .ganvadeba_right img{
+    width: 100%;
+  }
+
+  @media (max-width:769px) {
+    .about_proj_page{
+        padding-left: 20px;
+    }
+    .project_timeline_txt{
+        padding-left: 20px;
+    }
+    .ganvadeba{
+        flex-direction: column;
+    }
+    .ganvadeba_right{
+        width: 100%;
+    }
+    .ganvadeba_left{
+        width: 100%;
+        padding-left: 20px;
+    }
   }

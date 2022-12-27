@@ -80,7 +80,6 @@ li:hover:after{
     background-color: #01BCA7;
 }
 
-
 @media (max-width:769px) {
     .nav_menu{
         display: none;
@@ -95,3 +94,4 @@ li:hover:after{
         cursor: pointer;
     }
 }
+

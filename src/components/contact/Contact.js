@@ -14,7 +14,7 @@ export default function Contact(props){
 
     useEffect(()=>{
         contactHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
-        contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგეხმარებათ შეარჩიოთ თქვენზე მორგებული ბინა'
+        contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგეხმარებათ<br/> შეარჩიოთ  თქვენზე მორგებული ბინა'
         inputNameRef.current.placeholder = 'სახელი'
         inputNumberRef.current.placeholder = 'ნომერი'
         inputMailRef.current.placeholder = 'ელ.ფოსტა'
@@ -22,7 +22,7 @@ export default function Contact(props){
 
         if(localStorage.language === 'eng'){
             contactHeaderRef.current.innerHTML = 'Leave your Contact Info'
-            contactParagraphRef.current.innerHTML = 'Find the perfect apartment with the help of our expert representatives.'
+            contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
             inputNameRef.current.placeholder = 'Name'
             inputNumberRef.current.placeholder = 'Number'
             inputMailRef.current.placeholder = 'Email'
@@ -56,21 +56,28 @@ export default function Contact(props){
                 <h2 className="contact_header" ref={contactHeaderRef}>დაგვიტოვე საკონტაქტო</h2>
 
                 <p className="contact_paragraph" ref={contactParagraphRef}>
-                    ჩვენი წარმომადგენელი დაგეხმარებათ შეარჩიოთ თქვენზე მორგებული ბინა
+                    ჩვენი წარმომადგენელი დაგეხმარებათ   შეარჩიოთ  თქვენზე მორგებული ბინა
                 </p>
 
             </div>
 
             <div className="contact_right">
             <form ref={form} onSubmit={sendEmail}>
-                <div className="name_and_number">
-                    <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი"/>
-                    <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი"/>
+
+                <div className="input_fields">
+
+                    <div className="input_fields_top">
+                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი"/>
+                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი"/>
+                    </div>
+
+                    <div className="input_fields_bottom">
+                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა"/>
+                    </div>
+
+
                 </div>
 
-                <div className="email_input_div">
-                    <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა"/>
-                </div>
                 
                 <div className="submit_btn">
                     <button type="submit">

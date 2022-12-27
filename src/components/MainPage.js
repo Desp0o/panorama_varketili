@@ -1,7 +1,8 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
+import emailjs from '@emailjs/browser';
 import Flats from "./Flats/Flats";
-import WhyPanorama from './whyPanorama/WhyPanorama'
+// import WhyPanorama from './whyPanorama/WhyPanorama'
 import Features from "./features/Features";
 import Contact from './contact/Contact'
 import Footer from "./footer/Footer";
@@ -9,12 +10,18 @@ import Footer from "./footer/Footer";
 import '../styles/navbar.css'
 import '../styles/slider.css'
 import '../index.css'
+import '../styles/PopUpMsg.css'
+import '../styles/WhyPanorama.css'
 
 import slider1 from '../images/slider1.png'
 import slider2 from '../images/slider2.jpg'
 import slider3 from '../images/slider3.jpg'
 import slider4 from '../images/slider4.jpg'
 import logo from '../images/logo.svg'
+import xMark from '../images/close.png'
+import floatClif from '../images/floatClif.png'
+
+import callFloatBtn from '../images/callFloatBtn.png'
 
 const imgArr = [
     {
@@ -43,6 +50,24 @@ const imgArr = [
 ]
 
 export default function MainPage() {
+    //Floating Button Appear
+    const scrollRef = useRef()
+    const floatButtonRef = useRef()
+    const [floatBtnClass, setFloatBtnClass] = useState('call_float_btn')
+
+    useEffect(()=>{
+        window.addEventListener('scroll',()=>{
+            if(window.scrollY > scrollRef.current.offsetHeight/2+150){
+                setFloatBtnClass('call_float_btn call_float_btn_active')
+                
+            }else{
+                setFloatBtnClass('call_float_btn')
+            }
+        })
+
+        return  
+    },[window.scrollY])
+    //End Floating Button Appear
 
     const dot0 = useRef()
     const dot1 = useRef()
@@ -53,16 +78,42 @@ export default function MainPage() {
     const navbarLinkFlats = useRef()
     const navbarLinkAboutUs = useRef()
     const navbarLinkAboutProject = useRef()
-    const navbarLinkContact = useRef()
     const sliderHeaderRef = useRef()
     const EngLanguage = useRef()
     const RusLanguage = useRef()
     const sliderBtnRef = useRef()
 
+    // Email send Functionality
+    const form = useRef();
+    const inputNameRef = useRef()
+    const inputNumberRef = useRef()
+    const inputMailRef = useRef()
+    const inputSendref = useRef()
+    const [popUp, setPopUp] = useState('pop_up_msg')
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
+          .then((result) => {
+              console.log(result.text);
+          }, (error) => {
+              console.log(error.text);
+          });
+          e.target.reset()
+    };
+    // End Of Email Functionality
+
+    const whyPanoramaHeaderRef = useRef()
+    const whyPanoramaParagraphRef = useRef()
+    const whyPanoramaBtn = useRef()
+
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
+
     const [sliderClass, setSliderClass] = useState('slider_inner')
+    
 
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
@@ -140,6 +191,7 @@ export default function MainPage() {
             setIsGeo(true)
             setIsRus(false)
 
+            // Languages
             GeoLanguage.current.style.color = '#029FA0'
             EngLanguage.current.style.color = 'black'
             RusLanguage.current.style.color = 'black'
@@ -150,12 +202,18 @@ export default function MainPage() {
 
             sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
             sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
+
+            // why panorama txt
+            whyPanoramaHeaderRef.current.innerHTML = 'რატომ <br/> პანორამა ვარკეთილი?'
+            whyPanoramaParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში. <br/><br/>კორპუსის ძირითადი ნაწილი გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.'
+            whyPanoramaBtn.current.innerHTML = 'დაგვირეკე'
             
         if(localStorage.language === 'eng'){
             setIsEng(true)
             setIsGeo(false)
             setIsRus(false)
 
+            // Languages
             GeoLanguage.current.style.color = 'black'
             EngLanguage.current.style.color = '#029FA0'
             RusLanguage.current.style.color = 'black'
@@ -165,12 +223,18 @@ export default function MainPage() {
             navbarLinkAboutProject.current.innerHTML = 'About Project'
             sliderHeaderRef.current.innerHTML = ''
             sliderBtnRef.current.innerHTML = 'Contact Us'
+
+            // why panorama txt
+            whyPanoramaHeaderRef.current.innerHTML = 'Why <br/> Panorama Varketili?'
+            whyPanoramaParagraphRef.current.innerHTML =  'Experience breathtaking panoramic views of Tbilisi and the Tbilisi Sea from our new project, Panorama Varketili. Located in a vibrant and exciting part of the city, this building offers a living experience like no other'    
+            whyPanoramaBtn.current.innerHTML = 'Contact Us'
             
         }else if(localStorage.language === 'rus'){
             setIsEng(false)
             setIsGeo(false)
             setIsRus(true)
 
+            // Languages
             GeoLanguage.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
             RusLanguage.current.style.color = '#029FA0'
@@ -180,21 +244,49 @@ export default function MainPage() {
             navbarLinkAboutProject.current.innerHTML = ''
             sliderHeaderRef.current.innerHTML = ''
             sliderBtnRef.current.innerHTML = ''
+
+            // why panorama txt
+            whyPanoramaHeaderRef.current.innerHTML = ''
+            whyPanoramaParagraphRef.current.innerHTML = ''
+            whyPanoramaBtn.current.innerHTML = ''
         }
     },[isEng, isGeo, isRus])
 
-    // useEffect(()=>{
-    //     const sliderTimeOut = setTimeout(()=>{
-    //         setSliderClass('slider_inner act')
-    //     },300)
-
-    //     return()=>{
-    //         clearTimeout(sliderTimeOut)
-    //     }
-    // },[])
-
+   
     return(
         <>
+
+        <div className={popUp}>
+            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+
+            <div className="pop_up_msg_inner">
+
+                <img src={xMark} className="xMark" alt="xmarkBtn" onClick={()=>setPopUp('pop_up_msg')}/>
+                
+                <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
+
+                <form ref={form} onSubmit={sendEmail}>
+                    <div className="pop_up_msg_inner_top">
+                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
+                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
+                    </div>
+
+                    <div className="pop_up_msg_inner_middle">
+                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა" important="true"/>
+                    </div>
+
+                    <div className="pop_up_msg_inner_bottom">
+                        <div className="pop_up_msg_inner_bottom submit_btn">
+                            <button type="submit">
+                                <span ref={inputSendref}>გაგზავნა</span>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        
         <div className='Navbar'>
             <img className="logo" src={logo} />
 
@@ -214,7 +306,7 @@ export default function MainPage() {
             </div>
         </div>
 
-        <div className="slider">
+        <div className="slider" ref={scrollRef}>
             <div className={sliderClass}>
             
 
@@ -229,7 +321,7 @@ export default function MainPage() {
             {/* სლაიდერის სათაური */}
             <h1 className="slider_header" ref={sliderHeaderRef}>პანორამა ვარკეთილი</h1>
 
-            <div className="slider_btn">
+            <div className="slider_btn" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
                 <span ref={sliderBtnRef}>დაგვირეკე</span>
             </div>
 
@@ -275,9 +367,31 @@ export default function MainPage() {
             </div>    
         </div>
 
-        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} />
+        <img 
+            src={callFloatBtn} 
+            ref={floatButtonRef} 
+            className={floatBtnClass} 
+            onClick={()=> setPopUp('pop_up_msg pop_up_active')}
+        />
 
-        <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} />
+        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus}  />
+
+        {/* <WhyPanorama iseng={isEng} isgeo={isGeo} isrus={isRus} /> */}
+
+        <div className='why_panorama' onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
+            <div className="header_txt_btn">
+                <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef}>რატომ <br/> პანორამა ვარკეთილი?</h1>
+                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef}>პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში. <br/><br/>
+                    კორპუსის ძირითადი ნაწილი გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, 
+                    რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.
+                </p>
+                <div className="why_panorama_btn" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
+                    <span ref={whyPanoramaBtn}>დაგვირეკე</span>
+                </div>
+            </div>
+
+            <img className="float_cliff" src={floatClif}/>
+        </div>
 
         <Features iseng={isEng} isgeo={isGeo} isrus={isRus} />
 
