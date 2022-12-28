@@ -385,7 +385,7 @@ export default function MainPage() {
 
         <Flats iseng={isEng} isgeo={isGeo} isrus={isRus}  />
 
-        <div className='why_panorama' onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
+        <div className='why_panorama'>
             <div className="header_txt_btn">
                 <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef}>რატომ <br/> პანორამა ვარკეთილი?</h1>
                 <p className="why_panorama_txt" ref={whyPanoramaParagraphRef}>პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში. <br/><br/>
