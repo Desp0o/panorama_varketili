@@ -394,22 +394,22 @@
     .circle_txt2{
         position: absolute;
         top: 85%;
-        left: 17%;
+        left: 11%;
     }
     .msgBox2{
         top: 65%;
-        left: 14.5%;
+        left: 8.5%;
     }
 
     /* მესამე წრე */
     .circle_txt3{
         position: absolute;
         top: -70%;
-        right: 18%;
+        right: 13%;
     }
     .msgBox3{
         top: -90%;
-        right: 16%;
+        right: 10%;
     }
 
     /* მეოთხე წრე */
