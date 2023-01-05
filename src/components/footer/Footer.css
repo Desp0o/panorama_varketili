@@ -113,13 +113,17 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
+      width: 100%;
     }
     .responsive_footer-cl1,
     .responsive_footer-cl2{
+      width: 100%;
       padding-left: 20px;
       width: 100%;
       display: flex;
       gap: 19px;
+      box-sizing: border-box;
+      
     }
     .responsive_footer-cl1 span{
       font-family: 'bpg web 001';

@@ -171,7 +171,7 @@ export default function Footer(props){
                 <div className="responsive_footer-cl2">
                     <span>592 23 43 22</span>
                     <span>info@twins.com.ge</span>
-                    <span>თბილისი, ვიქტორ კუპრაძის ქ.68</span>
+                    <span>თბილისი, ვიქტორ კუპრაძის 68</span>
                 </div>
             </div>
 
