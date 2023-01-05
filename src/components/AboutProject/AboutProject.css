@@ -90,17 +90,18 @@
     justify-content: center;
 }
 
+.circleTXT{
+    font-size: 20px;
+    line-height: 23px;
+    font-family: 'bpg web 001';
+    color: #000000;
+}   
 
 /* წრე ერთი */
 .circle_txt1{
     position: absolute;
     top: -80%;
     left: 4.5%;
-
-    font-size: 20px;
-    line-height: 23px;
-    font-family: 'bpg web 001';
-    color: #000000;
 }
 .msgBox1{
     top: -125%;
@@ -135,11 +136,6 @@
     position: absolute;
     top: 110%;
     left: 13.5%;
-
-    font-size: 20px;
-    line-height: 23px;
-    font-family: 'bpg web 001';
-    color: #000000;
 }
 .msgBox2{
     top: 65%;
@@ -162,11 +158,6 @@
     position: absolute;
     top: -80%;
     right: 16%;
-
-    font-size: 20px;
-    line-height: 23px;
-    font-family: 'bpg web 001';
-    color: #000000;
 }
 .msgBox3{
     top: -125%;
@@ -190,11 +181,6 @@
     position: absolute;
     top: 110%;
     right: 11%;
-
-    font-size: 20px;
-    line-height: 23px;
-    font-family: 'bpg web 001';
-    color: #000000;
 }
 .msgBox4{
     top: 65%;
@@ -379,5 +365,61 @@
     .ganvadeba_left{
         width: 100%;
         padding-left: 20px;
+    }
+    .range_msg_box{
+        width: 102px;
+        height: 23.25px;
+    }
+    .circleTXT{
+        font-size: 8px;
+        line-height: 9px;
+    }
+    .msgBoxText{
+        font-size: 8px;
+        line-height: 9px;
+    }
+
+    /* პირველი წრე */
+    .circle_txt1{
+        position: absolute;
+        top: -70%;
+        left: 6.5%;
+    }
+    .msgBox1{
+        top: -90%;
+        left: 4.5%;
+    }
+
+    /* მეორე წრე */
+    .circle_txt2{
+        position: absolute;
+        top: 85%;
+        left: 17%;
+    }
+    .msgBox2{
+        top: 65%;
+        left: 14.5%;
+    }
+
+    /* მესამე წრე */
+    .circle_txt3{
+        position: absolute;
+        top: -70%;
+        right: 18%;
+    }
+    .msgBox3{
+        top: -90%;
+        right: 16%;
+    }
+
+    /* მეოთხე წრე */
+    .circle_txt4{
+        position: absolute;
+        top: 85%;
+        right: 12%;
+    }
+    .msgBox4{
+        top: 65%;
+        right: 10%;
     }
   }

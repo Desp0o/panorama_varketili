@@ -232,22 +232,22 @@ export default function AboutProject(){
             <div className="rangesDiv">
 
                 <span className="circle1"><img className="line1" src={line29}/></span>
-                    <p className="circle_txt1">პროექტის დაწყება</p>
+                    <p className="circleTXT circle_txt1">პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox1"><p className="msgBoxText">თებერვალი 2023</p></div>
                 
 
                 <span className="circle2"><img className="line2" src={line29}/></span>
-                    <p className="circle_txt2">პროექტის დაწყება</p>
+                    <p className="circleTXT circle_txt2">პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox2"><p className="msgBoxText">თებერვალი 2023</p></div>
                 
 
                 <span className="circle3"><img className="line3" src={line29}/></span>
-                    <p className="circle_txt3">პროექტის დაწყება</p>
+                    <p className="circleTXT circle_txt3">პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox3"><p className="msgBoxText">თებერვალი 2023</p></div>
 
 
                 <span className="circle4"><img className="line4" src={line29}/></span>
-                    <p className="circle_txt4">პროექტის დაწყება</p>
+                    <p className="circleTXT circle_txt4">პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox4"><p className="msgBoxText">თებერვალი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
