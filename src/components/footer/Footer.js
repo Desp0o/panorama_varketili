@@ -151,6 +151,7 @@ export default function Footer(props){
                     <ul>
                         <li ref={footerLinkContact}>კონტაქტი</li>
                         <li>592 23 43 22</li>
+                        <li>info@Twins.com.ge</li>
                     </ul>
 
                 </div>
@@ -169,7 +170,7 @@ export default function Footer(props){
 
                 <div className="responsive_footer-cl2">
                     <span>592 23 43 22</span>
-                    <span>იმეილი</span>
+                    <span>info@twins.com.ge</span>
                     <span>თბილისი, ვიქტორ კუპრაძის ქ.68</span>
                 </div>
             </div>
