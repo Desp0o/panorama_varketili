@@ -72,4 +72,10 @@
 
 
 @media (max-width:769px) {
+    .features_header{
+        margin-left: 19px;
+    }
+    .feature_bg{
+        margin-top: 40px;
+    }
 }

@@ -208,7 +208,7 @@ export default function Apartment102() {
             <ul className="nav_menu">
                 <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
                 <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
+                <li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li>
             </ul>
 
             <div className="languages">

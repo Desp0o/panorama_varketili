@@ -69,12 +69,12 @@
     margin-top: 20px;
 
     font-family: 'BPG Mrgvlovani';
-font-style: normal;
-font-weight: 400;
-font-size: 20px;
-line-height: 27px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
 
-color: #000000;
+    color: #000000;
 }
 
 .number_name{
@@ -92,6 +92,19 @@ color: #000000;
     }
     .apartment_main_inner_left{
         width: 100%;
+    }
+    .apartment_main_inner_right{
+        width: 100%;
+    }
+    .room{
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-top: 40px;
+    }
+    .apHeader{
+        text-align: center;
+        padding-bottom:0;
+        padding-top: 47px;
     }
 }
 

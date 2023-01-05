@@ -272,7 +272,7 @@ export default function MainPage() {
               }else{
                 setIndex(index+1)
               }
-        },7000)
+        },5000)
     }
 
         return ()=>{

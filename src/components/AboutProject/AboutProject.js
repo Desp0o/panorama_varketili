@@ -76,8 +76,7 @@ export default function AboutProject(){
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
     
-    const [data, setData] = useState(50)
-    const [bbb, setbbb]  = useState('line1')
+    const [data, setData] = useState(100)
 
     const [fadeOut, setFadeOut] = useState('about_proj_page')
     const [map, setMap] = useState('map')
@@ -136,15 +135,6 @@ export default function AboutProject(){
             clearTimeout(fadeOutTimer)
         })
     },[])
-
-    useEffect(()=>{
-
-        if(data >= 6 && data <=12){
-            setbbb('line1 line_active')
-        }else{
-            setbbb('line1')
-        }
-    },[data])
 
     function makeENG() {
         setIsEng(true)
@@ -241,10 +231,25 @@ export default function AboutProject(){
 
             <div className="rangesDiv">
 
-                <span className="circle1"><img className={bbb} src={line29}/></span>
+                <span className="circle1"><img className="line1" src={line29}/></span>
+                    <p className="circle_txt1">პროექტის დაწყება</p>
+                    <div className="range_msg_box msgBox1"><p className="msgBoxText">თებერვალი 2023</p></div>
+                
+
                 <span className="circle2"><img className="line2" src={line29}/></span>
+                    <p className="circle_txt2">პროექტის დაწყება</p>
+                    <div className="range_msg_box msgBox2"><p className="msgBoxText">თებერვალი 2023</p></div>
+                
+
                 <span className="circle3"><img className="line3" src={line29}/></span>
+                    <p className="circle_txt3">პროექტის დაწყება</p>
+                    <div className="range_msg_box msgBox3"><p className="msgBoxText">თებერვალი 2023</p></div>
+
+
                 <span className="circle4"><img className="line4" src={line29}/></span>
+                    <p className="circle_txt4">პროექტის დაწყება</p>
+                    <div className="range_msg_box msgBox4"><p className="msgBoxText">თებერვალი 2023</p></div>
+
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
                 <input className="inputRange" type='range' min='0' max='200' step='1' value={data} onChange={(e)=> setData(e.target.value)} />
             
