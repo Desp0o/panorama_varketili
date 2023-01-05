@@ -219,55 +219,32 @@
 
 @media (max-width:769px) {
     .slider_header{
-        font-size: 30px;
-    }
-    .slider_header{
+        font-size: 35px;
+        line-height: 40.74px;
         position: absolute;
         z-index: 1;
-        bottom: 210px;
-        left: 10.92px;
-    
-        color: #F4F3E7;
-        font-family: 'bpg web 001';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 79px;
+        bottom: 82px;
+        left: 17px;
     }
-    
     .slider_paragraph{
         position: absolute;
-        z-index: 1;
-        bottom: 140px;
-        left: 10.92px;
-    
-        font-family: 'bpg web 001';
-        font-weight: 400;
-        font-size: 15px;
-    
-        color: #F9F9F3;
-        opacity: 0;
-    
-        transition: all 0.8s ease;
+        font-size: 11px;
+        bottom: 8px;
+        left: 19px;
+        width: 217px;
     }
     
     .text_active{
         opacity: 1;
-        bottom: 178px;
+        bottom: 58px;
+        width: 217px;
     }
     
     .slider_btn{
-        position: absolute;
-        z-index: 1;
-        width: 233.18px;
-        height: 53.3px;
-        left: 10.92px;
-        bottom: 77px;
-    
-        background: #029FA0;
-        border-radius: 20px;
-    
-        cursor: pointer;
-        transition: all 0.4s ease;
+        display: none;
+    }
+    .prev_button,
+    .next_button{
+        display: none;
     }
 }
