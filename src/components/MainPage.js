@@ -261,6 +261,7 @@ export default function MainPage() {
         }
     },[isEng, isGeo, isRus])
 
+    // სლაიდერის ავტომატიზაცია რესპინსივზე
     useEffect(()=>{
         let sliderInterval = null
 

@@ -85,6 +85,9 @@
   .responsive_footer{
     display: none;
   }
+  .responsive_footer_social_logo{
+    display: none;
+  }
   @media (max-width:769px) {
     
     .footer{
