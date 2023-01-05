@@ -292,7 +292,7 @@ export default function MainPage() {
                 
                 <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
 
-                <form ref={form} onSubmit={sendEmail}>
+                <form className="popUpForm" ref={form} onSubmit={sendEmail}>
                     <div className="pop_up_msg_inner_top">
                         <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
                         <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
