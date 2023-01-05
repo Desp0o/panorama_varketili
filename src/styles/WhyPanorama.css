@@ -19,7 +19,7 @@
 }
 
 .why_panorama_h1{
-    font-family: 'bpg web 001';
+    font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
     font-size: 40px;
@@ -87,25 +87,33 @@
 
 @media (max-width:769px) {
     .why_panorama{
-        flex-direction: column-reverse;
+        flex-direction: column;
         height: fit-content;
         gap: 0;
         padding-left: 10px;
         padding-bottom: 50px;
         padding-right: 0;
     }
+    .why_panorama_btn{
+        display: none;
+    }
 
     .float_cliff{
         height: unset;
         width: 80%;
+        margin-top: 50px;
     }
 
     .why_panorama_h1{
-        font-family: 'BPG Arial';
+        font-family: 'BPG Mrgvlovani';
         font-style: normal;
-        font-weight: 700;
-        font-size: 24px;
-        line-height:normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
         color: #171F17;
+    }
+
+    .why_panorama_txt{
+
     }
 }

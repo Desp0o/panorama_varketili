@@ -153,26 +153,41 @@
     height: 31px;
 }
 
+.flats_plus_responsive{
+    display: none;
+}
+
 @media (max-width:769px) {
     .cards{
         flex-direction: column;
         align-items: center;
+        gap: 72px;
     }
     .card{
         width: 90%;
         margin: auto;
     }
-    .card_render_main_screen{
-        object-fit: scale-down;
+    .for_res_hide{
+        display: none;
     }
     .flats_header{
-        font-size: 18px;
+        font-size: 17px;
     }
     .headers_and_more{
-        width: 95%;
-        justify-content: space-between;
-        padding-left: 10px;
-        padding-right: 10px;
+        padding-left: 20px;
+    }
+    .more_flats_responsive{
+        display: flex;
+        font-family: 'BPG Nino Mtavruli';
+        position: relative;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        color: #000000;
+        transition:all 0.4s ease;
+    }
+    .for_resp_margin_top{
+        margin-top: 72px;
     }
 }
 

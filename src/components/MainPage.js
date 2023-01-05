@@ -261,6 +261,23 @@ export default function MainPage() {
         }
     },[isEng, isGeo, isRus])
 
+    useEffect(()=>{
+        let sliderInterval = null
+
+        if(document.body.getBoundingClientRect().width<770){
+            sliderInterval = setInterval(()=>{
+            if(index === slideLength-1){
+                setIndex(0)
+              }else{
+                setIndex(index+1)
+              }
+        },7000)
+    }
+
+        return ()=>{
+            clearInterval(sliderInterval)
+        }
+    }, [index])
    
     return(
         <>

@@ -1,6 +1,7 @@
 import {React, useEffect, useState, useRef} from "react";
 import './Footer.css'
 
+import footerInsta from '../../images/responsiveInsta.png'
 
 export default function Footer(props){
     const geoRuningText = useRef()
@@ -153,8 +154,28 @@ export default function Footer(props){
                 </div>
 
                 <div className="footer_bottom_right">
-                    <p ref={twinsC}>(c) თვინს დეველოპმენტი</p>
+                    <p className="copyright" ref={twinsC}>(c) თვინს დეველოპმენტი</p>
                 </div>
+            </div>
+
+            <div className="responsive_footer">
+                <div className="responsive_footer-cl1">
+                    <span>ჩვენ შესახებ</span>
+                    <span>ბინები</span>
+                    <span>მიმდინარე პროექტი</span>
+                </div>
+
+                <div className="responsive_footer-cl2">
+                    <span>ტელეფონი</span>
+                    <span>იმეილი</span>
+                    <span>მისამართი</span>
+                </div>
+            </div>
+
+            <div className="responsive_footer_social_logo">
+                <img className="footerResSocialIcons" src={footerInsta} alt="footer insta" />
+                <img className="footerResSocialIcons" src={footerInsta} alt="footer insta" />
+                <img className="footerResSocialIcons" src={footerInsta} alt="footer insta" />
             </div>
         </div>
     )
