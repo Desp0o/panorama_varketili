@@ -1,5 +1,7 @@
 import {React, useEffect, useState, useRef} from "react";
+import {Link} from  "react-router-dom";
 import './Footer.css'
+import lage from '../aboutUsPage/AboutUsPage'
 
 import footerInsta from '../../images/responsiveInsta.png'
 
@@ -134,9 +136,9 @@ export default function Footer(props){
             <div className="footer_bottom">
                 <div className="footer_bottom_links">
                     <ul>
-                        <li ref={footerLinkAboutUs}>ჩვენ შესახებ</li>
-                        <li ref={footerLinkProjects}>პროექტი</li>
-                        <li ref={footerLinkApartments}>ბინები</li>
+                    <Link to='/components/aboutUsPage/AboutUsPage'><li ref={footerLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                    <Link to='/components/AboutProject/AboutProject'><li ref={footerLinkProjects}>პროექტი</li></Link>
+                    <Link to='/components/Apartments/Apartments'><li ref={footerLinkApartments}>ბინები</li></Link>
                     </ul>
 
                     <ul>
@@ -160,15 +162,15 @@ export default function Footer(props){
 
             <div className="responsive_footer">
                 <div className="responsive_footer-cl1">
-                    <span>ჩვენ შესახებ</span>
-                    <span>ბინები</span>
-                    <span>მიმდინარე პროექტი</span>
+                <Link to='/components/aboutUsPage/AboutUsPage'><span>ჩვენ შესახებ</span></Link>
+                <Link to='/components/Apartments/Apartments'><span>ბინები</span></Link>
+                <Link to='/components/AboutProject/AboutProject'><span>მიმდინარე პროექტი</span></Link>
                 </div>
 
                 <div className="responsive_footer-cl2">
-                    <span>ტელეფონი</span>
+                    <span>592 23 43 22</span>
                     <span>იმეილი</span>
-                    <span>მისამართი</span>
+                    <span>თბილისი, ვიქტორ კუპრაძის ქ.68</span>
                 </div>
             </div>
 
