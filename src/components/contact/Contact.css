@@ -6,14 +6,15 @@
     max-width: 100%;
     padding-left: 75px;
     padding-right: 75px;
+    padding-bottom: 105px;
+    padding-top: 160px;
     gap: 100px;
 }
 
 .contact_left{
-    padding-top: 8px;
     display: flex;
     flex-direction: column;
-    gap: 57px;
+    gap: 75px;
 }
 
 .contact_header{
@@ -61,48 +62,44 @@ input:focus{
 }
 
 .submit_btn{
+    
+    margin-top: 47px;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    height: 45px;
 }
 
 .submit_btn button{
-    margin-top: 40px;
-    width: 147.38px;
-    height: 50.39px;
-    background-color: #029FA0;
-    border-radius: 15px;
-    border: none;
-    cursor: pointer;
-    box-sizing: border-box;
-    border: 1px solid #029FA0;
+    width: 145.6px;
+    height: 45.52px;
+    background: #029FA0;
+    border: 4px solid #91CCCC;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .submit_btn button:hover{
-    background-color: #fff;
+    margin-top: -10px;
 }
 
 button span{
-    font-family: 'bpg web 001';
+    font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 17px;
-    margin-top: 8px;
-    color: #F4F3E7;
-    transition: all 0.4s ease;
-}
+    line-height: 20px;
 
-button:hover span{
-    color: #029FA0;
+    color: #FFFFFF;
 }
 
 .input_fields{
-    box-sizing: border-box;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 72px;
@@ -111,13 +108,13 @@ button:hover span{
 }
 
 .input_fields_top{
-    box-sizing: border-box;
     width: 100%;
     display: flex;
     gap: 25px;
 }
 
 .input_fields_bottom{
+    position: relative;
     box-sizing: border-box;
     width: 100%;
 }
@@ -129,7 +126,7 @@ button:hover span{
 
 
     border: 1px solid #171F17;
-    border-radius: 15px;
+    border-radius: 30px;
 }
 
 .input_fields_bottom input{
@@ -139,8 +136,50 @@ button:hover span{
 
 
     border: 1px solid #171F17;
-    border-radius: 15px;
+    border-radius: 30px !important;
 }
+
+.input1_label1{
+    position: relative;
+}
+.placeholder_name{
+    font-family: 'BPG Mrgvlovani';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    
+    position: absolute;
+    top: -35px;
+    left: 33px;
+}
+
+.input2_label2{
+    position: relative;
+}
+.placeholder_number{
+    font-family: 'BPG Mrgvlovani';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    
+    position: absolute;
+    top: -35px;
+    left: 33px;
+}
+.placeholder_email{
+    font-family: 'BPG Mrgvlovani';
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(0, 0, 0, 0.6);
+    
+    position: absolute;
+    top: -35px;
+    left: 33px;
+}
+
 
 @media (max-width:769px) {
     .contact{
@@ -148,3 +187,24 @@ button:hover span{
     }
 }
 
+
+@media (max-width:1400px) {
+    .contact{
+        gap:87px;
+    }
+
+    .input_fields_top input{
+        width: 255px;
+        height: 55px;
+    }
+
+    .input_fields_bottom input{
+        width: 535px;
+        height: 55px;
+        box-sizing: border-box;
+    
+    
+        border: 1px solid #171F17;
+        border-radius: 15px;
+    }
+}
