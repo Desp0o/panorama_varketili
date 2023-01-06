@@ -33,16 +33,118 @@ export default function Contact(props){
     },[props.iseng, props.isrus, props.isgeo])
 
     const sendEmail = (e) => {
-        e.preventDefault();
+        if(numberBoolean === true && nameBoolean === true && mailBoolean === true){
+            e.preventDefault();
     
-        emailjs.sendForm('service_j7zw3pp', 'template_7suk37t', form.current, 'lf3j-nerT-hfKW-Fi')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          e.target.reset()
+            emailjs.sendForm('service_j7zw3pp', 'template_7suk37t', form.current, 'lf3j-nerT-hfKW-Fi')
+              .then((result) => {
+                  console.log(result.text);
+              }, (error) => {
+                  console.log(error.text);
+              });
+              e.target.reset()
+        }
+
+        if(numberBoolean === false){
+            e.preventDefault();
+            numberInputErrorMsg.current.style.display = 'block'
+            inputNumberRef.current.style.border = "2px solid #DD1A1A"
+            inputNumberRef.current.style.backgroundColor = ''
+        }
+
+        if(nameBoolean === false){
+            e.preventDefault();
+            inputNameRef.current.style.border = "2px solid #DD1A1A"
+            inputNameRef.current.style.backgroundColor = ''
+        }
+
+        if(mailBoolean === false){
+            e.preventDefault();
+            inputMailRef.current.style.border = "2px solid #DD1A1A"
+            inputMailRef.current.style.backgroundColor = ''
+        }
+        
+        console.log(mailBoolean + ' meili ref');
+        e.preventDefault();
+        
       };
+
+
+    // ///////////////////
+    // ნომრის ინპუტის პარამეტრები
+    // //////////////////
+    const numberInputErrorMsg = useRef()
+    const [numberBoolean, setNumberBoolean] = useState(false)
+    const [inputNumber, setInputNumber] = useState('')
+
+    const numberHandler = event => {
+        setInputNumber(event.target.value)
+    }
+
+    useEffect(()=>{
+        if(inputNumber.length >= 9 && !inputNumber.includes('a')){
+            setNumberBoolean(true)
+            numberInputErrorMsg.current.style.display = 'none'
+            inputNumberRef.current.style.border = ""
+            
+        }else if(inputNumber.length === 0){
+            inputNumberRef.current.style.border = ""
+            numberInputErrorMsg.current.style.display = 'none'
+            setNumberBoolean(false)
+        }else{
+            setNumberBoolean(false)
+        }
+
+        return
+    },[inputNumber,numberBoolean])
+
+    // ///////////////////
+    // სახელის ინპუტის პარამეტრები
+    // //////////////////
+    const [inputName, setInputName] = useState('')
+    const [nameBoolean, setnameBoolean] = useState(false)
+
+    const nameHandler = event => {
+        setInputName(event.target.value)
+    }
+
+    useEffect(()=>{
+        if(inputName.length > 0){
+            setnameBoolean(true)
+            inputNameRef.current.style.border = ""
+        }else{
+            setnameBoolean(false)
+        }
+
+        return
+    },[inputName,nameBoolean])
+
+    // ///////////////////
+    //  ინპუტის პარამეტრები
+    // //////////////////
+    const [inputMail, setInputMail] = useState('')
+    const [mailBoolean, setMailBoolean] = useState(false)
+
+    const mailHandler = event => {
+        setInputMail(event.target.value)
+    }
+
+    useEffect(()=>{
+        if(inputMail.length > 0){
+            setMailBoolean(true)
+            inputMailRef.current.style.border = ""
+        }else{
+            setMailBoolean(false)
+        }
+
+        return
+    },[inputMail,mailBoolean])
+
+
+
+
+
+
 
     return(
         <div className="contact">
@@ -64,12 +166,13 @@ export default function Contact(props){
 
                             <div className="input1_label1">
                                 <span className="placeholder_name">სახელი *</span>
-                                <input ref={inputNameRef} type="text" name="user_name"/>
+                                <input ref={inputNameRef} type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <span className="placeholder_number">ნომერი *</span>
-                                <input ref={inputNumberRef} type="text" name="user_number"/>
+                                <input ref={inputNumberRef} type="text" name="user_number" onChange={numberHandler}/>
+                                <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
                             
                             
@@ -77,7 +180,7 @@ export default function Contact(props){
 
                         <div className="input_fields_bottom">
                             <span className="placeholder_email">ელ-ფოსტა *</span>
-                            <input ref={inputMailRef} className="email" type="email" name="user_email"/>
+                            <input ref={inputMailRef} className="email" type="text" name="user_email" onChange={mailHandler}/>
                         </div>
 
 
