@@ -1,7 +1,7 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
-import logo from '../../../images/logo.svg'
+import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m102inner.png'
 

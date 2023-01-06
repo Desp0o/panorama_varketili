@@ -1,7 +1,7 @@
 import {React, useEffect, useState, useRef} from "react";
 import emailjs from '@emailjs/browser';
 import {Link} from  "react-router-dom";
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.png'
 import '../../index.css'
 import Footer from "../footer/Footer";
 import'./AboutProject.css'

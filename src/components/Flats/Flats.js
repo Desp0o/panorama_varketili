@@ -38,21 +38,17 @@ const renderArr =[
 
 export default function Flats(props){
     const flatsHeaderRef = useRef()
-    const seeMoreRef = useRef()
        
     useEffect(()=>{
         flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
-        seeMoreRef.current.innerHTML = 'მეტი'
 
 
         if(localStorage.language === 'eng'){
 
             flatsHeaderRef.current.innerHTML = 'Choose your ideal apartment'
-            seeMoreRef.current.innerHTML = 'See More'
 
         }else if(localStorage.language === 'rus'){
             flatsHeaderRef.current.innerHTML = ''
-            seeMoreRef.current.innerHTML = ''
         }
 
         
@@ -64,13 +60,6 @@ export default function Flats(props){
         <div className="flats">
             <div className="headers_and_more">
                 <h2 className="flats_header" ref={flatsHeaderRef}>შეარჩიე სასურველი ბინა</h2>
-
-                <div className="flats_plus">
-                    <Link to='/components/Apartments/Apartments'><h2 className="more_flats for_res_hide" ref={seeMoreRef}>მეტი</h2></Link>
-                    <svg className="svgPlus for_res_hide" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path className="plusPath" d="M4.12988 8.57489V5.29364H0.536133V3.57489H4.12988V0.29364H5.8584V3.57489H9.45215V5.29364H5.8584V8.57489H4.12988Z" />
-                    </svg>
-                </div>
             </div>
 
            
@@ -104,12 +93,12 @@ export default function Flats(props){
                 }
             </div>
 
-            <div className="flats_plus for_resp_margin_top">
-                    <Link to='/components/Apartments/Apartments'><h2 className="more_flats" ref={seeMoreRef}>მეტი</h2></Link>
-                    <svg className="svgPlus" width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path className="plusPath" d="M4.12988 8.57489V5.29364H0.536133V3.57489H4.12988V0.29364H5.8584V3.57489H9.45215V5.29364H5.8584V8.57489H4.12988Z" />
-                    </svg>
+            <div className="btnOuter">
+                <div className="seeMoreBtn">
+                    <p>მეტი ბინა</p>
+                </div>
             </div>
+
         </div>
     )
 }

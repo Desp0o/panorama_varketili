@@ -16,9 +16,10 @@ import slider1 from '../images/slider1.png'
 import slider2 from '../images/slider2.jpg'
 import slider3 from '../images/slider3.jpg'
 import slider4 from '../images/slider4.jpg'
-import logo from '../images/logo.svg'
+import logo from '../images/logo.png'
 import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
+import info from '../images/info.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
 
@@ -115,7 +116,6 @@ export default function MainPage() {
 
     const whyPanoramaHeaderRef = useRef()
     const whyPanoramaParagraphRef = useRef()
-    const whyPanoramaBtn = useRef()
 
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
@@ -213,9 +213,9 @@ export default function MainPage() {
             sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
 
             // why panorama txt
-            whyPanoramaHeaderRef.current.innerHTML = 'რატომ <br/> პანორამა ვარკეთილი?'
-            whyPanoramaParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში. <br/><br/>კორპუსის ძირითადი ნაწილი გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.'
-            whyPanoramaBtn.current.innerHTML = 'დაგვირეკე'
+            whyPanoramaHeaderRef.current.innerHTML = 'რატომ პანორამა ვარკეთილი?'
+            whyPanoramaParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში.'
+           
             
         if(localStorage.language === 'eng'){
             setIsEng(true)
@@ -234,9 +234,9 @@ export default function MainPage() {
             sliderBtnRef.current.innerHTML = 'Contact Us'
 
             // why panorama txt
-            whyPanoramaHeaderRef.current.innerHTML = 'Why <br/> Panorama Varketili?'
+            whyPanoramaHeaderRef.current.innerHTML = 'Why Panorama Varketili?'
             whyPanoramaParagraphRef.current.innerHTML =  'Experience breathtaking panoramic views of Tbilisi and the Tbilisi Sea from our new project, Panorama Varketili. Located in a vibrant and exciting part of the city, this building offers a living experience like no other'    
-            whyPanoramaBtn.current.innerHTML = 'Contact Us'
+            
             
         }else if(localStorage.language === 'rus'){
             setIsEng(false)
@@ -257,7 +257,7 @@ export default function MainPage() {
             // why panorama txt
             whyPanoramaHeaderRef.current.innerHTML = ''
             whyPanoramaParagraphRef.current.innerHTML = ''
-            whyPanoramaBtn.current.innerHTML = ''
+          
         }
     },[isEng, isGeo, isRus])
 
@@ -315,21 +315,29 @@ export default function MainPage() {
         </div>
         
         <div className='Navbar'>
-            <img className="logo" src={logo} />
 
-            <ul className="nav_menu">
-                <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
-                <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
+            <div className="navbar_inner">
                 
-            </ul>
+                {/* ლოგო */}
+                <img className="logo" src={logo} />
 
-            <div className="languages">
-                <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
-                <span>/</span>
-                <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
-                <span>/</span>
-                <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+                <div className="menu_and_langs">
+                    {/* მენუ */}
+                    <ul className="nav_menu">
+                        <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
+                        <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                        <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                    </ul>
+
+                    {/* ენები */}
+                    <div className="languages">
+                        <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
+                        <span>/</span>
+                        <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
+                        <span>/</span>
+                        <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -405,13 +413,18 @@ export default function MainPage() {
 
         <div className='why_panorama'>
             <div className="header_txt_btn">
-                <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef}>რატომ <br/> პანორამა ვარკეთილი?</h1>
-                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef}>პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში. <br/><br/>
-                    კორპუსის ძირითადი ნაწილი გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, 
-                    რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.
-                </p>
+                <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef}>რატომ პანორამა ვარკეთილი?</h1>
+                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef}>პანორამა ვარკეთილი ჩვენი ახალი პროექტია, ჰუალინგ თბილისი პლაზის ახალ ქალაქში.</p>
+
+                <h1 className="why_panorama_h1">კორპუსის ძირითადი ნაწილი</h1>
+                <p className="why_panorama_txt">გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.</p>
+
+                <h1 className="why_panorama_h1">პანორამა ვარკეთილი ჩვენი ახალი</h1>
+                <p className="why_panorama_txt">გარშემორტყმულია პანორამული ხედებით თბილისსა და თბილისის ზღვაზე, რომელსაც ანალოგი არ ჰყავს ქალაქის ამ ნაწილში.</p>
+
                 <div className="why_panorama_btn" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
-                    <span ref={whyPanoramaBtn}>დაგვირეკე</span>
+                    <img className="why_panorama_btn_icon" src={info} alt="thumbUp" />
+                    <Link to='/components/AboutProject/AboutProject'><p className="why_panorama_btn_paragraph">გაიგე დეტალურად პროექტის შესახებ</p></Link>
                 </div>
             </div>
 

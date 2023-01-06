@@ -2,7 +2,7 @@ import {React, useEffect, useState, useRef} from "react";
 import emailjs from '@emailjs/browser';
 import {Link} from  "react-router-dom";
 import Footer from '../footer/Footer'
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo.png'
 import './Apartments.css'
 import '../../styles/PopUpMsg.css'
 
