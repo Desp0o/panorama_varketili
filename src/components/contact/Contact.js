@@ -62,30 +62,30 @@ export default function Contact(props){
             </div>
 
             <div className="contact_right">
-            <form ref={form} onSubmit={sendEmail}>
+                <form ref={form} onSubmit={sendEmail}>
 
-                <div className="input_fields">
+                    <div className="input_fields">
 
-                    <div className="input_fields_top">
-                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი"/>
-                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი"/>
+                        <div className="input_fields_top">
+                            <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი"/>
+                            <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი"/>
+                        </div>
+
+                        <div className="input_fields_bottom">
+                            <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა"/>
+                        </div>
+
+
                     </div>
 
-                    <div className="input_fields_bottom">
-                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა"/>
+                    
+                    <div className="submit_btn">
+                        <button type="submit">
+                            <span ref={inputSendref}>გაგზავნა</span>
+                        </button>
                     </div>
-
-
-                </div>
-
                 
-                <div className="submit_btn">
-                    <button type="submit">
-                        <span ref={inputSendref}>გაგზავნა</span>
-                    </button>
-                </div>
-            
-            </form>
+                </form>
             </div>
         </div>
     )
