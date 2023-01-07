@@ -77,10 +77,6 @@ input:focus{
     cursor: pointer;
 }
 
-.submit_btn button:hover{
-    margin-top: -5px;
-}
-
 button span{
     font-family: 'BPG Mrgvlovani';
     font-style: normal;

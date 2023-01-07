@@ -62,3 +62,10 @@ a{
   src: url('../src/fonts/bpg_aria.ttf');
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('../src/fonts/Roboto-Regular.ttf');
+  font-display: swap;
+}
+

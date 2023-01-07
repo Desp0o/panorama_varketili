@@ -92,8 +92,8 @@
 
 
 .call_float_btn{
-    width: 61px;
-    height: 61px;
+    width: 59px;
+    height: 59px;
     position: fixed;
     bottom: 30px;
     right: 31.5px;
@@ -101,6 +101,12 @@
     transition: all 0.4s ease;
     cursor: pointer;
     z-index: -1;
+    transition: all 0.4s ease;
+    border-radius: 50%;
+}
+
+.call_float_btn:hover{
+    box-shadow: 0px 0px 15px #029FA0;
 }
 
 .call_float_btn_active{
