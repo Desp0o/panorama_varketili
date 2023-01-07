@@ -7,7 +7,7 @@
     padding-left: 75px;
     padding-right: 75px;
     padding-bottom: 105px;
-    padding-top: 160px;
+    padding-top: 60px;
     gap: 100px;
 }
 
@@ -50,14 +50,13 @@ input{
 }
 
 input:focus{
-    background-color: #D8E5D6;
+    background-color:none;
     transition: all 0.4s ease;
     outline: none;
 }
 
 .submit_btn{
-    
-    margin-top: 47px;
+    margin-top: 73px;
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -79,7 +78,7 @@ input:focus{
 }
 
 .submit_btn button:hover{
-    margin-top: -10px;
+    margin-top: -5px;
 }
 
 button span{
@@ -124,6 +123,7 @@ button span{
 
 .input_fields_top input:focus{
     border: 2px solid #029FA0;
+    background-color: #D8E5D6;
 }
 
 .input_fields_bottom input{
@@ -137,6 +137,7 @@ button span{
 
 .input_fields_bottom input:focus{
     border: 2px solid #029FA0;
+    background-color: #D8E5D6;
 }
 
 .input1_label1{
@@ -177,6 +178,20 @@ button span{
     
     position: absolute;
     bottom: -35px;
+    right: 33px;
+
+    display: none;
+}
+
+.placeholder_email_error{
+    font-family: 'BPG Mrgvlovani';
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #9B0D0D;
+    
+    position: absolute;
+    bottom: -35px;
     left: 33px;
 
     display: none;
@@ -195,6 +210,13 @@ button span{
     left: 33px;
 }
 
+.error_icon{
+    position: absolute;
+    right: 23px;
+    top:15.87px;
+
+    display: none;
+}
 
 @media (max-width:769px) {
     .contact{
@@ -219,7 +241,21 @@ button span{
         box-sizing: border-box;
     
     
-        border: 1px solid #171F17;
+        border: 2px solid #171F17;
         border-radius: 15px;
+    }
+
+    .placeholder_number_error{
+        font-family: 'BPG Mrgvlovani';
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 14px;
+        color: #9B0D0D;
+        
+        position: absolute;
+        bottom: -35px;
+        right: 20px;
+    
+        display: none;
     }
 }

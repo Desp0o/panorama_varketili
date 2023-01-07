@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 
 import './Contact.css'
 
+import errorIcon from '../../images/errorIcon.png'
+
 export default function Contact(props){
     const form = useRef();
     const contactHeaderRef = useRef()
@@ -32,6 +34,9 @@ export default function Contact(props){
 
     },[props.iseng, props.isrus, props.isgeo])
 
+    useEffect(()=>{
+
+    },[])
     const sendEmail = (e) => {
         if(numberBoolean === true && nameBoolean === true && mailBoolean === true){
             e.preventDefault();
@@ -43,28 +48,34 @@ export default function Contact(props){
                   console.log(error.text);
               });
               e.target.reset()
+              setInputMail('')
+              setInputNumber('')
+              setInputName('')
         }
 
         if(numberBoolean === false){
             e.preventDefault();
             numberInputErrorMsg.current.style.display = 'block'
+            numberErrorIconRef.current.style.display = 'block'
             inputNumberRef.current.style.border = "2px solid #DD1A1A"
-            inputNumberRef.current.style.backgroundColor = ''
+            inputNumberRef.current.style.backgroundColor = 'white'
         }
 
         if(nameBoolean === false){
             e.preventDefault();
-            inputNameRef.current.style.border = "2px solid #DD1A1A"
             inputNameRef.current.style.backgroundColor = ''
+            inputNameRef.current.style.backgroundColor = 'white'
         }
 
         if(mailBoolean === false){
             e.preventDefault();
             inputMailRef.current.style.border = "2px solid #DD1A1A"
             inputMailRef.current.style.backgroundColor = ''
+            inputMailRef.current.style.backgroundColor = 'white'
+            emailInputErrorMsg.current.style.display = 'block'
+            mailErrorIconRef.current.style.display = 'block'
         }
         
-        console.log(mailBoolean + ' meili ref');
         e.preventDefault();
         
       };
@@ -74,6 +85,7 @@ export default function Contact(props){
     // ნომრის ინპუტის პარამეტრები
     // //////////////////
     const numberInputErrorMsg = useRef()
+    const numberErrorIconRef = useRef()
     const [numberBoolean, setNumberBoolean] = useState(false)
     const [inputNumber, setInputNumber] = useState('')
 
@@ -82,14 +94,19 @@ export default function Contact(props){
     }
 
     useEffect(()=>{
-        if(inputNumber.length >= 9 && !inputNumber.includes('a')){
+        const regex = /^[0-9+]+$/;
+        if(inputNumber.length >= 9 && regex.test(inputNumber)){
             setNumberBoolean(true)
             numberInputErrorMsg.current.style.display = 'none'
+            numberErrorIconRef.current.style.display = 'none'
             inputNumberRef.current.style.border = ""
+            inputNumberRef.current.style.backgroundColor = ''
             
         }else if(inputNumber.length === 0){
             inputNumberRef.current.style.border = ""
+            numberErrorIconRef.current.style.display = 'none'
             numberInputErrorMsg.current.style.display = 'none'
+            inputNumberRef.current.style.backgroundColor = ''
             setNumberBoolean(false)
         }else{
             setNumberBoolean(false)
@@ -112,6 +129,7 @@ export default function Contact(props){
         if(inputName.length > 0){
             setnameBoolean(true)
             inputNameRef.current.style.border = ""
+            inputNameRef.current.style.backgroundColor = ''
         }else{
             setnameBoolean(false)
         }
@@ -120,8 +138,10 @@ export default function Contact(props){
     },[inputName,nameBoolean])
 
     // ///////////////////
-    //  ინპუტის პარამეტრები
+    // მეილის ინპუტის პარამეტრები
     // //////////////////
+    const emailInputErrorMsg = useRef()
+    const mailErrorIconRef = useRef()
     const [inputMail, setInputMail] = useState('')
     const [mailBoolean, setMailBoolean] = useState(false)
 
@@ -130,9 +150,19 @@ export default function Contact(props){
     }
 
     useEffect(()=>{
-        if(inputMail.length > 0){
+        const mailCheck = /[@]/ ;
+        if(inputMail.length > 6 && mailCheck.test(inputMail)){
             setMailBoolean(true)
             inputMailRef.current.style.border = ""
+            emailInputErrorMsg.current.style.display = 'none'
+            mailErrorIconRef.current.style.display = 'none'
+            inputMailRef.current.style.backgroundColor = ''
+        }else if(inputMail.length === 0){
+            inputMailRef.current.style.border = ""
+            emailInputErrorMsg.current.style.display = 'none'
+            mailErrorIconRef.current.style.display = 'none'
+            inputMailRef.current.style.backgroundColor = ''
+            setMailBoolean(false)
         }else{
             setMailBoolean(false)
         }
@@ -165,11 +195,13 @@ export default function Contact(props){
                         <div className="input_fields_top">
 
                             <div className="input1_label1">
+                                
                                 <span className="placeholder_name">სახელი *</span>
                                 <input ref={inputNameRef} type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
+                                <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                                 <span className="placeholder_number">ნომერი *</span>
                                 <input ref={inputNumberRef} type="text" name="user_number" onChange={numberHandler}/>
                                 <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
@@ -179,8 +211,10 @@ export default function Contact(props){
                         </div>
 
                         <div className="input_fields_bottom">
+                            <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                             <span className="placeholder_email">ელ-ფოსტა *</span>
-                            <input ref={inputMailRef} className="email" type="text" name="user_email" onChange={mailHandler}/>
+                            <input ref={inputMailRef}  type="text" name="user_email" onChange={mailHandler}/>
+                            <span ref={emailInputErrorMsg} className="placeholder_email_error">მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                         </div>
 
 

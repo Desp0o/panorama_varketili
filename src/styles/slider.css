@@ -74,7 +74,7 @@
     position: absolute;
     z-index: 1;
 
-    top: 135px;
+    top: 171px;
     width: 40px;
     height: 40px;
 
@@ -185,7 +185,7 @@
     width: 168.02px;
     height: 50.01px;
     left: 75px;
-    bottom: 77px;
+    bottom: 51px;
 
     display: flex;
     align-items: center;

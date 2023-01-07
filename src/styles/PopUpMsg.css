@@ -53,7 +53,7 @@
     box-sizing: border-box;
     height: 63px;
     border-radius: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.596);
+    border: 2px solid rgba(0, 0, 0, 0.596);
     -webkit-appearance: none;
 }
 
