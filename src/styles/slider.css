@@ -217,15 +217,17 @@
 
 @media (max-width:769px) {
     .slider_header{
-        bottom: 120px;
+        bottom: 130px;
         left: 50%;
         width: 317px;
+        max-width: 98%;
         transform: translateX(-50%);
         color: #FFFFFF;
         font-family: 'BPG Nino Mtavruli';
         font-style: normal;
         font-weight: 700;
         font-size: 30px;
+        line-height: 34px;
     }
     .slider_paragraph{
         
@@ -269,5 +271,9 @@
     .prev_button,
     .next_button{
         display: none;
+    }
+    .slider_btn:hover{
+        bottom: none;
+        box-shadow: none;
     }
 }
