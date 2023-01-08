@@ -14,23 +14,6 @@ export default function Form(){
     const inputMailRef = useRef()
     const inputSendref = useRef()
 
-    useEffect(()=>{
-        
-        inputSendref.current.innerHTML = 'გაგზავნა'
-
-        if(localStorage.language === 'eng'){
-            contactHeaderRef.current.innerHTML = 'Leave your Contact Info'
-            contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
-            
-            inputSendref.current.innerHTML = 'Send'
-        }else if(localStorage.language === 'rus'){
-            contactHeaderRef.current.innerHTML = ''
-            contactParagraphRef.current.innerHTML = ''
-            
-            inputSendref.current.innerHTML = ''
-        }
-
-    },[])
 
     // props.iseng, props.isrus, props.isgeo
 

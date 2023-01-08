@@ -21,6 +21,7 @@ import logo from '../images/logo.png'
 import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
+import burgerStick from '../images/sticks.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
 
@@ -135,6 +136,7 @@ export default function MainPage() {
         setIsGeo(false)
         localStorage.setItem('language', 'eng')
     }
+    //*************//
 
     function makeGEO() {
         setIsEng(false)
@@ -142,6 +144,7 @@ export default function MainPage() {
         setIsGeo(true)
         localStorage.removeItem('language')
     }
+    //*************//
 
     function makeRUS() {
         setIsEng(false)
@@ -149,6 +152,7 @@ export default function MainPage() {
         setIsGeo(false)
         localStorage.setItem('language', 'rus')
     }
+    //*************//
 
     function nextSlide() {
         if(index === slideLength-1){
@@ -157,6 +161,7 @@ export default function MainPage() {
             setIndex(index+1)
           }
     }
+    //*************//
 
     function prevSlide(){
         
@@ -166,10 +171,12 @@ export default function MainPage() {
             setIndex(index-1)
         }
     }
+    //*************//
 
     function dotHandler(num){
         setIndex(num)
     }
+    //*************//
 
     useEffect(()=>{
         if(index === 0){
@@ -196,6 +203,7 @@ export default function MainPage() {
             dot3.current.style.opacity = '0.5'
         }
     },[index])
+    //*************//
 
     useEffect(()=>{
             setIsEng(false)
@@ -204,8 +212,11 @@ export default function MainPage() {
 
             // Languages
             GeoLanguage.current.style.color = '#029FA0'
+            GeoLanguageBurger.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
             RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
             navbarLinkFlats.current.innerHTML = 'ბინები'
             navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
@@ -226,8 +237,11 @@ export default function MainPage() {
 
             // Languages
             GeoLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = '#029FA0'
             RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
             navbarLinkFlats.current.innerHTML = 'Apartments'
             navbarLinkAboutUs.current.innerHTML = 'About Us'
@@ -247,8 +261,11 @@ export default function MainPage() {
 
             // Languages
             GeoLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
+            EngLanguageBurger.current.style.color = 'black'
             RusLanguage.current.style.color = '#029FA0'
+            RusLanguageBurger.current.style.color = '#029FA0'
 
             navbarLinkFlats.current.innerHTML = ''
             navbarLinkAboutUs.current.innerHTML = ''
@@ -262,6 +279,7 @@ export default function MainPage() {
           
         }
     },[isEng, isGeo, isRus])
+    //*************//
 
     // სლაიდერის ავტომატიზაცია რესპინსივზე
     useEffect(()=>{
@@ -281,6 +299,28 @@ export default function MainPage() {
             clearInterval(sliderInterval)
         }
     }, [index])
+    //*************//
+
+
+    //burgermenu panel///
+    ////////////////////
+    const GeoLanguageBurger = useRef()
+    const EngLanguageBurger = useRef()
+    const RusLanguageBurger = useRef()
+    const [burger, setBurger] = useState('burgerMenu_panel')
+    const [burgerBoolean, setBurgerBoolean] = useState(false)
+
+    function burgerHandler() {
+        if(!burgerBoolean){
+            setBurgerBoolean(true)
+            setBurger('burgerMenu_panel burgerMenu_panel_active')
+        }else{
+            setBurgerBoolean(false)
+            setBurger('burgerMenu_panel')
+        }
+    }
+
+    //*************//
    
     return(
         <>
@@ -297,11 +337,10 @@ export default function MainPage() {
         </div>
         
         <div className='Navbar'>
-
             <div className="navbar_inner">
                 
                 {/* ლოგო */}
-                <img className="logo" src={logo} />
+                <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
 
                 <div className="menu_and_langs">
                     {/* მენუ */}
@@ -320,6 +359,32 @@ export default function MainPage() {
                         <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
                     </div>
                 </div>
+
+                <div className='burgerMenu' onClick={burgerHandler}>
+                    <img src={burgerStick} alt="burgermenu" /> 
+                </div>
+            </div>
+        </div>
+
+        <div className={burger}>
+            <div className="burgerMenu_link">
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
+            </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+            </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+            </div>
+
+            <div className="burger_languages">
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span>/</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span>/</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
             </div>
         </div>
 

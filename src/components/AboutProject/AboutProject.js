@@ -1,5 +1,4 @@
 import {React, useEffect, useState, useRef} from "react";
-import emailjs from '@emailjs/browser';
 import {Link} from  "react-router-dom";
 import logo from '../../images/logo.png'
 import '../../index.css'
@@ -13,6 +12,7 @@ import '../../styles/PopUpMsg.css'
 
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
+import burgerStick from '../../images/sticks.png'
 
 export default function AboutProject(){
 
@@ -45,26 +45,7 @@ export default function AboutProject(){
     },[window.scrollY])
     //End Floating Button Appear
 
-    // Email send Functionality
-    const form = useRef();
-    const inputNameRef = useRef()
-    const inputNumberRef = useRef()
-    const inputMailRef = useRef()
-    const inputSendref = useRef()
     const [popUp, setPopUp] = useState('pop_up_msg')
-
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          e.target.reset()
-    };
-    // End Of Email Functionality
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -88,8 +69,11 @@ export default function AboutProject(){
         setIsRus(false)
 
         GeoLanguage.current.style.color = '#029FA0'
-        EngLanguage.current.style.color = 'black'
-        RusLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = 'black'
+            RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
@@ -103,8 +87,11 @@ export default function AboutProject(){
         setIsRus(false)
 
         GeoLanguage.current.style.color = 'black'
-        EngLanguage.current.style.color = '#029FA0'
-        RusLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = '#029FA0'
+            RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'Apartments'
         navbarLinkAboutUs.current.innerHTML = 'About Us'
@@ -116,8 +103,11 @@ export default function AboutProject(){
         setIsRus(true)
 
         GeoLanguage.current.style.color = 'black'
-        EngLanguage.current.style.color = 'black'
-        RusLanguage.current.style.color = '#029FA0'
+            GeoLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = 'black'
+            EngLanguageBurger.current.style.color = 'black'
+            RusLanguage.current.style.color = '#029FA0'
+            RusLanguageBurger.current.style.color = '#029FA0'
 
         navbarLinkFlats.current.innerHTML = ''
         navbarLinkAboutUs.current.innerHTML = ''
@@ -157,10 +147,30 @@ export default function AboutProject(){
         setIsGeo(false)
         localStorage.setItem('language', 'rus')
     }
+    
+    //burgermenu panel///
+    ////////////////////
+    const GeoLanguageBurger = useRef()
+    const EngLanguageBurger = useRef()
+    const RusLanguageBurger = useRef()
+    const [burger, setBurger] = useState('burgerMenu_panel')
+    const [burgerBoolean, setBurgerBoolean] = useState(false)
+
+    function burgerHandler() {
+        if(!burgerBoolean){
+            setBurgerBoolean(true)
+            setBurger('burgerMenu_panel burgerMenu_panel_active')
+        }else{
+            setBurgerBoolean(false)
+            setBurger('burgerMenu_panel')
+        }
+    }
+
+    //*************//
+    
     return(
         <> 
             <div className='Navbar'>
-
             <div className="navbar_inner">
                 
                 {/* ლოგო */}
@@ -169,9 +179,9 @@ export default function AboutProject(){
                 <div className="menu_and_langs">
                     {/* მენუ */}
                     <ul className="nav_menu">
-                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links active_page" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                        <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
+                        <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                        <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
                     </ul>
 
                     {/* ენები */}
@@ -183,8 +193,34 @@ export default function AboutProject(){
                         <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
                     </div>
                 </div>
+
+                <div className='burgerMenu' onClick={burgerHandler}>
+                    <img src={burgerStick} alt="burgermenu" /> 
+                </div>
             </div>
+        </div>
+
+        <div className={burger}>
+            <div className="burgerMenu_link">
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
             </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+            </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+            </div>
+
+            <div className="burger_languages">
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span>/</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span>/</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+            </div>
+        </div>
 
             <div className={popUp}>
                 <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>

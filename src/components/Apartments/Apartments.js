@@ -12,6 +12,7 @@ import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
+import burgerStick from '../../images/sticks.png'
 
 export default function Apartments(){
     //Floating Button Appear
@@ -78,8 +79,11 @@ export default function Apartments(){
         setIsRus(false)
 
         GeoLanguage.current.style.color = '#029FA0'
-        EngLanguage.current.style.color = 'black'
-        RusLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = 'black'
+            RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
@@ -93,8 +97,11 @@ export default function Apartments(){
         setIsRus(false)
 
         GeoLanguage.current.style.color = 'black'
-        EngLanguage.current.style.color = '#029FA0'
-        RusLanguage.current.style.color = 'black'
+            GeoLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = '#029FA0'
+            EngLanguageBurger.current.style.color = '#029FA0'
+            RusLanguage.current.style.color = 'black'
+            RusLanguageBurger.current.style.color = 'black'
 
         ApartmentRef.current.innerHTML = 'Choose Your Apartment'
 
@@ -109,8 +116,11 @@ export default function Apartments(){
         setIsRus(true)
 
         GeoLanguage.current.style.color = 'black'
-        EngLanguage.current.style.color = 'black'
-        RusLanguage.current.style.color = '#029FA0'
+            GeoLanguageBurger.current.style.color = 'black'
+            EngLanguage.current.style.color = 'black'
+            EngLanguageBurger.current.style.color = 'black'
+            RusLanguage.current.style.color = '#029FA0'
+            RusLanguageBurger.current.style.color = '#029FA0'
 
         navbarLinkFlats.current.innerHTML = ''
         navbarLinkAboutUs.current.innerHTML = ''
@@ -142,33 +152,78 @@ export default function Apartments(){
         localStorage.setItem('language', 'rus')
     }
 
+    //burgermenu panel///
+    ////////////////////
+    const GeoLanguageBurger = useRef()
+    const EngLanguageBurger = useRef()
+    const RusLanguageBurger = useRef()
+    const [burger, setBurger] = useState('burgerMenu_panel')
+    const [burgerBoolean, setBurgerBoolean] = useState(false)
+
+    function burgerHandler() {
+        if(!burgerBoolean){
+            setBurgerBoolean(true)
+            setBurger('burgerMenu_panel burgerMenu_panel_active')
+        }else{
+            setBurgerBoolean(false)
+            setBurger('burgerMenu_panel')
+        }
+    }
+
+    //*************//
+
     return(
         <>
         <div className='Navbar'>
+            <div className="navbar_inner">
+                
+                {/* ლოგო */}
+                <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
 
-        <div className="navbar_inner">
-            
-            {/* ლოგო */}
-            <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
+                <div className="menu_and_langs">
+                    {/* მენუ */}
+                    <ul className="nav_menu">
+                        <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
+                        <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                        <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                    </ul>
 
-            <div className="menu_and_langs">
-                {/* მენუ */}
-                <ul className="nav_menu">
-                    <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
-                    <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                    <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
-                </ul>
+                    {/* ენები */}
+                    <div className="languages">
+                        <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
+                        <span>/</span>
+                        <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
+                        <span>/</span>
+                        <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+                    </div>
+                </div>
 
-                {/* ენები */}
-                <div className="languages">
-                    <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
-                    <span>/</span>
-                    <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
-                    <span>/</span>
-                    <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+                <div className='burgerMenu' onClick={burgerHandler}>
+                    <img src={burgerStick} alt="burgermenu" /> 
                 </div>
             </div>
         </div>
+
+        <div className={burger}>
+            <div className="burgerMenu_link">
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
+            </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+            </div>
+
+            <div className="burgerMenu_link">
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+            </div>
+
+            <div className="burger_languages">
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span>/</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span>/</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+            </div>
         </div>
         
         

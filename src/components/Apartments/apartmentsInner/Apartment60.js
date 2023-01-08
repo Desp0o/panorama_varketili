@@ -4,6 +4,7 @@ import Footer from '../../footer/Footer'
 import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m60inner.png'
+import burgerStick from '../../../images/sticks.png'
 
 const pointerStyle5 ={
     left: '48%',
