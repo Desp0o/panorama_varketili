@@ -210,36 +210,61 @@
     font-size: 15px;
     line-height: 20px;
     color: #FFFFFF;
-
+    margin-top: 3px;
     transition: all 0.4s ease;
 }
 
 
 @media (max-width:769px) {
     .slider_header{
-        font-size: 35px;
-        line-height: 40.74px;
-        position: absolute;
-        z-index: 1;
-        bottom: 82px;
-        left: 17px;
+        bottom: 120px;
+        left: 50%;
+        width: 317px;
+        transform: translateX(-50%);
+        color: #FFFFFF;
+        font-family: 'BPG Nino Mtavruli';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
     }
     .slider_paragraph{
+        
+        left: 50%;
+        bottom: 70px;
+        transform: translateX(-50%);
         position: absolute;
         font-size: 11px;
-        bottom: 8px;
-        left: 19px;
-        width: 217px;
+        display: inline-block;
+
+        font-family: 'BPG Mrgvlovani';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        text-align: center;
+
+        color: #FFFFFF;
     }
     
     .text_active{
         opacity: 1;
-        bottom: 58px;
-        width: 217px;
+        bottom: 102px;
     }
     
     .slider_btn{
-        display: none;
+        width: 100px;
+        height: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slider_btn span{
+        font-family: 'BPG Nino Mtavruli';
+        font-weight: 700;
+        font-size: 13px;
+        color: #FFFFFF;
+    
+        transition: all 0.4s ease;
     }
     .prev_button,
     .next_button{
