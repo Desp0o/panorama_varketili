@@ -207,7 +207,7 @@ export default function MainPage() {
 
             navbarLinkFlats.current.innerHTML = 'ბინები'
             navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
-            navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
+            navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
 
             sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
             sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'

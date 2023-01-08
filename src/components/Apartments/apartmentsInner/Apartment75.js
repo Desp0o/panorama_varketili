@@ -76,7 +76,7 @@ export default function Apartment75() {
 
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
-        navbarLinkAboutProject.current.innerHTML = 'პროექტების შესახებ'
+        navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
@@ -200,22 +200,31 @@ export default function Apartment75() {
 
     return(
         <>
-        <div className='Navbar'  style={{backgroundColor:'#A9C1A9'}}>
-            <Link to='../MainPage'><img className="logo" src={logo} /></Link>
+        <div className='Navbar'>
 
-            <ul className="nav_menu">
-                <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
-                <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>პროექტების შესახებ</li></Link>
-            </ul>
+        <div className="navbar_inner">
+            
+            {/* ლოგო */}
+            <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
 
-            <div className="languages">
-                <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
-                <span>/</span>
-                <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
-                <span>/</span>
-                <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+            <div className="menu_and_langs">
+                {/* მენუ */}
+                <ul className="nav_menu">
+                    <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats}>ბინები</li></Link>
+                    <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
+                    <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                </ul>
+
+                {/* ენები */}
+                <div className="languages">
+                    <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
+                    <span>/</span>
+                    <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
+                    <span>/</span>
+                    <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
+                </div>
             </div>
+        </div>
         </div>
 
         <div className="apartment_main">

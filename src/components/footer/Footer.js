@@ -3,6 +3,9 @@ import {Link} from  "react-router-dom";
 import './Footer.css'
 
 import facebook from '../../images/facebook.png'
+import instagram from '../../images/instagram.png'
+import linkedin from '../../images/linkedin.png'
+import email from '../../images/email.png'
 
 export default function Footer(props){
     const geoRuningText = useRef()
@@ -117,10 +120,22 @@ export default function Footer(props){
 
             <div className="footer_bottom">
                 <div className="footer_bottom_icons">
-                    <img className="footer_icon" src={facebook} alt="footer social icon"/>
-                    <img className="footer_icon" src={facebook} alt="footer social icon"/>
-                    <img className="footer_icon" src={facebook} alt="footer social icon"/>
-                    <img className="footer_icon" src={facebook} alt="footer social icon"/>
+                    <div className="footer_icon">
+                        <img src={facebook} alt="footer social icon" />
+                    </div>
+
+                    <div className="footer_icon">
+                        <img src={instagram} alt="footer social icon" />
+                    </div>
+
+                    <div className="footer_icon">
+                        <img src={linkedin} alt="footer social icon" />
+                    </div>
+
+                    <div className="footer_icon">
+                        <img src={email} alt="footer social icon" />
+                    </div>
+
                 </div>
 
                 <div className="footer_bottom_number_adrees">

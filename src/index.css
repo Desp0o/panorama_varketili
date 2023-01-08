@@ -31,13 +31,20 @@ a{
   margin: 0;
 }
 
-::-webkit-scrollbar{
-  background-color: transparent;
+::-webkit-scrollbar {
+  width: 16px;
 }
 
+
 ::-webkit-scrollbar-thumb{
-  background-color: #A9C1A9;
+  background-color: #858384;
+  border-radius: 60px;
+  width: 10px;
+  height: 55px;
 }
+
+
+
 
 @font-face {
   font-family: 'BPG Mrgvlovani';
