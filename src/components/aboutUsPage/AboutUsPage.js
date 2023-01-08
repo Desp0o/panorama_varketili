@@ -8,13 +8,16 @@ import Footer from '../footer/Footer'
 
 import './AboutUsPage.css'
 
+const style={
+    fontFamily: 'Roboto'
+}
+
 export default function AboutUsPage(){
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
     const navbarLinkAboutUs = useRef()
     const navbarLinkAboutProject = useRef()
-    const navbarLinkContact = useRef()
     const EngLanguage = useRef()
     const RusLanguage = useRef()
 
@@ -153,8 +156,8 @@ export default function AboutUsPage(){
                 <div className="about_inner_left">
                     <h1 ref={aboutPageHeader} className="about_us_header">თვინს დეველოპმენტი</h1>
                     
-                    <div className="about_inner_left_texts">
-                    <p ref={aboutPageP1}>Twins Development მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
+                    <div className="about_inner_left_texts" style={null}>
+                    <p ref={aboutPageP1}> <span style={style} className="engTwins">Twins Development</span> მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
 
                     <ul ref={geoListRef}>
                         <li className="about_us_list">გამორჩეული სტილი</li>

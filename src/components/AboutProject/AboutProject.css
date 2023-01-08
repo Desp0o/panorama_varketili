@@ -11,23 +11,23 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding-top: 160px;
+    padding-top: 202px;
     gap: 37px;
     padding-left:70px ;
     padding-bottom: 110px;
 
     background-image: url('../../images/aboutProjCover.png');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
 
-    /* filter: brightness(0%); */
-    opacity: 0;
+    filter: brightness(10%);
+    opacity: 0.2;
     transition: all 1.2s ease;
 }
 
 .about_proj_page_active{
-    /* filter: brightness(100%); */
+    filter: brightness(100%);
     opacity: 1;
 }
 
@@ -91,9 +91,9 @@
 }
 
 .circleTXT{
+    font-weight: 700;
     font-size: 20px;
-    line-height: 23px;
-    font-family: 'bpg web 001';
+    font-family: 'BPG Nino Mtavruli';
     color: #000000;
 }   
 
@@ -101,7 +101,7 @@
 .circle_txt1{
     position: absolute;
     top: -80%;
-    left: 4.5%;
+    left: 5%;
 }
 .msgBox1{
     top: -125%;
@@ -157,7 +157,7 @@
 .circle_txt3{
     position: absolute;
     top: -80%;
-    right: 16%;
+    right: 23%;
 }
 .msgBox3{
     top: -125%;
@@ -180,7 +180,7 @@
 .circle_txt4{
     position: absolute;
     top: 110%;
-    right: 11%;
+    right: 18%;
 }
 .msgBox4{
     top: 65%;
@@ -211,7 +211,7 @@
 
 
 .msgBoxText{
-    font-family: 'bpg web 001';
+    font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
@@ -305,7 +305,6 @@
     width: 100%;
     margin-top: 196px;
     display: flex;
-    background-color: #EFEEE4;
   }
 
   .ganvadeba_left{

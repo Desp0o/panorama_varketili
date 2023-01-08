@@ -7,18 +7,19 @@
 .about_inner{
     width: 100%;
     background-color: #A9C1A9;
-    padding-top: 179px;
-    padding-bottom: 232px;
-    padding-left: 77px;
+    padding-top: 220px;
+    padding-bottom: 210px;
+    padding-left: 75px;
+    padding-right: 75px;
 
-    font-family: 'BPG Mrgvlovani';
+    font-family: 'BPG Nino Mtavruli';
     font-style: normal;
     font-weight: 400;
     font-size: 17px;
     line-height: 23px;
 
     display: flex;
-    gap: 5px;
+    gap: 150px;
 
     color: #171F17;
 }
@@ -36,8 +37,15 @@
     gap: 25px;
 }
 
+.engTwins{
+    font-size: 40px !important;
+    font-family: 'Roboto' !important;
+    color: red !important;
+}
+
 .about_us_list{
     list-style:inside;
+    font-weight: bold;
 }
 
 .about_inner_left_texts ul{
@@ -57,36 +65,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 25px 10px rgba(2, 159, 160, 0.5);
 }
 
-@media (max-width:769px) {
-    .about_us_page{
-        width: 100%;
-        height: 100vh;
-        overflow-x: hidden;
-    }
-    .about_inner{
-        width: 95%;
-        flex-direction: column;
-        gap: 20px;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .about_inner_left{
-        width: 100%;
-    }
-    .about_inner_left_texts{
-        
-    }
-    .about_inner_right{
-        width: 100%;
-        display: flex;
-    }
-    .aboutImage{
-        width: 100%;
-    }
-    .about_us_header{
-        font-size: 26px;
-    }
-}

@@ -1,0 +1,33 @@
+.contact_form_btn{
+    width: 803px;
+    height: 55px;
+    
+
+    background: #029FA0;
+    border-radius: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    border: 0;
+    margin-top: 68px;
+}
+
+.email_for_form{
+    width: 803px !important;
+    height: 55px !important;
+}
+
+.upper_input{
+    width: 385px !important;
+    height: 55px !important;
+}
+
+.leave_contact{
+    margin-bottom: 71px;
+
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 700;
+    font-size: 25px;
+
+    color: #171F17;
+}

@@ -94,9 +94,9 @@ export default function Flats(props){
             </div>
 
             <div className="btnOuter">
-                <div className="seeMoreBtn">
+                <Link to='/components/Apartments/Apartments'><div className="seeMoreBtn">
                     <p>მეტი ბინა</p>
-                </div>
+                </div></Link>
             </div>
 
         </div>

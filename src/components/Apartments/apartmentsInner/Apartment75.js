@@ -3,7 +3,7 @@ import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
 import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/m102inner.png'
+import m102inner from '../../../images/innerRenders/m75inner.png'
 
 const pointerStyle6 ={
     left: '42%',

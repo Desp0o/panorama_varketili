@@ -20,76 +20,24 @@
     position: absolute;
 }
 
-.pop_up_msg_inner{
+.form_outer{
+    background-color: #fff;
+    padding-bottom: 81px;
+    padding-left: 71px;
+    padding-right: 71px;
+    padding-top: 71px;
     position: relative;
-    width: 40%;
-    height: auto;
-    background-color: #E2E1D7;
-    opacity: 0.95;
     border-radius: 20px;
-
-    padding-top: 82px;
-    padding-bottom: 82px;
-    padding-left: 68px;
-    padding-right: 68px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
 }
 
-.pop_up_header{
-    font-family: 'bpg web 001';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 29px;
-
-    color: #171F17;
+.close{
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
 }
-
-.pop_up_msg_inner input,
-.pop_up_msg_inner button{
-    box-sizing: border-box;
-    height: 63px;
-    border-radius: 15px;
-    border: 2px solid rgba(0, 0, 0, 0.596);
-    -webkit-appearance: none;
-}
-
-.pop_up_msg_inner_top{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
-.pop_up_msg_inner_top input{
-    width: 47%;
-}
-
-.pop_up_msg_inner_middle{
-    width: 100%;
-}
-
-.pop_up_msg_inner_middle input{
-    width: 100%;
-}
-
-.pop_up_msg_inner_bottom{
-    width: 100%;
-}
-
-.pop_up_msg_inner_bottom button{
-    width: 100%;
-    margin-top: 0px !important;
-}
-
-.pop_up_msg_inner form{
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
 
 .call_float_btn{
     width: 59px;
@@ -115,47 +63,5 @@
     transition: all 0.4s ease;
 }
 
-.xMark{
-    width: 15px;
-    position: absolute;
-    top:25px;
-    right: 25px;
-    cursor: pointer;
-}
 
-@media (max-width:769px) {
-    .pop_up_msg_inner{
-        position: relative;
-        width: 90%;
-        height: auto;
-        background-color: #E2E1D7;
-        opacity: 0.95;
-        border-radius: 20px;
-    
-        padding-top: 62px;
-        padding-bottom: 62px;
-        padding-left: 19px;
-        padding-right: 19px;
-    
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-    }
-    .pop_up_msg_inner_top{
-        width: 100%;
-        flex-direction: column;
-        justify-content: unset;
-        gap: 18px;
-    }
-    .pop_up_msg_inner_top input{
-        width: 100%;
-    }
-    .popUpForm{
-        display: flex;
-        flex-direction: column;
-        gap: 18px !important;
-    }
-    .pop_up_msg_inner_bottom{
-        margin-top: 18px;
-    }
-}
+

@@ -1,5 +1,5 @@
 .apartments_page{
-    padding-top: 150px;
+    padding-top: 240px;
     padding-bottom: 150px;
     width: 100%;
     display: flex;
@@ -9,7 +9,7 @@
 }
 
 .apartment_header{
-    margin-bottom: 100px;
+    margin-bottom: 116px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -23,18 +23,13 @@
     color: #171F17;
 }
 
-.cardinpage{
-    margin-top: 10px;
-}
-
 .apartment_list{
-    width: calc(100% - 80px);
+    width: calc(100% - 70px);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
     margin: 0 auto;
-    gap: 20px 0;
+    gap: 110px 70px;
     padding: 0 40px;
     
 }
@@ -46,5 +41,12 @@
     .apartment_list{
         width: 99%;
         justify-content: center;
+    }
+}
+
+@media (max-width:1400px) {
+    .apartment_list{
+        justify-content: space-around;
+        gap: 110px 20px;
     }
 }

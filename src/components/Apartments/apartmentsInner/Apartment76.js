@@ -171,7 +171,7 @@ const roomsArr = [
     {
         id: 4,
         number:4,
-        roomTypeGeo: 'საძინებელი 2',
+        roomTypeGeo: 'გარდერობი',
         roomTypeEng: 'Hall',
         roomTypeRus: 'aaaa',
         m2: '6.9 M2',

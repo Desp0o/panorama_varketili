@@ -5,6 +5,7 @@ import Flats from "./Flats/Flats";
 import Features from "./features/Features";
 import Contact from './contact/Contact'
 import Footer from "./footer/Footer";
+import Form from "./contacForm";
 
 import '../styles/navbar.css'
 import '../styles/slider.css'
@@ -22,6 +23,7 @@ import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
+
 
 const imgArr = [
     {
@@ -284,34 +286,14 @@ export default function MainPage() {
         <>
 
         <div className={popUp}>
-            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
-
-            <div className="pop_up_msg_inner">
-
-                <img src={xMark} className="xMark" alt="xmarkBtn" onClick={()=>setPopUp('pop_up_msg')}/>
+            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}>
                 
-                <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
-
-                <form className="popUpForm" ref={form} onSubmit={sendEmail}>
-                    <div className="pop_up_msg_inner_top">
-                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
-                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_middle">
-                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_bottom">
-                        <div className="pop_up_msg_inner_bottom submit_btn">
-                            <button type="submit">
-                                <span ref={inputSendref}>გაგზავნა</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
             </div>
+        <div className="form_outer">
+            <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+            <Form />
+        </div>
+           
         </div>
         
         <div className='Navbar'>

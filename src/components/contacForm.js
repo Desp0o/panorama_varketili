@@ -1,11 +1,11 @@
 import {React, useEffect, useState, useRef} from "react";
 import emailjs from '@emailjs/browser';
 
-import './Contact.css'
+import '../styles/contactForm.css'
 
-import errorIcon from '../../images/errorIcon.png'
+import errorIcon from '../images/errorIcon.png'
 
-export default function Contact(props){
+export default function Form(){
     const form = useRef();
     const contactHeaderRef = useRef()
     const contactParagraphRef = useRef()
@@ -15,8 +15,6 @@ export default function Contact(props){
     const inputSendref = useRef()
 
     useEffect(()=>{
-        contactHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
-        contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგეხმარებათ<br/> შეარჩიოთ  თქვენზე მორგებული ბინა'
         
         inputSendref.current.innerHTML = 'გაგზავნა'
 
@@ -32,9 +30,10 @@ export default function Contact(props){
             inputSendref.current.innerHTML = ''
         }
 
-    },[props.iseng, props.isrus, props.isgeo])
+    },[])
 
-    
+    // props.iseng, props.isrus, props.isgeo
+
     const sendEmail = (e) => {
         if(numberBoolean === true && nameBoolean === true && mailBoolean === true){
             e.preventDefault();
@@ -168,25 +167,12 @@ export default function Contact(props){
         return
     },[inputMail,mailBoolean])
 
-
-
-
-
-
-
     return(
-        <div className="contact">
-            <div className="contact_left">
-                <h2 className="contact_header" ref={contactHeaderRef}>დაგვიტოვე საკონტაქტო</h2>
+        <>
 
-                <p className="contact_paragraph" ref={contactParagraphRef}>
-                    ჩვენი წარმომადგენელი დაგეხმარებათ   შეარჩიოთ  თქვენზე მორგებული ბინა
-                </p>
+        <p className="leave_contact">დაგვიტოვე საკონტაქტო</p>
 
-            </div>
-
-            <div className="contact_right">
-                <form ref={form} onSubmit={sendEmail}>
+        <form ref={form} onSubmit={sendEmail}>
 
                     <div className="input_fields">
 
@@ -195,13 +181,13 @@ export default function Contact(props){
                             <div className="input1_label1">
                                 
                                 <span className="placeholder_name">სახელი *</span>
-                                <input ref={inputNameRef} type="text" name="user_name" onChange={nameHandler}/>
+                                <input ref={inputNameRef} className='upper_input' type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                                 <span className="placeholder_number">ნომერი *</span>
-                                <input ref={inputNumberRef} type="text" name="user_number" onChange={numberHandler}/>
+                                <input ref={inputNumberRef} className='upper_input' type="text" name="user_number" onChange={numberHandler}/>
                                 <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
                             
@@ -211,7 +197,7 @@ export default function Contact(props){
                         <div className="input_fields_bottom">
                             <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                             <span className="placeholder_email">ელ-ფოსტა *</span>
-                            <input ref={inputMailRef}  type="text" name="user_email" onChange={mailHandler}/>
+                            <input ref={inputMailRef} className='email_for_form'  type="text" name="user_email" onChange={mailHandler}/>
                             <span ref={emailInputErrorMsg} className="placeholder_email_error">მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                         </div>
 
@@ -219,14 +205,13 @@ export default function Contact(props){
                     </div>
 
                     
-                    <div className="submit_btn">
-                        <button type="submit">
+                    
+                        <button className="contact_form_btn" type="submit">
                             <span ref={inputSendref}>გაგზავნა</span>
                         </button>
-                    </div>
+                    
                 
                 </form>
-            </div>
-        </div>
+        </>
     )
 }

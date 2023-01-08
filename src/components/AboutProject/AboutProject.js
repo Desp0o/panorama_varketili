@@ -7,6 +7,7 @@ import Footer from "../footer/Footer";
 import'./AboutProject.css'
 import line29 from '../../images/Line29.png'
 import sofa from '../../images/sofa.png'
+import Form from "../contacForm"
 
 import '../../styles/PopUpMsg.css'
 
@@ -186,34 +187,12 @@ export default function AboutProject(){
             </div>
 
             <div className={popUp}>
-            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+                <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
 
-            <div className="pop_up_msg_inner">
-
-                <img src={xMark} className="xMark" alt="xmarkBtn" onClick={()=>setPopUp('pop_up_msg')}/>
-                
-                <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
-
-                <form ref={form} onSubmit={sendEmail}>
-                    <div className="pop_up_msg_inner_top">
-                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
-                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_middle">
-                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_bottom">
-                        <div className="pop_up_msg_inner_bottom submit_btn">
-                            <button type="submit">
-                                <span ref={inputSendref}>გაგზავნა</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
-            </div>
+                <div className="form_outer">
+                    <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+                    <Form />
+                </div>
             </div>
 
             <img 
@@ -246,18 +225,18 @@ export default function AboutProject(){
                 
 
                 <span className="circle2"><img className="line2" src={line29}/></span>
-                    <p className="circleTXT circle_txt2">პროექტის დაწყება</p>
-                    <div className="range_msg_box msgBox2"><p className="msgBoxText">თებერვალი 2023</p></div>
+                    <p className="circleTXT circle_txt2">საძირკველი</p>
+                    <div className="range_msg_box msgBox2"><p className="msgBoxText">მარტი 2023</p></div>
                 
 
                 <span className="circle3"><img className="line3" src={line29}/></span>
-                    <p className="circleTXT circle_txt3">პროექტის დაწყება</p>
-                    <div className="range_msg_box msgBox3"><p className="msgBoxText">თებერვალი 2023</p></div>
+                    <p className="circleTXT circle_txt3">მონოლითი</p>
+                    <div className="range_msg_box msgBox3"><p className="msgBoxText">აპრილი 2023</p></div>
 
 
                 <span className="circle4"><img className="line4" src={line29}/></span>
-                    <p className="circleTXT circle_txt4">პროექტის დაწყება</p>
-                    <div className="range_msg_box msgBox4"><p className="msgBoxText">თებერვალი 2023</p></div>
+                    <p className="circleTXT circle_txt4">შავი კარკასი</p>
+                    <div className="range_msg_box msgBox4"><p className="msgBoxText">ოქტომბერი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
                 <input className="inputRange" type='range' min='0' max='200' step='1' value={data} onChange={(e)=> setData(e.target.value)} />
