@@ -277,3 +277,9 @@
         box-shadow: none;
     }
 }
+
+@media (max-width:375px) {
+    .slider_header{
+        font-size: 26px;
+    }
+}
