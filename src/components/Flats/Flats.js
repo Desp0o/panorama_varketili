@@ -61,17 +61,8 @@ export default function Flats(props){
 
     const cardsListRef = useRef()
     let box = document.querySelector('.cards')
-    let card = document.querySelector('.card')
     function toLeft() {
-        // let width = cardsListRef.current.clientWidth;
-
-        // cardsListRef.current.scrollLeft = cardsListRef.current.scrollLeft - width;
-        // console.log(cardsListRef.current.scrollLeft);
-
-        let width = card.clientWidth
-        box.scrollLeft = box.scrollLeft - width;
-        console.log(box.scrollLeft);
-        
+        box.scrollLeft = box.scrollLeft+300;
     }
     
 
@@ -87,8 +78,8 @@ export default function Flats(props){
                     renderArr.map((render)=>{
                         return(
                             
-                            <div className="card_outter">
-                                <div key={render.Id}  className="card" ref={cardsListRef}>
+                            <>
+                                <div key={render.Id}  className="card" >
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
                                         <img className="card_render_main_screen" src={render.image} />
@@ -107,10 +98,7 @@ export default function Flats(props){
                                     </div>
                                     </Link>
                                 </div>
-
-                                    <div className="leftBtn"><img src={leftArrow} alt="card swap arrow" onClick={toLeft}/></div>
-                                    <div className="rightBtn"><img src={rightArrow} alt="card swap arrow"/></div>
-                            </div>
+                            </>
                             
                         )
                     })

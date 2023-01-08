@@ -190,9 +190,11 @@
 
 @media (max-width:769px) {
     .cards{
-        width: unset;
         gap: 15px;
         margin-top: 36px;
+        scroll-behavior: smooth;
+        overflow: scroll;
+        padding: 50px;
     }
     .card{
         width: 329px;
