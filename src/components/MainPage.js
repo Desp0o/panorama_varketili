@@ -474,9 +474,11 @@ export default function MainPage() {
                     <Link to='/components/AboutProject/AboutProject'><p className="why_panorama_btn_paragraph">გაიგე დეტალურად პროექტის შესახებ</p></Link>
                 </div>
 
-                <div className="why_panorama_btn_responsive" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
-                    <Link to='/components/AboutProject/AboutProject'><p className="why_panorama_btn_paragraph_responsive">დეტალურად</p></Link>
-                </div>
+                <Link to='/components/AboutProject/AboutProject'>
+                    <div className="why_panorama_btn_responsive">
+                        <p className="why_panorama_btn_paragraph_responsive">დეტალურად</p>
+                    </div>
+                </Link>
             </div>
 
             <img className="float_cliff" src={floatClif}/>

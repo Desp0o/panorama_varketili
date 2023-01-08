@@ -124,68 +124,30 @@
   }
   
   @media (max-width:769px) {
-    
+    .running_text_outter{
+      display: none;
+    }
+
     .footer{
-      padding-top: 40px;
-      padding-bottom: 30px;
+      background-color: #D8E5D6;
+    }
+
+    .footer_icon{
+      background-color: #CEDACC;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.15);
     }
     .footer_bottom{
       flex-direction: column;
-      margin-top: 46px;
+      gap: 50px;
+      padding-left: 30px;
+      padding-right: 30px;
     }
-    .footer_bottom_links{
-      display: none;
+    .footer_bottom_number_adrees{
+      margin-left: 0px;
     }
-    .copyright{
-      display: none;
-    }
-    .running_text h1{
-      font-size: 30px;
-      line-height: 41px;
-      font-family: 'BPG Mrgvlovani';
-    }
-    .responsive_footer{
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      width: 100%;
-    }
-    .responsive_footer-cl1,
-    .responsive_footer-cl2{
-      width: 100%;
-      padding-left: 20px;
-      width: 100%;
-      display: flex;
-      gap: 19px;
-      box-sizing: border-box;
-      
-    }
-    .responsive_footer-cl1 span{
-      font-family: 'bpg web 001';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 12px;
-      color: #171F17;
-    }
-    .responsive_footer-cl2 span{
-      font-family: 'BPG Mrgvlovani';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 10px;
-      line-height: 14px;
-      color: #171F17;
-    }
-
-    .responsive_footer_social_logo{
-      display: flex;
-      gap: 19px;
-      padding-left: 20px;
-      margin-top: 30px;
-    }
-
-    .footerResSocialIcons{
-      width: 30px;
-      height: 30px;
+    .footer_bottom_rights{
+      flex-grow: 0;
+      justify-content: flex-start;
+      margin-top: -30px;
     }
   }
