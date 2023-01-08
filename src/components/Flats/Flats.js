@@ -6,6 +6,8 @@ import renderB04 from '../../images/RenderB04.png'
 import renderB03 from '../../images/RenderB03.png'
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
+import leftArrow from '../../images/leftArrow.png'
+import rightArrow from '../../images/rightArrow.png'
 
 
 import './Flats.css'
@@ -36,6 +38,8 @@ const renderArr =[
     }
 ]
 
+
+
 export default function Flats(props){
     const flatsHeaderRef = useRef()
        
@@ -55,6 +59,21 @@ export default function Flats(props){
 
     },[props.iseng, props.isrus, props.isgeo])
 
+    const cardsListRef = useRef()
+    let box = document.querySelector('.cards')
+    let card = document.querySelector('.card')
+    function toLeft() {
+        // let width = cardsListRef.current.clientWidth;
+
+        // cardsListRef.current.scrollLeft = cardsListRef.current.scrollLeft - width;
+        // console.log(cardsListRef.current.scrollLeft);
+
+        let width = card.clientWidth
+        box.scrollLeft = box.scrollLeft - width;
+        console.log(box.scrollLeft);
+        
+    }
+    
 
     return(
         <div className="flats">
@@ -63,29 +82,34 @@ export default function Flats(props){
             </div>
 
            
-             <div className="cards">
+             <div className="cards" >
                 {
                     renderArr.map((render)=>{
                         return(
                             
-                            <div key={render.Id}  className="card">
-                            <Link to={render.link}>
-                                <div className="card_inner_top">
-                                    <img className="card_render_main_screen" src={render.image} />
-                                </div>
-
-                                <div className="card_inner_bottom">
-                                    <div className="card_inner_bottom_left">
-                                        <img className="mc_Icon" src={meterCoub} />
-                                        <p className="card_inner_bottom_p">{render.text1}</p>
+                            <div className="card_outter">
+                                <div key={render.Id}  className="card" ref={cardsListRef}>
+                                <Link to={render.link}>
+                                    <div className="card_inner_top">
+                                        <img className="card_render_main_screen" src={render.image} />
                                     </div>
 
-                                    <div className="card_inner_bottom_right">
-                                        <img className="bed_Icon" src={bed} />
-                                        <p className="card_inner_bottom_p">{render.text2}</p>
+                                    <div className="card_inner_bottom">
+                                        <div className="card_inner_bottom_left">
+                                            <img className="mc_Icon" src={meterCoub} />
+                                            <p className="card_inner_bottom_p">{render.text1}</p>
+                                        </div>
+
+                                        <div className="card_inner_bottom_right">
+                                            <img className="bed_Icon" src={bed} />
+                                            <p className="card_inner_bottom_p">{render.text2}</p>
+                                        </div>
                                     </div>
+                                    </Link>
                                 </div>
-                                </Link>
+
+                                    <div className="leftBtn"><img src={leftArrow} alt="card swap arrow" onClick={toLeft}/></div>
+                                    <div className="rightBtn"><img src={rightArrow} alt="card swap arrow"/></div>
                             </div>
                             
                         )
