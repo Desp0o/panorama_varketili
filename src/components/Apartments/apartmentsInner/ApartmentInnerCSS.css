@@ -1,6 +1,6 @@
 .apartment_main{
     width: 100%;
-    padding-top: 110px;
+    padding-top: 304px;
 }
 
 .apartment_main_inner{
@@ -83,6 +83,33 @@
     gap: 30px;
 }
 
+.pointers{
+    width: 31px;
+    height: 31px;
+    background-color: #029FA0;
+    position: absolute;
+    border-radius:50%;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #fff;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+.bold{
+    font-weight: 900;
+}
+
+@media (max-width:1400px) {
+    .apartment_main{
+        padding-top: 150px;
+    }
+}
 
 @media (max-width:769px) {
     
@@ -109,24 +136,3 @@
 
 
 
-.pointers{
-    width: 31px;
-    height: 31px;
-    background-color: #029FA0;
-    position: absolute;
-    border-radius:50%;
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #fff;
-    font-weight: 600;
-    text-align: center;
-}
-
-
-.bold{
-    font-weight: 900;
-}

@@ -170,7 +170,7 @@ export default function AboutProject(){
     
     return(
         <> 
-            <div className='Navbar'>
+        <div className='Navbar'>
             <div className="navbar_inner">
                 
                 {/* ლოგო */}
