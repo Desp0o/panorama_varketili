@@ -258,6 +258,7 @@
         height: 40px;
         left: 50%;
         transform: translateX(-50%);
+        bottom: 35px;
     }
 
     .slider_btn span{
@@ -273,8 +274,12 @@
         display: none;
     }
     .slider_btn:hover{
-        bottom: none;
+        bottom: 35px;
         box-shadow: none;
+    }
+
+    .dots{
+        bottom: 11px;
     }
 }
 

@@ -11,7 +11,7 @@
     justify-content: center;
     align-items: center;
     gap: 320px;
-
+    
     padding-top: 100px;
     padding-bottom: 80px;
     padding-left: 75px;
@@ -87,6 +87,33 @@
     border: 1px solid #1F271F;
 }
 
+.why_panorama_btn_responsive{
+    width: 330.02px;
+    height: 55px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background: #E6ECDF;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 45px;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.why_panorama_btn_paragraph_responsive{
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 700;
+    font-size: 15px;
+
+    display: flex;
+    align-items: center;
+
+    color: #2B1C50;
+}
+
 .float_cliff{
     height: 600px;
     width: auto;
@@ -96,14 +123,21 @@
     display: none;
 }
 
+@media (max-width:1400px) {
+    .why_panorama{
+        gap: 200px;
+    }
+}
+
 @media (max-width:769px) {
     .why_panorama{
         flex-direction: column;
         height: fit-content;
-        gap: 0;
-        padding-left: 10px;
-        padding-bottom: 50px;
-        padding-right: 0;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        padding-left: 30px;
+        padding-right: 30px;
+        gap: 50px;
     }
     .why_panorama_btn{
         display: none;
@@ -112,22 +146,27 @@
     .float_cliff{
         height: unset;
         width: 80%;
-        margin-top: 50px;
     }
 
     .why_panorama_h1{
         font-family: 'BPG Mrgvlovani';
         font-style: normal;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 17px;
         line-height: 40px;
-        color: #171F17;
+        color: #2B1C50;
+        font-weight: 700;
+    }
+    .why_panorama_btn_responsive{
+        display: flex;
+    }
+    .float_cliff{
+        height: 395px;
+        width: auto;
+    }
+    .why_panorama_txt{
+        font-family: 'BPG Mrgvlovani';
+        font-size: 13px;
     }
 
-}
-
-@media (max-width:1400px) {
-    .why_panorama{
-        gap: 200px;
-    }
 }
