@@ -14,7 +14,7 @@ import './Flats.css'
 
 const renderArr =[
     {
-        Id: 1,
+        id: 1,
         image: `${renderB02}`,
         text1: '/ 90 M2',
         text2: '/ 2',
@@ -22,7 +22,7 @@ const renderArr =[
     },
 
     {
-        Id: 2,
+        id: 2,
         image: `${renderB04}`,
         text1: '/ 71.5 M2',
         text2: '/ 2',
@@ -30,7 +30,7 @@ const renderArr =[
     },
 
     {
-        Id: 3,
+        id: 3,
         image: `${renderB03}`,
         text1: '/ 76.6 M2',
         text2: '/ 2',
@@ -79,7 +79,7 @@ export default function Flats(props){
                         return(
                             
                             <>
-                                <div key={render.Id}  className="card" >
+                                <div key={render.id}  className="card" >
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
                                         <img className="card_render_main_screen" src={render.image} />

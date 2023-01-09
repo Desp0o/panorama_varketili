@@ -50,3 +50,16 @@
         gap: 110px 20px;
     }
 }
+
+@media (min-width:1600px) {
+    .apartment_list{
+        width: calc(100% - 70px);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        gap: 110px 60px;
+        padding: 0 40px;
+        
+    }
+}
