@@ -289,6 +289,11 @@ export default function Apartment83() {
 
             <div className="apartment_main_inner">
 
+                <div className="to_back">
+                    <img src={toBack} alt="back arrow" />
+                    <Link to='/components/Apartments/Apartments'><p>უკან</p></Link>
+                </div>
+
                 <div className="apartment_main_inner_left">
                     <img src={m102inner} alt="m102inner" />
 
