@@ -351,7 +351,6 @@
   @media (max-width:769px) {
     
     .about_proj_page{
-        box-sizing: content-box;
         padding-left: 20px;
         padding-top: 210px;
         padding-bottom: 86px;
@@ -414,7 +413,7 @@
         font-size: 10px;
         line-height: 18px;
         /* or 180% */
-        padding-right: 150px;
+        padding-right: 0px;
 
         color: #000000;
     }

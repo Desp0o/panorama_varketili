@@ -68,7 +68,7 @@ export default function AboutProject(){
         setIsGeo(true)
         setIsRus(false)
 
-        GeoLanguage.current.style.color = '#029FA0'
+            GeoLanguage.current.style.color = '#029FA0'
             GeoLanguageBurger.current.style.color = '#029FA0'
             EngLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
