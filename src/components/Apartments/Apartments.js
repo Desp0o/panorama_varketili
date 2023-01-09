@@ -44,10 +44,6 @@ export default function Apartments(){
 
     // Email send Functionality
     const form = useRef();
-    const inputNameRef = useRef()
-    const inputNumberRef = useRef()
-    const inputMailRef = useRef()
-    const inputSendref = useRef()
     const [popUp, setPopUp] = useState('pop_up_msg')
 
     const sendEmail = (e) => {
@@ -232,7 +228,7 @@ export default function Apartments(){
         <div className="to_back apartment_to__back">
                         <img src={toBack} alt="back arrow " />
                         <Link to='/components/MainPage'><p>უკან</p></Link>
-            </div>
+        </div>
         
         <div className="apartments_page" ref={scrollRef}>
 

@@ -78,11 +78,13 @@ export default function Flats(props){
 
            
              <div className="cards" >
+
+                <div className="cards maping_cards">
                 {
                     renderArr.map((render)=>{
                         return(
                             
-                            <div className="maping_cards">
+                            <>
                                 <div key={render.id}  className="card" >
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
@@ -102,12 +104,12 @@ export default function Flats(props){
                                     </div>
                                     </Link>
                                 </div>
-                            </div>
+                            </>
                             
                         )
                     })
                 }
-
+                </div>
 
                 {/* swiper slider */}
                 <div className="swiper_slider_responsive">

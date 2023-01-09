@@ -13,6 +13,8 @@ import '../../styles/PopUpMsg.css'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
+import toBack from '../../images/toBackWhite.png'
+
 
 export default function AboutProject(){
 
@@ -246,6 +248,11 @@ export default function AboutProject(){
 
             <div className={map} ref={scrollRef}>
                 <iframe className="map_frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28337.617671515094!2d44.87096419968619!3d41.70702743657408!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4044127860f0ad61%3A0x8f893e58130af269!2zNjgg4YOV4YOY4YOl4YOi4YOd4YOgIOGDmeGDo-GDnuGDoOGDkOGDq-GDmOGDoSDhg6Xhg6Phg6nhg5AsIOGDl-GDkeGDmOGDmuGDmOGDoeGDmA!5e0!3m2!1ska!2sge!4v1672070202149!5m2!1ska!2sge" referrerPolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <div className="to_back about_proj_to_back">
+                        <img src={toBack} alt="back arrow " />
+                        <Link to='/components/MainPage'><p>უკან</p></Link>
             </div>
 
             <div className="project_timeline_txt">

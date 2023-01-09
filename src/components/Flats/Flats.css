@@ -43,6 +43,7 @@
     margin-top: 146px;
 }
 
+
 .card_outter{
     position: relative;
 }
@@ -225,6 +226,10 @@
     -ms-flex-align: center;
     -webkit-align-items: center;
     align-items: center;
+  }
+
+  .maping_cards{
+    margin-top: 0px !important;
   }
   
 

@@ -348,6 +348,13 @@
     width: 100%;
   }
 
+  .about_proj_to_back{
+    position: absolute;
+    top:130px;
+    left:0px;
+    color: #fff;
+  }
+
   @media (max-width:769px) {
     
     .about_proj_page{
