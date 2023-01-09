@@ -241,7 +241,7 @@ export default function AboutProject(){
             <div className={fadeOut}>
                 <h1 className="about_proj_page_header">ლოკაცია</h1>
                 <p className="about_proj_page_p">ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.</p>
-                <p className="about_proj_page_p"> ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.</p>
+                <p className="about_proj_page_p second_p"> ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.</p>
             </div>
 
             <div className={map} ref={scrollRef}>

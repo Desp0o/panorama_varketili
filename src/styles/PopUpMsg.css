@@ -64,6 +64,10 @@
 }
 
 @media (max-width:769px) {
+    .form_outer{
+        border-radius: 0px;
+    }
+
     .call_float_btn:hover{
         box-shadow: none;
     }

@@ -30,8 +30,7 @@
 
 .about_inner_left_texts{
     margin-top: 55px;
-    /* width: 560px; */
-    max-width: 100%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 25px;
@@ -69,3 +68,44 @@
     box-shadow: 0px 0px 25px 10px rgba(2, 159, 160, 0.5);
 }
 
+.about_to_back{
+    padding-left: 30px !important;
+    margin-top: 150px;
+}
+
+@media (max-width:769px) {
+    .about_inner{
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 0px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 100px;
+        background-color: #fff;
+    }
+    .about_inner_left{
+        box-sizing: border-box;
+        width: 100%;
+        padding-right: 40px;
+    }
+
+    .about_us_header{
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        color: #171F17;
+    }
+
+    .about_inner_left_texts{
+        margin-top: 25px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        font-size: 12px;
+    }
+    .about_inner_right{
+        width: 100%;
+        display: flex;
+    }
+}

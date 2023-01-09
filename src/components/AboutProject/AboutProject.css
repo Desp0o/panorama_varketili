@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     padding-top: 70px;
-    overflow-x:hiddens;
+    overflow-x:hidden;
 }
 
 .about_proj_page{
@@ -349,14 +349,45 @@
   }
 
   @media (max-width:769px) {
+    
     .about_proj_page{
+        box-sizing: content-box;
         padding-left: 20px;
+        padding-top: 210px;
+        padding-bottom: 86px;
+        gap: 7px;
     }
     .project_timeline_txt{
+        padding-top: 70px;
         padding-left: 20px;
+        gap: 23px;
+    }
+    .map_frame{
+        height: 210px;
+    }
+    .about_proj_page_header{
+        font-size: 25px;
+    }
+    .about_proj_page_p{
+        font-size: 10px;
+    }
+    .second_p{
+        display: none;
+    }
+    .project_timeline_txt h2{
+        font-family: 'BPG Nino Mtavruli';
+        font-weight: 700;
+        font-size: 15px;
+    }
+    .project_timeline_txt p{
+        font-family: 'BPG Mrgvlovani';
+        font-size: 10px;
+        line-height: 16px;
+        color: #000000;
     }
     .ganvadeba{
         flex-direction: column;
+        margin-top: 20px;
     }
     .ganvadeba_right{
         width: 100%;
@@ -364,6 +395,36 @@
     .ganvadeba_left{
         width: 100%;
         padding-left: 20px;
+        gap: 24px;
+    }
+    .ganvadeba_left h2{
+        font-family: 'bpg web 001';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        line-height: 17px;
+
+        color: #000000
+    }
+
+    .ganvadeba_left p{
+        font-family: 'BPG Nino Mtavruli';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 18px;
+        /* or 180% */
+        padding-right: 150px;
+
+        color: #000000;
+    }
+
+    .rangesDiv{
+        margin: 0 auto;
+        width: 90%;
+        position: relative;
+        margin-top:200px ;
+        padding-bottom:150px;
     }
     .range_msg_box{
         width: 102px;
@@ -404,7 +465,7 @@
     .circle_txt3{
         position: absolute;
         top: -70%;
-        right: 13%;
+        right: 25%;
     }
     .msgBox3{
         top: -90%;
@@ -415,7 +476,7 @@
     .circle_txt4{
         position: absolute;
         top: 85%;
-        right: 12%;
+        right: 23%;
     }
     .msgBox4{
         top: 65%;

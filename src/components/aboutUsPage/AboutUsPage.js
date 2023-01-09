@@ -4,6 +4,7 @@ import logo from '../../images/logo.png'
 import aboutimage from '../../images/aboutimage.png'
 import burgerStick from '../../images/sticks.png'
 import '../../styles/navbar.css'
+import toBack from '../../images/toback.png'
 
 import Footer from '../footer/Footer'
 
@@ -206,6 +207,11 @@ export default function AboutUsPage(){
                 <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
             </div>
         </div>
+
+        <div className="to_back about_to_back">
+                    <img src={toBack} alt="back arrow" />
+                        <Link to='/components/MainPage'><p>უკან</p></Link>
+                    </div>
 
             <div className="about_inner">
 
