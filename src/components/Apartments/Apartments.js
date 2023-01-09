@@ -14,6 +14,8 @@ import bed from '../../images/bed.png'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
+import toBack from '../../images/toback.png'
+
 
 export default function Apartments(){
     //Floating Button Appear
@@ -226,9 +228,15 @@ export default function Apartments(){
                 <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
             </div>
         </div>
-        
+
+        <div className="to_back apartment_to__back">
+                        <img src={toBack} alt="back arrow " />
+                        <Link to='/components/MainPage'><p>უკან</p></Link>
+            </div>
         
         <div className="apartments_page" ref={scrollRef}>
+
+            
     
             <h1 className="apartment_header" ref={ApartmentRef}>შეარჩიე სასურველი ბინა</h1>
         
