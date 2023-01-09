@@ -182,6 +182,52 @@
     right: 107px;
 }
 
+.card_outer_div{
+    position: relative;
+}
+
+.swiper_slider_responsive{
+    display: none;
+}
+
+
+/* სლაიდერი */
+.swiper {
+    width: 100%;
+    display: flex;
+    margin-left: -50px;
+    padding: 0;
+  }
+  
+  .mySwiper{
+      display: flex;
+  }
+  
+  
+  .swiper-slide {
+    overflow: hidden;
+    position: relative;
+    width: 329px;
+    height: 342px;
+    padding-top: 10px;
+    padding-bottom: 50px;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+
 @media (min-width:1400px) {
     .cards{
         gap: 100px;
@@ -189,11 +235,18 @@
 }
 
 @media (max-width:769px) {
+    .flats{
+        width: 100%;
+        padding-left: 36px;
+        padding-right: 36px;
+        box-sizing: border-box;
+        padding-top: 120px;
+        padding-bottom: 135px;
+        overflow: hidden;
+    }
     .cards{
         gap: 15px;
         margin-top: 36px;
-        scroll-behavior: smooth;
-        overflow: scroll;
         padding: 50px;
     }
     .card{
@@ -202,7 +255,7 @@
     }
     .card:hover{
         margin-top: 0px;
-        box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
     }
     .card_render_main_screen{
         width: 315px;
@@ -239,5 +292,31 @@
         padding-top: 76px;
         padding-bottom: 100px;
     }
+    
+    .swiper_slider_responsive{
+        display: flex;
+    }
+    .btnOuter{
+        margin-top: 0;
+    }
+    .maping_cards{
+        display: none;
+    }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
