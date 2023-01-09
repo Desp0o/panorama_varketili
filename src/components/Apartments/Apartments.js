@@ -5,6 +5,7 @@ import Footer from '../footer/Footer'
 import logo from '../../images/logo.png'
 import './Apartments.css'
 import '../../styles/PopUpMsg.css'
+import Form from "../contacForm";
 
 import { ApartmentsArr } from "./ApartmentsData";
 
@@ -271,31 +272,9 @@ export default function Apartments(){
         <div className={popUp}>
             <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
 
-            <div className="pop_up_msg_inner">
-
-                <img src={xMark} className="xMark" alt="xmarkBtn" onClick={()=>setPopUp('pop_up_msg')}/>
-                
-                <h1 className="pop_up_header">დაგვიტოვე საკონტაქტო</h1>
-
-                <form ref={form} onSubmit={sendEmail}>
-                    <div className="pop_up_msg_inner_top">
-                        <input ref={inputNameRef} type="text" name="user_name" placeholder="სახელი" important="true"/>
-                        <input ref={inputNumberRef} type="text" name="user_number" placeholder="ნომერი" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_middle">
-                        <input ref={inputMailRef} className="email" type="email" name="user_email"  placeholder="ელ.ფოსტა" important="true"/>
-                    </div>
-
-                    <div className="pop_up_msg_inner_bottom">
-                        <div className="pop_up_msg_inner_bottom submit_btn">
-                            <button type="submit">
-                                <span ref={inputSendref}>გაგზავნა</span>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-
+            <div className="form_outer">
+                <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+                <Form />
             </div>
         </div>
 

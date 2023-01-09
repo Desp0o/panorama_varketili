@@ -326,13 +326,12 @@ export default function MainPage() {
         <>
 
         <div className={popUp}>
-            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}>
-                
+            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+
+            <div className="form_outer">
+                <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+                <Form />
             </div>
-        <div className="form_outer">
-            <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
-            <Form />
-        </div>
            
         </div>
         
