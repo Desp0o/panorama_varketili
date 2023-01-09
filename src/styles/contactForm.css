@@ -31,3 +31,29 @@
 
     color: #171F17;
 }
+
+@media (max-width:769px) {
+    .email_for_form{
+        width: 100% !important;
+        height: 40px !important;
+    }
+    .upper_input{
+        width: 100% !important;
+        height: 40px !important;
+    }
+    .contact_form_btn{
+        width: 100%;
+    }
+
+    .leave_contact{
+        margin-bottom: 71px;
+        margin-top: 180px;
+    
+        font-family: 'BPG Nino Mtavruli';
+        font-weight: 700;
+        font-size: 25px;
+    
+        color: #171F17;
+    }
+    
+}

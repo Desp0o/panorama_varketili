@@ -5,6 +5,7 @@ import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m57inner.png'
 import burgerStick from '../../../images/sticks.png'
+import toBack from '../../../images/toback.png'
 
 const pointerStyle5 ={
     left: '48%',
