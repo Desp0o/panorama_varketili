@@ -50,17 +50,21 @@ const renderArr =[
 
 export default function Flats(props){
     const flatsHeaderRef = useRef()
+    const seeMoreApartments = useRef()
        
     useEffect(()=>{
         flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
+        seeMoreApartments.current.innerHTML = 'მეტი ბინა'
 
 
         if(localStorage.language === 'eng'){
 
             flatsHeaderRef.current.innerHTML = 'Choose your ideal apartment'
+            seeMoreApartments.current.innerHTML = 'More apartments'
 
         }else if(localStorage.language === 'rus'){
-            flatsHeaderRef.current.innerHTML = ''
+            flatsHeaderRef.current.innerHTML = 'Выберите свою идеальную квартиру'
+            seeMoreApartments.current.innerHTML = 'Еще апартаменты'
         }
 
         
@@ -219,7 +223,7 @@ export default function Flats(props){
 
             <div className="btnOuter">
                 <Link to='/components/Apartments/Apartments'><div className="seeMoreBtn">
-                    <p>მეტი ბინა</p>
+                    <p ref={seeMoreApartments}>მეტი ბინა</p>
                 </div></Link>
             </div>
 

@@ -13,23 +13,39 @@ export default function Contact(props){
     const inputNumberRef = useRef()
     const inputMailRef = useRef()
     const inputSendref = useRef()
+    const namePlaceHolderRef = useRef()
+    const numberPlaceHolderRef = useRef()
+    const emailPlaceHolderRef = useRef()
 
     useEffect(()=>{
         contactHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
         contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგეხმარებათ<br/> შეარჩიოთ  თქვენზე მორგებული ბინა'
-        
         inputSendref.current.innerHTML = 'გაგზავნა'
+
+        //კონტაქტის ფორმა
+        namePlaceHolderRef.current.innerHTML = 'სახელი *'
+        numberPlaceHolderRef.current.innerHTML = "ნომერი *"
+        emailPlaceHolderRef.current.innerHTML = "ელ-ფოსტა *"
 
         if(localStorage.language === 'eng'){
             contactHeaderRef.current.innerHTML = 'Leave your Contact Info'
             contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
-            
             inputSendref.current.innerHTML = 'Send'
+
+            //კონტაქტის ფორმა
+            namePlaceHolderRef.current.innerHTML = 'Name *'
+            numberPlaceHolderRef.current.innerHTML = "Number *"
+            emailPlaceHolderRef.current.innerHTML = "Email *"
+
         }else if(localStorage.language === 'rus'){
-            contactHeaderRef.current.innerHTML = ''
-            contactParagraphRef.current.innerHTML = ''
-            
-            inputSendref.current.innerHTML = ''
+            contactHeaderRef.current.innerHTML = 'Оставьте свою контактную информацию'
+            contactParagraphRef.current.innerHTML = 'Найдите идеальную квартиру с помощью наших представителей-экспертов.'
+            inputSendref.current.innerHTML = 'Отправить'
+
+            //კონტაქტის ფორმა
+            namePlaceHolderRef.current.innerHTML = 'имя *' 
+            numberPlaceHolderRef.current.innerHTML = "номер *"
+            emailPlaceHolderRef.current.innerHTML = "Эл. адрес *"
         }
 
     },[props.iseng, props.isrus, props.isgeo])
@@ -177,9 +193,9 @@ export default function Contact(props){
     return(
         <div className="contact">
             <div className="contact_left">
-                <h2 className="contact_header" ref={contactHeaderRef}>დაგვიტოვე საკონტაქტო</h2>
+                <h2 className="contact_header" ref={contactHeaderRef} style={props.styleeng}>დაგვიტოვე საკონტაქტო</h2>
 
-                <p className="contact_paragraph" ref={contactParagraphRef}>
+                <p className="contact_paragraph" ref={contactParagraphRef} style={props.styleeng}>
                     ჩვენი წარმომადგენელი დაგეხმარებათ   შეარჩიოთ  თქვენზე მორგებული ბინა
                 </p>
 
@@ -194,15 +210,15 @@ export default function Contact(props){
 
                             <div className="input1_label1">
                                 
-                                <span className="placeholder_name">სახელი *</span>
+                                <span ref={namePlaceHolderRef} className="placeholder_name" style={props.styleeng}>სახელი *</span>
                                 <input ref={inputNameRef} type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                                <span className="placeholder_number">ნომერი *</span>
+                                <span ref={numberPlaceHolderRef} className="placeholder_number" style={props.styleeng}>ნომერი *</span>
                                 <input ref={inputNumberRef} type="text" name="user_number" onChange={numberHandler}/>
-                                <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
+                                <span ref={numberInputErrorMsg} className="placeholder_number_error" style={props.styleeng}>მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
                             
                             
@@ -210,9 +226,9 @@ export default function Contact(props){
 
                         <div className="input_fields_bottom">
                             <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                            <span className="placeholder_email">ელ-ფოსტა *</span>
+                            <span ref={emailPlaceHolderRef} className="placeholder_email" style={props.styleeng}>ელ-ფოსტა *</span>
                             <input ref={inputMailRef}  type="text" name="user_email" onChange={mailHandler}/>
-                            <span ref={emailInputErrorMsg} className="placeholder_email_error">მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
+                            <span ref={emailInputErrorMsg} className="placeholder_email_error" style={props.styleeng}>მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                         </div>
 
 
@@ -221,7 +237,7 @@ export default function Contact(props){
                     
                     <div className="submit_btn">
                         <button type="submit">
-                            <span ref={inputSendref}>გაგზავნა</span>
+                            <span ref={inputSendref} style={props.styleeng}>გაგზავნა</span>
                         </button>
                     </div>
                 

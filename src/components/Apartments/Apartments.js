@@ -16,8 +16,14 @@ import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
 import toBack from '../../images/toback.png'
 
+const styleENG={
+    fontFamily: 'Roboto'
+}
 
 export default function Apartments(){
+
+    const [style, setStyle] = useState(styleENG)
+
     //Floating Button Appear
     const scrollRef = useRef(null)
     const floatButtonRef = useRef()
@@ -76,6 +82,7 @@ export default function Apartments(){
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
+        setStyle(null)
 
         GeoLanguage.current.style.color = '#029FA0'
             GeoLanguageBurger.current.style.color = '#029FA0'
@@ -94,6 +101,7 @@ export default function Apartments(){
         setIsEng(true)
         setIsGeo(false)
         setIsRus(false)
+        setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -113,6 +121,7 @@ export default function Apartments(){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
+        setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -282,7 +291,7 @@ export default function Apartments(){
             </div>
         </div>
 
-        <Footer iseng={isEng} isgeo={isGeo} isrus={isRus}/>
+        <Footer iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
 
         </>
             

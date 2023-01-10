@@ -3,12 +3,24 @@ import {React, useEffect, useState, useRef} from "react";
 import FeatureBg from '../../images/FeatureBg.webp'
 import './Features.css'
 
-export default function Features() {
+export default function Features(props) {
     const [expand, setExpand] = useState(null)
+
+    const featuresHeaderRef = useRef()
+
+    useEffect(()=>{
+        featuresHeaderRef.current.innerHTML = 'უპირატესობები'
+    if(localStorage.language === 'eng'){
+        featuresHeaderRef.current.innerHTML = 'Advantages'
+        
+    }else if(localStorage.language === 'rus'){
+        featuresHeaderRef.current.innerHTML = 'Преимущества'
+    }
+},[props.iseng, props.isgeo, props.isrus])
 
     return(
         <div className="features">
-            <p className="features_header">უპირატესობები</p>
+            <p ref={featuresHeaderRef} className="features_header" style={props.styleeng}>უპირატესობები</p>
 
             <div className="feature_bg">
                 <img src={FeatureBg} />

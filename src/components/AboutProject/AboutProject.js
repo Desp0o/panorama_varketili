@@ -15,8 +15,13 @@ import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
 import toBack from '../../images/toBackWhite.png'
 
+const styleENG={
+    fontFamily: 'Roboto'
+}
 
 export default function AboutProject(){
+
+    const [style, setStyle] = useState(styleENG)
 
     //Floating Button Appear
     const scrollRef = useRef(null)
@@ -69,6 +74,7 @@ export default function AboutProject(){
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
+        setStyle(null)
 
             GeoLanguage.current.style.color = '#029FA0'
             GeoLanguageBurger.current.style.color = '#029FA0'
@@ -87,6 +93,7 @@ export default function AboutProject(){
         setIsEng(true)
         setIsGeo(false)
         setIsRus(false)
+        setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -103,6 +110,7 @@ export default function AboutProject(){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
+        setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -298,7 +306,7 @@ export default function AboutProject(){
                 </div>
 
             </div>
-            <Footer />
+            <Footer iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
         </>
     )
 }

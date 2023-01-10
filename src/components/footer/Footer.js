@@ -7,7 +7,10 @@ import instagram from '../../images/instagram.png'
 import linkedin from '../../images/linkedin.png'
 import email from '../../images/email.png'
 
+
 export default function Footer(props){
+
+
     const geoRuningText = useRef()
     const engRuningText = useRef()
     const rusRuningText = useRef()
@@ -41,6 +44,7 @@ export default function Footer(props){
     }
 
     useEffect(()=>{
+
         geoRuningText.current.style. display = "flex"
         engRuningText.current.style. display = "none"
         rusRuningText.current.style. display = "none"
@@ -68,52 +72,34 @@ export default function Footer(props){
             <div className="running_text_outter">
                 <div ref={geoRuningText}>
                     <div className="running_text">
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1>დასრულებამდე დარჩა <span> {timeLeft.days} </span> დღე</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
                     </div>
                 </div>
 
                 <div ref={engRuningText}>
                     <div className="running_text">
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
                     </div>
                 </div>
 
                 <div ref={rusRuningText}>
                     <div className="running_text">
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
-                        <h1><span>{timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1>დარჩენილია 54 ბინა</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
                     </div>
                 </div>
             </div>
@@ -138,13 +124,13 @@ export default function Footer(props){
 
                 </div>
 
-                <div className="footer_bottom_number_adrees">
-                    <p className="footer_number">0322 73 24 19</p>
-                    <p className="footer_adress">გაყიდვების ოფისი-მისამართი</p>
+                <div className="footer_bottom_number_adrees" style={props.styleeng}>
+                    <p className="footer_number" style={props.styleeng}>0322 73 24 19</p>
+                    <p className="footer_adress" style={props.styleeng}>გაყიდვების ოფისი-მისამართი</p>
                 </div>
 
-                <div className="footer_bottom_rights">
-                    <p className="copyright">© 2023 Twins Development</p>
+                <div className="footer_bottom_rights" style={props.styleeng}>
+                    <p className="copyright" style={props.styleeng}>© 2023 Twins Development</p>
                 </div>
 
                 

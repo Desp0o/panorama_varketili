@@ -36,11 +36,15 @@
     gap: 25px;
 }
 
-.engTwins{
-    font-size: 40px !important;
-    font-family: 'Roboto' !important;
-    color: red !important;
-}
+
+
+ .first_span{
+    display: inline-block !important;
+ }
+ .second_span{
+    display: inline-block !important;
+ }
+ 
 
 .about_us_list{
     list-style:inside;
