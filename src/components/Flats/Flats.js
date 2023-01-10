@@ -46,11 +46,10 @@ const renderArr =[
     }
 ]
 
-
-
 export default function Flats(props){
     const flatsHeaderRef = useRef()
     const seeMoreApartments = useRef()
+
        
     useEffect(()=>{
         flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
@@ -77,7 +76,7 @@ export default function Flats(props){
     return(
         <div className="flats">
             <div className="headers_and_more">
-                <h2 className="flats_header" ref={flatsHeaderRef}>შეარჩიე სასურველი ბინა</h2>
+                <h2 className="flats_header" ref={flatsHeaderRef} style={props.styleeng}>შეარჩიე სასურველი ბინა</h2>
             </div>
 
            
@@ -223,7 +222,7 @@ export default function Flats(props){
 
             <div className="btnOuter">
                 <Link to='/components/Apartments/Apartments'><div className="seeMoreBtn">
-                    <p ref={seeMoreApartments}>მეტი ბინა</p>
+                    <p style={props.styleeng} ref={seeMoreApartments}>მეტი ბინა</p>
                 </div></Link>
             </div>
 

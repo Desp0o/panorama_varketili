@@ -100,9 +100,6 @@ export default function MainPage() {
     const dot2 = useRef()
     const dot3 = useRef()
 
-    const sliderParagraphGeo = useRef()
-    const sliderParagraphRus = useRef()
-    const sliderParagraphEng = useRef()
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -518,7 +515,7 @@ export default function MainPage() {
             onClick={()=> setPopUp('pop_up_msg pop_up_active')}
         />
 
-        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus}  />
+        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style} />
 
         <div className='why_panorama'>
             <div className="header_txt_btn">
