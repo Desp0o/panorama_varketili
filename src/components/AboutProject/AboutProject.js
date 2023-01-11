@@ -119,6 +119,10 @@ export default function AboutProject(){
         projBlackFrame.current.innerHTML = 'შავი კარკასი'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
 
+        ganvadebaRef.current.innerHTML = 'განვადება'
+        ganvadebaParagraph1Ref.current.innerHTML = 'ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.'
+        ganvadebaParagraph2Ref.current.innerHTML = "აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით."
+
     if(localStorage.language === 'eng'){
         setIsEng(true)
         setIsGeo(false)
@@ -160,6 +164,10 @@ export default function AboutProject(){
         projBlackFrame.current.innerHTML = 'Black Frame'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
 
+        ganvadebaRef.current.innerHTML = 'Installment'
+        ganvadebaParagraph1Ref.current.innerHTML = 'The option of domestic 2-year interest-free installment plans is available for the purchase of apartments.'
+        ganvadebaParagraph2Ref.current.innerHTML = "The bank's 5-10 year mortgage loan is also available."
+
     }else if(localStorage.language === 'rus'){
         setIsEng(false)
         setIsGeo(false)
@@ -196,6 +204,10 @@ export default function AboutProject(){
         projMonolitRef.current.classList.add('circle_txt3_rus')
         projBlackFrame.current.innerHTML = 'Черный каркас'   
         projBlackFrame.current.classList.add('circle_txt4_rus')
+
+        ganvadebaRef.current.innerHTML = 'Рассрочка'
+        ganvadebaParagraph1Ref.current.innerHTML = 'Возможность использования домашних беспроцентных инсталляционных планов на 2 года доступна для покупки квартир.'
+        ganvadebaParagraph2Ref.current.innerHTML = 'И доступна ипотечная займ на период от 5 до 10 лет от банка.'
 
     }
     },[isEng, isGeo, isRus])
@@ -261,6 +273,9 @@ export default function AboutProject(){
     const projFoundationRef = useRef()
     const projMonolitRef = useRef()
     const projBlackFrame = useRef()
+    const ganvadebaRef = useRef()
+    const ganvadebaParagraph1Ref = useRef()
+    const ganvadebaParagraph2Ref = useRef()
     
     return(
         <> 
@@ -380,9 +395,9 @@ export default function AboutProject(){
 
             <div className="ganvadeba">
                 <div className="ganvadeba_left">
-                    <h2>განვადება</h2>
-                    <p>ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.</p>
-                    <p>აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით.</p>
+                    <h2 ref={ganvadebaRef} style={style}>განვადება</h2>
+                    <p ref={ganvadebaParagraph1Ref} style={style}>ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.</p>
+                    <p ref={ganvadebaParagraph2Ref} style={style}>აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით.</p>
                 </div>
 
                 <div className="ganvadeba_right">

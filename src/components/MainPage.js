@@ -22,6 +22,7 @@ import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
 import burgerStick from '../images/sticks.png'
+import burgerClose from '../images/burgerClose.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
 
@@ -358,6 +359,7 @@ export default function MainPage() {
     const burgerApartments = useRef()
     const burgerAbout = useRef()
     const burgerProj = useRef()
+    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
 
     const [burger, setBurger] = useState('burgerMenu_panel')
     const [burgerBoolean, setBurgerBoolean] = useState(false)
@@ -366,9 +368,11 @@ export default function MainPage() {
         if(!burgerBoolean){
             setBurgerBoolean(true)
             setBurger('burgerMenu_panel burgerMenu_panel_active')
+            setBurgerIcon(burgerClose)
         }else{
             setBurgerBoolean(false)
             setBurger('burgerMenu_panel')
+            setBurgerIcon(burgerStick)
         }
     }
 
@@ -412,7 +416,7 @@ export default function MainPage() {
                 </div>
 
                 <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerStick} alt="burgermenu" /> 
+                    <img src={burgerIcon} alt="burgermenu" /> 
                 </div>
             </div>
         </div>
@@ -431,11 +435,11 @@ export default function MainPage() {
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
             </div>
         </div>
 

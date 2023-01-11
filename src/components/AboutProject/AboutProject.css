@@ -360,6 +360,50 @@
     left:0px;
     color: #fff;
   }
+  @media (min-width:1400px) {
+    .msgBox2{
+        top: 65%;
+        left: 14%;
+    }
+    .circle_txt2{
+        position: absolute;
+        top: 110%;
+        left: 15%;
+    }
+  }
+
+  @media (min-width:1600px) {
+    .msgBox3{
+        top: -125%;
+        right: 19%;
+    }
+    .circle_txt3{
+        position: absolute;
+        top: -80%;
+        right: 25%;
+    }
+    .msgBox2{
+        top: 65%;
+        left: 18%;
+    }
+    .circle_txt2{
+        position: absolute;
+        top: 110%;
+        left: 19%;
+    }
+    .circle_txt4{
+        position: absolute;
+        top: 110%;
+        right: 15.5%;
+    }
+    .circle_txt4_rus{
+        position: absolute;
+        top: 110%;
+        right: 14%;
+    }
+  }
+
+ 
 
   @media (max-width:769px) {
     
@@ -498,4 +542,5 @@
     .circle_txt3_rus{
         right: 28%;
     }
+    
   }
