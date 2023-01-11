@@ -19,6 +19,9 @@ export default function Contact(props){
 
     useEffect(()=>{
         contactHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
+        contactHeaderRef.current.classList.remove('rusFontDecrease')
+        contactHeaderRef.current.style.fontSize = ''
+
         contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგეხმარებათ<br/> შეარჩიოთ  თქვენზე მორგებული ბინა'
         inputSendref.current.innerHTML = 'გაგზავნა'
 
@@ -27,8 +30,14 @@ export default function Contact(props){
         numberPlaceHolderRef.current.innerHTML = "ნომერი *"
         emailPlaceHolderRef.current.innerHTML = "ელ-ფოსტა *"
 
+        numberInputErrorMsg.current.innerHTML = 'მიუთითეთ ნომრის სწორი ფორმატი'
+        numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus')
+        emailInputErrorMsg.current.innerHTML = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
+
         if(localStorage.language === 'eng'){
             contactHeaderRef.current.innerHTML = 'Leave your Contact Info'
+            contactHeaderRef.current.classList.remove('rusFontDecrease')
+            contactHeaderRef.current.style.fontSize = ''
             contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
             inputSendref.current.innerHTML = 'Send'
 
@@ -37,8 +46,14 @@ export default function Contact(props){
             numberPlaceHolderRef.current.innerHTML = "Number *"
             emailPlaceHolderRef.current.innerHTML = "Email *"
 
+            numberInputErrorMsg.current.innerHTML = 'Please enter the correct email format'
+            numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus')
+            emailInputErrorMsg.current.innerHTML = 'Please enter the correct number format'
+
         }else if(localStorage.language === 'rus'){
             contactHeaderRef.current.innerHTML = 'Оставьте свою контактную информацию'
+            contactHeaderRef.current.classList.add('rusFontDecrease')
+            contactHeaderRef.current.style.fontSize = '29px'
             contactParagraphRef.current.innerHTML = 'Найдите идеальную квартиру с помощью наших представителей-экспертов.'
             inputSendref.current.innerHTML = 'Отправить'
 
@@ -46,6 +61,11 @@ export default function Contact(props){
             namePlaceHolderRef.current.innerHTML = 'имя *' 
             numberPlaceHolderRef.current.innerHTML = "номер *"
             emailPlaceHolderRef.current.innerHTML = "Эл. адрес *"
+
+            numberInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный формат электронной почты'
+            numberInputErrorMsg.current.classList.add('placeholder_number_error_rus')
+            emailInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный номер'
+            
         }
 
     },[props.iseng, props.isrus, props.isgeo])

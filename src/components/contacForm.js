@@ -5,17 +5,57 @@ import '../styles/contactForm.css'
 
 import errorIcon from '../images/errorIcon.png'
 
-export default function Form(){
+export default function Form(props){
     const form = useRef();
-    const contactHeaderRef = useRef()
-    const contactParagraphRef = useRef()
     const inputNameRef = useRef()
     const inputNumberRef = useRef()
     const inputMailRef = useRef()
     const inputSendref = useRef()
 
+    const comtactFormHeaderRef = useRef()
+    const comtactFormNameRef = useRef()
+    const contactFormNumberRef = useRef()
+    const contactFormEmailRef = useRef()
 
-    // props.iseng, props.isrus, props.isgeo
+
+            
+
+    useEffect(()=>{
+
+        comtactFormHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
+        comtactFormNameRef.current.innerHTML = 'სახელი *'
+        contactFormNumberRef.current.innerHTML = 'ნომერი *'
+        contactFormEmailRef.current.innerHTML = 'ელ-ფოსტა *'
+        inputSendref.current.innerHTML = 'გაგზავნა'
+
+        numberInputErrorMsg.current.innerHTML = 'მიუთითეთ ნომრის სწორი ფორმატი'
+        emailInputErrorMsg.current.innerHTML = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
+        
+        
+    if(localStorage.language === 'eng'){
+
+        comtactFormHeaderRef.current.innerHTML = 'Leave your Contact Info'
+        comtactFormNameRef.current.innerHTML = 'Name *'
+        contactFormNumberRef.current.innerHTML = 'Number *'
+        contactFormEmailRef.current.innerHTML = 'Email  *'
+        inputSendref.current.innerHTML = 'Send'
+
+        numberInputErrorMsg.current.innerHTML = 'Please enter the correct email format'
+        emailInputErrorMsg.current.innerHTML = 'Please enter the correct number format'
+        
+        
+    }else if(localStorage.language === 'rus'){
+        comtactFormHeaderRef.current.innerHTML = 'Оставьте свою контактную информацию'
+        comtactFormNameRef.current.innerHTML = 'имя *'
+        contactFormNumberRef.current.innerHTML = 'номер *'
+        contactFormEmailRef.current.innerHTML = 'Эл. адрес *'
+        inputSendref.current.innerHTML = 'Отправить'
+
+        numberInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный формат электронной почты'
+        emailInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный номер'
+        
+    }
+    },[props.iseng, props.isrus, props.isgeo])        
 
     const sendEmail = (e) => {
         if(numberBoolean === true && nameBoolean === true && mailBoolean === true){
@@ -153,7 +193,7 @@ export default function Form(){
     return(
         <>
 
-        <p className="leave_contact">დაგვიტოვე საკონტაქტო</p>
+        <p className="leave_contact" ref={comtactFormHeaderRef}>დაგვიტოვე საკონტაქტო</p>
 
         <form ref={form} onSubmit={sendEmail}>
 
@@ -163,13 +203,13 @@ export default function Form(){
 
                             <div className="input1_label1">
                                 
-                                <span className="placeholder_name">სახელი *</span>
+                                <span className="placeholder_name" ref={comtactFormNameRef}>სახელი *</span>
                                 <input ref={inputNameRef} className='upper_input' type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                                <span className="placeholder_number">ნომერი *</span>
+                                <span className="placeholder_number" ref={contactFormNumberRef}>ნომერი *</span>
                                 <input ref={inputNumberRef} className='upper_input' type="text" name="user_number" onChange={numberHandler}/>
                                 <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
@@ -179,7 +219,7 @@ export default function Form(){
 
                         <div className="input_fields_bottom">
                             <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                            <span className="placeholder_email">ელ-ფოსტა *</span>
+                            <span className="placeholder_email" ref={contactFormEmailRef}>ელ-ფოსტა *</span>
                             <input ref={inputMailRef} className='email_for_form'  type="text" name="user_email" onChange={mailHandler}/>
                             <span ref={emailInputErrorMsg} className="placeholder_email_error">მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                         </div>

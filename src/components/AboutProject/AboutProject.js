@@ -70,25 +70,55 @@ export default function AboutProject(){
     const [fadeOut, setFadeOut] = useState('about_proj_page')
     const [map, setMap] = useState('map')
 
+    const februaryRef = useRef()
+    const marchRef = useRef()
+    const aprilRef = useRef()
+    const octomberRef = useRef()
+
+    const burgerApartments = useRef()
+    const burgerAbout = useRef()
+    const burgerProj = useRef()
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
         setStyle(null)
 
-            GeoLanguage.current.style.color = '#029FA0'
-            GeoLanguageBurger.current.style.color = '#029FA0'
-            EngLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = 'black'
-            RusLanguage.current.style.color = 'black'
-            RusLanguageBurger.current.style.color = 'black'
+        GeoLanguage.current.style.color = '#029FA0'
+        GeoLanguageBurger.current.style.color = '#029FA0'
+        EngLanguageBurger.current.style.color = 'black'
+        EngLanguage.current.style.color = 'black'
+        RusLanguage.current.style.color = 'black'
+        RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
 
+        februaryRef.current.innerHTML = 'თებერვალი'
+        marchRef.current.innerHTML = 'მარტი'
+        aprilRef.current.innerHTML = 'აპრილი'
+        octomberRef.current.innerHTML = 'ოქტომბერი'
+
+        burgerApartments.current.innerHTML = "ბინები"
+        burgerAbout.current.innerHTML = "ჩვენ შესახებ"
+        burgerProj.current.innerHTML = "მიმდინარე პროექტი"
+
+        firstSectionHeaderRef.current.innerHTML = 'ლოკაცია'
+        firstSectionParagraphRef.current.innerHTML = 'ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
+        firstSectionParagrap2hRef.current.innerHTML = 'ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.'
+
+        proTimelineHeaderRef.current.innerHTML = 'პროექტის ვადები'
+        proTimelineparagraphRef.current.innerHTML = 'ვარკეთილის მიმდინარე პროექტი დასრულდება 2024 წლის დეკემბერში.<br/> ბინები ბარდება მწვანე კარკასის კონდიციით.'
         
-        
+        projStartRef.current.innerHTML = 'პროექტის დაწყება'
+        projFoundationRef.current.innerHTML = 'საძირკველი'
+        projMonolitRef.current.innerHTML = 'მონოლითი'
+        projMonolitRef.current.classList.remove('circle_txt3_rus')
+        projBlackFrame.current.innerHTML = 'შავი კარკასი'
+        projBlackFrame.current.classList.remove('circle_txt4_rus')
+
     if(localStorage.language === 'eng'){
         setIsEng(true)
         setIsGeo(false)
@@ -96,16 +126,40 @@ export default function AboutProject(){
         setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
-            GeoLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = '#029FA0'
-            EngLanguageBurger.current.style.color = '#029FA0'
-            RusLanguage.current.style.color = 'black'
-            RusLanguageBurger.current.style.color = 'black'
+        GeoLanguageBurger.current.style.color = 'black'
+        EngLanguage.current.style.color = '#029FA0'
+        EngLanguageBurger.current.style.color = '#029FA0'
+        RusLanguage.current.style.color = 'black'
+        RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'Apartments'
         navbarLinkAboutUs.current.innerHTML = 'About Us'
         navbarLinkAboutProject.current.innerHTML = 'About Project'
+
+        februaryRef.current.innerHTML = 'February'
+        marchRef.current.innerHTML = 'March'
+        aprilRef.current.innerHTML = 'April'
+        octomberRef.current.innerHTML = 'Octomber'
+
+        //burger
+        burgerApartments.current.innerHTML = "Apartments"
+        burgerAbout.current.innerHTML = "About Us"
+        burgerProj.current.innerHTML = "About Project"
+
+        firstSectionHeaderRef.current.innerHTML = 'ლოკაცია'
+        firstSectionParagraphRef.current.innerHTML = 'ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
+        firstSectionParagrap2hRef.current.innerHTML = 'ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.'
+
+        proTimelineHeaderRef.current.innerHTML = 'Project Deadlines'
+        proTimelineparagraphRef.current.innerHTML = 'The project at Varketili is set to be finished by December 2024.<br/>The apartments will be delivered in a green frame condition.'
         
+        projStartRef.current.innerHTML = 'Project start'
+        projFoundationRef.current.innerHTML = 'Foundation'
+        projMonolitRef.current.innerHTML = 'Monolith'
+        projMonolitRef.current.classList.add('circle_txt3_rus')
+        projBlackFrame.current.innerHTML = 'Black Frame'
+        projBlackFrame.current.classList.remove('circle_txt4_rus')
+
     }else if(localStorage.language === 'rus'){
         setIsEng(false)
         setIsGeo(false)
@@ -113,16 +167,36 @@ export default function AboutProject(){
         setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
-            GeoLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = 'black'
-            EngLanguageBurger.current.style.color = 'black'
-            RusLanguage.current.style.color = '#029FA0'
-            RusLanguageBurger.current.style.color = '#029FA0'
+        GeoLanguageBurger.current.style.color = 'black'
+        EngLanguage.current.style.color = 'black'
+        EngLanguageBurger.current.style.color = 'black'
+        RusLanguage.current.style.color = '#029FA0'
+        RusLanguageBurger.current.style.color = '#029FA0'
 
-        navbarLinkFlats.current.innerHTML = ''
-        navbarLinkAboutUs.current.innerHTML = ''
-        navbarLinkAboutProject.current.innerHTML = ''
-        
+        navbarLinkFlats.current.innerHTML = 'Апартаменты'
+        navbarLinkAboutUs.current.innerHTML = 'О нас'
+        navbarLinkAboutProject.current.innerHTML = 'О проекте'
+
+        februaryRef.current.innerHTML = 'Февраль'
+        marchRef.current.innerHTML = 'Mарт'
+        aprilRef.current.innerHTML = 'Aпреля'
+        octomberRef.current.innerHTML = 'Октябрь'
+
+        //burger
+        burgerApartments.current.innerHTML = "Апартаменты"
+        burgerAbout.current.innerHTML = "О нас"
+        burgerProj.current.innerHTML = "О проекте"
+
+        proTimelineHeaderRef.current.innerHTML = 'Сроки проекта'
+        proTimelineparagraphRef.current.innerHTML = 'Проект в Варкетили запланирован к завершению к декабрю 2024 года.<br/>Квартиры будут переданы в зеленом каркасном состоянии.'
+    
+        projStartRef.current.innerHTML = 'Запуск проекта'
+        projFoundationRef.current.innerHTML = 'Фундамент'
+        projMonolitRef.current.innerHTML = 'монолит'
+        projMonolitRef.current.classList.add('circle_txt3_rus')
+        projBlackFrame.current.innerHTML = 'Черный каркас'   
+        projBlackFrame.current.classList.add('circle_txt4_rus')
+
     }
     },[isEng, isGeo, isRus])
     
@@ -177,6 +251,16 @@ export default function AboutProject(){
     }
 
     //*************//
+
+    const firstSectionHeaderRef = useRef()
+    const firstSectionParagraphRef = useRef()
+    const firstSectionParagrap2hRef = useRef()
+    const proTimelineHeaderRef = useRef()
+    const proTimelineparagraphRef = useRef()
+    const projStartRef = useRef()
+    const projFoundationRef = useRef()
+    const projMonolitRef = useRef()
+    const projBlackFrame = useRef()
     
     return(
         <> 
@@ -189,9 +273,9 @@ export default function AboutProject(){
                 <div className="menu_and_langs">
                     {/* მენუ */}
                     <ul className="nav_menu">
-                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
+                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
+                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links active_page" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
                     </ul>
 
                     {/* ენები */}
@@ -212,23 +296,23 @@ export default function AboutProject(){
 
         <div className={burger}>
             <div className="burgerMenu_link">
-                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler} ref={burgerApartments} style={style}>ბინები</Link>
             </div>
 
             <div className="burgerMenu_link">
-                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} ref={burgerAbout} style={style}>ჩვენ შესახებ</Link>
             </div>
 
-            <div className="burgerMenu_link">
-                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+            <div className="burgerMenu_link  active_page">
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
             </div>
         </div>
 
@@ -249,9 +333,9 @@ export default function AboutProject(){
             />
 
             <div className={fadeOut}>
-                <h1 className="about_proj_page_header">ლოკაცია</h1>
-                <p className="about_proj_page_p">ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.</p>
-                <p className="about_proj_page_p second_p"> ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.</p>
+                <h1 className="about_proj_page_header" ref={firstSectionHeaderRef} style={style}>ლოკაცია</h1>
+                <p className="about_proj_page_p" ref={firstSectionParagraphRef} style={style}>ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.</p>
+                <p className="about_proj_page_p second_p" ref={firstSectionParagrap2hRef} style={style}> ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.</p>
             </div>
 
             <div className={map} ref={scrollRef}>
@@ -264,30 +348,30 @@ export default function AboutProject(){
             </div>
 
             <div className="project_timeline_txt">
-                <h2>პროექტის ვადები</h2>
-                <p>ვარკეთილის მიმდინარე პროექტი დასრულდება 2024 წლის დეკემბერში.<br/> ბინები ბარდება მწვანე კარკასის კონდიციით.</p>
+                <h2 ref={proTimelineHeaderRef} style={style}>პროექტის ვადები</h2>
+                <p ref={proTimelineparagraphRef} style={style}>ვარკეთილის მიმდინარე პროექტი დასრულდება 2024 წლის დეკემბერში.<br/> ბინები ბარდება მწვანე კარკასის კონდიციით.</p>
             </div>
 
             <div className="rangesDiv">
 
                 <span className="circle1"><img className="line1" src={line29}/></span>
-                    <p className="circleTXT circle_txt1">პროექტის დაწყება</p>
-                    <div className="range_msg_box msgBox1"><p className="msgBoxText">თებერვალი 2023</p></div>
+                    <p className="circleTXT circle_txt1" style={style} ref={projStartRef}>პროექტის დაწყება</p>
+                    <div className="range_msg_box msgBox1"><p className="msgBoxText" ref={februaryRef} style={style}>თებერვალი 2023</p></div>
                 
 
                 <span className="circle2"><img className="line2" src={line29}/></span>
-                    <p className="circleTXT circle_txt2">საძირკველი</p>
-                    <div className="range_msg_box msgBox2"><p className="msgBoxText">მარტი 2023</p></div>
+                    <p className="circleTXT circle_txt2" style={style} ref={projFoundationRef}>საძირკველი</p>
+                    <div className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>მარტი 2023</p></div>
                 
 
                 <span className="circle3"><img className="line3" src={line29}/></span>
-                    <p className="circleTXT circle_txt3">მონოლითი</p>
-                    <div className="range_msg_box msgBox3"><p className="msgBoxText">აპრილი 2023</p></div>
+                    <p className="circleTXT circle_txt3 circle_txt3_rus" style={style} ref={projMonolitRef}>მონოლითი</p>
+                    <div className="range_msg_box msgBox3"><p className="msgBoxText" ref={aprilRef} style={style}>აპრილი 2023</p></div>
 
 
                 <span className="circle4"><img className="line4" src={line29}/></span>
-                    <p className="circleTXT circle_txt4">შავი კარკასი</p>
-                    <div className="range_msg_box msgBox4"><p className="msgBoxText">ოქტომბერი 2023</p></div>
+                    <p className="circleTXT circle_txt4" style={style} ref={projBlackFrame}>შავი კარკასი</p>
+                    <div className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
                 <input className="inputRange" type='range' min='0' max='200' step='1' value={data} onChange={(e)=> setData(e.target.value)} />

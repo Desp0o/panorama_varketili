@@ -33,18 +33,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 25px; 
 }
 
 
 
- .first_span{
-    display: inline-block !important;
- }
- .second_span{
-    display: inline-block !important;
- }
- 
 
 .about_us_list{
     list-style:inside;

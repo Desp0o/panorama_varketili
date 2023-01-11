@@ -88,7 +88,7 @@ export default function Flats(props){
                         return(
                             
                             <>
-                                <div key={render.id}  className="card" >
+                                <div className="card" >
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
                                         <img className="card_render_main_screen" src={render.image} />

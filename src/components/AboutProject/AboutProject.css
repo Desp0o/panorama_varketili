@@ -22,13 +22,11 @@
     background-repeat: no-repeat;
 
     filter: brightness(10%);
-    opacity: 0.2;
-    transition: all 1.2s ease;
+    transition: all 1.6s ease;
 }
 
 .about_proj_page_active{
     filter: brightness(100%);
-    opacity: 1;
 }
 
 .about_proj_page_header{
@@ -159,6 +157,9 @@
     top: -80%;
     right: 23%;
 }
+.circle_txt3_rus{
+    right: 25.5%;
+}
 .msgBox3{
     top: -125%;
     right: 14%;
@@ -181,6 +182,11 @@
     position: absolute;
     top: 110%;
     right: 18%;
+}
+.circle_txt4_rus{
+    position: absolute;
+    top: 110%;
+    right: 16%;
 }
 .msgBox4{
     top: 65%;
@@ -487,5 +493,9 @@
     .msgBox4{
         top: 65%;
         right: 10%;
+    }
+
+    .circle_txt3_rus{
+        right: 28%;
     }
   }

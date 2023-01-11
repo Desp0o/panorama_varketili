@@ -133,6 +133,7 @@ export default function MainPage() {
     const whyPanoramaParagraphRef3 = useRef()
     const whyPanoramaParagraphRef4 = useRef()
     const whyPanoramaParagraphRef5 = useRef()
+    const responsiveSeeMoreBtn = useRef()
 
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
@@ -254,7 +255,8 @@ export default function MainPage() {
             whyPanoramaParagraphRef3.current.innerHTML = 'პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.'
             whyPanoramaParagraphRef4.current.innerHTML = 'გაიგე დეტალურად პროექტის შესახებ'
             whyPanoramaParagraphRef5.current.style.display = 'none'
-            
+            responsiveSeeMoreBtn.current.innerHTML = 'დეტალურად'
+
         if(localStorage.language === 'eng'){
             setIsEng(true)
             setIsGeo(false)
@@ -288,7 +290,7 @@ export default function MainPage() {
             whyPanoramaParagraphRef4.current.innerHTML = 'Learn more about the project'
             whyPanoramaParagraphRef5.current.innerHTML = "Our distinctive appearance and innovative approaches help us set a new standard in the synthesis of urbanization, making Panorama Varketili a truly unique place to call home."
             whyPanoramaParagraphRef5.current.style.display = 'block'
-            
+            responsiveSeeMoreBtn.current.innerHTML = 'See More'
 
         }else if(localStorage.language === 'rus'){
             setIsEng(false)
@@ -322,6 +324,7 @@ export default function MainPage() {
             whyPanoramaParagraphRef3.current.innerHTML =  'Наш заметный внешний вид и инновационный подход помогают нам установить новые стандарты в сфере урбанизации, что делает Панорама Варкетили истинно уникальным местом, которое можно назвать домом.'
             whyPanoramaParagraphRef4.current.innerHTML = 'Узнать больше о проекте'
             whyPanoramaParagraphRef5.current.style.display = 'none'
+            responsiveSeeMoreBtn.current.innerHTML = 'Подробнее'
         }
     },[isEng, isGeo, isRus])
     //*************//
@@ -379,7 +382,7 @@ export default function MainPage() {
 
             <div className="form_outer">
                 <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
-                <Form />
+                <Form  iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
             </div>
            
         </div>
@@ -435,8 +438,6 @@ export default function MainPage() {
                 <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
             </div>
         </div>
-
-        
 
         <div className="slider" ref={scrollRef}>
             <div className={sliderClass}>
@@ -533,7 +534,7 @@ export default function MainPage() {
 
                 <Link to='/components/AboutProject/AboutProject'>
                     <div className="why_panorama_btn_responsive">
-                        <p className="why_panorama_btn_paragraph_responsive" style={style}>დეტალურად</p>
+                        <p className="why_panorama_btn_paragraph_responsive" ref={responsiveSeeMoreBtn} style={style}>დეტალურად</p>
                     </div>
                 </Link>
             </div>

@@ -125,7 +125,7 @@ export default function AboutUsPage(){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
-        setStyle(null)
+        setStyle(styleENG)
 
         GeoLanguage.current.style.color = 'black'
         GeoLanguageBurger.current.style.color = 'black'
@@ -134,9 +134,9 @@ export default function AboutUsPage(){
         RusLanguage.current.style.color = '#029FA0'
         RusLanguageBurger.current.style.color = '#029FA0'
 
-        navbarLinkFlats.current.innerHTML = ''
-        navbarLinkAboutUs.current.innerHTML = ''
-        navbarLinkAboutProject.current.innerHTML = ''
+        navbarLinkFlats.current.innerHTML = 'Апартаменты'
+        navbarLinkAboutUs.current.innerHTML = 'О нас'
+        navbarLinkAboutProject.current.innerHTML = 'О проекте'
         aboutPageHeader.current.innerHTML = 'Twins Development'
         toBack.current.innerHTML = 'назад'
         geoTwinsWord.current.style.display = 'none'
@@ -212,7 +212,7 @@ export default function AboutUsPage(){
                     {/* მენუ */}
                     <ul className="nav_menu">
                         <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
+                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links active_page" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
                         <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
                     </ul>
 
@@ -237,7 +237,7 @@ export default function AboutUsPage(){
                 <Link to='/components/Apartments/Apartments' onClick={burgerHandler} style={style} ref={burgerApartments}>ბინები</Link>
             </div>
 
-            <div className="burgerMenu_link">
+            <div className="burgerMenu_link active_page">
                 <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} style={style} ref={burgerAbout}>ჩვენ შესახებ</Link>
             </div>
 
@@ -246,11 +246,11 @@ export default function AboutUsPage(){
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
             </div>
         </div>
 
@@ -265,9 +265,9 @@ export default function AboutUsPage(){
                     <h1 ref={aboutPageHeader} className="about_us_header" style={style}>თვინს დეველოპმენტი</h1>
                     
                     <div className="about_inner_left_texts" style={null}>
-                    <p ref={geoTwinsWord}><span style={{fontFamily:'Roboto', fontSize:'18px'}}>Twins Development</span> მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
+                    <p ref={geoTwinsWord}><span style={{fontFamily:'Roboto', textTransform:''}}>Twins Development</span> მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
                     <p ref={engTwinsWord} style={style}> For years, Twins Development has been setting the standard for excellence in the Georgian market with</p>
-                    <p ref={rusTwinsWord} style={style}>Компания Twins Development на грузинском рынке уже много лет устанавливает стандарты качества:</p>
+                    <p ref={rusTwinsWord} style={style}>Компания <span style={{fontFamily:'Roboto', textTransform:''}}>Twins Development</span> на грузинском рынке уже много лет устанавливает стандарты качества:</p>
 
 
                     <ul ref={geoListRef}>

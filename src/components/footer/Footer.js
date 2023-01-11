@@ -14,6 +14,7 @@ export default function Footer(props){
     const geoRuningText = useRef()
     const engRuningText = useRef()
     const rusRuningText = useRef()
+    const footerAdressRef = useRef()
 
     const calculateTimeLeft = () => {
         const difference = +new Date("2023-12-28T00:00:00+04:00") - +new Date();
@@ -48,6 +49,8 @@ export default function Footer(props){
         geoRuningText.current.style. display = "flex"
         engRuningText.current.style. display = "none"
         rusRuningText.current.style. display = "none"
+
+        footerAdressRef.current.innerHTML = 'თბილისი, ვიქტორ კუპრაძის 68'
         
 
         if(localStorage.language === 'eng'){
@@ -55,12 +58,14 @@ export default function Footer(props){
             engRuningText.current.style. display = "flex"
             rusRuningText.current.style. display = "none"
             
+            footerAdressRef.current.innerHTML = 'Tbilisi, Victor Kupradze st. 68'
         
         }else if(localStorage.language === 'rus'){
             geoRuningText.current.style. display = "none"
             engRuningText.current.style. display = "none"
             rusRuningText.current.style. display = "flex"
         
+            footerAdressRef.current.innerHTML = 'Тбилиси, ул. Виктора Купрадзе. 68'
         }
 
     },[props.iseng, props.isrus, props.isgeo])
@@ -126,7 +131,7 @@ export default function Footer(props){
 
                 <div className="footer_bottom_number_adrees" style={props.styleeng}>
                     <p className="footer_number" style={props.styleeng}>0322 73 24 19</p>
-                    <p className="footer_adress" style={props.styleeng}>გაყიდვების ოფისი-მისამართი</p>
+                    <p className="footer_adress" style={props.styleeng} ref={footerAdressRef}>გაყიდვების ოფისი-მისამართი</p>
                 </div>
 
                 <div className="footer_bottom_rights" style={props.styleeng}>

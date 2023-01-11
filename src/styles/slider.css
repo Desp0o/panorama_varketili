@@ -218,10 +218,13 @@
 @media (max-width:769px) {
     .slider_header{
         bottom: 140px;
-        left: 50%;
-        width: 317px;
-        max-width: 98%;
-        transform: translateX(-50%);
+        display:inline;
+        width: 100%;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
         color: #FFFFFF;
         font-family: 'BPG Nino Mtavruli';
         font-style: normal;
@@ -231,12 +234,15 @@
     }
     .slider_paragraph{
         
-        left: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        left: 0;
+
         bottom: 70px;
-        transform: translateX(-50%);
         position: absolute;
         font-size: 11px;
-        display: inline-block;
 
         font-family: 'BPG Mrgvlovani';
         font-style: normal;
@@ -280,11 +286,5 @@
 
     .dots{
         bottom: 11px;
-    }
-}
-
-@media (max-width:375px) {
-    .slider_header{
-        font-size: 26px;
     }
 }

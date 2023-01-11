@@ -38,7 +38,13 @@ const pointerStyle1 ={
     top: '22%'
 }
 
+const styleENG={
+    fontFamily: 'Roboto'
+}
+
 export default function Apartment102() {
+
+    const [style, setStyle] = useState(styleENG)
 
     const GeoLanguage = useRef()
     const navbarLinkFlats = useRef()
@@ -63,10 +69,15 @@ export default function Apartment102() {
     const [ball5txt, setBall5txt] = useState(null)
     const [ball6txt, setBall6txt] = useState(null)
 
+    const burgerApartments = useRef()
+    const burgerAbout = useRef()
+    const burgerProj = useRef()
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
+        setStyle(null)
 
         setRoomGeo(null)
         setRoomEng('roomType')
@@ -82,47 +93,60 @@ export default function Apartment102() {
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
+
+        burgerApartments.current.innerHTML = "ბინები"
+        burgerAbout.current.innerHTML = "ჩვენ შესახებ"
+        burgerProj.current.innerHTML = "მიმდინარე პროექტი"
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
         setIsGeo(false)
         setIsRus(false)
+        setStyle(styleENG)
 
         setRoomGeo('roomType')
         setRoomEng(null)
         setRoomRus('roomType')
 
-        GeoLanguage.current.style.color = 'black'
+            GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = '#029FA0'
             EngLanguageBurger.current.style.color = '#029FA0'
             RusLanguage.current.style.color = 'black'
             RusLanguageBurger.current.style.color = 'black'
         
-        navbarLinkFlats.current.innerHTML = 'Apartments'
-        navbarLinkAboutUs.current.innerHTML = 'About Us'
-        navbarLinkAboutProject.current.innerHTML = 'About Project'
+            navbarLinkFlats.current.innerHTML = 'Apartments'
+            navbarLinkAboutUs.current.innerHTML = 'About Us'
+            navbarLinkAboutProject.current.innerHTML = 'About Project'
 
+            burgerApartments.current.innerHTML = "Apartments"
+            burgerAbout.current.innerHTML = "About Us"
+            burgerProj.current.innerHTML = "About Project"
 
     }else if(localStorage.language === 'rus'){
         setIsEng(false)
         setIsGeo(false)
         setIsRus(true)
+        setStyle(styleENG)
 
         setRoomGeo('roomType')
         setRoomEng('roomType')
         setRoomRus(null)
 
-        GeoLanguage.current.style.color = 'black'
+            GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
             EngLanguageBurger.current.style.color = 'black'
             RusLanguage.current.style.color = '#029FA0'
             RusLanguageBurger.current.style.color = '#029FA0'
 
-        navbarLinkFlats.current.innerHTML = ''
-        navbarLinkAboutUs.current.innerHTML = ''
-        navbarLinkAboutProject.current.innerHTML = ''
+            navbarLinkFlats.current.innerHTML = 'Апартаменты'
+            navbarLinkAboutUs.current.innerHTML = 'О нас'
+            navbarLinkAboutProject.current.innerHTML = 'О проекте'
+
+            burgerApartments.current.innerHTML = "Апартаменты"
+            burgerAbout.current.innerHTML = "О нас"
+            burgerProj.current.innerHTML = "О проекте"
     }
     },[isEng, isGeo, isRus])
 
@@ -153,7 +177,7 @@ export default function Apartment102() {
             number:1,
             roomTypeGeo: 'ჰოლი',
             roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeRus: 'холл',
             m2: '6.8 M2',
             forBold: `${ball1txt}`    
         },
@@ -162,8 +186,8 @@ export default function Apartment102() {
             id: 2,
             number:2,
             roomTypeGeo: 'სააბაზანო',
-            roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeEng: 'Bathroom',
+            roomTypeRus: 'Ванная',
             m2: '4.1 M2',
             forBold: `${ball2txt}`    
         },
@@ -172,8 +196,8 @@ export default function Apartment102() {
             id: 3,
             number:3,
             roomTypeGeo: 'საძინებელი 1',
-            roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeEng: 'Bedroom 1',
+            roomTypeRus: 'Спальная 1',
             m2: '12 M2',
             forBold: `${ball3txt}`    
         },
@@ -182,8 +206,8 @@ export default function Apartment102() {
             id: 4,
             number:4,
             roomTypeGeo: 'საძინებელი 2',
-            roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeEng: 'Bedroom 2',
+            roomTypeRus: 'Спальная 2',
             m2: '11.8 M2',
             forBold: `${ball4txt}`    
         },
@@ -192,8 +216,8 @@ export default function Apartment102() {
             id: 5,
             number:5,
             roomTypeGeo: 'სტუდიო',
-            roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeEng: 'Studio',
+            roomTypeRus: 'Студиo',
             m2: '18.5 M2',
             forBold: `${ball5txt}`    
         },
@@ -202,8 +226,8 @@ export default function Apartment102() {
             id: 6,
             number:6,
             roomTypeGeo: 'აივანი',
-            roomTypeEng: 'Hall',
-            roomTypeRus: 'aaaa',
+            roomTypeEng: 'Balcony',
+            roomTypeRus: 'Балкон',
             m2: '21.8 M2',
             forBold: `${ball6txt}`    
         }
@@ -240,9 +264,9 @@ export default function Apartment102() {
                 <div className="menu_and_langs">
                     {/* მენუ */}
                     <ul className="nav_menu">
-                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                        <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
+                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
+                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
                     </ul>
 
                     {/* ენები */}
@@ -262,24 +286,24 @@ export default function Apartment102() {
         </div>
 
         <div className={burger}>
-            <div className="burgerMenu_link">
-                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
+            <div className="burgerMenu_link active_page">
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler} ref={burgerApartments} style={style}>ბინები</Link>
             </div>
 
             <div className="burgerMenu_link">
-                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} ref={burgerAbout} style={style}>ჩვენ შესახებ</Link>
             </div>
 
             <div className="burgerMenu_link">
-                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
             </div>
         </div>
 
@@ -421,8 +445,8 @@ export default function Apartment102() {
                                             <div className="numberRounded">{room.number}</div>
 
                                             <p className={roomGeo}><span className={room.forBold}>{room.roomTypeGeo}</span></p>
-                                            <p className={roomEng}><span className={room.forBold}>{room.roomTypeEng}</span></p>
-                                            <p className={roomRus}><span className={room.forBold}>{room.roomTypeRus}</span></p>
+                                            <p className={roomEng} style={style}><span className={room.forBold}>{room.roomTypeEng}</span></p>
+                                            <p className={roomRus} style={style}><span className={room.forBold}>{room.roomTypeRus}</span></p>
                                         </div>
 
                                         <p className={room.forBold}>{room.m2}</p>

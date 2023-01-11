@@ -52,17 +52,6 @@ export default function Apartments(){
     const form = useRef();
     const [popUp, setPopUp] = useState('pop_up_msg')
 
-    const sendEmail = (e) => {
-        e.preventDefault();
-    
-        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
-            .then((result) => {
-                console.log(result.text);
-            }, (error) => {
-                console.log(error.text);
-            });
-            e.target.reset()
-    };
     // End Of Email Functionality
 
     const ApartmentRef = useRef()
@@ -73,6 +62,10 @@ export default function Apartments(){
     const navbarLinkAboutProject = useRef()
     const EngLanguage = useRef()
     const RusLanguage = useRef()
+
+    const burgerApartments = useRef()
+    const burgerAbout = useRef()
+    const burgerProj = useRef()
 
     const [isGeo, setIsGeo] = useState(false)
     const [isRus, setIsRus] = useState(false)
@@ -85,17 +78,21 @@ export default function Apartments(){
         setStyle(null)
 
         GeoLanguage.current.style.color = '#029FA0'
-            GeoLanguageBurger.current.style.color = '#029FA0'
-            EngLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = 'black'
-            RusLanguage.current.style.color = 'black'
-            RusLanguageBurger.current.style.color = 'black'
+        GeoLanguageBurger.current.style.color = '#029FA0'
+        EngLanguageBurger.current.style.color = 'black'
+        EngLanguage.current.style.color = 'black'
+        RusLanguage.current.style.color = 'black'
+        RusLanguageBurger.current.style.color = 'black'
 
         navbarLinkFlats.current.innerHTML = 'ბინები'
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
 
         ApartmentRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
+
+        burgerApartments.current.innerHTML = "ბინები"
+        burgerAbout.current.innerHTML = "ჩვენ შესახებ"
+        burgerProj.current.innerHTML = "მიმდინარე პროექტი"
         
     if(localStorage.language === 'eng'){
         setIsEng(true)
@@ -103,18 +100,23 @@ export default function Apartments(){
         setIsRus(false)
         setStyle(styleENG)
 
-        GeoLanguage.current.style.color = 'black'
+            GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = '#029FA0'
             EngLanguageBurger.current.style.color = '#029FA0'
             RusLanguage.current.style.color = 'black'
             RusLanguageBurger.current.style.color = 'black'
 
-        ApartmentRef.current.innerHTML = 'Choose Your Apartment'
+            ApartmentRef.current.innerHTML = 'Choose Your Apartment'
 
-        navbarLinkFlats.current.innerHTML = 'Apartments'
-        navbarLinkAboutUs.current.innerHTML = 'About Us'
-        navbarLinkAboutProject.current.innerHTML = 'About Project'
+            navbarLinkFlats.current.innerHTML = 'Apartments'
+            navbarLinkAboutUs.current.innerHTML = 'About Us'
+            navbarLinkAboutProject.current.innerHTML = 'About Project'
+
+            //burger
+            burgerApartments.current.innerHTML = "Apartments"
+            burgerAbout.current.innerHTML = "About Us"
+            burgerProj.current.innerHTML = "About Project"
         
 
     }else if(localStorage.language === 'rus'){
@@ -123,18 +125,23 @@ export default function Apartments(){
         setIsRus(true)
         setStyle(styleENG)
 
-        GeoLanguage.current.style.color = 'black'
+            GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
             EngLanguage.current.style.color = 'black'
             EngLanguageBurger.current.style.color = 'black'
             RusLanguage.current.style.color = '#029FA0'
             RusLanguageBurger.current.style.color = '#029FA0'
 
-        navbarLinkFlats.current.innerHTML = ''
-        navbarLinkAboutUs.current.innerHTML = ''
-        navbarLinkAboutProject.current.innerHTML = ''
+            navbarLinkFlats.current.innerHTML = 'Апартаменты'
+            navbarLinkAboutUs.current.innerHTML = 'О нас'
+            navbarLinkAboutProject.current.innerHTML = 'О проекте'
 
-        ApartmentRef.current.innerHTML = ''
+            ApartmentRef.current.innerHTML = 'Выберите желаемую квартиру'
+
+            //burger
+            burgerApartments.current.innerHTML = "Апартаменты"
+            burgerAbout.current.innerHTML = "О нас"
+            burgerProj.current.innerHTML = "О проекте"
 
     }
     },[isEng, isGeo, isRus])
@@ -191,9 +198,9 @@ export default function Apartments(){
                 <div className="menu_and_langs">
                     {/* მენუ */}
                     <ul className="nav_menu">
-                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs}>ჩვენ შესახებ</li></Link>
-                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject}>მიმდინარე პროექტი</li></Link>
+                        <Link to='/components/Apartments/Apartments'><li className="menu_links active_page" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
+                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
+                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
                     </ul>
 
                     {/* ენები */}
@@ -213,37 +220,37 @@ export default function Apartments(){
         </div>
 
         <div className={burger}>
-            <div className="burgerMenu_link">
-                <Link to='/components/Apartments/Apartments' onClick={burgerHandler}>ბინები</Link>
+            <div className="burgerMenu_link active_page">
+                <Link to='/components/Apartments/Apartments' onClick={burgerHandler} ref={burgerApartments} style={style}>ბინები</Link>
             </div>
 
             <div className="burgerMenu_link">
-                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler}>ჩვენ შესახებ</Link>
+                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} ref={burgerAbout} style={style}>ჩვენ შესახებ</Link>
             </div>
 
             <div className="burgerMenu_link">
-                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler}>მიმდინარე პროექტი</Link>
+                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO();burgerHandler()}}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG();burgerHandler()}}>EN</span>
+                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS();burgerHandler()}}>RU</span>
+                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
             </div>
         </div>
 
         <div className="to_back apartment_to__back">
                         <img src={toBack} alt="back arrow " />
-                        <Link to='/components/MainPage'><p>უკან</p></Link>
+                        <Link to='/components/MainPage'><p style={style}>უკან</p></Link>
         </div>
         
         <div className="apartments_page" ref={scrollRef}>
 
             
     
-            <h1 className="apartment_header" ref={ApartmentRef}>შეარჩიე სასურველი ბინა</h1>
+            <h1 className="apartment_header" ref={ApartmentRef} style={style}>შეარჩიე სასურველი ბინა</h1>
         
             <div className="apartment_list">
                 {

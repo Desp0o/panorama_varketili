@@ -179,6 +179,11 @@ button span{
     display: none;
 }
 
+.placeholder_number_error_rus{
+    bottom: -45px !important;
+    right: -9px !important;
+}
+
 .placeholder_email_error{
     font-family: 'BPG Mrgvlovani';
     font-weight: 400;
@@ -324,5 +329,9 @@ button span{
         bottom: -24px;
         left: unset;
         right: 20px;
+    }
+    .rusFontDecrease{
+        font-size: 16px !important;
+        font-weight: 700 !important;
     }
 }
