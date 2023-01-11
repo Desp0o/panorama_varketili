@@ -68,6 +68,8 @@ export default function Apartment57() {
     const burgerAbout = useRef()
     const burgerProj = useRef()
 
+    const toBack = useRef()
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
@@ -77,6 +79,8 @@ export default function Apartment57() {
         setRoomGeo(null)
         setRoomEng('roomType')
         setRoomRus('roomType')
+
+        toBack.current.innerHTML = 'უკან'
 
             GeoLanguage.current.style.color = '#029FA0'
             GeoLanguageBurger.current.style.color = '#029FA0'
@@ -102,6 +106,8 @@ export default function Apartment57() {
         setRoomGeo('roomType')
         setRoomEng(null)
         setRoomRus('roomType')
+
+        toBack.current.innerHTML = 'Back'
 
             GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -129,6 +135,8 @@ export default function Apartment57() {
         setRoomGeo('roomType')
         setRoomEng('roomType')
         setRoomRus(null)
+
+        toBack.current.innerHTML = 'назад'
 
             GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -306,7 +314,7 @@ export default function Apartment57() {
 
                 <div className="to_back">
                     <img src={toBack} alt="back arrow" />
-                    <Link to='/components/Apartments/Apartments'><p>უკან</p></Link>
+                    <Link to='/components/Apartments/Apartments'><p style={style} ref={toBack}>უკან</p></Link>
                 </div>
 
                 <div className="apartment_main_inner_left">
