@@ -52,7 +52,7 @@
 .secondMSG{
     left: 50%;
 }
-.activeMSG1{
+.activeMSG2{
     left: calc(50% + 50px);
 }
 
@@ -114,7 +114,7 @@
         width: 30px;
         height: 30px;
     }
-    .activeMSG1{
+    .activeMSG2{
         left: 50%;
         top:50%;
 

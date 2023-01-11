@@ -25,6 +25,7 @@ export default function Features(props) {
             <div className="feature_bg">
                 <img src={FeatureBg} />
 
+                {/* მეორე მესიჯბოქსი */}
                 <div className="expandMSG secondMSG">
                     <svg 
                     onClick={()=>{
@@ -42,9 +43,10 @@ export default function Features(props) {
                     
                 </div>
 
-                <div className={expand === 2 ? "messagebox activeMSG activeMSG1" : "messagebox activeMSG1"}>
+                <div className={expand === 2 ? "messagebox activeMSG activeMSG2" : "messagebox activeMSG2"}>
                     pppppppppp
                 </div>
+                {/* ********************** */}
 
                 <div className="expandMSG firstMSG">
                     <svg 
