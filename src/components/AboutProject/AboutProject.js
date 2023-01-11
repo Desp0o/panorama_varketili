@@ -14,7 +14,7 @@ import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
 import burgerClose from '../../images/burgerClose.png'
-import toBack from '../../images/toBackWhite.png'
+import toBackimg from '../../images/toBackWhite.png'
 
 const styleENG={
     fontFamily: 'Roboto'
@@ -371,7 +371,7 @@ export default function AboutProject(){
             </div>
 
             <div className="to_back about_proj_to_back">
-                        <img src={toBack} alt="back arrow " />
+                        <img src={toBackimg} alt="back arrow " />
                         <Link to='/components/MainPage'><p style={style} ref={tobackRef}>უკან</p></Link>
             </div>
 

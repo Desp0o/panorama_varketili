@@ -5,7 +5,7 @@ import aboutimage from '../../images/aboutimage.png'
 import burgerStick from '../../images/sticks.png'
 import burgerClose from '../../images/burgerClose.png'
 import '../../styles/navbar.css'
-import toBackArrow from '../../images/toback.png'
+import toBackimg from '../../images/toback.png'
 
 import Footer from '../footer/Footer'
 
@@ -259,7 +259,7 @@ export default function AboutUsPage(){
         </div>
 
             <div className="to_back about_to_back">
-                    <img src={toBackArrow} alt="back arrow" />
+                    <img src={toBackimg} alt="back arrow" />
                         <Link to='/components/MainPage'><p style={style} ref={toBack}>უკან</p></Link>
             </div>
 

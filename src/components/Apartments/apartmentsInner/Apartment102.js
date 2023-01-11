@@ -6,7 +6,7 @@ import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m102inner.png'
 import burgerClose from '../../../images/burgerClose.png'
 import burgerStick from '../../../images/sticks.png'
-import toBack from '../../../images/toback.png'
+import toBackimg from '../../../images/toback.png'
 
 
 const pointerStyle6 ={
@@ -324,7 +324,7 @@ export default function Apartment102() {
             <div className="apartment_main_inner">
                 
                 <div className="to_back">
-                    <img src={toBack} alt="back arrow" />
+                    <img src={toBackimg} alt="back arrow" />
                     <Link to='/components/Apartments/Apartments'><p style={style} ref={toBack}>უკან</p></Link>
                 </div>
 
