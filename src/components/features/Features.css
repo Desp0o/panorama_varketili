@@ -52,6 +52,9 @@
 .secondMSG{
     left: 50%;
 }
+.activeMSG1{
+    left: calc(50% + 50px);
+}
 
 .svgExpand{
     cursor: pointer;
@@ -70,7 +73,7 @@
     overflow: hidden;
     width: 0;
     transition: all 0.4s ease;
-    position: relative;
+    position: absolute;
     opacity: 1;
 }
 
@@ -78,6 +81,7 @@
     padding: 14px 32px;
     width: fit-content;
 }
+
 
 @media (max-width:769px) {
     .features{
@@ -106,6 +110,15 @@
         font-size: 17px;
     }
 
-    
+    .svgExpand{
+        width: 30px;
+        height: 30px;
+    }
+    .activeMSG1{
+        left: 50%;
+        top:50%;
+
+        transform: translate(-50%,-50%);
+    }
     
 }

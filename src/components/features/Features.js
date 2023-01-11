@@ -39,9 +39,11 @@ export default function Features(props) {
                         <path d="M17.4961 25.4551V19.5664H11.6514V17.1055H17.4961V11.2607H19.9863V17.1055H25.8311V19.5664H19.9863V25.4551H17.4961Z" fill="white"/>
                     </svg>
 
-                    <div className={expand === 2 ? "messagebox activeMSG" : "messagebox"}>
-                        pppppppppp
-                    </div>
+                    
+                </div>
+
+                <div className={expand === 2 ? "messagebox activeMSG activeMSG1" : "messagebox activeMSG1"}>
+                    pppppppppp
                 </div>
 
                 <div className="expandMSG firstMSG">
