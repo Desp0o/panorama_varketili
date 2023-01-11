@@ -4,6 +4,7 @@ import Footer from '../../footer/Footer'
 import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m83inner.png'
+import burgerClose from '../../../images/burgerClose.png'
 import burgerStick from '../../../images/sticks.png'
 import toBack from '../../../images/toback.png'
 
