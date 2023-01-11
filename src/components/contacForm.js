@@ -5,7 +5,9 @@ import '../styles/contactForm.css'
 
 import errorIcon from '../images/errorIcon.png'
 
+
 export default function Form(props){
+
     const form = useRef();
     const inputNameRef = useRef()
     const inputNumberRef = useRef()
@@ -193,7 +195,7 @@ export default function Form(props){
     return(
         <>
 
-        <p className="leave_contact" ref={comtactFormHeaderRef}>დაგვიტოვე საკონტაქტო</p>
+        <p className="leave_contact" ref={comtactFormHeaderRef} style={props.styleeng}>დაგვიტოვე საკონტაქტო</p>
 
         <form ref={form} onSubmit={sendEmail}>
 
@@ -203,15 +205,15 @@ export default function Form(props){
 
                             <div className="input1_label1">
                                 
-                                <span className="placeholder_name" ref={comtactFormNameRef}>სახელი *</span>
+                                <span className="placeholder_name" ref={comtactFormNameRef} style={props.styleeng}>სახელი *</span>
                                 <input ref={inputNameRef} className='upper_input' type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                                <span className="placeholder_number" ref={contactFormNumberRef}>ნომერი *</span>
+                                <span className="placeholder_number" ref={contactFormNumberRef} style={props.styleeng}>ნომერი *</span>
                                 <input ref={inputNumberRef} className='upper_input' type="text" name="user_number" onChange={numberHandler}/>
-                                <span ref={numberInputErrorMsg} className="placeholder_number_error">მიუთითეთ ნომრის სწორი ფორმატი</span>
+                                <span ref={numberInputErrorMsg} className="placeholder_number_error" style={props.styleeng}>მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
                             
                             
@@ -219,9 +221,9 @@ export default function Form(props){
 
                         <div className="input_fields_bottom">
                             <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
-                            <span className="placeholder_email" ref={contactFormEmailRef}>ელ-ფოსტა *</span>
+                            <span className="placeholder_email" ref={contactFormEmailRef} style={props.styleeng}>ელ-ფოსტა *</span>
                             <input ref={inputMailRef} className='email_for_form'  type="text" name="user_email" onChange={mailHandler}/>
-                            <span ref={emailInputErrorMsg} className="placeholder_email_error">მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
+                            <span ref={emailInputErrorMsg} className="placeholder_email_error" style={props.styleeng}>მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                         </div>
 
 
@@ -230,7 +232,7 @@ export default function Form(props){
                     
                     
                         <button className="contact_form_btn" type="submit">
-                            <span ref={inputSendref}>გაგზავნა</span>
+                            <span ref={inputSendref} style={props.styleeng}>გაგზავნა</span>
                         </button>
                     
                 
