@@ -13,6 +13,7 @@ import '../../styles/PopUpMsg.css'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
+import burgerClose from '../../images/burgerClose.png'
 import toBack from '../../images/toBackWhite.png'
 
 const styleENG={
@@ -249,6 +250,8 @@ export default function AboutProject(){
     const GeoLanguageBurger = useRef()
     const EngLanguageBurger = useRef()
     const RusLanguageBurger = useRef()
+    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
+
     const [burger, setBurger] = useState('burgerMenu_panel')
     const [burgerBoolean, setBurgerBoolean] = useState(false)
 
@@ -256,9 +259,11 @@ export default function AboutProject(){
         if(!burgerBoolean){
             setBurgerBoolean(true)
             setBurger('burgerMenu_panel burgerMenu_panel_active')
+            setBurgerIcon(burgerClose)
         }else{
             setBurgerBoolean(false)
             setBurger('burgerMenu_panel')
+            setBurgerIcon(burgerStick)
         }
     }
 
@@ -304,7 +309,7 @@ export default function AboutProject(){
                 </div>
 
                 <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerStick} alt="burgermenu" /> 
+                    <img src={burgerIcon} alt="burgermenu" /> 
                 </div>
             </div>
         </div>

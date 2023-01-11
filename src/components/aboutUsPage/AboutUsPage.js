@@ -3,6 +3,7 @@ import {Link} from  "react-router-dom";
 import logo from '../../images/logo.png'
 import aboutimage from '../../images/aboutimage.png'
 import burgerStick from '../../images/sticks.png'
+import burgerClose from '../../images/burgerClose.png'
 import '../../styles/navbar.css'
 import toBackArrow from '../../images/toback.png'
 
@@ -186,14 +187,17 @@ export default function AboutUsPage(){
     const RusLanguageBurger = useRef()
     const [burger, setBurger] = useState('burgerMenu_panel')
     const [burgerBoolean, setBurgerBoolean] = useState(false)
+    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
 
     function burgerHandler() {
         if(!burgerBoolean){
             setBurgerBoolean(true)
             setBurger('burgerMenu_panel burgerMenu_panel_active')
+            setBurgerIcon(burgerClose)
         }else{
             setBurgerBoolean(false)
             setBurger('burgerMenu_panel')
+            setBurgerIcon(burgerStick)
         }
     }
 
@@ -227,7 +231,7 @@ export default function AboutUsPage(){
                 </div>
 
                 <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerStick} alt="burgermenu" /> 
+                    <img src={burgerIcon} alt="burgermenu" /> 
                 </div>
             </div>
         </div>

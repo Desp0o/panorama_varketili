@@ -1,5 +1,4 @@
 import {React, useEffect, useState, useRef} from "react";
-import emailjs from '@emailjs/browser';
 import {Link} from  "react-router-dom";
 import Footer from '../footer/Footer'
 import logo from '../../images/logo.png'
@@ -14,6 +13,7 @@ import bed from '../../images/bed.png'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import burgerStick from '../../images/sticks.png'
+import burgerClose from '../../images/burgerClose.png'
 import toBack from '../../images/toback.png'
 
 const styleENG={
@@ -174,14 +174,17 @@ export default function Apartments(){
     const RusLanguageBurger = useRef()
     const [burger, setBurger] = useState('burgerMenu_panel')
     const [burgerBoolean, setBurgerBoolean] = useState(false)
+    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
 
     function burgerHandler() {
         if(!burgerBoolean){
             setBurgerBoolean(true)
             setBurger('burgerMenu_panel burgerMenu_panel_active')
+            setBurgerIcon(burgerClose)
         }else{
             setBurgerBoolean(false)
             setBurger('burgerMenu_panel')
+            setBurgerIcon(burgerStick)
         }
     }
 
@@ -214,7 +217,7 @@ export default function Apartments(){
                 </div>
 
                 <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerStick} alt="burgermenu" /> 
+                    <img src={burgerIcon} alt="burgermenu" /> 
                 </div>
             </div>
         </div>
