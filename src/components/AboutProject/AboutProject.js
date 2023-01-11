@@ -80,11 +80,15 @@ export default function AboutProject(){
     const burgerAbout = useRef()
     const burgerProj = useRef()
 
+    const tobackRef = useRef()
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
         setStyle(null)
+
+        tobackRef.current.innerHTML = 'უკან'
 
         GeoLanguage.current.style.color = '#029FA0'
         GeoLanguageBurger.current.style.color = '#029FA0'
@@ -130,6 +134,8 @@ export default function AboutProject(){
         setIsRus(false)
         setStyle(styleENG)
 
+        tobackRef.current.innerHTML = 'Back'
+
         GeoLanguage.current.style.color = 'black'
         GeoLanguageBurger.current.style.color = 'black'
         EngLanguage.current.style.color = '#029FA0'
@@ -174,6 +180,8 @@ export default function AboutProject(){
         setIsGeo(false)
         setIsRus(true)
         setStyle(styleENG)
+
+        tobackRef.current.innerHTML = 'Назад'
 
         GeoLanguage.current.style.color = 'black'
         GeoLanguageBurger.current.style.color = 'black'
@@ -364,7 +372,7 @@ export default function AboutProject(){
 
             <div className="to_back about_proj_to_back">
                         <img src={toBack} alt="back arrow " />
-                        <Link to='/components/MainPage'><p>უკან</p></Link>
+                        <Link to='/components/MainPage'><p style={style} ref={tobackRef}>უკან</p></Link>
             </div>
 
             <div className="project_timeline_txt">

@@ -71,11 +71,15 @@ export default function Apartments(){
     const [isRus, setIsRus] = useState(false)
     const [isEng, setIsEng] = useState(false)
 
+    const tobackRef = useRef()
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
         setIsRus(false)
         setStyle(null)
+
+        tobackRef.current.innerHTML = 'უკან'
 
         GeoLanguage.current.style.color = '#029FA0'
         GeoLanguageBurger.current.style.color = '#029FA0'
@@ -99,6 +103,8 @@ export default function Apartments(){
         setIsGeo(false)
         setIsRus(false)
         setStyle(styleENG)
+
+        tobackRef.current.innerHTML = 'Back'
 
             GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -124,6 +130,8 @@ export default function Apartments(){
         setIsGeo(false)
         setIsRus(true)
         setStyle(styleENG)
+
+        tobackRef.current.innerHTML = 'Назад'
 
             GeoLanguage.current.style.color = 'black'
             GeoLanguageBurger.current.style.color = 'black'
@@ -246,7 +254,7 @@ export default function Apartments(){
 
         <div className="to_back apartment_to__back">
                         <img src={toBack} alt="back arrow " />
-                        <Link to='/components/MainPage'><p style={style}>უკან</p></Link>
+                        <Link to='/components/MainPage'><p ref={tobackRef} style={style}>უკან</p></Link>
         </div>
         
         <div className="apartments_page" ref={scrollRef}>
