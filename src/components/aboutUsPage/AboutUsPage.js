@@ -269,9 +269,9 @@ export default function AboutUsPage(){
                     <h1 ref={aboutPageHeader} className="about_us_header" style={style}>თვინს დეველოპმენტი</h1>
                     
                     <div className="about_inner_left_texts" style={null}>
-                    <p ref={geoTwinsWord}><span style={{fontFamily:'Roboto', textTransform:''}}>Twins Development</span> მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
+                    <p ref={geoTwinsWord}> თვინს დეველოპმენტი მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
                     <p ref={engTwinsWord} style={style}> For years, Twins Development has been setting the standard for excellence in the Georgian market with</p>
-                    <p ref={rusTwinsWord} style={style}>Компания <span style={{fontFamily:'Roboto', textTransform:''}}>Twins Development</span> на грузинском рынке уже много лет устанавливает стандарты качества:</p>
+                    <p ref={rusTwinsWord} style={style}>Компания Твинс Девелопмент на грузинском рынке уже много лет устанавливает стандарты качества:</p>
 
 
                     <ul ref={geoListRef}>

@@ -243,14 +243,17 @@ export default function Apartment71Sec() {
     const RusLanguageBurger = useRef()
     const [burger, setBurger] = useState('burgerMenu_panel')
     const [burgerBoolean, setBurgerBoolean] = useState(false)
+    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
 
     function burgerHandler() {
         if(!burgerBoolean){
             setBurgerBoolean(true)
             setBurger('burgerMenu_panel burgerMenu_panel_active')
+            setBurgerIcon(burgerClose)
         }else{
             setBurgerBoolean(false)
             setBurger('burgerMenu_panel')
+            setBurgerIcon(burgerStick)
         }
     }
 
@@ -283,7 +286,7 @@ export default function Apartment71Sec() {
                 </div>
 
                 <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerStick} alt="burgermenu" /> 
+                    <img src={burgerIcon} alt="burgermenu" /> 
                 </div>
             </div>
         </div>
