@@ -180,8 +180,10 @@ button span{
 }
 
 .placeholder_number_error_rus{
-    bottom: -45px !important;
-    right: -9px !important;
+    bottom: -30px !important;
+    right: 0px !important;
+    left: 10px;
+    width: 100%;
 }
 
 .placeholder_email_error{

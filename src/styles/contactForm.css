@@ -32,6 +32,8 @@
     color: #171F17;
 }
 
+
+
 @media (max-width:769px) {
     .email_for_form{
         width: 100% !important;
@@ -55,6 +57,13 @@
         font-size: 25px;
     
         color: #171F17;
+    }
+
+    .placeholder_number_error_rus_contactFrom{
+        bottom: -20px !important;
+        right: 0px !important;
+        left: 10px;
+        width: 100%;
     }
     
 }

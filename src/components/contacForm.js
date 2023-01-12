@@ -31,18 +31,20 @@ export default function Form(props){
         inputSendref.current.innerHTML = 'გაგზავნა'
 
         numberInputErrorMsg.current.innerHTML = 'მიუთითეთ ნომრის სწორი ფორმატი'
+        numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus_contactFrom')
         emailInputErrorMsg.current.innerHTML = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
         
         
     if(localStorage.language === 'eng'){
 
-        comtactFormHeaderRef.current.innerHTML = 'Leave your Contact Info'
+        comtactFormHeaderRef.current.innerHTML = 'Leave your contact Info'
         comtactFormNameRef.current.innerHTML = 'Name *'
         contactFormNumberRef.current.innerHTML = 'Number *'
         contactFormEmailRef.current.innerHTML = 'Email  *'
         inputSendref.current.innerHTML = 'Send'
 
         numberInputErrorMsg.current.innerHTML = 'Please enter the correct email format'
+        numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus_contactFrom')
         emailInputErrorMsg.current.innerHTML = 'Please enter the correct number format'
         
         
@@ -54,6 +56,7 @@ export default function Form(props){
         inputSendref.current.innerHTML = 'Отправить'
 
         numberInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный формат электронной почты'
+        numberInputErrorMsg.current.classList.add('placeholder_number_error_rus_contactFrom')
         emailInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный номер'
         
     }
