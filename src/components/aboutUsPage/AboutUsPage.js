@@ -269,38 +269,38 @@ export default function AboutUsPage(){
                     <h1 ref={aboutPageHeader} className="about_us_header" style={style}>თვინს დეველოპმენტი</h1>
                     
                     <div className="about_inner_left_texts" style={null}>
-                    <p ref={geoTwinsWord}> თვინს დეველოპმენტი მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
-                    <p ref={engTwinsWord} style={style}> For years, Twins Development has been setting the standard for excellence in the Georgian market with</p>
-                    <p ref={rusTwinsWord} style={style}>Компания Твинс Девелопмент на грузинском рынке уже много лет устанавливает стандарты качества:</p>
+                        <p ref={geoTwinsWord}> თვინს დეველოპმენტი მრავალი წელია საქართველოს ბაზარზე, გამორჩეულ პროექტებს ქმნის.</p>
+                        <p ref={engTwinsWord} style={style}> For years, Twins Development has been setting the standard for excellence in the Georgian market with</p>
+                        <p ref={rusTwinsWord} style={style}>Компания Твинс Девелопмент на грузинском рынке уже много лет устанавливает стандарты качества:</p>
 
 
-                    <ul ref={geoListRef}>
-                        <li className="about_us_list">გამორჩეული სტილი</li>
-                        <li className="about_us_list">ინოვაციური მიდგომები</li>
-                        <li className="about_us_list">პრემიუმ ხარისხის სამშენებლო მასალები</li>
-                        <li className="about_us_list">მრავაწლიანი გამოცდილება</li>
-                        <li className="about_us_list">საუკეთესო ლოკაციები</li>
-                    </ul>
+                        <ul ref={geoListRef}>
+                            <li className="about_us_list">გამორჩეული სტილი</li>
+                            <li className="about_us_list">ინოვაციური მიდგომები</li>
+                            <li className="about_us_list">პრემიუმ ხარისხის სამშენებლო მასალები</li>
+                            <li className="about_us_list">მრავაწლიანი გამოცდილება</li>
+                            <li className="about_us_list">საუკეთესო ლოკაციები</li>
+                        </ul>
 
-                    <ul ref={engListRef} style={style}>
-                        <li className="about_us_list">distinctive style</li>
-                        <li className="about_us_list">innovative approaches</li>
-                        <li className="about_us_list">premium quality building materials</li>
-                    </ul>
+                        <ul ref={engListRef} style={style}>
+                            <li className="about_us_list">distinctive style</li>
+                            <li className="about_us_list">innovative approaches</li>
+                            <li className="about_us_list">premium quality building materials</li>
+                        </ul>
 
-                    <ul ref={rusListRef}>
-                        <li className="about_us_list">уникальный стиль</li>
-                        <li className="about_us_list">инновационные подходы</li>
-                        <li className="about_us_list">высококачественные строительные материалы</li>
-                    </ul>
+                        <ul ref={rusListRef}>
+                            <li className="about_us_list">уникальный стиль</li>
+                            <li className="about_us_list">инновационные подходы</li>
+                            <li className="about_us_list">высококачественные строительные материалы</li>
+                        </ul>
 
-                    <p ref={aboutPageP2} style={style}>ჩვენი გუნდი შესაძლებელს ხდის, კომფორტული ცხოვრების სტილი, ნებისმიერი ადამიანისთვის ხელმისაწვდომი გახადოს.</p>
+                        <p ref={aboutPageP2} style={style}>ჩვენი გუნდი შესაძლებელს ხდის, კომფორტული ცხოვრების სტილი, ნებისმიერი ადამიანისთვის ხელმისაწვდომი გახადოს.</p>
 
-                    <p ref={aboutPageP3} style={style}>ობიექტზე უსაფრთხოების წესებისა და ნორმების სრული დაცვით, სამუშაოს პროფესიონალურად შესრულება ჩვენი მთავარი პრიორიტეტია. სწორედ საქმისადმი მსგავსი დამოკიდებულების და დეტალებზე მაქსიმალური ყურადღების გამო გვაქვს მაღალი ნდობა ჩვენი მომხმარებლისგან. </p>
+                        <p ref={aboutPageP3} style={style}>ობიექტზე უსაფრთხოების წესებისა და ნორმების სრული დაცვით, სამუშაოს პროფესიონალურად შესრულება ჩვენი მთავარი პრიორიტეტია. სწორედ საქმისადმი მსგავსი დამოკიდებულების და დეტალებზე მაქსიმალური ყურადღების გამო გვაქვს მაღალი ნდობა ჩვენი მომხმარებლისგან. </p>
 
-                    <p ref={aboutPageP4} style={style}>Twins Development საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.</p>
-                    
-                    <p ref={aboutPageP5} style={style}>Twins Development საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.</p>
+                        <p ref={aboutPageP4} style={style}>Twins Development საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.</p>
+                        
+                        <p ref={aboutPageP5} style={style}>Twins Development საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.</p>
                     </div>
                 </div>
 

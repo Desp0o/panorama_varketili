@@ -19,7 +19,7 @@
     line-height: 23px;
 
     display: flex;
-    gap: 150px;
+    gap: 160px;
 
     color: #171F17;
 }
@@ -30,7 +30,7 @@
 
 .about_inner_left_texts{
     margin-top: 55px;
-    width: 100%;
+    width: 535.73px;
     display: flex;
     flex-direction: column;
     gap: 25px; 
