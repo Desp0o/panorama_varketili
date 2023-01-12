@@ -23,8 +23,8 @@
             animation-timing-function: linear;
    -webkit-animation-name: ticker;
            animation-name: ticker;
-    -webkit-animation-duration: 200s;
-            animation-duration: 200s;
+    -webkit-animation-duration: 50s;
+            animation-duration: 50s;
 }
 
 .running_text h1{
@@ -46,7 +46,7 @@
   
     100% {
       -webkit-transform: translate3d(-30%, 0, 0);
-      transform: translate3d(-100%, 0, 0);
+      transform: translate3d(-50%, 0, 0);
     }
 
   }

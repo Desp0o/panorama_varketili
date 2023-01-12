@@ -50,8 +50,8 @@
 
 .card{
     position: relative;
-    width: 409.85px;
-    height: 484.45px;
+    width: 424px;
+    height: 484px;
     background: #E6ECDF;
     border-radius: 70px;
 
@@ -103,11 +103,11 @@
 }
 
 .card_inner_bottom_p{
-    font-family: 'BPG Nino Mtavruli';
+    font-family: 'Roboto';
     font-weight: 400;
-    font-size: 25px;
-    line-height: 28px;
-    color: #2B1C50;;
+    font-size: 20px;
+    line-height: 23px;
+    color: #181B41;
 }
 
 .bed_Icon{
@@ -233,11 +233,6 @@
   }
   
 
-@media (min-width:1400px) {
-    .cards{
-        gap: 100px;
-    }
-}
 
 @media (max-width:769px) {
     .flats{
@@ -255,8 +250,8 @@
         padding: 50px;
     }
     .card{
-        width: 329px;
-        height: 342px;
+        width: 330px;
+        height: 340px;
     }
     .card:hover{
         margin-top: 0px;

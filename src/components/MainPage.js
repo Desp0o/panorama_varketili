@@ -334,7 +334,7 @@ export default function MainPage() {
     useEffect(()=>{
         let sliderInterval = null
 
-        if(document.body.getBoundingClientRect().width<770){
+        
             sliderInterval = setInterval(()=>{
             if(index === slideLength-1){
                 setIndex(0)
@@ -342,7 +342,7 @@ export default function MainPage() {
                 setIndex(index+1)
               }
         },5000)
-    }
+    
 
         return ()=>{
             clearInterval(sliderInterval)
@@ -524,11 +524,11 @@ export default function MainPage() {
 
         <div className='why_panorama'>
             <div className="header_txt_btn">
-                <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef} style={style}>რატომ პანორამა ვარკეთილი?</h1><br/>
-                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef} style={style}>პროექტის უნიკალურობას განაპირობებს, თბილისზე გაშლილი პანორამული ხედები.</p><br/>
+                <h1 className="why_panorama_h1" ref={whyPanoramaHeaderRef} style={style}>რატომ პანორამა ვარკეთილი?</h1>
+                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef} style={style}>პროექტის უნიკალურობას განაპირობებს, თბილისზე გაშლილი პანორამული ხედები.</p>
                 <p className="why_panorama_txt" ref={whyPanoramaParagraphRef2} style={style}>შენი სახლი ქალაქზე ახალი პერსპექტივითაა გარშემორტყმული,სადაც კომფორტული ცხოვრების სტილი,
-                 თანამედროვე არქიტექტურასთან და გამორჩეულ იერსახესთანაა შეხამებული.</p><br/>
-                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef3} style={style}>პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.</p><br/>
+                 თანამედროვე არქიტექტურასთან და გამორჩეულ იერსახესთანაა შეხამებული.</p>
+                <p className="why_panorama_txt" ref={whyPanoramaParagraphRef3} style={style}>პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.</p>
                 <p className="why_panorama_txt" ref={whyPanoramaParagraphRef5} style={style}>პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.</p>
 
                 <div className="why_panorama_btn" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>

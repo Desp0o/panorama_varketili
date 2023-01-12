@@ -22,6 +22,12 @@
     box-sizing: border-box;
 }
 
+.header_txt_btn{
+    width: 478.18px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
 
 .why_panorama_h1{
     font-family: 'BPG Nino Mtavruli';
@@ -36,14 +42,14 @@
     font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 31px;
     /* or 155% */
 
     display: flex;
     align-items: center;
 
-    color: #171F17;
+    color: #2B1C50;
 }
 
 .why_panorama_btn{
@@ -123,13 +129,11 @@
     display: none;
 }
 
-@media (max-width:1400px) {
-    .why_panorama{
-        gap: 200px;
-    }
-}
 
 @media (max-width:769px) {
+    .header_txt_btn{
+        width: 313.82px;
+    }
     .why_panorama{
         flex-direction: column;
         height: fit-content;

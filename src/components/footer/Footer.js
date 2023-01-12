@@ -99,12 +99,12 @@ export default function Footer(props){
 
                 <div ref={rusRuningText}>
                     <div className="running_text">
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
                     </div>
                 </div>
             </div>

@@ -56,12 +56,20 @@
     justify-content: center;
     margin-top: 20px;
     transition: all 1.4s ease;
+
+    
+}
+
+iframe{
+    border: none;
 }
 
 .map_frame{
     width: 90%;
     height: 500px;
     border-radius: 50px;
+
+    box-shadow: 0px 10px 60px rgba(2, 159, 160, 0.2);
 }
 
 .map_active{
