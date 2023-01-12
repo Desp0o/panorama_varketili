@@ -158,7 +158,7 @@ export default function AboutProject(){
         burgerProj.current.innerHTML = "About Project"
 
         firstSectionHeaderRef.current.innerHTML = 'Location'
-        firstSectionParagraphRef.current.innerHTML = 'The Varketili project is located at 68 Viktor Kupradze Street <br/>, within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
+        firstSectionParagraphRef.current.innerHTML = 'The Varketili project is located at 68 Viktor Kupradze Street, <br/> within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
         firstSectionParagrap2hRef.current.innerHTML = 'Additionally, all the apartments in the project boast spectacular views.'
 
         proTimelineHeaderRef.current.innerHTML = 'Project Deadlines'
