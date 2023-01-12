@@ -29,16 +29,10 @@
     flex-wrap: wrap;
     align-items: center;
     margin: 0 auto;
-    gap: 110px 70px;
+    /* //////// */
+    gap: 110px 50px; 
     padding: 0 40px;
     
-}
-
-@media (max-width:1400px) {
-    .apartment_list{
-        justify-content: space-around;
-        gap: 110px 20px;
-    }
 }
 
 
@@ -77,7 +71,12 @@
     }
 }
 
-
+@media (max-width:1400px) {
+    .apartment_list{
+        justify-content: space-around;
+        gap: 110px 20px;
+    }
+}
 
 @media (min-width:1600px) {
     .apartment_list{
