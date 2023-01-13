@@ -111,7 +111,7 @@ export default function AboutProject(){
         burgerProj.current.innerHTML = "მიმდინარე პროექტი"
 
         firstSectionHeaderRef.current.innerHTML = 'ლოკაცია'
-        firstSectionParagraphRef.current.innerHTML = 'ვარკეთილის პროექტი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
+        firstSectionParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
         firstSectionParagrap2hRef.current.innerHTML = 'ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.'
 
         proTimelineHeaderRef.current.innerHTML = 'პროექტის ვადები'
@@ -158,7 +158,7 @@ export default function AboutProject(){
         burgerProj.current.innerHTML = "About Project"
 
         firstSectionHeaderRef.current.innerHTML = 'Location'
-        firstSectionParagraphRef.current.innerHTML = 'The Varketili project is located at 68 Viktor Kupradze Street, <br/> within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
+        firstSectionParagraphRef.current.innerHTML = 'The Panorama Varketili is located at 68 Viktor Kupradze Street, <br/> within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
         firstSectionParagrap2hRef.current.innerHTML = 'Additionally, all the apartments in the project boast spectacular views.'
 
         proTimelineHeaderRef.current.innerHTML = 'Project Deadlines'
@@ -205,7 +205,7 @@ export default function AboutProject(){
         burgerProj.current.innerHTML = "О проекте"
 
         firstSectionHeaderRef.current.innerHTML = 'место нахождения'
-        firstSectionParagraphRef.current.innerHTML = 'Проект Varketili расположен на улице Виктора Купрадзе 68, <br/> в развитии Hualing Tbilisi Plaza в Новом Городе.<br/>Он удобно расположен на боку основной дороги,<br/>предлагая легкий доступ ко всем удобствам в этом районе.'
+        firstSectionParagraphRef.current.innerHTML = 'Панорама Варкетили расположен на улице Виктора Купрадзе 68, <br/> в развитии Hualing Tbilisi Plaza в Новом Городе.<br/>Он удобно расположен на боку основной дороги,<br/>предлагая легкий доступ ко всем удобствам в этом районе.'
         firstSectionParagrap2hRef.current.innerHTML = 'Кроме того, все квартиры в проекте имеют лучшие виды.'
 
         proTimelineHeaderRef.current.innerHTML = 'Сроки проекта'
