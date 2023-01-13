@@ -131,6 +131,7 @@
 
 .apartment_rooms{
     width: 570px;
+    max-width: 100%;
 }
 
 @media (min-width:1600px) {
@@ -160,12 +161,12 @@
     .room{
         padding-left: 30px;
         padding-right: 30px;
-        margin-top: 40px;
+        margin-top: 0px;
     }
     .apHeader{
         text-align: center;
         padding-bottom:60px;
-        padding-top: 80px;
+        padding-top: 45px;
     }
     .room p{
         font-size: 15px;
@@ -187,6 +188,9 @@
         align-items: center;
         padding-left: 24px;
         padding-bottom: 60px;
+    }
+    .apartment_rooms{
+        height: 40px;
     }
 }
 
