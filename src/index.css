@@ -74,3 +74,10 @@ a{
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url('../src/fonts/RobotoFlex.ttf');
+  font-display: swap;
+}
+
+

@@ -341,7 +341,7 @@ export default function MainPage() {
               }else{
                 setIndex(index+1)
               }
-        },5000)
+        },3000)
     
 
         return ()=>{
