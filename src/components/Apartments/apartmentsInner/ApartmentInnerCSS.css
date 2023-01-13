@@ -102,10 +102,15 @@
     text-align: center;
 }
 
+.default{
+    font-weight: 400;
+    transition: all 0.4s ease;
+}
 
 .bold{
-    transition: all 0.6s ease-out;
     font-weight: 900;
+    transition: all 0.4s ease;
+    color: red;
 }
 
 .to_back{

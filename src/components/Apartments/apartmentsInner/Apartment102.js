@@ -63,12 +63,12 @@ export default function Apartment102() {
     const [roomRus, setRoomRus] = useState(null)
 
     const [ballNumber, setBallNumber] = useState(null)
-    const [ball1txt, setBall1txt] = useState(null)
-    const [ball2txt, setBall2txt] = useState(null)
-    const [ball3txt, setBall3txt] = useState(null)
-    const [ball4txt, setBall4txt] = useState(null)
-    const [ball5txt, setBall5txt] = useState(null)
-    const [ball6txt, setBall6txt] = useState(null)
+    const [ball1txt, setBall1txt] = useState('default')
+    const [ball2txt, setBall2txt] = useState('default')
+    const [ball3txt, setBall3txt] = useState('default')
+    const [ball4txt, setBall4txt] = useState('default')
+    const [ball5txt, setBall5txt] = useState('default')
+    const [ball6txt, setBall6txt] = useState('default')
 
     const burgerApartments = useRef()
     const burgerAbout = useRef()
@@ -335,16 +335,16 @@ export default function Apartment102() {
                         onClick={()=>{
                             if(ballNumber === 6){
                                 setBallNumber(null)
-                                setBall6txt(null)
+                                setBall6txt('default')
                             }else{
                                 setBallNumber(6)
                                 setBall6txt('bold')
 
-                                setBall1txt(null)
-                                setBall2txt(null)
-                                setBall3txt(null)
-                                setBall4txt(null)
-                                setBall5txt(null)
+                                setBall1txt('default')
+                                setBall2txt('default')
+                                setBall3txt('default')
+                                setBall4txt('default')
+                                setBall5txt('default')
                             }
                         }}
                     >6</span>
@@ -353,16 +353,16 @@ export default function Apartment102() {
                         onClick={()=>{
                             if(ballNumber === 5){
                                 setBallNumber(null)
-                                setBall5txt(null)
+                                setBall5txt('default')
                             }else{
                                 setBallNumber(5)
                                 setBall5txt('bold')
 
-                                setBall1txt(null)
-                                setBall2txt(null)
-                                setBall3txt(null)
-                                setBall4txt(null)
-                                setBall6txt(null)
+                                setBall1txt('default')
+                                setBall2txt('default')
+                                setBall3txt('default')
+                                setBall4txt('default')
+                                setBall6txt('default')
                             }
                         }}
                     >5</span>
@@ -371,16 +371,16 @@ export default function Apartment102() {
                         onClick={()=>{
                             if(ballNumber === 4){
                                 setBallNumber(null)
-                                setBall4txt(null)
+                                setBall4txt('default')
                             }else{
                                 setBallNumber(4)
                                 setBall4txt('bold')
 
-                                setBall1txt(null)
-                                setBall2txt(null)
-                                setBall3txt(null)
-                                setBall5txt(null)
-                                setBall6txt(null)
+                                setBall1txt('default')
+                                setBall2txt('default')
+                                setBall3txt('default')
+                                setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }}
                     >4</span>
@@ -389,16 +389,16 @@ export default function Apartment102() {
                         onClick={()=>{
                             if(ballNumber === 3){
                                 setBallNumber(null)
-                                setBall3txt(null)
+                                setBall3txt('default')
                             }else{
                                 setBallNumber(3)
                                 setBall3txt('bold')
 
-                                setBall1txt(null)
-                                setBall2txt(null)
-                                setBall4txt(null)
-                                setBall5txt(null)
-                                setBall6txt(null)
+                                setBall1txt('default')
+                                setBall2txt('default')
+                                setBall4txt('default')
+                                setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }}
                     >3</span>
@@ -407,16 +407,16 @@ export default function Apartment102() {
                     onClick={()=>{
                         if(ballNumber === 2){
                             setBallNumber(null)
-                            setBall2txt(null)
+                            setBall2txt('default')
                         }else{
                             setBallNumber(2)
                             setBall2txt('bold')
                             
-                            setBall1txt(null)
-                            setBall3txt(null)
-                            setBall4txt(null)
-                            setBall5txt(null)
-                            setBall6txt(null)
+                            setBall1txt('default')
+                            setBall3txt('default')
+                            setBall4txt('default')
+                            setBall5txt('default')
+                            setBall6txt('default')
                         }
                     }}
                     >2</span>
@@ -427,16 +427,16 @@ export default function Apartment102() {
                         onClick={()=> {
                             if(ballNumber === 1){
                                 setBallNumber(null)
-                                setBall1txt(null)
+                                setBall1txt('default')
                             }else{
                                 setBallNumber(1)
                                 setBall1txt('bold')
 
-                                setBall2txt(null)
-                                setBall3txt(null)
-                                setBall4txt(null)
-                                setBall5txt(null)
-                                setBall6txt(null)
+                                setBall2txt('default')
+                                setBall3txt('default')
+                                setBall4txt('default')
+                                setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }
                             
