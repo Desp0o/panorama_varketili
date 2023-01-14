@@ -77,7 +77,7 @@ export default function AboutUsPage(){
         rusTwinsWord.current.style.display = 'none'
         aboutPageP2.current.innerHTML = 'ჩვენი გუნდი შესაძლებელს ხდის, კომფორტული ცხოვრების სტილი, ნებისმიერი ადამიანისთვის ხელმისაწვდომი გახადოს.'
         aboutPageP3.current.innerHTML = 'ობიექტზე უსაფრთხოების წესებისა და ნორმების სრული დაცვით, სამუშაოს პროფესიონალურად შესრულება ჩვენი მთავარი პრიორიტეტია. სწორედ საქმისადმი მსგავსი დამოკიდებულების და დეტალებზე მაქსიმალური ყურადღების გამო გვაქვს მაღალი ნდობა ჩვენი მომხმარებლისგან.'
-        aboutPageP4.current.innerHTML = 'Twins Development საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.'
+        aboutPageP4.current.innerHTML = 'თვინს დეველოპმენტი საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.'
         aboutPageP5.current.style.display = 'none'
 
         //burger
@@ -138,7 +138,7 @@ export default function AboutUsPage(){
         navbarLinkFlats.current.innerHTML = 'Апартаменты'
         navbarLinkAboutUs.current.innerHTML = 'О нас'
         navbarLinkAboutProject.current.innerHTML = 'О проекте'
-        aboutPageHeader.current.innerHTML = 'Twins Development'
+        aboutPageHeader.current.innerHTML = 'Твинс Девелопмент'
         toBack.current.innerHTML = 'назад'
         geoTwinsWord.current.style.display = 'none'
         engTwinsWord.current.style.display = 'none'
@@ -150,7 +150,7 @@ export default function AboutUsPage(){
         aboutPageP3.current.innerHTML = 'Безопасность и профессионализм являются нашими главными приоритетами, и именно это внимание к деталям заслужило нам доверие наших клиентов.'
         aboutPageP4.current.innerHTML = 'Мы гордимся тем, что создаем проекты, которые сочетают архитектуру и урбанизацию органично, внося свой вклад в внешний вид города.'
         aboutPageP5.current.style.display = 'block'
-        aboutPageP5.current.innerHTML = 'С Twins Development вы можете быть уверены, что получите самое лучшее, что может предложить отрасль.'
+        aboutPageP5.current.innerHTML = 'С Твинс Девелопмент вы можете быть уверены, что получите самое лучшее, что может предложить отрасль.'
     
         //burger
         burgerApartments.current.innerHTML = "Апартаменты"

@@ -81,17 +81,22 @@ iframe{
 
 
 .rangesDiv{
+    box-sizing: border-box;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     position: relative;
-    margin-top:250px ;
+    margin-top:447px ;
     padding-bottom:150px;
 }
 
 .range_msg_box{
     position: absolute;
-    width: 230px;
-    height: 54px;
+    width: fit-content;
+    height: fit-content;
+    padding-left: 20px;
+    padding-right: 18px;
+    padding-top: 15px;
+    padding-bottom: 11px;
     background: #029FA0;
     border-radius: 20px;
     display: flex;
@@ -101,7 +106,7 @@ iframe{
 
 .circleTXT{
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'BPG Nino Mtavruli';
     color: #000000;
 }   
@@ -109,7 +114,7 @@ iframe{
 /* წრე ერთი */
 .circle_txt1{
     position: absolute;
-    top: -122px;
+    top: -130px;
     left: 120px;
 }
 .msgBox1{
@@ -137,18 +142,18 @@ iframe{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     z-index: 1;
-    left: 30%;
+    left: 392px;
     border-radius: 50%;
     transform: translateY(-50%);
 }
 .circle_txt2{
     position: absolute;
-    top: 110%;
-    left: 13.5%;
+    top: 126px;
+    left: 340px;
 }
 .msgBox2{
-    top: 65%;
-    left: 12.5%;
+    top: 150px;
+    left: 265px;
 }
 
 /* მესამე წრე */
@@ -159,21 +164,21 @@ iframe{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     z-index: 1;
-    right: 10%;
+    left: 1211px;
     border-radius: 50%;
     transform: translateY(-50%);
 }
 .circle_txt3{
     position: absolute;
-    top: -80%;
-    right: 23%;
+    top: -130px;
+    left: 668px;
 }
 .circle_txt3_rus{
     right: 25.5%;
 }
 .msgBox3{
-    top: -125%;
-    right: 14%;
+    top: -197px;
+    left:656px;
 }
 
 
@@ -185,14 +190,14 @@ iframe{
     background-color: rgb(255, 255, 255);
     border: 1px solid black;
     z-index: 1;
-    right: 30%;
+    left: 671px;
     border-radius: 50%;
     transform: translateY(-50%);
 }
 .circle_txt4{
     position: absolute;
-    top: 110%;
-    right: 18%;
+    top: 126px;
+    left: 1154px;
 }
 .circle_txt4_rus{
     position: absolute;
@@ -200,8 +205,8 @@ iframe{
     right: 16%;
 }
 .msgBox4{
-    top: 65%;
-    right: 10%;
+    top: 150px;
+    left: 1014px;
 }
 
 
@@ -233,7 +238,7 @@ iframe{
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
-    line-height: 23px;
+    line-height: 27px;
     color: #FFFFFF;
 }
 
@@ -255,6 +260,7 @@ iframe{
 
 .inputRange{
     position: absolute;
+    right: 0;
     width: 100%;
     background-color: none;
     -webkit-appearance: none;
@@ -317,31 +323,45 @@ iframe{
 
   /*************************/
   .ganvadeba{
+    box-sizing: border-box;
     overflow: hidden;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 195px;
     width: 100%;
     margin-top: 196px;
+  }
+
+  .ganvadeba_inner{
+    width: 100%;
+    box-sizing: border-box;
     display: flex;
+    justify-content: space-between;
+    height: 395px;
   }
 
   .ganvadeba_left{
-    width: 50%;
+    box-sizing: border-box;
+    width: 665.99px;
     display: flex;
     flex-direction: column;
-    gap: 74px;
+    gap: 70px;
     padding-left: 70px;
     justify-content: center;
   }
 
-  .ganvadeba_left h2{
-    font-family: 'bpg web 001';
+  #para{
+    margin-bottom: -10px;
+  }
+
+  .ganvadeba h2{
+    font-family: 'BPG Nino Mtavruli';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 35px;
     line-height: 41px;
+    margin-left: 70px;
     /* identical to box height */
-    
+    margin-bottom: -50px;
     
     color: #000000;
   }
@@ -358,9 +378,6 @@ iframe{
     color: #000000;
   }
 
-  .ganvadeba_right{
-    width: 50%;
-  }
 
   .ganvadeba_right img{
     width: 100%;
@@ -372,50 +389,17 @@ iframe{
     left:0px;
     color: #fff;
   }
-  @media (min-width:1400px) {
-    .msgBox2{
-        top: 65%;
-        left: 14%;
-    }
-    .circle_txt2{
-        position: absolute;
-        top: 110%;
-        left: 15%;
-    }
-  }
+  
+ @media (min-width:1900px) {
+    .ganvadeba_inner{
+        padding-left: 100px;
+        padding-right: 100px;
+      }
+      .ganvadeba h2{
+        margin-left: 170px;
+      }
+ }
 
-  @media (min-width:1600px) {
-    .msgBox3{
-        top: -125%;
-        right: 19%;
-    }
-    .circle_txt3{
-        position: absolute;
-        top: -80%;
-        right: 25%;
-    }
-    .msgBox2{
-        top: 65%;
-        left: 18%;
-    }
-    .circle_txt2{
-        position: absolute;
-        top: 110%;
-        left: 19%;
-    }
-    .circle_txt4{
-        position: absolute;
-        top: 110%;
-        right: 15.5%;
-    }
-    .circle_txt4_rus{
-        position: absolute;
-        top: 110%;
-        right: 14%;
-    }
-  }
-
- 
 
   @media (max-width:769px) {
     
@@ -555,4 +539,17 @@ iframe{
         right: 28%;
     }
     
+  }
+
+
+  .custom-range-slider-thumb{
+    width: 30px;
+    height: 30px;
+    background-color: #029FA0;
+  }
+
+  .custom-range-slider{
+    width: 100%;
+
+    background-color: #171F17;
   }

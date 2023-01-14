@@ -65,6 +65,8 @@ export default function Form(props){
     const sendEmail = (e) => {
         if(numberBoolean === true && nameBoolean === true && mailBoolean === true){
             e.preventDefault();
+
+            emailInputOKMsg.current.style.display = 'block'
     
             emailjs.sendForm('service_j7zw3pp', 'template_7suk37t', form.current, 'lf3j-nerT-hfKW-Fi')
               .then((result) => {
@@ -76,6 +78,10 @@ export default function Form(props){
               setInputMail('')
               setInputNumber('')
               setInputName('')
+
+            setTimeout(()=>{
+                emailInputOKMsg.current.style.display = 'none'
+            },5000)
         }
 
         if(numberBoolean === false){
@@ -166,6 +172,7 @@ export default function Form(props){
     // მეილის ინპუტის პარამეტრები
     // //////////////////
     const emailInputErrorMsg = useRef()
+    const emailInputOKMsg = useRef()
     const mailErrorIconRef = useRef()
     const [inputMail, setInputMail] = useState('')
     const [mailBoolean, setMailBoolean] = useState(false)
@@ -227,6 +234,7 @@ export default function Form(props){
                             <span className="placeholder_email" ref={contactFormEmailRef} style={props.styleeng}>ელ-ფოსტა *</span>
                             <input ref={inputMailRef} className='email_for_form'  type="text" name="user_email" onChange={mailHandler}/>
                             <span ref={emailInputErrorMsg} className="placeholder_email_error" style={props.styleeng}>მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
+                            <span ref={emailInputOKMsg} className="placeholder_email_ok" style={props.styleeng}>მოთხოვნა მიღებულია! მალე დაგიკავშირდებით.</span>
                         </div>
 
 

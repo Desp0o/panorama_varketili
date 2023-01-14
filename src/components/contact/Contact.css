@@ -28,6 +28,8 @@
 }
 
 .contact_paragraph{
+    width: 514px;
+    height: 81px;
     font-family: 'BPG Mrgvlovani';
     font-style: normal;
     font-weight: 400;
@@ -99,6 +101,7 @@ button span{
 .input_fields_top{
     width: 100%;
     display: flex;
+    justify-content: space-between;
     gap: 25px;
 }
 
@@ -200,6 +203,22 @@ button span{
     display: none;
 }
 
+.placeholder_email_ok{
+    bottom: -38px;
+    left: 33px;
+    position: absolute;
+    width: 441.06px;
+    height: 16px;
+
+    font-family: 'BPG Mrgvlovani';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    display: none;
+    color: green;
+}
 
 .placeholder_email{
     font-family: 'BPG Mrgvlovani';
@@ -331,6 +350,13 @@ button span{
         bottom: -24px;
         left: unset;
         right: 20px;
+    }
+
+    .placeholder_email_ok{
+        bottom: -30px;
+        left: 15px;
+        right: 0;
+        font-size: 10px;
     }
     .rusFontDecrease{
         font-size: 16px !important;

@@ -37,7 +37,7 @@ export const ApartmentsArr =[
         id: 4,
         image: `${render76}`,
         text1: '/ 76.6 M2',
-        text2: '/ 2',
+        text2: '/ 1',
         link: '/components/Apartments/apartmentsInner/Apartment76'
     },
 

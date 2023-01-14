@@ -82,6 +82,10 @@ export default function AboutProject(){
 
     const tobackRef = useRef()
 
+
+    const circle1Ref = useRef()
+
+
     useEffect(()=>{
         setIsEng(false)
         setIsGeo(true)
@@ -101,10 +105,10 @@ export default function AboutProject(){
         navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
         navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
 
-        februaryRef.current.innerHTML = 'თებერვალი'
-        marchRef.current.innerHTML = 'მარტი'
-        aprilRef.current.innerHTML = 'აპრილი'
-        octomberRef.current.innerHTML = 'ოქტომბერი'
+        februaryRef.current.innerHTML = 'თებერვალი 2023'
+        marchRef.current.innerHTML = 'მარტი 2023'
+        aprilRef.current.innerHTML = 'აპრილი 2023'
+        octomberRef.current.innerHTML = 'ოქტომბერი 2023'
 
         burgerApartments.current.innerHTML = "ბინები"
         burgerAbout.current.innerHTML = "ჩვენ შესახებ"
@@ -147,10 +151,10 @@ export default function AboutProject(){
         navbarLinkAboutUs.current.innerHTML = 'About Us'
         navbarLinkAboutProject.current.innerHTML = 'About Project'
 
-        februaryRef.current.innerHTML = 'February'
-        marchRef.current.innerHTML = 'March'
-        aprilRef.current.innerHTML = 'April'
-        octomberRef.current.innerHTML = 'Octomber'
+        februaryRef.current.innerHTML = 'February 2023'
+        marchRef.current.innerHTML = 'March 2023'
+        aprilRef.current.innerHTML = 'April 2023'
+        octomberRef.current.innerHTML = 'Octomber 2023'
 
         //burger
         burgerApartments.current.innerHTML = "Apartments"
@@ -194,10 +198,10 @@ export default function AboutProject(){
         navbarLinkAboutUs.current.innerHTML = 'О нас'
         navbarLinkAboutProject.current.innerHTML = 'О проекте'
 
-        februaryRef.current.innerHTML = 'Февраль'
-        marchRef.current.innerHTML = 'Mарт'
-        aprilRef.current.innerHTML = 'Aпреля'
-        octomberRef.current.innerHTML = 'Октябрь'
+        februaryRef.current.innerHTML = 'Февраль 2023'
+        marchRef.current.innerHTML = 'Mарт 2023'
+        aprilRef.current.innerHTML = 'Aпреля 2023'
+        octomberRef.current.innerHTML = 'Октябрь 2023'
 
         //burger
         burgerApartments.current.innerHTML = "Апартаменты"
@@ -293,6 +297,8 @@ export default function AboutProject(){
     const ganvadebaRef = useRef()
     const ganvadebaParagraph1Ref = useRef()
     const ganvadebaParagraph2Ref = useRef()
+
+    
     
     return(
         <> 
@@ -386,7 +392,7 @@ export default function AboutProject(){
 
             <div className="rangesDiv">
 
-                <span className="circle1"><img className="line1" src={line29}/></span>
+                <span ref={circle1Ref} className="circle1"><img className="line1" src={line29}/></span>
                     <p className="circleTXT circle_txt1" style={style} ref={projStartRef}>პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox1"><p className="msgBoxText" ref={februaryRef} style={style}>თებერვალი 2023</p></div>
                 
@@ -406,19 +412,24 @@ export default function AboutProject(){
                     <div className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
-                <input className="inputRange" type='range' min='0' max='200' step='1' value={data} onChange={(e)=> setData(e.target.value)} />
-            
+                {/* <input ref={rangeThumbRef} className="inputRange" type='range' min='0' max='300' step='1' value={data} onChange={(e)=> setData(e.target.value)} /> */}
+                
             </div>
 
             <div className="ganvadeba">
-                <div className="ganvadeba_left">
-                    <h2 ref={ganvadebaRef} style={style}>განვადება</h2>
-                    <p ref={ganvadebaParagraph1Ref} style={style}>ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.</p>
-                    <p ref={ganvadebaParagraph2Ref} style={style}>აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით.</p>
-                </div>
+                <h2 ref={ganvadebaRef} style={style}>განვადება</h2>
 
-                <div className="ganvadeba_right">
-                    <img src={sofa} alt="sofa"/>
+
+                <div className="ganvadeba_inner">
+                    <div className="ganvadeba_left">
+                        
+                        <p  ref={ganvadebaParagraph1Ref} style={style}>ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.</p>
+                        <p id="para" ref={ganvadebaParagraph2Ref} style={style}>აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით.</p>
+                    </div>
+
+                    <div className="ganvadeba_right">
+                        <img src={sofa} alt="sofa"/>
+                    </div>
                 </div>
 
             </div>

@@ -20,7 +20,7 @@
     line-height: 23px;
 
     display: flex;
-    gap: 160px;
+    gap: 30px;
 
     color: #171F17;
 }
@@ -29,12 +29,23 @@
     width: 50%;
 }
 
+.about_us_header{
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+
+    color: #171F17;
+}
+
 .about_inner_left_texts{
-    margin-top: 55px;
+    box-sizing: border-box;
+    margin-top: 70px;
     width: 535.73px;
     display: flex;
+    line-height: 24px;
     flex-direction: column;
-    gap: 25px; 
+    gap: 30px; 
 }
 
 .about_us_list{
@@ -47,8 +58,10 @@
 }
 
 .about_inner_right{
+    box-sizing: border-box;
     width: 50%;
     display: flex;
+    padding-bottom: 7px;
 }
 
 .aboutImage{
@@ -114,5 +127,14 @@
         object-fit: cover;
         border-radius: 30px;
         box-shadow: 0px 0px 25px 10px rgba(2, 159, 160, 0.5);
+    }
+    .about_inner{
+        gap: 160px;
+    }
+}
+
+@media (min-width:1400px) {
+    .about_inner{
+        gap: 109px;
     }
 }

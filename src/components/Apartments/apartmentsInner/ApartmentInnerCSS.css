@@ -1,17 +1,20 @@
 .apartment_main{
     width: 100%;
-    padding-top: 304px;
+    padding-top: 193px;
 }
 
 .apartment_main_inner{
+    box-sizing: border-box;
     width: 100%;
     display: flex;
-    padding-bottom: 80px;
+    padding-bottom: 193px;
 }
 
 .apartment_main_inner_left{
+    box-sizing: border-box;
     width: 50%;
     position: relative;
+    margin-left: 114px;
 }
 
 .apartment_main_inner_left img{
@@ -21,6 +24,8 @@
 }
 
 .apartment_main_inner_right{
+    box-sizing: border-box;
+    padding-left: 100px;
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -138,15 +143,17 @@
     max-width: 100%;
 }
 
-@media (min-width:1600px) {
-    .apartment_main{
-        padding-top: 204px;
+
+
+@media (min-width:1400px) {
+    .apartment_main_inner_right{
+        padding-left: 150px;
     }
 }
 
-@media (max-width:1400px) {
-    .apartment_main{
-        padding-top: 150px;
+@media (min-width:1600px) {
+    .apartment_main_inner_right{
+        padding-left: 350px;
     }
 }
 
@@ -156,15 +163,18 @@
         flex-direction: column;
     }
     .apartment_main_inner_left{
+        box-sizing: border-box;
         width: 100%;
+        padding-left: 0px;
+        margin-left:0px;
     }
     .apartment_main_inner_right{
         width: 100%;
-        
+        padding-left: 0;
     }
     .room{
         padding-left: 30px;
-        padding-right: 30px;
+        padding-right: 20px;
         margin-top: 0px;
     }
     .apHeader{
