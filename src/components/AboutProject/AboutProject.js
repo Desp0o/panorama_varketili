@@ -84,7 +84,9 @@ export default function AboutProject(){
 
 
     const circle1Ref = useRef()
-
+    const rangeboxMarch = useRef()
+    const rangeboxOctomber = useRef()
+    const blackframe = useRef()
 
     useEffect(()=>{
         setIsEng(false)
@@ -123,10 +125,14 @@ export default function AboutProject(){
         
         projStartRef.current.innerHTML = 'პროექტის დაწყება'
         projFoundationRef.current.innerHTML = 'საძირკველი'
+        rangeboxMarch.current.classList.remove('msgBox2_rus')
+        rangeboxMarch.current.classList.remove('msgBox2_eng')
         projMonolitRef.current.innerHTML = 'მონოლითი'
         projMonolitRef.current.classList.remove('circle_txt3_rus')
         projBlackFrame.current.innerHTML = 'შავი კარკასი'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
+        rangeboxOctomber.current.classList.remove('msgBox4_eng')
+        rangeboxOctomber.current.classList.remove('msgBox4_rus')
 
         ganvadebaRef.current.innerHTML = 'განვადება'
         ganvadebaParagraph1Ref.current.innerHTML = 'ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.'
@@ -170,10 +176,15 @@ export default function AboutProject(){
         
         projStartRef.current.innerHTML = 'Project start'
         projFoundationRef.current.innerHTML = 'Foundation'
+        rangeboxMarch.current.classList.add('msgBox2_eng')
+        rangeboxMarch.current.classList.remove('msgBox2_rus')
         projMonolitRef.current.innerHTML = 'Monolith'
         projMonolitRef.current.classList.add('circle_txt3_rus')
         projBlackFrame.current.innerHTML = 'Black Frame'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
+        rangeboxOctomber.current.classList.add('msgBox4_eng')
+        rangeboxOctomber.current.classList.remove('msgBox4_rus')
+
 
         ganvadebaRef.current.innerHTML = 'Installment'
         ganvadebaParagraph1Ref.current.innerHTML = 'The option of domestic 2-year interest-free installment plans is available for the purchase of apartments.'
@@ -217,10 +228,14 @@ export default function AboutProject(){
     
         projStartRef.current.innerHTML = 'Запуск проекта'
         projFoundationRef.current.innerHTML = 'Фундамент'
+        rangeboxMarch.current.classList.add('msgBox2_rus')
+        rangeboxMarch.current.classList.remove('msgBox2_eng')
         projMonolitRef.current.innerHTML = 'монолит'
         projMonolitRef.current.classList.add('circle_txt3_rus')
         projBlackFrame.current.innerHTML = 'Черный каркас'   
         projBlackFrame.current.classList.add('circle_txt4_rus')
+        rangeboxOctomber.current.classList.remove('msgBox4_eng')
+        rangeboxOctomber.current.classList.add('msgBox4_rus')
 
         ganvadebaRef.current.innerHTML = 'Рассрочка'
         ganvadebaParagraph1Ref.current.innerHTML = 'Возможность использования домашних беспроцентных инсталляционных планов на 2 года доступна для покупки квартир.'
@@ -399,7 +414,7 @@ export default function AboutProject(){
 
                 <span className="circle2"><img className="line2" src={line29}/></span>
                     <p className="circleTXT circle_txt2" style={style} ref={projFoundationRef}>საძირკველი</p>
-                    <div className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>მარტი 2023</p></div>
+                    <div ref={rangeboxMarch} className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>მარტი 2023</p></div>
                 
 
                 <span className="circle3"><img className="line3" src={line29}/></span>
@@ -409,7 +424,7 @@ export default function AboutProject(){
 
                 <span className="circle4"><img className="line4" src={line29}/></span>
                     <p className="circleTXT circle_txt4" style={style} ref={projBlackFrame}>შავი კარკასი</p>
-                    <div className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
+                    <div ref={rangeboxOctomber} className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
                 {/* <input ref={rangeThumbRef} className="inputRange" type='range' min='0' max='300' step='1' value={data} onChange={(e)=> setData(e.target.value)} /> */}
