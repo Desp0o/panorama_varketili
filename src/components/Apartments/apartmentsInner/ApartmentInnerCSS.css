@@ -147,13 +147,13 @@
 
 @media (min-width:1400px) {
     .apartment_main_inner_right{
-        padding-left: 150px;
+        padding-left: 140px;
     }
 }
 
 @media (min-width:1600px) {
     .apartment_main_inner_right{
-        padding-left: 345px;
+        padding-left: 350px;
     }
 }
 
