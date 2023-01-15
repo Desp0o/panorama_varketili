@@ -1,13 +1,13 @@
 .apartment_main{
     width: 100%;
-    padding-top: 193px;
+    padding-top: 134px;
 }
 
 .apartment_main_inner{
     box-sizing: border-box;
     width: 100%;
     display: flex;
-    padding-bottom: 193px;
+    padding-bottom: 154px;
 }
 
 .apartment_main_inner_left{

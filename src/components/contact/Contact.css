@@ -245,7 +245,7 @@ button span{
 
 @media (max-width:1400px) {
     .contact{
-        gap:87px;
+        gap:66px;
     }
 
     .input_fields_top input{
@@ -295,6 +295,7 @@ button span{
         color: #171F17;
     }
     .contact_paragraph{
+        max-width: 98%;
         font-family: 'BPG Mrgvlovani';
         font-style: normal;
         font-weight: 400;
