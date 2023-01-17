@@ -123,9 +123,9 @@ export default function Footer(props){
                         <img src={linkedin} alt="footer social icon" />
                     </div>
 
-                    <div className="footer_icon">
+                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=info@twins.com.ge' target='_blank'><div className="footer_icon">
                         <img src={email} alt="footer social icon" />
-                    </div>
+                    </div></a>
 
                 </div>
 
