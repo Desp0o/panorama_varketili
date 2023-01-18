@@ -121,6 +121,7 @@ export default function Flats(props){
                         spaceBetween={15}
                         centeredSlides={true}
                         modules={[Navigation]}
+                        loop={true}
                         className="swiper"
                         navigation={{
                             
