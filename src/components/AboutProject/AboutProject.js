@@ -1,6 +1,5 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
-import logo from '../../images/logo.png'
 import '../../index.css'
 import Footer from "../footer/Footer";
 import'./AboutProject.css'
@@ -12,15 +11,13 @@ import '../../styles/PopUpMsg.css'
 
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
-import burgerStick from '../../images/sticks.png'
-import burgerClose from '../../images/burgerClose.png'
 import toBackimg from '../../images/toBackWhite.png'
 
 const styleENG={
     fontFamily: 'Roboto'
 }
 
-export default function AboutProject(){
+export default function AboutProject(props){
 
     const [style, setStyle] = useState(styleENG)
 
@@ -55,18 +52,7 @@ export default function AboutProject(){
 
     const [popUp, setPopUp] = useState('pop_up_msg')
 
-    const GeoLanguage = useRef()
-    const navbarLinkFlats = useRef()
-    const navbarLinkAboutUs = useRef()
-    const navbarLinkAboutProject = useRef()
-    const EngLanguage = useRef()
-    const RusLanguage = useRef()
-
-    const [isGeo, setIsGeo] = useState(false)
-    const [isRus, setIsRus] = useState(false)
-    const [isEng, setIsEng] = useState(false)
     
-    const [data, setData] = useState(100)
 
     const [fadeOut, setFadeOut] = useState('about_proj_page')
     const [map, setMap] = useState('map')
@@ -76,9 +62,6 @@ export default function AboutProject(){
     const aprilRef = useRef()
     const octomberRef = useRef()
 
-    const burgerApartments = useRef()
-    const burgerAbout = useRef()
-    const burgerProj = useRef()
 
     const tobackRef = useRef()
 
@@ -86,35 +69,20 @@ export default function AboutProject(){
     const circle1Ref = useRef()
     const rangeboxMarch = useRef()
     const rangeboxOctomber = useRef()
-    const blackframe = useRef()
 
     useEffect(()=>{
-        setIsEng(false)
-        setIsGeo(true)
-        setIsRus(false)
         setStyle(null)
 
         tobackRef.current.innerHTML = 'უკან'
 
-        GeoLanguage.current.style.color = '#029FA0'
-        GeoLanguageBurger.current.style.color = '#029FA0'
-        EngLanguageBurger.current.style.color = 'black'
-        EngLanguage.current.style.color = 'black'
-        RusLanguage.current.style.color = 'black'
-        RusLanguageBurger.current.style.color = 'black'
-
-        navbarLinkFlats.current.innerHTML = 'ბინები'
-        navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
-        navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
+        
 
         februaryRef.current.innerHTML = 'თებერვალი 2023'
         marchRef.current.innerHTML = 'მარტი 2023'
         aprilRef.current.innerHTML = 'აპრილი 2023'
         octomberRef.current.innerHTML = 'ოქტომბერი 2023'
 
-        burgerApartments.current.innerHTML = "ბინები"
-        burgerAbout.current.innerHTML = "ჩვენ შესახებ"
-        burgerProj.current.innerHTML = "მიმდინარე პროექტი"
+       
 
         firstSectionHeaderRef.current.innerHTML = 'ლოკაცია'
         firstSectionParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
@@ -139,33 +107,18 @@ export default function AboutProject(){
         ganvadebaParagraph2Ref.current.innerHTML = "აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით."
 
     if(localStorage.language === 'eng'){
-        setIsEng(true)
-        setIsGeo(false)
-        setIsRus(false)
         setStyle(styleENG)
 
         tobackRef.current.innerHTML = 'Back'
 
-        GeoLanguage.current.style.color = 'black'
-        GeoLanguageBurger.current.style.color = 'black'
-        EngLanguage.current.style.color = '#029FA0'
-        EngLanguageBurger.current.style.color = '#029FA0'
-        RusLanguage.current.style.color = 'black'
-        RusLanguageBurger.current.style.color = 'black'
+        
 
-        navbarLinkFlats.current.innerHTML = 'Apartments'
-        navbarLinkAboutUs.current.innerHTML = 'About Us'
-        navbarLinkAboutProject.current.innerHTML = 'About Project'
 
         februaryRef.current.innerHTML = 'February 2023'
         marchRef.current.innerHTML = 'March 2023'
         aprilRef.current.innerHTML = 'April 2023'
         octomberRef.current.innerHTML = 'Octomber 2023'
 
-        //burger
-        burgerApartments.current.innerHTML = "Apartments"
-        burgerAbout.current.innerHTML = "About Us"
-        burgerProj.current.innerHTML = "About Project"
 
         firstSectionHeaderRef.current.innerHTML = 'Location'
         firstSectionParagraphRef.current.innerHTML = 'The Panorama Varketili is located at 68 Viktor Kupradze Street, <br/> within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
@@ -191,33 +144,19 @@ export default function AboutProject(){
         ganvadebaParagraph2Ref.current.innerHTML = "The bank's 5-10 year mortgage loan is also available."
 
     }else if(localStorage.language === 'rus'){
-        setIsEng(false)
-        setIsGeo(false)
-        setIsRus(true)
         setStyle(styleENG)
 
         tobackRef.current.innerHTML = 'Назад'
 
-        GeoLanguage.current.style.color = 'black'
-        GeoLanguageBurger.current.style.color = 'black'
-        EngLanguage.current.style.color = 'black'
-        EngLanguageBurger.current.style.color = 'black'
-        RusLanguage.current.style.color = '#029FA0'
-        RusLanguageBurger.current.style.color = '#029FA0'
+        
 
-        navbarLinkFlats.current.innerHTML = 'Апартаменты'
-        navbarLinkAboutUs.current.innerHTML = 'О нас'
-        navbarLinkAboutProject.current.innerHTML = 'О проекте'
 
         februaryRef.current.innerHTML = 'Февраль 2023'
         marchRef.current.innerHTML = 'Mарт 2023'
         aprilRef.current.innerHTML = 'Aпреля 2023'
         octomberRef.current.innerHTML = 'Октябрь 2023'
 
-        //burger
-        burgerApartments.current.innerHTML = "Апартаменты"
-        burgerAbout.current.innerHTML = "О нас"
-        burgerProj.current.innerHTML = "О проекте"
+        
 
         firstSectionHeaderRef.current.innerHTML = 'место нахождения'
         firstSectionParagraphRef.current.innerHTML = 'Панорама Варкетили расположен на улице Виктора Купрадзе 68, <br/> в развитии Hualing Tbilisi Plaza в Новом Городе.<br/>Он удобно расположен на боку основной дороги,<br/>предлагая легкий доступ ко всем удобствам в этом районе.'
@@ -242,7 +181,7 @@ export default function AboutProject(){
         ganvadebaParagraph2Ref.current.innerHTML = 'И доступна ипотечная займ на период от 5 до 10 лет от банка.'
 
     }
-    },[isEng, isGeo, isRus])
+    },[props.isEng, props.isGeo, props.isRus])
     
     useEffect(()=>{
         const fadeOutTimer = setTimeout(()=>{
@@ -254,51 +193,6 @@ export default function AboutProject(){
             clearTimeout(fadeOutTimer)
         })
     },[])
-
-    function makeENG() {
-        setIsEng(true)
-        setIsRus(false)
-        setIsGeo(false)
-        localStorage.setItem('language', 'eng')
-    }
-
-    function makeGEO() {
-        setIsEng(false)
-        setIsRus(false)
-        setIsGeo(true)
-        localStorage.removeItem('language')
-    }
-
-    function makeRUS() {
-        setIsEng(false)
-        setIsRus(true)
-        setIsGeo(false)
-        localStorage.setItem('language', 'rus')
-    }
-    
-    //burgermenu panel///
-    ////////////////////
-    const GeoLanguageBurger = useRef()
-    const EngLanguageBurger = useRef()
-    const RusLanguageBurger = useRef()
-    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
-
-    const [burger, setBurger] = useState('burgerMenu_panel')
-    const [burgerBoolean, setBurgerBoolean] = useState(false)
-
-    function burgerHandler() {
-        if(!burgerBoolean){
-            setBurgerBoolean(true)
-            setBurger('burgerMenu_panel burgerMenu_panel_active')
-            setBurgerIcon(burgerClose)
-        }else{
-            setBurgerBoolean(false)
-            setBurger('burgerMenu_panel')
-            setBurgerIcon(burgerStick)
-        }
-    }
-
-    //*************//
 
     const firstSectionHeaderRef = useRef()
     const firstSectionParagraphRef = useRef()
@@ -317,64 +211,13 @@ export default function AboutProject(){
     
     return(
         <> 
-        <div className='Navbar'>
-            <div className="navbar_inner">
-                
-                {/* ლოგო */}
-                <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
-
-                <div className="menu_and_langs">
-                    {/* მენუ */}
-                    <ul className="nav_menu">
-                        <Link to='/components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
-                        <Link to='/components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
-                        <Link to='/components/AboutProject/AboutProject'><li className="menu_links active_page" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
-                    </ul>
-
-                    {/* ენები */}
-                    <div className="languages">
-                        <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
-                        <span>/</span>
-                        <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
-                        <span>/</span>
-                        <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
-                    </div>
-                </div>
-
-                <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerIcon} alt="burgermenu" /> 
-                </div>
-            </div>
-        </div>
-
-        <div className={burger}>
-            <div className="burgerMenu_link">
-                <Link to='/components/Apartments/Apartments' onClick={burgerHandler} ref={burgerApartments} style={style}>ბინები</Link>
-            </div>
-
-            <div className="burgerMenu_link">
-                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} ref={burgerAbout} style={style}>ჩვენ შესახებ</Link>
-            </div>
-
-            <div className="burgerMenu_link  active_page">
-                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
-            </div>
-
-            <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
-                <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
-                <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
-            </div>
-        </div>
 
             <div className={popUp}>
                 <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
 
                 <div className="form_outer">
                     <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
-                    <Form />
+                    <Form iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style} />
                 </div>
             </div>
 
@@ -448,7 +291,7 @@ export default function AboutProject(){
                 </div>
 
             </div>
-            <Footer iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
+            <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
         </>
     )
 }

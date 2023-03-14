@@ -74,8 +74,8 @@
     .apartment_header{
         font-size: 18px;
         font-family: 'BPG Nino Mtavruli';
-        justify-content: flex-start;
-        padding-left: 30px;
+        justify-content: center;
+        padding-left: 0px;
     }
 }
 

@@ -17,7 +17,6 @@ import slider1 from '../images/slider1.png'
 import slider2 from '../images/slider2.jpg'
 import slider3 from '../images/slider3.jpg'
 import slider4 from '../images/slider4.jpg'
-import logo from '../images/logo.png'
 import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
@@ -63,7 +62,7 @@ const imgArr = [
 const styleENG={
     fontFamily: 'Roboto'
 }
-export default function MainPage() {
+export default function MainPage(props) {
 
     const [style, setStyle] = useState(styleENG)
 
@@ -102,30 +101,14 @@ export default function MainPage() {
     const dot3 = useRef()
 
 
-    const GeoLanguage = useRef()
-    const navbarLinkFlats = useRef()
-    const navbarLinkAboutUs = useRef()
-    const navbarLinkAboutProject = useRef()
     const sliderHeaderRef = useRef()
-    const EngLanguage = useRef()
-    const RusLanguage = useRef()
     const sliderBtnRef = useRef()
 
     // Email send Functionality
     const form = useRef();
     const [popUp, setPopUp] = useState('pop_up_msg')
 
-    const sendEmail = (e) => {
-        e.preventDefault();
     
-        emailjs.sendForm('service_bpng7e7', 'template_y2xffsh', form.current, 'k5sgg72-uloGuXB_E')
-          .then((result) => {
-              console.log(result.text);
-          }, (error) => {
-              console.log(error.text);
-          });
-          e.target.reset()
-    };
     // End Of Email Functionality
 
     const whyPanoramaHeaderRef = useRef()
@@ -136,9 +119,6 @@ export default function MainPage() {
     const whyPanoramaParagraphRef5 = useRef()
     const responsiveSeeMoreBtn = useRef()
 
-    const [isGeo, setIsGeo] = useState(false)
-    const [isRus, setIsRus] = useState(false)
-    const [isEng, setIsEng] = useState(false)
 
     const [sliderClass, setSliderClass] = useState('slider_inner')
     
@@ -146,29 +126,6 @@ export default function MainPage() {
     let [index, setIndex] = useState(0)
     const slideLength = imgArr.length
 
-    function makeENG() {
-        setIsEng(true)
-        setIsRus(false)
-        setIsGeo(false)
-        localStorage.setItem('language', 'eng')
-    }
-    //*************//
-
-    function makeGEO() {
-        setIsEng(false)
-        setIsRus(false)
-        setIsGeo(true)
-        localStorage.removeItem('language')
-    }
-    //*************//
-
-    function makeRUS() {
-        setIsEng(false)
-        setIsRus(true)
-        setIsGeo(false)
-        localStorage.setItem('language', 'rus')
-    }
-    //*************//
 
     function nextSlide() {
         if(index === slideLength-1){
@@ -222,29 +179,12 @@ export default function MainPage() {
     //*************//
 
     useEffect(()=>{
-            setIsEng(false)
-            setIsGeo(true)
-            setIsRus(false)
             setStyle(null)
 
             //სლაიდერის ტექსტი
 
-            // Languages
-            GeoLanguage.current.style.color = '#029FA0'
-            GeoLanguageBurger.current.style.color = '#029FA0'
-            EngLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = 'black'
-            RusLanguage.current.style.color = 'black'
-            RusLanguageBurger.current.style.color = 'black'
+            
 
-            //burger
-            burgerApartments.current.innerHTML = "ბინები"
-            burgerAbout.current.innerHTML = "ჩვენ შესახებ"
-            burgerProj.current.innerHTML = "მიმდინარე პროექტი"
-
-            navbarLinkFlats.current.innerHTML = 'ბინები'
-            navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
-            navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
 
             sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
             sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
@@ -259,27 +199,11 @@ export default function MainPage() {
             responsiveSeeMoreBtn.current.innerHTML = 'დეტალურად'
 
         if(localStorage.language === 'eng'){
-            setIsEng(true)
-            setIsGeo(false)
-            setIsRus(false)
+            
             setStyle(styleENG)
 
-            // Languages
-            GeoLanguage.current.style.color = 'black'
-            GeoLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = '#029FA0'
-            EngLanguageBurger.current.style.color = '#029FA0'
-            RusLanguage.current.style.color = 'black'
-            RusLanguageBurger.current.style.color = 'black'
-
-            burgerApartments.current.innerHTML = "Apartments"
-            burgerAbout.current.innerHTML = "About Us"
-            burgerProj.current.innerHTML = "About Project"
+           
             
-
-            navbarLinkFlats.current.innerHTML = 'Apartments'
-            navbarLinkAboutUs.current.innerHTML = 'About Us'
-            navbarLinkAboutProject.current.innerHTML = 'About Project'
             sliderHeaderRef.current.innerHTML = 'Panorama Varketili'
             sliderBtnRef.current.innerHTML = 'Contact Us'
 
@@ -294,27 +218,9 @@ export default function MainPage() {
             responsiveSeeMoreBtn.current.innerHTML = 'See More'
 
         }else if(localStorage.language === 'rus'){
-            setIsEng(false)
-            setIsGeo(false)
-            setIsRus(true)
             setStyle(styleENG)
 
-            // Languages
-            GeoLanguage.current.style.color = 'black'
-            GeoLanguageBurger.current.style.color = 'black'
-            EngLanguage.current.style.color = 'black'
-            EngLanguageBurger.current.style.color = 'black'
-            RusLanguage.current.style.color = '#029FA0'
-            RusLanguageBurger.current.style.color = '#029FA0'
 
-            //burger
-            burgerApartments.current.innerHTML = "Апартаменты"
-            burgerAbout.current.innerHTML = "О нас"
-            burgerProj.current.innerHTML = "О проекте"
-
-            navbarLinkFlats.current.innerHTML = 'Апартаменты'
-            navbarLinkAboutUs.current.innerHTML = 'О нас'
-            navbarLinkAboutProject.current.innerHTML = 'О проекте'
             sliderHeaderRef.current.innerHTML = 'Панорама Варкетили'
             sliderBtnRef.current.innerHTML = 'контакт'
 
@@ -327,7 +233,7 @@ export default function MainPage() {
             whyPanoramaParagraphRef5.current.style.display = 'none'
             responsiveSeeMoreBtn.current.innerHTML = 'Подробнее'
         }
-    },[isEng, isGeo, isRus])
+    },[props.isEng, props.isGeo, props.isRus])
     //*************//
 
     // სლაიდერის ავტომატიზაცია რესპინსივზე
@@ -386,62 +292,12 @@ export default function MainPage() {
 
             <div className="form_outer">
                 <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
-                <Form  iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
+                <Form  iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
             </div>
            
         </div>
         
-        <div className='Navbar'>
-            <div className="navbar_inner">
-                
-                {/* ლოგო */}
-                <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
-
-                <div className="menu_and_langs">
-                    {/* მენუ */}
-                    <ul className="nav_menu">
-                        <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
-                        <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
-                        <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
-                    </ul>
-
-                    {/* ენები */}
-                    <div className="languages">
-                        <span ref={GeoLanguage} onClick={()=> makeGEO()}>GE</span>
-                        <span>/</span>
-                        <span ref={EngLanguage} onClick={()=> makeENG()}>EN</span>
-                        <span>/</span>
-                        <span ref={RusLanguage} onClick={()=> makeRUS()}>RU</span>
-                    </div>
-                </div>
-
-                <div className='burgerMenu' onClick={burgerHandler}>
-                    <img src={burgerIcon} alt="burgermenu" /> 
-                </div>
-            </div>
-        </div>
-
-        <div className={burger}>
-            <div className="burgerMenu_link">
-                <Link to='/components/Apartments/Apartments' onClick={burgerHandler} ref={burgerApartments} style={style}>ბინები</Link>
-            </div>
-
-            <div className="burgerMenu_link">
-                <Link to='/components/aboutUsPage/AboutUsPage' onClick={burgerHandler} ref={burgerAbout} style={style}>ჩვენ შესახებ</Link>
-            </div>
-
-            <div className="burgerMenu_link">
-                <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
-            </div>
-
-            <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={()=> {makeGEO()}}>GE</span>
-                <span>/</span>
-                <span ref={EngLanguageBurger} onClick={()=> {makeENG()}}>EN</span>
-                <span>/</span>
-                <span ref={RusLanguageBurger} onClick={()=> {makeRUS()}}>RU</span>
-            </div>
-        </div>
+        
 
         <div className="slider" ref={scrollRef}>
             <div className={sliderClass}>
@@ -520,7 +376,7 @@ export default function MainPage() {
             onClick={()=> setPopUp('pop_up_msg pop_up_active')}
         />
 
-        <Flats iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style} />
+        <Flats iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style} />
 
         <div className='why_panorama'>
             <div className="header_txt_btn">
@@ -546,11 +402,11 @@ export default function MainPage() {
             <img className="float_cliff" src={floatClif}/>
         </div>
 
-        <Features iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
+        <Features iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
 
-        <Contact iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
+        <Contact iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
 
-        <Footer iseng={isEng} isgeo={isGeo} isrus={isRus} styleeng={style}/>
+        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
         </>
     )
 }
