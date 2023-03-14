@@ -51,19 +51,19 @@ function App() {
       <Navbar geoLang={makeGEO} engLang={makeENG} rusLang={makeRUS} isEng={isEng} isGeo={isGeo} isRus={isRus} />
 
       <Routes>
-      <Route exact path="*" element={<MainPage isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/aboutUsPage/AboutUsPage" element={<AboutUsPage isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/Apartments" element={<Apartments isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/AboutProject/AboutProject" element={<AboutProject isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment102" element={<Apartment102 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment90" element={<Apartment90 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment83" element={<Apartment83 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment76" element={<Apartment76 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment75" element={<Apartment75 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment71" element={<Apartment71 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="*"                                                     element={<MainPage       isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/aboutUsPage/AboutUsPage"                   element={<AboutUsPage    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/Apartments"                     element={<Apartments     isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/AboutProject/AboutProject"                 element={<AboutProject   isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment102"   element={<Apartment102   isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment90"    element={<Apartment90    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment83"    element={<Apartment83    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment76"    element={<Apartment76    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment75"    element={<Apartment75    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment71"    element={<Apartment71    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment71Sec" element={<Apartment71Sec isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment60" element={<Apartment60 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
-      <Route exact path="/components/Apartments/apartmentsInner/Apartment57" element={<Apartment57 isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment60"    element={<Apartment60    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment57"    element={<Apartment57    isEng={isEng} isGeo={isGeo} isRus={isRus} />} />
       </Routes>
     </div>
   );
