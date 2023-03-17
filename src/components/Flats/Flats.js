@@ -3,9 +3,9 @@ import {Link} from  "react-router-dom";
 
 
 
-import renderB02 from '../../images/RenderB02.png'
-import renderB04 from '../../images/RenderB04.png'
-import renderB03 from '../../images/RenderB03.png'
+import renderB02 from '../../images/RenderB02.webp'
+import renderB04 from '../../images/RenderB04.webp'
+import renderB03 from '../../images/RenderB03.webp'
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
 import leftArrow from '../../images/leftArrow.png'

@@ -13,10 +13,10 @@ import '../index.css'
 import '../styles/PopUpMsg.css'
 import '../styles/WhyPanorama.css'
 
-import slider1 from '../images/slider1.png'
-import slider2 from '../images/slider2.jpg'
-import slider3 from '../images/slider3.jpg'
-import slider4 from '../images/slider4.jpg'
+import slider1 from '../images/slider1.webp'
+import slider2 from '../images/slider2.webp'
+import slider3 from '../images/slider3.webp'
+import slider4 from '../images/slider4.webp'
 import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
@@ -370,7 +370,7 @@ export default function MainPage(props) {
                 </Link>
             </div>
 
-            <img className="float_cliff" src={floatClif}/>
+            <img className="float_cliff" src={floatClif} alt="float cliff"/>
         </div>
 
         <Features iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>

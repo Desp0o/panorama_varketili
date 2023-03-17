@@ -87,7 +87,8 @@ export default function AboutUsPage(props){
 
 
     return(
-        <div className="about_us_page">
+        <>
+        
 
         
 
@@ -147,7 +148,8 @@ export default function AboutUsPage(props){
 
             
             <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
-        </div>
+        
+        </>
     )
 }
 

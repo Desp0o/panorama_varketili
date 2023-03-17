@@ -1,12 +1,12 @@
-import render102 from '../../images/render102.png'
-import render90 from '../../images/render90.png'
-import render83 from '../../images/render83.png'
-import render76 from '../../images/render76.png'
-import render75 from '../../images/render75.png'
-import render71 from '../../images/render71.png'
-import render712 from '../../images/render712.png'
-import render60 from '../../images/render60.png'
-import render57 from '../../images/render57.png'
+import render102 from '../../images/render102.webp'
+import render90 from '../../images/render90.webp'
+import render83 from '../../images/render83.webp'
+import render76 from '../../images/render76.webp'
+import render75 from '../../images/render75.webp'
+import render71 from '../../images/render71.webp'
+import render712 from '../../images/render712.webp'
+import render60 from '../../images/render60.webp'
+import render57 from '../../images/render57.webp'
 
 export const ApartmentsArr =[
     {

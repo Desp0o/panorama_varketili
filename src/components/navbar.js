@@ -156,11 +156,11 @@ export default function Navbar(props){
 
                 <div className="menu_and_langs">
                     {/* მენუ */}
-                    <ul className="nav_menu">
-                        <Link to='./components/Apartments/Apartments'><li className="menu_links" ref={navbarLinkFlats} style={style}>ბინები</li></Link>
-                        <Link to='./components/aboutUsPage/AboutUsPage'><li className="menu_links" ref={navbarLinkAboutUs} style={style}>ჩვენ შესახებ</li></Link>
-                        <Link to='./components/AboutProject/AboutProject'><li className="menu_links" ref={navbarLinkAboutProject} style={style}>მიმდინარე პროექტი</li></Link>
-                    </ul>
+                    <div className="nav_menu">
+                        <Link to='./components/Apartments/Apartments'     className="menu_links" style={style} ref={navbarLinkFlats}>ბინები</Link>
+                        <Link to='./components/aboutUsPage/AboutUsPage'   className="menu_links" style={style} ref={navbarLinkAboutUs}>ჩვენ შესახებ</Link>
+                        <Link to='./components/AboutProject/AboutProject' className="menu_links" style={style} ref={navbarLinkAboutProject}>მიმდინარე პროექტი</Link>
+                    </div>
 
                     {/* ენები */}
                     <div className="languages">

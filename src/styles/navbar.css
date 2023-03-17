@@ -32,6 +32,7 @@
 .logo{
     cursor: pointer;
     height: 45.54px;
+    width: auto;
 }
 
 .menu_and_langs{
