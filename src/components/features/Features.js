@@ -9,12 +9,12 @@ export default function Features(props) {
     const featuresHeaderRef = useRef()
 
     useEffect(()=>{
-        featuresHeaderRef.current.innerHTML = 'უპირატესობები'
+        featuresHeaderRef.current.innerText = 'უპირატესობები'
     if(localStorage.language === 'eng'){
-        featuresHeaderRef.current.innerHTML = 'Advantages'
+        featuresHeaderRef.current.innerText = 'Advantages'
         
     }else if(localStorage.language === 'rus'){
-        featuresHeaderRef.current.innerHTML = 'Преимущества'
+        featuresHeaderRef.current.innerText = 'Преимущества'
     }
 },[props.iseng, props.isgeo, props.isrus])
 

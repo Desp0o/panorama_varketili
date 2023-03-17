@@ -57,20 +57,20 @@ export default function Apartments(props){
     useEffect(()=>{
         setStyle(null)
 
-        tobackRef.current.innerHTML = 'უკან'
-        ApartmentRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
+        tobackRef.current.innerText = 'უკან'
+        ApartmentRef.current.innerText = 'შეარჩიე სასურველი ბინა'
         
     if(localStorage.language === 'eng'){
         setStyle(styleENG)
 
-        tobackRef.current.innerHTML = 'Back'
-        ApartmentRef.current.innerHTML = 'Choose Your Apartment'
+        tobackRef.current.innerText = 'Back'
+        ApartmentRef.current.innerText = 'Choose Your Apartment'
 
     }else if(localStorage.language === 'rus'){
         setStyle(styleENG)
 
-        tobackRef.current.innerHTML = 'Назад'
-        ApartmentRef.current.innerHTML = 'Выберите желаемую квартиру'
+        tobackRef.current.innerText = 'Назад'
+        ApartmentRef.current.innerText = 'Выберите желаемую квартиру'
     }
     },[props.isEng, props.isGeo, props.isRus])
 

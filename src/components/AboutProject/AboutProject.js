@@ -73,112 +73,112 @@ export default function AboutProject(props){
     useEffect(()=>{
         setStyle(null)
 
-        tobackRef.current.innerHTML = 'უკან'
+        tobackRef.current.innerText = 'უკან'
 
         
 
-        februaryRef.current.innerHTML = 'თებერვალი 2023'
-        marchRef.current.innerHTML = 'მარტი 2023'
-        aprilRef.current.innerHTML = 'აპრილი 2023'
-        octomberRef.current.innerHTML = 'ოქტომბერი 2023'
+        februaryRef.current.innerText = 'თებერვალი 2023'
+        marchRef.current.innerText = 'მარტი 2023'
+        aprilRef.current.innerText = 'აპრილი 2023'
+        octomberRef.current.innerText = 'ოქტომბერი 2023'
 
        
 
-        firstSectionHeaderRef.current.innerHTML = 'ლოკაცია'
+        firstSectionHeaderRef.current.innerText = 'ლოკაცია'
         firstSectionParagraphRef.current.innerHTML = 'პანორამა ვარკეთილი მდებარეობს ვიქტორ კუპრაძის 68<br/> ნომერში, ჰუალინგ თბილისი პლაზას ახალ ქალაქში,<br/> ცენტრალური გზის პირას.'
-        firstSectionParagrap2hRef.current.innerHTML = 'ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.'
+        firstSectionParagrap2hRef.current.innerText = 'ჩვენი პროექტის ყველა ბინას აქვს საუკეთესო ხედები.'
 
-        proTimelineHeaderRef.current.innerHTML = 'პროექტის ვადები'
+        proTimelineHeaderRef.current.innerText = 'პროექტის ვადები'
         proTimelineparagraphRef.current.innerHTML = 'ვარკეთილის მიმდინარე პროექტი დასრულდება 2024 წლის დეკემბერში.<br/> ბინები ბარდება მწვანე კარკასის კონდიციით.'
         
-        projStartRef.current.innerHTML = 'პროექტის დაწყება'
-        projFoundationRef.current.innerHTML = 'საძირკველი'
+        projStartRef.current.innerText = 'პროექტის დაწყება'
+        projFoundationRef.current.innerText = 'საძირკველი'
         rangeboxMarch.current.classList.remove('msgBox2_rus')
         rangeboxMarch.current.classList.remove('msgBox2_eng')
         projMonolitRef.current.innerHTML = 'მონოლითი'
         projMonolitRef.current.classList.remove('circle_txt3_rus')
-        projBlackFrame.current.innerHTML = 'შავი კარკასი'
+        projBlackFrame.current.innerText = 'შავი კარკასი'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
         rangeboxOctomber.current.classList.remove('msgBox4_eng')
         rangeboxOctomber.current.classList.remove('msgBox4_rus')
 
-        ganvadebaRef.current.innerHTML = 'განვადება'
-        ganvadebaParagraph1Ref.current.innerHTML = 'ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.'
-        ganvadebaParagraph2Ref.current.innerHTML = "აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით."
+        ganvadebaRef.current.innerText = 'განვადება'
+        ganvadebaParagraph1Ref.current.innerText = 'ბინების შესაძენად მოქმედებს შიდა 2 წლიანი უპროცენტო განვადება.'
+        ganvadebaParagraph2Ref.current.innerText = "აგრეთვე მოქმედებს ბანკის იპოთეკური სესხი 5-10 წლამდე ვადით."
 
     if(localStorage.language === 'eng'){
         setStyle(styleENG)
 
-        tobackRef.current.innerHTML = 'Back'
+        tobackRef.current.innerText = 'Back'
 
         
 
 
-        februaryRef.current.innerHTML = 'February 2023'
-        marchRef.current.innerHTML = 'March 2023'
-        aprilRef.current.innerHTML = 'April 2023'
-        octomberRef.current.innerHTML = 'Octomber 2023'
+        februaryRef.current.innerText = 'February 2023'
+        marchRef.current.innerText = 'March 2023'
+        aprilRef.current.innerText = 'April 2023'
+        octomberRef.current.innerText = 'Octomber 2023'
 
 
-        firstSectionHeaderRef.current.innerHTML = 'Location'
+        firstSectionHeaderRef.current.innerText = 'Location'
         firstSectionParagraphRef.current.innerHTML = 'The Panorama Varketili is located at 68 Viktor Kupradze Street, <br/> within the Hualing Tbilisi Plaza development in New City.<br/> It is conveniently located alongside the main road, offering easy access <br/>to all the amenities in the area.'
-        firstSectionParagrap2hRef.current.innerHTML = 'Additionally, all the apartments in the project boast spectacular views.'
+        firstSectionParagrap2hRef.current.innerText = 'Additionally, all the apartments in the project boast spectacular views.'
 
-        proTimelineHeaderRef.current.innerHTML = 'Project Deadlines'
+        proTimelineHeaderRef.current.innerText = 'Project Deadlines'
         proTimelineparagraphRef.current.innerHTML = 'The project at Varketili is set to be finished by December 2024.<br/>The apartments will be delivered in a green frame condition.'
         
-        projStartRef.current.innerHTML = 'Project start'
-        projFoundationRef.current.innerHTML = 'Foundation'
+        projStartRef.current.innerText = 'Project start'
+        projFoundationRef.current.innerText = 'Foundation'
         rangeboxMarch.current.classList.add('msgBox2_eng')
         rangeboxMarch.current.classList.remove('msgBox2_rus')
-        projMonolitRef.current.innerHTML = 'Monolith'
+        projMonolitRef.current.innerText = 'Monolith'
         projMonolitRef.current.classList.add('circle_txt3_rus')
-        projBlackFrame.current.innerHTML = 'Black Frame'
+        projBlackFrame.current.innerText = 'Black Frame'
         projBlackFrame.current.classList.remove('circle_txt4_rus')
         rangeboxOctomber.current.classList.add('msgBox4_eng')
         rangeboxOctomber.current.classList.remove('msgBox4_rus')
 
 
-        ganvadebaRef.current.innerHTML = 'Installment'
-        ganvadebaParagraph1Ref.current.innerHTML = 'The option of domestic 2-year interest-free installment plans is available for the purchase of apartments.'
-        ganvadebaParagraph2Ref.current.innerHTML = "The bank's 5-10 year mortgage loan is also available."
+        ganvadebaRef.current.innerText = 'Installment'
+        ganvadebaParagraph1Ref.current.innerText = 'The option of domestic 2-year interest-free installment plans is available for the purchase of apartments.'
+        ganvadebaParagraph2Ref.current.innerText = "The bank's 5-10 year mortgage loan is also available."
 
     }else if(localStorage.language === 'rus'){
         setStyle(styleENG)
 
-        tobackRef.current.innerHTML = 'Назад'
+        tobackRef.current.innerText = 'Назад'
 
         
 
 
-        februaryRef.current.innerHTML = 'Февраль 2023'
-        marchRef.current.innerHTML = 'Mарт 2023'
-        aprilRef.current.innerHTML = 'Aпреля 2023'
-        octomberRef.current.innerHTML = 'Октябрь 2023'
+        februaryRef.current.innerText = 'Февраль 2023'
+        marchRef.current.innerText = 'Mарт 2023'
+        aprilRef.current.innerText = 'Aпреля 2023'
+        octomberRef.current.innerText = 'Октябрь 2023'
 
         
 
-        firstSectionHeaderRef.current.innerHTML = 'место нахождения'
+        firstSectionHeaderRef.current.innerText = 'место нахождения'
         firstSectionParagraphRef.current.innerHTML = 'Панорама Варкетили расположен на улице Виктора Купрадзе 68, <br/> в развитии Hualing Tbilisi Plaza в Новом Городе.<br/>Он удобно расположен на боку основной дороги,<br/>предлагая легкий доступ ко всем удобствам в этом районе.'
-        firstSectionParagrap2hRef.current.innerHTML = 'Кроме того, все квартиры в проекте имеют лучшие виды.'
+        firstSectionParagrap2hRef.current.innerText = 'Кроме того, все квартиры в проекте имеют лучшие виды.'
 
-        proTimelineHeaderRef.current.innerHTML = 'Сроки проекта'
+        proTimelineHeaderRef.current.innerText = 'Сроки проекта'
         proTimelineparagraphRef.current.innerHTML = 'Проект в Варкетили запланирован к завершению к декабрю 2024 года.<br/>Квартиры будут переданы в зеленом каркасном состоянии.'
     
-        projStartRef.current.innerHTML = 'Запуск проекта'
-        projFoundationRef.current.innerHTML = 'Фундамент'
+        projStartRef.current.innerText = 'Запуск проекта'
+        projFoundationRef.current.innerText = 'Фундамент'
         rangeboxMarch.current.classList.add('msgBox2_rus')
         rangeboxMarch.current.classList.remove('msgBox2_eng')
-        projMonolitRef.current.innerHTML = 'монолит'
+        projMonolitRef.current.innerText = 'монолит'
         projMonolitRef.current.classList.add('circle_txt3_rus')
-        projBlackFrame.current.innerHTML = 'Черный каркас'   
+        projBlackFrame.current.innerText = 'Черный каркас'   
         projBlackFrame.current.classList.add('circle_txt4_rus')
         rangeboxOctomber.current.classList.remove('msgBox4_eng')
         rangeboxOctomber.current.classList.add('msgBox4_rus')
 
-        ganvadebaRef.current.innerHTML = 'Рассрочка'
-        ganvadebaParagraph1Ref.current.innerHTML = 'Возможность использования домашних беспроцентных инсталляционных планов на 2 года доступна для покупки квартир.'
-        ganvadebaParagraph2Ref.current.innerHTML = 'И доступна ипотечная займ на период от 5 до 10 лет от банка.'
+        ganvadebaRef.current.innerText = 'Рассрочка'
+        ganvadebaParagraph1Ref.current.innerText = 'Возможность использования домашних беспроцентных инсталляционных планов на 2 года доступна для покупки квартир.'
+        ganvadebaParagraph2Ref.current.innerText = 'И доступна ипотечная займ на период от 5 до 10 лет от банка.'
 
     }
     },[props.isEng, props.isGeo, props.isRus])

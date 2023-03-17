@@ -88,13 +88,13 @@ export default function Navbar(props){
         RusLanguageBurger.current.style.color = 'black'
 
         //burger
-        burgerApartments.current.innerHTML = "ბინები"
-        burgerAbout.current.innerHTML = "ჩვენ შესახებ"
-        burgerProj.current.innerHTML = "მიმდინარე პროექტი"
+        burgerApartments.current.innerText = "ბინები"
+        burgerAbout.current.innerText = "ჩვენ შესახებ"
+        burgerProj.current.innerText = "მიმდინარე პროექტი"
 
-        navbarLinkFlats.current.innerHTML = 'ბინები'
-        navbarLinkAboutUs.current.innerHTML = 'ჩვენ შესახებ'
-        navbarLinkAboutProject.current.innerHTML = 'მიმდინარე პროექტი'
+        navbarLinkFlats.current.innerText = 'ბინები'
+        navbarLinkAboutUs.current.innerText = 'ჩვენ შესახებ'
+        navbarLinkAboutProject.current.innerText = 'მიმდინარე პროექტი'
 
 
     if(localStorage.language === 'eng'){
@@ -109,14 +109,14 @@ export default function Navbar(props){
         RusLanguage.current.style.color = 'black'
         RusLanguageBurger.current.style.color = 'black'
 
-        burgerApartments.current.innerHTML = "Apartments"
-        burgerAbout.current.innerHTML = "About Us"
-        burgerProj.current.innerHTML = "About Project"
+        burgerApartments.current.innerText = "Apartments"
+        burgerAbout.current.innerText = "About Us"
+        burgerProj.current.innerText = "About Project"
         
 
-        navbarLinkFlats.current.innerHTML = 'Apartments'
-        navbarLinkAboutUs.current.innerHTML = 'About Us'
-        navbarLinkAboutProject.current.innerHTML = 'About Project'
+        navbarLinkFlats.current.innerText = 'Apartments'
+        navbarLinkAboutUs.current.innerText = 'About Us'
+        navbarLinkAboutProject.current.innerText = 'About Project'
        
 
         
@@ -134,13 +134,13 @@ export default function Navbar(props){
         RusLanguageBurger.current.style.color = '#029FA0'
 
         //burger
-        burgerApartments.current.innerHTML = "Апартаменты"
-        burgerAbout.current.innerHTML = "О нас"
-        burgerProj.current.innerHTML = "О проекте"
+        burgerApartments.current.innerText = "Апартаменты"
+        burgerAbout.current.innerText = "О нас"
+        burgerProj.current.innerText = "О проекте"
 
-        navbarLinkFlats.current.innerHTML = 'Апартаменты'
-        navbarLinkAboutUs.current.innerHTML = 'О нас'
-        navbarLinkAboutProject.current.innerHTML = 'О проекте'
+        navbarLinkFlats.current.innerText = 'Апартаменты'
+        navbarLinkAboutUs.current.innerText = 'О нас'
+        navbarLinkAboutProject.current.innerText = 'О проекте'
         
     }
     },[props.isEng, props.isGeo, props.isRus])

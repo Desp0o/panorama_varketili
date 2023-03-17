@@ -52,18 +52,18 @@ export default function Flats(props){
 
        
     useEffect(()=>{
-        flatsHeaderRef.current.innerHTML = 'შეარჩიე სასურველი ბინა'
-        seeMoreApartments.current.innerHTML = 'მეტი ბინა'
+        flatsHeaderRef.current.innerText = 'შეარჩიე სასურველი ბინა'
+        seeMoreApartments.current.innerText = 'მეტი ბინა'
 
 
         if(localStorage.language === 'eng'){
 
-            flatsHeaderRef.current.innerHTML = 'Choose your ideal apartment'
-            seeMoreApartments.current.innerHTML = 'More apartments'
+            flatsHeaderRef.current.innerText = 'Choose your ideal apartment'
+            seeMoreApartments.current.innerText = 'More apartments'
 
         }else if(localStorage.language === 'rus'){
-            flatsHeaderRef.current.innerHTML = 'Выберите свою идеальную квартиру'
-            seeMoreApartments.current.innerHTML = 'Еще апартаменты'
+            flatsHeaderRef.current.innerText = 'Выберите свою идеальную квартиру'
+            seeMoreApartments.current.innerText = 'Еще апартаменты'
         }
 
         

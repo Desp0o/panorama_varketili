@@ -18,53 +18,53 @@ export default function Contact(props){
     const emailPlaceHolderRef = useRef()
 
     useEffect(()=>{
-        contactHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
+        contactHeaderRef.current.innerText = 'დაგვიტოვე საკონტაქტო'
         contactHeaderRef.current.classList.remove('rusFontDecrease')
         contactHeaderRef.current.style.fontSize = ''
 
-        contactParagraphRef.current.innerHTML = 'ჩვენი წარმომადგენელი დაგიკავშირდებათ და დაგეხმარებათ შეარჩიოთ თქვენთვის სასურველი ბინა.'
-        inputSendref.current.innerHTML = 'გაგზავნა'
+        contactParagraphRef.current.innerText = 'ჩვენი წარმომადგენელი დაგიკავშირდებათ და დაგეხმარებათ შეარჩიოთ თქვენთვის სასურველი ბინა.'
+        inputSendref.current.innerText = 'გაგზავნა'
 
         //კონტაქტის ფორმა
-        namePlaceHolderRef.current.innerHTML = 'სახელი *'
-        numberPlaceHolderRef.current.innerHTML = "ნომერი *"
-        emailPlaceHolderRef.current.innerHTML = "ელ-ფოსტა *"
+        namePlaceHolderRef.current.innerText = 'სახელი *'
+        numberPlaceHolderRef.current.innerText = "ნომერი *"
+        emailPlaceHolderRef.current.innerText = "ელ-ფოსტა *"
 
-        numberInputErrorMsg.current.innerHTML = 'მიუთითეთ ნომრის სწორი ფორმატი'
+        numberInputErrorMsg.current.innerText = 'მიუთითეთ ნომრის სწორი ფორმატი'
         numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus')
-        emailInputErrorMsg.current.innerHTML = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
+        emailInputErrorMsg.current.innerText = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
 
         if(localStorage.language === 'eng'){
-            contactHeaderRef.current.innerHTML = 'Leave your Contact Info'
+            contactHeaderRef.current.innerText = 'Leave your Contact Info'
             contactHeaderRef.current.classList.remove('rusFontDecrease')
             contactHeaderRef.current.style.fontSize = ''
-            contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
-            inputSendref.current.innerHTML = 'Send'
+            contactParagraphRef.current.innerText = 'Find the perfect apartment <br/> with the help of our expert representatives.'
+            inputSendref.current.innerText = 'Send'
 
             //კონტაქტის ფორმა
-            namePlaceHolderRef.current.innerHTML = 'Name *'
-            numberPlaceHolderRef.current.innerHTML = "Number *"
-            emailPlaceHolderRef.current.innerHTML = "Email *"
+            namePlaceHolderRef.current.innerText = 'Name *'
+            numberPlaceHolderRef.current.innerText = "Number *"
+            emailPlaceHolderRef.current.innerText = "Email *"
 
-            numberInputErrorMsg.current.innerHTML = 'Please enter the correct email format'
+            numberInputErrorMsg.current.innerText = 'Please enter the correct email format'
             numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus')
-            emailInputErrorMsg.current.innerHTML = 'Please enter the correct number format'
+            emailInputErrorMsg.current.innerText = 'Please enter the correct number format'
 
         }else if(localStorage.language === 'rus'){
-            contactHeaderRef.current.innerHTML = 'Оставьте свою контактную информацию'
+            contactHeaderRef.current.innerText = 'Оставьте свою контактную информацию'
             contactHeaderRef.current.classList.add('rusFontDecrease')
             contactHeaderRef.current.style.fontSize = '29px'
-            contactParagraphRef.current.innerHTML = 'Найдите идеальную квартиру с помощью наших представителей-экспертов.'
-            inputSendref.current.innerHTML = 'Отправить'
+            contactParagraphRef.current.innerText = 'Найдите идеальную квартиру с помощью наших представителей-экспертов.'
+            inputSendref.current.innerText = 'Отправить'
 
             //კონტაქტის ფორმა
-            namePlaceHolderRef.current.innerHTML = 'имя *' 
-            numberPlaceHolderRef.current.innerHTML = "номер *"
-            emailPlaceHolderRef.current.innerHTML = "Эл. адрес *"
+            namePlaceHolderRef.current.innerText = 'имя *' 
+            numberPlaceHolderRef.current.innerText = "номер *"
+            emailPlaceHolderRef.current.innerText = "Эл. адрес *"
 
-            numberInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный формат электронной почты'
+            numberInputErrorMsg.current.innerText = 'Пожалуйста, введите правильный формат электронной почты'
             numberInputErrorMsg.current.classList.add('placeholder_number_error_rus')
-            emailInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный номер'
+            emailInputErrorMsg.current.innerText = 'Пожалуйста, введите правильный номер'
             
         }
 

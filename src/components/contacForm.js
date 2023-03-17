@@ -24,40 +24,40 @@ export default function Form(props){
 
     useEffect(()=>{
 
-        comtactFormHeaderRef.current.innerHTML = 'დაგვიტოვე საკონტაქტო'
-        comtactFormNameRef.current.innerHTML = 'სახელი *'
-        contactFormNumberRef.current.innerHTML = 'ნომერი *'
-        contactFormEmailRef.current.innerHTML = 'ელ-ფოსტა *'
-        inputSendref.current.innerHTML = 'გაგზავნა'
+        comtactFormHeaderRef.current.innerText = 'დაგვიტოვე საკონტაქტო'
+        comtactFormNameRef.current.innerText = 'სახელი *'
+        contactFormNumberRef.current.innerText = 'ნომერი *'
+        contactFormEmailRef.current.innerText = 'ელ-ფოსტა *'
+        inputSendref.current.innerText = 'გაგზავნა'
 
-        numberInputErrorMsg.current.innerHTML = 'მიუთითეთ ნომრის სწორი ფორმატი'
+        numberInputErrorMsg.current.innerText = 'მიუთითეთ ნომრის სწორი ფორმატი'
         numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus_contactFrom')
-        emailInputErrorMsg.current.innerHTML = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
+        emailInputErrorMsg.current.innerText = 'მიუთითეთ ელ-ფოსტის სწორი ფორმატი'
         
         
     if(localStorage.language === 'eng'){
 
-        comtactFormHeaderRef.current.innerHTML = 'Leave your contact Info'
-        comtactFormNameRef.current.innerHTML = 'Name *'
-        contactFormNumberRef.current.innerHTML = 'Number *'
-        contactFormEmailRef.current.innerHTML = 'Email  *'
-        inputSendref.current.innerHTML = 'Send'
+        comtactFormHeaderRef.current.innerText = 'Leave your contact Info'
+        comtactFormNameRef.current.innerText = 'Name *'
+        contactFormNumberRef.current.innerText = 'Number *'
+        contactFormEmailRef.current.innerText = 'Email  *'
+        inputSendref.current.innerText = 'Send'
 
-        numberInputErrorMsg.current.innerHTML = 'Please enter the correct email format'
+        numberInputErrorMsg.current.innerText = 'Please enter the correct email format'
         numberInputErrorMsg.current.classList.remove('placeholder_number_error_rus_contactFrom')
-        emailInputErrorMsg.current.innerHTML = 'Please enter the correct number format'
+        emailInputErrorMsg.current.innerText = 'Please enter the correct number format'
         
         
     }else if(localStorage.language === 'rus'){
-        comtactFormHeaderRef.current.innerHTML = 'Оставьте свою контактную информацию'
-        comtactFormNameRef.current.innerHTML = 'имя *'
-        contactFormNumberRef.current.innerHTML = 'номер *'
-        contactFormEmailRef.current.innerHTML = 'Эл. адрес *'
-        inputSendref.current.innerHTML = 'Отправить'
+        comtactFormHeaderRef.current.innerText = 'Оставьте свою контактную информацию'
+        comtactFormNameRef.current.innerText = 'имя *'
+        contactFormNumberRef.current.innerText = 'номер *'
+        contactFormEmailRef.current.innerText = 'Эл. адрес *'
+        inputSendref.current.innerText = 'Отправить'
 
-        numberInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный формат электронной почты'
+        numberInputErrorMsg.current.innerText = 'Пожалуйста, введите правильный формат электронной почты'
         numberInputErrorMsg.current.classList.add('placeholder_number_error_rus_contactFrom')
-        emailInputErrorMsg.current.innerHTML = 'Пожалуйста, введите правильный номер'
+        emailInputErrorMsg.current.innerText = 'Пожалуйста, введите правильный номер'
         
     }
     },[props.iseng, props.isrus, props.isgeo])        

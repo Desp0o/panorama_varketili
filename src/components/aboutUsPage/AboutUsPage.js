@@ -34,17 +34,17 @@ export default function AboutUsPage(props){
     useEffect(()=>{
         setStyle(null)
 
-        aboutPageHeader.current.innerHTML = 'თვინს დეველოპმენტი'
-        toBack.current.innerHTML = 'უკან'
+        aboutPageHeader.current.innerText = 'თვინს დეველოპმენტი'
+        toBack.current.innerText = 'უკან'
         engListRef.current.style.display = 'none'
         rusListRef.current.style.display = 'none'
         geoListRef.current.style.display = 'block'
         geoTwinsWord.current.style.display = 'block'
         engTwinsWord.current.style.display = 'none'
         rusTwinsWord.current.style.display = 'none'
-        aboutPageP2.current.innerHTML = 'ჩვენი გუნდი შესაძლებელს ხდის, კომფორტული ცხოვრების სტილი, ნებისმიერი ადამიანისთვის ხელმისაწვდომი გახადოს.'
-        aboutPageP3.current.innerHTML = 'ობიექტზე უსაფრთხოების წესებისა და ნორმების სრული დაცვით, სამუშაოს პროფესიონალურად შესრულება ჩვენი მთავარი პრიორიტეტია. სწორედ საქმისადმი მსგავსი დამოკიდებულების და დეტალებზე მაქსიმალური ყურადღების გამო გვაქვს მაღალი ნდობა ჩვენი მომხმარებლისგან.'
-        aboutPageP4.current.innerHTML = 'თვინს დეველოპმენტი საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.'
+        aboutPageP2.current.innerText = 'ჩვენი გუნდი შესაძლებელს ხდის, კომფორტული ცხოვრების სტილი, ნებისმიერი ადამიანისთვის ხელმისაწვდომი გახადოს.'
+        aboutPageP3.current.innerText = 'ობიექტზე უსაფრთხოების წესებისა და ნორმების სრული დაცვით, სამუშაოს პროფესიონალურად შესრულება ჩვენი მთავარი პრიორიტეტია. სწორედ საქმისადმი მსგავსი დამოკიდებულების და დეტალებზე მაქსიმალური ყურადღების გამო გვაქვს მაღალი ნდობა ჩვენი მომხმარებლისგან.'
+        aboutPageP4.current.innerText = 'თვინს დეველოპმენტი საუკეთესო პრაქტიკებზე დაყრდნობით, ქმნის პროექტებს, რომელიც ქალაქის იერსახეს, არქიტექტურისა და ურბანიზაციის სინთეზის გამორჩეულ მაგალითად აქცევს.'
         aboutPageP5.current.style.display = 'none'
 
     if(localStorage.language === 'eng'){
@@ -53,34 +53,34 @@ export default function AboutUsPage(props){
         engListRef.current.style.display = 'block'
         rusListRef.current.style.display = 'none'
         geoListRef.current.style.display = 'none'
-        aboutPageHeader.current.innerHTML = 'Twins Development'
-        toBack.current.innerHTML = 'Back'
+        aboutPageHeader.current.innerText = 'Twins Development'
+        toBack.current.innerText = 'Back'
         geoTwinsWord.current.style.display = 'none'
         engTwinsWord.current.style.display = 'block'
         rusTwinsWord.current.style.display = 'none'
-        aboutPageP2.current.innerHTML = 'With decades of experience and a keen eye for the best locations, our team is dedicated to making comfortable living accessible to all. '
-        aboutPageP3.current.innerHTML = 'are our top priorities, and it\'s this commitment to detail that has earned us the trust of our customers. '
-        aboutPageP4.current.innerHTML = 'We pride ourselves on creating projects that seamlessly blend architecture and urbanization, making a positive impact on the appearance of the city.'
+        aboutPageP2.current.innerText = 'With decades of experience and a keen eye for the best locations, our team is dedicated to making comfortable living accessible to all. '
+        aboutPageP3.current.innerText = 'are our top priorities, and it\'s this commitment to detail that has earned us the trust of our customers. '
+        aboutPageP4.current.innerText = 'We pride ourselves on creating projects that seamlessly blend architecture and urbanization, making a positive impact on the appearance of the city.'
         aboutPageP5.current.style.display = 'block'
-        aboutPageP5.current.innerHTML = 'With Twins Development, you can trust that you are getting the best the industry has to offer.'
+        aboutPageP5.current.innerText = 'With Twins Development, you can trust that you are getting the best the industry has to offer.'
 
     
     }else if(localStorage.language === 'rus'){
         setStyle(styleENG)
 
-        aboutPageHeader.current.innerHTML = 'Твинс Девелопмент'
-        toBack.current.innerHTML = 'назад'
+        aboutPageHeader.current.innerText = 'Твинс Девелопмент'
+        toBack.current.innerText = 'назад'
         geoTwinsWord.current.style.display = 'none'
         engTwinsWord.current.style.display = 'none'
         rusTwinsWord.current.style.display = 'block'
         engListRef.current.style.display = 'none'
         rusListRef.current.style.display = 'block'
         geoListRef.current.style.display = 'none'
-        aboutPageP2.current.innerHTML = 'Наша команда, обладающая многолетним опытом и хорошим взглядом на ситуацию, стремится сделать комфортную жизнь доступной для всех.'
-        aboutPageP3.current.innerHTML = 'Безопасность и профессионализм являются нашими главными приоритетами, и именно это внимание к деталям заслужило нам доверие наших клиентов.'
-        aboutPageP4.current.innerHTML = 'Мы гордимся тем, что создаем проекты, которые сочетают архитектуру и урбанизацию органично, внося свой вклад в внешний вид города.'
+        aboutPageP2.current.innerText = 'Наша команда, обладающая многолетним опытом и хорошим взглядом на ситуацию, стремится сделать комфортную жизнь доступной для всех.'
+        aboutPageP3.current.innerText = 'Безопасность и профессионализм являются нашими главными приоритетами, и именно это внимание к деталям заслужило нам доверие наших клиентов.'
+        aboutPageP4.current.innerText = 'Мы гордимся тем, что создаем проекты, которые сочетают архитектуру и урбанизацию органично, внося свой вклад в внешний вид города.'
         aboutPageP5.current.style.display = 'block'
-        aboutPageP5.current.innerHTML = 'С Твинс Девелопмент вы можете быть уверены, что получите самое лучшее, что может предложить отрасль.'
+        aboutPageP5.current.innerText = 'С Твинс Девелопмент вы можете быть уверены, что получите самое лучшее, что может предложить отрасль.'
     
     }
     },[props.isEng, props.isGeo, props.isRus])

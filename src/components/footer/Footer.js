@@ -50,7 +50,7 @@ export default function Footer(props){
         engRuningText.current.style. display = "none"
         rusRuningText.current.style. display = "none"
 
-        footerAdressRef.current.innerHTML = 'თბილისი, ვიქტორ კუპრაძის 68'
+        footerAdressRef.current.innerText = 'თბილისი, ვიქტორ კუპრაძის 68'
         
 
         if(localStorage.language === 'eng'){
@@ -58,14 +58,14 @@ export default function Footer(props){
             engRuningText.current.style. display = "flex"
             rusRuningText.current.style. display = "none"
             
-            footerAdressRef.current.innerHTML = 'Tbilisi, Victor Kupradze st. 68'
+            footerAdressRef.current.innerText = 'Tbilisi, Victor Kupradze st. 68'
         
         }else if(localStorage.language === 'rus'){
             geoRuningText.current.style. display = "none"
             engRuningText.current.style. display = "none"
             rusRuningText.current.style. display = "flex"
         
-            footerAdressRef.current.innerHTML = 'Тбилиси, ул. Виктора Купрадзе. 68'
+            footerAdressRef.current.innerText = 'Тбилиси, ул. Виктора Купрадзе. 68'
         }
 
     },[props.iseng, props.isrus, props.isgeo])

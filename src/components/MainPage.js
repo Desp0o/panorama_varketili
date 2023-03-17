@@ -186,17 +186,17 @@ export default function MainPage(props) {
             
 
 
-            sliderHeaderRef.current.innerHTML = 'პანორამა ვარკეთილი'
-            sliderBtnRef.current.innerHTML = 'დაგვირეკეთ'
+            sliderHeaderRef.current.innerText = 'პანორამა ვარკეთილი'
+            sliderBtnRef.current.innerText = 'დაგვირეკეთ'
 
             // why panorama txt
-            whyPanoramaHeaderRef.current.innerHTML = 'რატომ პანორამა ვარკეთილი?'
-            whyPanoramaParagraphRef.current.innerHTML = 'პროექტის უნიკალურობას განაპირობებს, თბილისზე გაშლილი პანორამული ხედები.'
-            whyPanoramaParagraphRef2.current.innerHTML = 'შენი სახლი ქალაქზე ახალი პერსპექტივითაა გარშემორტყმული,სადაც კომფორტული ცხოვრების სტილი, თანამედროვე არქიტექტურასთან და გამორჩეულ იერსახესთანაა შეხამებული.'
-            whyPanoramaParagraphRef3.current.innerHTML = 'პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.'
-            whyPanoramaParagraphRef4.current.innerHTML = 'გაიგე დეტალურად პროექტის შესახებ'
+            whyPanoramaHeaderRef.current.innerText = 'რატომ პანორამა ვარკეთილი?'
+            whyPanoramaParagraphRef.current.innerText = 'პროექტის უნიკალურობას განაპირობებს, თბილისზე გაშლილი პანორამული ხედები.'
+            whyPanoramaParagraphRef2.current.innerText = 'შენი სახლი ქალაქზე ახალი პერსპექტივითაა გარშემორტყმული,სადაც კომფორტული ცხოვრების სტილი, თანამედროვე არქიტექტურასთან და გამორჩეულ იერსახესთანაა შეხამებული.'
+            whyPanoramaParagraphRef3.current.innerText = 'პანორამა ვარკეთილი ახალი მიდგომებით განსხვავებულ სტანდარტს ქმნის ურბანიზაციასთან სინთეზში.'
+            whyPanoramaParagraphRef4.current.innerText = 'გაიგე დეტალურად პროექტის შესახებ'
             whyPanoramaParagraphRef5.current.style.display = 'none'
-            responsiveSeeMoreBtn.current.innerHTML = 'დეტალურად'
+            responsiveSeeMoreBtn.current.innerText = 'დეტალურად'
 
         if(localStorage.language === 'eng'){
             
@@ -204,34 +204,34 @@ export default function MainPage(props) {
 
            
             
-            sliderHeaderRef.current.innerHTML = 'Panorama Varketili'
-            sliderBtnRef.current.innerHTML = 'Contact Us'
+            sliderHeaderRef.current.innerText = 'Panorama Varketili'
+            sliderBtnRef.current.innerText = 'Contact Us'
 
             // why panorama txt
-            whyPanoramaHeaderRef.current.innerHTML = 'Why Panorama Varketili?'
-            whyPanoramaParagraphRef.current.innerHTML =  'You’ll be surrounded by breathtaking panoramic views, making it truly one-of-a-kind!'    
-            whyPanoramaParagraphRef2.current.innerHTML = 'These unparalleled views will give you a new perspective on the city and all it offers.'
-            whyPanoramaParagraphRef3.current.innerHTML = "But that's not all. We believe that comfortable living and modern architecture go hand in hand, and we've designed our building with this in mind."
-            whyPanoramaParagraphRef4.current.innerHTML = 'Learn more about the project'
-            whyPanoramaParagraphRef5.current.innerHTML = "Our distinctive appearance and innovative approaches help us set a new standard in the synthesis of urbanization, making Panorama Varketili a truly unique place to call home."
+            whyPanoramaHeaderRef.current.innerText = 'Why Panorama Varketili?'
+            whyPanoramaParagraphRef.current.innerText =  'You’ll be surrounded by breathtaking panoramic views, making it truly one-of-a-kind!'    
+            whyPanoramaParagraphRef2.current.innerText = 'These unparalleled views will give you a new perspective on the city and all it offers.'
+            whyPanoramaParagraphRef3.current.innerText = "But that's not all. We believe that comfortable living and modern architecture go hand in hand, and we've designed our building with this in mind."
+            whyPanoramaParagraphRef4.current.innerText = 'Learn more about the project'
+            whyPanoramaParagraphRef5.current.innerText = "Our distinctive appearance and innovative approaches help us set a new standard in the synthesis of urbanization, making Panorama Varketili a truly unique place to call home."
             whyPanoramaParagraphRef5.current.style.display = 'block'
-            responsiveSeeMoreBtn.current.innerHTML = 'See More'
+            responsiveSeeMoreBtn.current.innerText = 'See More'
 
         }else if(localStorage.language === 'rus'){
             setStyle(styleENG)
 
 
-            sliderHeaderRef.current.innerHTML = 'Панорама Варкетили'
-            sliderBtnRef.current.innerHTML = 'контакт'
+            sliderHeaderRef.current.innerText = 'Панорама Варкетили'
+            sliderBtnRef.current.innerText = 'контакт'
 
             // why panorama txt
-            whyPanoramaHeaderRef.current.innerHTML = 'Почему Панорама Варкетили?'
-            whyPanoramaParagraphRef.current.innerHTML = 'Когда вы окажетесь здесь, вы будете окружены великолепными панорамными видами, которые позволят вам увидеть город с совершенно новой стороны.'
-            whyPanoramaParagraphRef2.current.innerHTML = 'Однако, мы также заботимся о том, чтобы наше здание было комфортным и соответствовало современным требованиям архитектуры.'
-            whyPanoramaParagraphRef3.current.innerHTML =  'Наш заметный внешний вид и инновационный подход помогают нам установить новые стандарты в сфере урбанизации, что делает Панорама Варкетили истинно уникальным местом, которое можно назвать домом.'
-            whyPanoramaParagraphRef4.current.innerHTML = 'Узнать больше о проекте'
+            whyPanoramaHeaderRef.current.innerText = 'Почему Панорама Варкетили?'
+            whyPanoramaParagraphRef.current.innerText = 'Когда вы окажетесь здесь, вы будете окружены великолепными панорамными видами, которые позволят вам увидеть город с совершенно новой стороны.'
+            whyPanoramaParagraphRef2.current.innerText = 'Однако, мы также заботимся о том, чтобы наше здание было комфортным и соответствовало современным требованиям архитектуры.'
+            whyPanoramaParagraphRef3.current.innerText =  'Наш заметный внешний вид и инновационный подход помогают нам установить новые стандарты в сфере урбанизации, что делает Панорама Варкетили истинно уникальным местом, которое можно назвать домом.'
+            whyPanoramaParagraphRef4.current.innerText = 'Узнать больше о проекте'
             whyPanoramaParagraphRef5.current.style.display = 'none'
-            responsiveSeeMoreBtn.current.innerHTML = 'Подробнее'
+            responsiveSeeMoreBtn.current.innerText = 'Подробнее'
         }
     },[props.isEng, props.isGeo, props.isRus])
     //*************//
@@ -256,34 +256,6 @@ export default function MainPage(props) {
     }, [index])
     //*************//
 
-
-    //burgermenu panel///
-    ////////////////////
-    const GeoLanguageBurger = useRef()
-    const EngLanguageBurger = useRef()
-    const RusLanguageBurger = useRef()
-    const burgerApartments = useRef()
-    const burgerAbout = useRef()
-    const burgerProj = useRef()
-    const [burgerIcon, setBurgerIcon] = useState(burgerStick)
-
-    const [burger, setBurger] = useState('burgerMenu_panel')
-    const [burgerBoolean, setBurgerBoolean] = useState(false)
-
-    function burgerHandler() {
-        if(!burgerBoolean){
-            setBurgerBoolean(true)
-            setBurger('burgerMenu_panel burgerMenu_panel_active')
-            setBurgerIcon(burgerClose)
-        }else{
-            setBurgerBoolean(false)
-            setBurger('burgerMenu_panel')
-            setBurgerIcon(burgerStick)
-        }
-    }
-
-    //*************//
-   
     return(
         <>
 

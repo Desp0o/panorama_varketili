@@ -63,7 +63,7 @@ export default function Apartment71(props) {
         setRoomEng('roomType')
         setRoomRus('roomType')
 
-        toBack.current.innerHTML = 'უკან'
+        toBack.current.innerText = 'უკან'
         
     if(localStorage.language === 'eng'){
         setStyle(styleENG)
@@ -72,7 +72,7 @@ export default function Apartment71(props) {
         setRoomEng(null)
         setRoomRus('roomType')
 
-        toBack.current.innerHTML = 'Back'
+        toBack.current.innerText = 'Back'
 
     }else if(localStorage.language === 'rus'){
         setStyle(styleENG)
@@ -81,7 +81,7 @@ export default function Apartment71(props) {
         setRoomEng('roomType')
         setRoomRus(null)
 
-        toBack.current.innerHTML = 'назад'
+        toBack.current.innerText = 'назад'
     }
     },[props.isEng, props.isGeo, props.isRus])
 
