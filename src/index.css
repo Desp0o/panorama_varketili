@@ -80,4 +80,10 @@ a{
   font-display: swap;
 }
 
+.overflowHidden{
+  overflow: hidden;
+}
 
+.overflowAdd{
+  overflow: scroll;
+}

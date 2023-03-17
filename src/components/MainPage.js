@@ -1,6 +1,6 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
-import emailjs from '@emailjs/browser';
+import { overFlow, overFlowAvailable } from "./overflow";
 import Flats from "./Flats/Flats";
 import Features from "./features/Features";
 import Contact from './contact/Contact'
@@ -20,8 +20,6 @@ import slider4 from '../images/slider4.jpg'
 import xMark from '../images/close.png'
 import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
-import burgerStick from '../images/sticks.png'
-import burgerClose from '../images/burgerClose.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
 
@@ -260,10 +258,10 @@ export default function MainPage(props) {
         <>
 
         <div className={popUp}>
-            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+            <div className="overlay" onClick={()=>{setPopUp('pop_up_msg'); overFlowAvailable()}}></div>
 
             <div className="form_outer">
-                <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+                <img className="close" alt="close" src={xMark} onClick={()=>{setPopUp('pop_up_msg');overFlowAvailable()}}/>
                 <Form  iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
             </div>
            
@@ -286,7 +284,7 @@ export default function MainPage(props) {
             {/* სლაიდერის სათაური */}
             <h1 className="slider_header" ref={sliderHeaderRef} style={style}>პანორამა ვარკეთილი</h1>
 
-            <div className="slider_btn" onClick={()=> setPopUp('pop_up_msg pop_up_active')}>
+            <div className="slider_btn" onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}>
                 <span ref={sliderBtnRef} style={style}>დაგვირეკე</span>
             </div>
 
@@ -345,7 +343,7 @@ export default function MainPage(props) {
             src={callFloatBtn} 
             ref={floatButtonRef} 
             className={floatBtnClass} 
-            onClick={()=> setPopUp('pop_up_msg pop_up_active')}
+            onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}
         />
 
         <Flats iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style} />

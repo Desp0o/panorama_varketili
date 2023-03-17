@@ -87,8 +87,8 @@ export default function Flats(props){
                     renderArr.map((render)=>{
                         return(
                             
-                            <>
-                                <div className="card" >
+                            
+                                <div className="card" key={render.id}>
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
                                         <img className="card_render_main_screen" src={render.image} />
@@ -107,7 +107,7 @@ export default function Flats(props){
                                     </div>
                                     </Link>
                                 </div>
-                            </>
+                            
                             
                         )
                     })

@@ -1,5 +1,6 @@
 import {React, useEffect, useState, useRef} from "react";
 import {Link} from  "react-router-dom";
+import {overFlow, overFlowAvailable} from "../overflow"
 import Footer from '../footer/Footer'
 import './Apartments.css'
 import '../../styles/PopUpMsg.css'
@@ -123,14 +124,14 @@ export default function Apartments(props){
             src={callFloatBtn} 
             ref={floatButtonRef} 
             className={floatBtnClass} 
-            onClick={()=> setPopUp('pop_up_msg pop_up_active')}
+            onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}
         />
 
         <div className={popUp}>
-            <div className="overlay" onClick={()=>setPopUp('pop_up_msg')}></div>
+            <div className="overlay" onClick={()=>{setPopUp('pop_up_msg'); overFlowAvailable()}}></div>
 
             <div className="form_outer">
-                <img className="close" alt="close" src={xMark} onClick={()=>setPopUp('pop_up_msg')}/>
+                <img className="close" alt="close" src={xMark} onClick={()=>{setPopUp('pop_up_msg');overFlowAvailable()}}/>
                 <Form iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
             </div>
         </div>
