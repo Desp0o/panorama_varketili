@@ -152,7 +152,7 @@ export default function Navbar(props){
             <div className="navbar_inner">
                 
                 {/* ლოგო */}
-                <Link to='/components/MainPage'><img className="logo" src={logo} /></Link>
+                <Link to='/components/MainPage'><img className="logo" src={logo} alt='logo' /></Link>
 
                 <div className="menu_and_langs">
                     {/* მენუ */}

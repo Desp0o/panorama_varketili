@@ -97,17 +97,17 @@ export default function Apartments(props){
                             <div className="card cardinpage" key={render.id}>
                                 <Link to={render.link}>
                                 <div className="card_inner_top">
-                                    <img className="card_render_main_screen" src={render.image} />
+                                    <img className="card_render_main_screen" src={render.image} alt='render'/>
                                 </div>
 
                                 <div className="card_inner_bottom">
                                     <div className="card_inner_bottom_left">
-                                        <img className="mc_Icon" src={meterCoub} />
+                                        <img className="mc_Icon" src={meterCoub} alt='mc icon'/>
                                         <p className="card_inner_bottom_p">{render.text1}</p>
                                     </div>
 
                                     <div className="card_inner_bottom_right">
-                                        <img className="bed_Icon" src={bed} />
+                                        <img className="bed_Icon" src={bed} alt='bed icon'/>
                                         <p className="card_inner_bottom_p">{render.text2}</p>
                                     </div>
                                 </div>
@@ -125,6 +125,7 @@ export default function Apartments(props){
             ref={floatButtonRef} 
             className={floatBtnClass} 
             onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}
+            alt='call btn'
         />
 
         <div className={popUp}>

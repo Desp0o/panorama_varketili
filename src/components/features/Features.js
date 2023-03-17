@@ -23,7 +23,7 @@ export default function Features(props) {
             <p ref={featuresHeaderRef} className="features_header" style={props.styleeng}>უპირატესობები</p>
 
             <div className="feature_bg">
-                <img src={FeatureBg} />
+                <img src={FeatureBg} alt='FeatureBg'/>
 
                 {/* მეორე მესიჯბოქსი */}
                 <div className="expandMSG secondMSG">

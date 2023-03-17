@@ -325,7 +325,7 @@ export default function MainPage(props) {
                 return(
                     <div key={slideIndex}>
                     <div className='mapping-div' key={slideIndex}>
-                        <img  className={slideClass} src={slide.image}/>
+                        <img  className={slideClass} src={slide.image} alt='slide'/>
                     </div>
 
                     <div>
@@ -344,6 +344,7 @@ export default function MainPage(props) {
             ref={floatButtonRef} 
             className={floatBtnClass} 
             onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}
+            alt="call btn"
         />
 
         <Flats iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style} />

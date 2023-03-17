@@ -227,6 +227,7 @@ export default function AboutProject(props){
             ref={floatButtonRef} 
             className={floatBtnClass} 
             onClick={()=> {setPopUp('pop_up_msg pop_up_active'); overFlow()}}
+            alt='call btn'
             />
 
             <div className={fadeOut}>
@@ -251,22 +252,22 @@ export default function AboutProject(props){
 
             <div className="rangesDiv">
 
-                <span ref={circle1Ref} className="circle1"><img className="line1" src={line29}/></span>
+                <span ref={circle1Ref} className="circle1"><img className="line1" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt1" style={style} ref={projStartRef}>პროექტის დაწყება</p>
                     <div className="range_msg_box msgBox1"><p className="msgBoxText" ref={februaryRef} style={style}>თებერვალი 2023</p></div>
                 
 
-                <span className="circle2"><img className="line2" src={line29}/></span>
+                <span className="circle2"><img className="line2" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt2" style={style} ref={projFoundationRef}>საძირკველი</p>
                     <div ref={rangeboxMarch} className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>მარტი 2023</p></div>
                 
 
-                <span className="circle3"><img className="line3" src={line29}/></span>
+                <span className="circle3"><img className="line3" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt3 circle_txt3_rus" style={style} ref={projMonolitRef}>მონოლითი</p>
                     <div className="range_msg_box msgBox3"><p className="msgBoxText" ref={aprilRef} style={style}>აპრილი 2023</p></div>
 
 
-                <span className="circle4"><img className="line4" src={line29}/></span>
+                <span className="circle4"><img className="line4" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt4" style={style} ref={projBlackFrame}>შავი კარკასი</p>
                     <div ref={rangeboxOctomber} className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
 

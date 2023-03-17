@@ -91,17 +91,17 @@ export default function Flats(props){
                                 <div className="card" key={render.id}>
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
-                                        <img className="card_render_main_screen" src={render.image} />
+                                        <img className="card_render_main_screen" src={render.image} alt='mc icon'/>
                                     </div>
 
                                     <div className="card_inner_bottom">
                                         <div className="card_inner_bottom_left">
-                                            <img className="mc_Icon" src={meterCoub} />
+                                            <img className="mc_Icon" src={meterCoub} alt='mc icon'/>
                                             <p className="card_inner_bottom_p">{render.text1}</p>
                                         </div>
 
                                         <div className="card_inner_bottom_right">
-                                            <img className="bed_Icon" src={bed} />
+                                            <img className="bed_Icon" src={bed} alt='mc icon'/>
                                             <p className="card_inner_bottom_p">{render.text2}</p>
                                         </div>
                                     </div>
@@ -134,17 +134,17 @@ export default function Flats(props){
                                 <div  className="card" >
                                     <Link to='/components/Apartments/apartmentsInner/Apartment90'>
                                         <div className="card_inner_top">
-                                            <img className="card_render_main_screen" src={renderB02} />
+                                            <img className="card_render_main_screen" src={renderB02} alt='render'/>
                                         </div>
 
                                         <div className="card_inner_bottom">
                                             <div className="card_inner_bottom_left">
-                                                <img className="mc_Icon" src={meterCoub} />
+                                                <img className="mc_Icon" src={meterCoub} alt='mc icon'/>
                                                 <p className="card_inner_bottom_p">/ 90 M2</p>
                                             </div>
 
                                             <div className="card_inner_bottom_right">
-                                                <img className="bed_Icon" src={bed} />
+                                                <img className="bed_Icon" src={bed} alt='bed icon'/>
                                                 <p className="card_inner_bottom_p">/ 2</p>
                                             </div>
                                         </div>
@@ -162,17 +162,17 @@ export default function Flats(props){
                                 <div  className="card" >
                                     <Link to='/components/Apartments/apartmentsInner/Apartment71Sec'>
                                         <div className="card_inner_top">
-                                            <img className="card_render_main_screen" src={renderB04} />
+                                            <img className="card_render_main_screen" src={renderB04} alt='render'/>
                                         </div>
 
                                         <div className="card_inner_bottom">
                                             <div className="card_inner_bottom_left">
-                                                <img className="mc_Icon" src={meterCoub} />
+                                                <img className="mc_Icon" src={meterCoub} alt='coub icon'/>
                                                 <p className="card_inner_bottom_p">/ 71.5 M2</p>
                                             </div>
 
                                             <div className="card_inner_bottom_right">
-                                                <img className="bed_Icon" src={bed} />
+                                                <img className="bed_Icon" src={bed} alt='bed icon'/>
                                                 <p className="card_inner_bottom_p">/ 2</p>
                                             </div>
                                         </div>
@@ -190,17 +190,17 @@ export default function Flats(props){
                                 <div  className="card" >
                                     <Link to='/components/Apartments/apartmentsInner/Apartment76'>
                                         <div className="card_inner_top">
-                                            <img className="card_render_main_screen" src={renderB03} />
+                                            <img className="card_render_main_screen" src={renderB03} alt='render'/>
                                         </div>
 
                                         <div className="card_inner_bottom">
                                             <div className="card_inner_bottom_left">
-                                                <img className="mc_Icon" src={meterCoub} />
+                                                <img className="mc_Icon" src={meterCoub} alt='mc icon'/>
                                                 <p className="card_inner_bottom_p">/ 76.6 M2</p>
                                             </div>
 
                                             <div className="card_inner_bottom_right">
-                                                <img className="bed_Icon" src={bed} />
+                                                <img className="bed_Icon" src={bed} alt='bed icon'/>
                                                 <p className="card_inner_bottom_p">/ 1</p>
                                             </div>
                                         </div>
