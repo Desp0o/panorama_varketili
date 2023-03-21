@@ -1,8 +1,5 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
-
-
-
 import renderB02 from '../../images/RenderB02.webp'
 import renderB04 from '../../images/RenderB04.webp'
 import renderB03 from '../../images/RenderB03.webp'
@@ -19,6 +16,7 @@ import { Navigation } from "swiper";
 
 
 import './Flats.css'
+import { LangContext } from "../langContext";
 
 const renderArr =[
     {
@@ -47,6 +45,10 @@ const renderArr =[
 ]
 
 export default function Flats(props){
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)
+
     const flatsHeaderRef = useRef()
     const seeMoreApartments = useRef()
 
@@ -68,7 +70,7 @@ export default function Flats(props){
 
         
 
-    },[props.iseng, props.isrus, props.isgeo])
+    },[isGeo, isEng, isRus])
 
    
     

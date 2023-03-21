@@ -1,12 +1,11 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
+import Navbar from "../../navbar";
 import Footer from '../../footer/Footer'
-import logo from '../../../images/logo.png'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m83inner.png'
-import burgerClose from '../../../images/burgerClose.png'
-import burgerStick from '../../../images/sticks.png'
 import toBackimg from '../../../images/toback.png'
+import { LangContext } from "../../langContext";
 
 
 const pointerStyle6 ={
@@ -45,19 +44,11 @@ const styleENG={
 
 export default function Apartment83(props) {
 
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
+
     const [style, setStyle] = useState(styleENG)
-
-    const GeoLanguage = useRef()
-    const navbarLinkFlats = useRef()
-    const navbarLinkAboutUs = useRef()
-    const navbarLinkAboutProject = useRef()
-    const EngLanguage = useRef()
-    const RusLanguage = useRef()
-
-
-    const [isGeo, setIsGeo] = useState(false)
-    const [isRus, setIsRus] = useState(false)
-    const [isEng, setIsEng] = useState(false)
     const [roomGeo, setRoomGeo] = useState(null)
     const [roomEng, setRoomEng] = useState(null)
     const [roomRus, setRoomRus] = useState(null)
@@ -99,7 +90,7 @@ export default function Apartment83(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
 
 
     const roomsArr = [
@@ -167,6 +158,7 @@ export default function Apartment83(props) {
 
     return(
         <>
+        <Navbar activeApartments="active_page"/>
 
         <div className="apartment_main">
 
@@ -321,7 +313,7 @@ export default function Apartment83(props) {
             </div>
         </div>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus}/>
+        <Footer styleeng={style}/>
         </>
     )
 }

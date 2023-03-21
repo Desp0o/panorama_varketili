@@ -1,9 +1,11 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
+import Navbar from "../../navbar";
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m71inner.png'
 import toBackimg from '../../../images/toback.png'
+import { LangContext } from "../../langContext";
 
 const pointerStyle6 ={
     left: '54%',
@@ -40,6 +42,10 @@ const styleENG={
 }
 
 export default function Apartment71(props) {
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
 
     const [style, setStyle] = useState(styleENG)
 
@@ -83,7 +89,7 @@ export default function Apartment71(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
 
     
 
@@ -152,7 +158,8 @@ export default function Apartment71(props) {
 
     return(
         <>
-
+        <Navbar activeApartments="active_page"/>
+        
         <div className="apartment_main">
 
             <div className="apartment_main_inner">
@@ -306,7 +313,7 @@ export default function Apartment71(props) {
             </div>
         </div>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus}/>
+        <Footer styleeng={style}/>
         </>
     )
 }

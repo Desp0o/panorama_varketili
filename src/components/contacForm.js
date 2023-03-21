@@ -1,12 +1,17 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import emailjs from '@emailjs/browser';
 
 import '../styles/contactForm.css'
 
 import errorIcon from '../images/errorIcon.png'
+import { LangContext } from "./langContext";
 
 
 export default function Form(props){
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)
 
     const form = useRef();
     const inputNameRef = useRef()
@@ -60,7 +65,7 @@ export default function Form(props){
         emailInputErrorMsg.current.innerText = 'Пожалуйста, введите правильный номер'
         
     }
-    },[props.iseng, props.isrus, props.isgeo])        
+    },[isEng, isGeo, isRus])        
 
     const sendEmail = (e) => {
         if(numberBoolean === true && nameBoolean === true && mailBoolean === true){

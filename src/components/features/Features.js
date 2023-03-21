@@ -1,10 +1,15 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 
 import FeatureBg from '../../images/FeatureBg.webp'
+import { LangContext } from "../langContext";
 import './Features.css'
 
 export default function Features(props) {
     const [expand, setExpand] = useState(null)
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)
 
     const featuresHeaderRef = useRef()
 
@@ -16,7 +21,7 @@ export default function Features(props) {
     }else if(localStorage.language === 'rus'){
         featuresHeaderRef.current.innerText = 'Преимущества'
     }
-},[props.iseng, props.isgeo, props.isrus])
+},[isEng, isGeo, isRus])
 
     return(
         <div className="features">

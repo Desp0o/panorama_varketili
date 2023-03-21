@@ -1,5 +1,6 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
+import Navbar from '../navbar'
 import aboutimage from '../../images/aboutimage.png'
 import '../../styles/navbar.css'
 import toBackimg from '../../images/toback.png'
@@ -7,12 +8,17 @@ import toBackimg from '../../images/toback.png'
 import Footer from '../footer/Footer'
 
 import './AboutUsPage.css'
+import { LangContext } from "../langContext";
 
 const styleENG={
     fontFamily: 'Roboto'
 }
 
 export default function AboutUsPage(props){
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
 
     const aboutPageHeader = useRef()
     const aboutPageP2 = useRef()
@@ -83,14 +89,12 @@ export default function AboutUsPage(props){
         aboutPageP5.current.innerText = 'С Твинс Девелопмент вы можете быть уверены, что получите самое лучшее, что может предложить отрасль.'
     
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
 
 
     return(
         <>
-        
-
-        
+            <Navbar activeAbout="active_page"/>
 
             <div className="to_back about_to_back">
                     <img src={toBackimg} alt="back arrow" />
@@ -140,14 +144,14 @@ export default function AboutUsPage(props){
 
                 <div className="about_inner_right">
                     <div className="aboutImage">
-                        <img src={aboutimage} alt='about page image'/>
+                        <img src={aboutimage} alt='about page'/>
                     </div>
                 </div>
 
             </div>
 
             
-            <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+            <Footer styleeng={style}/>
         
         </>
     )

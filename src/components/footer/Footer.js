@@ -1,74 +1,77 @@
-import {React, useEffect, useState, useRef} from "react";
-import {Link} from  "react-router-dom";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import './Footer.css'
 
 import facebook from '../../images/facebook.png'
 import instagram from '../../images/instagram.png'
 import linkedin from '../../images/linkedin.png'
 import email from '../../images/email.png'
+import { LangContext } from "../langContext";
 
 
 export default function Footer(props){
 
+const {isEng} = useContext(LangContext)
+const {isGeo} = useContext(LangContext)
+const {isRus} = useContext(LangContext)
 
-    const geoRuningText = useRef()
-    const engRuningText = useRef()
-    const rusRuningText = useRef()
-    const footerAdressRef = useRef()
+const geoRuningText = useRef()
+const engRuningText = useRef()
+const rusRuningText = useRef()
+const footerAdressRef = useRef()
 
-    const calculateTimeLeft = () => {
-        const difference = +new Date("2023-12-28T00:00:00+04:00") - +new Date();
-        let timeLeft = {};
-    
-        if (difference > 0) {
-          timeLeft = {
-            days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-            hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
-            minutes: Math.floor((difference / 1000 / 60) % 60),
-            seconds: Math.floor((difference / 1000) % 60),
-          };
-        }
+const calculateTimeLeft = () => {
+    const difference = +new Date("2023-12-28T00:00:00+04:00") - +new Date();
+    let timeLeft = {};
 
-        return timeLeft;
-      };
-
-    const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
-
-    useEffect(() => {
-        setTimeout(() => {
-        setTimeLeft(calculateTimeLeft());
-        }, 1000);
-    });
-
-    if(timeLeft.days<10){
-        timeLeft.days='0'+timeLeft.days
+    if (difference > 0) {
+        timeLeft = {
+        days: Math.floor(difference / (1000 * 60 * 60 * 24)),
+        hours: Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+        minutes: Math.floor((difference / 1000 / 60) % 60),
+        seconds: Math.floor((difference / 1000) % 60),
+        };
     }
 
-    useEffect(()=>{
+    return timeLeft;
+    };
 
-        geoRuningText.current.style. display = "flex"
-        engRuningText.current.style. display = "none"
-        rusRuningText.current.style. display = "none"
+const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
-        footerAdressRef.current.innerText = 'თბილისი, ვიქტორ კუპრაძის 68'
-        
+useEffect(() => {
+    setTimeout(() => {
+    setTimeLeft(calculateTimeLeft());
+    }, 1000);
+});
 
-        if(localStorage.language === 'eng'){
-            geoRuningText.current.style. display = "none"
-            engRuningText.current.style. display = "flex"
-            rusRuningText.current.style. display = "none"
-            
-            footerAdressRef.current.innerText = 'Tbilisi, Victor Kupradze st. 68'
-        
-        }else if(localStorage.language === 'rus'){
-            geoRuningText.current.style. display = "none"
-            engRuningText.current.style. display = "none"
-            rusRuningText.current.style. display = "flex"
-        
-            footerAdressRef.current.innerText = 'Тбилиси, ул. Виктора Купрадзе. 68'
-        }
+if(timeLeft.days<10){
+    timeLeft.days='0'+timeLeft.days
+}
 
-    },[props.iseng, props.isrus, props.isgeo])
+useEffect(()=>{
+
+geoRuningText.current.style.display = "flex"
+engRuningText.current.style.display = "none"
+rusRuningText.current.style.display = "none"
+
+footerAdressRef.current.innerText = 'თბილისი, ვიქტორ კუპრაძის 68'
+
+
+if(localStorage.language === 'eng'){
+    geoRuningText.current.style.display = "none"
+    engRuningText.current.style.display = "flex"
+    rusRuningText.current.style.display = "none"
+    
+    footerAdressRef.current.innerText = 'Tbilisi, Victor Kupradze st. 68'
+
+}else if(localStorage.language === 'rus'){
+    geoRuningText.current.style.display = "none"
+    engRuningText.current.style.display = "none"
+    rusRuningText.current.style.display = "flex"
+
+    footerAdressRef.current.innerText = 'Тбилиси, ул. Виктора Купрадзе. 68'
+}
+
+},[isEng, isGeo, isRus])
 
     return(
         
@@ -123,7 +126,7 @@ export default function Footer(props){
                         <img src={linkedin} alt="footer social icon" />
                     </div>
 
-                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=info@twins.com.ge' target='_blank'><div className="footer_icon">
+                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=info@twins.com.ge' target='_blank' rel="noreferrer"><div className="footer_icon">
                         <img src={email} alt="footer social icon" />
                     </div></a>
 

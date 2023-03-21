@@ -1,10 +1,11 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import {overFlow, overFlowAvailable} from "../overflow"
+import Navbar from "../navbar"
 import Footer from '../footer/Footer'
 import './Apartments.css'
 import '../../styles/PopUpMsg.css'
-import Form from "../contacForm";
+import Form from "../contacForm"
 
 import { ApartmentsArr } from "./ApartmentsData";
 
@@ -13,12 +14,17 @@ import bed from '../../images/bed.png'
 import callFloatBtn from '../../images/callFloatBtn.png'
 import xMark from '../../images/close.png'
 import toBackimg from '../../images/toback.png'
+import { LangContext } from "../langContext";
 
 const styleENG={
     fontFamily: 'Roboto'
 }
 
 export default function Apartments(props){
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
 
     const [style, setStyle] = useState(styleENG)
 
@@ -47,7 +53,6 @@ export default function Apartments(props){
     //End Floating Button Appear
 
     // Email send Functionality
-    const form = useRef();
     const [popUp, setPopUp] = useState('pop_up_msg')
 
     // End Of Email Functionality
@@ -73,11 +78,12 @@ export default function Apartments(props){
         tobackRef.current.innerText = 'Назад'
         ApartmentRef.current.innerText = 'Выберите желаемую квартиру'
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
 
 
     return(
         <>
+        <Navbar activeApartments="active_page"/>
 
         <div className="to_back apartment_to__back">
                         <img src={toBackimg} alt="back arrow " />
@@ -133,11 +139,11 @@ export default function Apartments(props){
 
             <div className="form_outer">
                 <img className="close" alt="close" src={xMark} onClick={()=>{setPopUp('pop_up_msg');overFlowAvailable()}}/>
-                <Form iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+                <Form styleeng={style}/>
             </div>
         </div>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+        <Footer styleeng={style}/>
 
         </>
             

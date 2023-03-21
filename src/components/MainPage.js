@@ -1,4 +1,4 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import { overFlow, overFlowAvailable } from "./overflow";
 import Flats from "./Flats/Flats";
@@ -6,7 +6,7 @@ import Features from "./features/Features";
 import Contact from './contact/Contact'
 import Footer from "./footer/Footer";
 import Form from "./contacForm";
-
+import Navbar from "./navbar";
 import '../styles/navbar.css'
 import '../styles/slider.css'
 import '../index.css'
@@ -22,6 +22,7 @@ import floatClif from '../images/floatClif.png'
 import info from '../images/info.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
+import { LangContext } from "./langContext";
 
 
 const imgArr = [
@@ -61,6 +62,9 @@ const styleENG={
     fontFamily: 'Roboto'
 }
 export default function MainPage(props) {
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)    
 
     const [style, setStyle] = useState(styleENG)
 
@@ -90,7 +94,7 @@ export default function MainPage(props) {
         return () => {
             window.removeEventListener('scroll',floatBtnHandler);
           };
-    },[window.scrollY])
+    },)
     //End Floating Button Appear
 
     const dot0 = useRef()
@@ -103,7 +107,6 @@ export default function MainPage(props) {
     const sliderBtnRef = useRef()
 
     // Email send Functionality
-    const form = useRef();
     const [popUp, setPopUp] = useState('pop_up_msg')
 
     
@@ -231,7 +234,7 @@ export default function MainPage(props) {
             whyPanoramaParagraphRef5.current.style.display = 'none'
             responsiveSeeMoreBtn.current.innerText = 'Подробнее'
         }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
     //*************//
 
     // სლაიდერის ავტომატიზაცია რესპინსივზე
@@ -256,7 +259,9 @@ export default function MainPage(props) {
 
     return(
         <>
-
+        <Navbar/>
+        
+        
         <div className={popUp}>
             <div className="overlay" onClick={()=>{setPopUp('pop_up_msg'); overFlowAvailable()}}></div>
 
@@ -311,8 +316,8 @@ export default function MainPage(props) {
                 let textClass = 'slider_paragraph'
                 let slidetParagraph = ''
 
-                {index === slideIndex  ? slideClass = 'slider_img slider_active' : slideClass = 'slider_img'}
-                {index === slideIndex  ? textClass = 'slider_paragraph text_active' : textClass = 'slider_paragraph'}
+                index === slideIndex  ? slideClass = 'slider_img slider_active' : slideClass = 'slider_img'
+                index === slideIndex  ? textClass = 'slider_paragraph text_active' : textClass = 'slider_paragraph'
                 
                 if(localStorage.language === 'rus'){
                     slidetParagraph = `${slide.textRus}`
@@ -373,11 +378,11 @@ export default function MainPage(props) {
             <img className="float_cliff" src={floatClif} alt="float cliff"/>
         </div>
 
-        <Features iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+        <Features styleeng={style}/>
 
-        <Contact iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+        <Contact styleeng={style}/>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus} styleeng={style}/>
+        <Footer styleeng={style}/>
         </>
     )
 }

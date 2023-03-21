@@ -1,9 +1,11 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
+import Navbar from "../../navbar";
 import Footer from '../../footer/Footer'
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m57inner.png'
 import toBackimg from '../../../images/toback.png'
+import { LangContext } from "../../langContext";
 
 const pointerStyle5 ={
     left: '48%',
@@ -36,6 +38,10 @@ const styleENG={
 
 export default function Apartment57(props) {
 
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
+
     const [style, setStyle] = useState(styleENG)
 
     const [ballNumber, setBallNumber] = useState(null)
@@ -44,7 +50,6 @@ export default function Apartment57(props) {
     const [ball3txt, setBall3txt] = useState(null)
     const [ball4txt, setBall4txt] = useState(null)
     const [ball5txt, setBall5txt] = useState(null)
-    const [ball6txt, setBall6txt] = useState(null)
     const [roomGeo, setRoomGeo] = useState(null)
     const [roomEng, setRoomEng] = useState(null)
     const [roomRus, setRoomRus] = useState(null)
@@ -78,7 +83,7 @@ export default function Apartment57(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng,isGeo, isRus])
 
     const roomsArr = [
         {   
@@ -136,6 +141,7 @@ export default function Apartment57(props) {
     
     return(
         <>
+        <Navbar activeApartments="active_page"/>
 
         <div className="apartment_main">
 
@@ -162,7 +168,6 @@ export default function Apartment57(props) {
                                 setBall2txt('default')
                                 setBall3txt('default')
                                 setBall4txt('default')
-                                setBall6txt('default')
                             }
                         }}
                     >5</span>
@@ -180,7 +185,6 @@ export default function Apartment57(props) {
                                 setBall2txt('default')
                                 setBall3txt('default')
                                 setBall5txt('default')
-                                setBall6txt('default')
                             }
                         }}
                     >4</span>
@@ -198,7 +202,6 @@ export default function Apartment57(props) {
                                 setBall2txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
-                                setBall6txt('default')
                             }
                         }}
                     >3</span>
@@ -216,7 +219,6 @@ export default function Apartment57(props) {
                             setBall3txt('default')
                             setBall4txt('default')
                             setBall5txt('default')
-                            setBall6txt('default')
                         }
                     }}
                     >2</span>
@@ -236,7 +238,6 @@ export default function Apartment57(props) {
                                 setBall3txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
-                                setBall6txt('default')
                             }
                         }
                             
@@ -272,7 +273,7 @@ export default function Apartment57(props) {
             </div>
         </div>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus}/>
+        <Footer styleeng={style}/>
         </>
     )
 }

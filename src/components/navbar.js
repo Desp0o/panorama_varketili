@@ -1,5 +1,6 @@
-import { useRef, useState, useEffect } from 'react'
+import { useRef, useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
+import { LangContext } from './langContext'
 
 import logo from '../images/logo.png'
 import burgerStick from '../images/sticks.png'
@@ -8,32 +9,15 @@ import burgerClose from '../images/burgerClose.png'
 
 
 export default function Navbar(props){
-    const [isGeo, setIsGeo] = useState(false)
-    const [isRus, setIsRus] = useState(false)
-    const [isEng, setIsEng] = useState(false)
 
-    function makeENG() {
-        setIsEng(true)
-        setIsRus(false)
-        setIsGeo(false)
-        localStorage.setItem('language', 'eng')
-    }
-    //*************//
+    const {makeGEO} = useContext(LangContext)
+    const {makeENG} = useContext(LangContext)
+    const {makeRUS} = useContext(LangContext)
 
-    function makeGEO() {
-        setIsEng(false)
-        setIsRus(false)
-        setIsGeo(true)
-        localStorage.removeItem('language')
-    }
-    //*************//
+    const {isGeo} = useContext(LangContext)
+    const {isEng} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)
 
-    function makeRUS() {
-        setIsEng(false)
-        setIsRus(true)
-        setIsGeo(false)
-        localStorage.setItem('language', 'rus')
-    }
 
     const styleENG={
         fontFamily: 'Roboto'
@@ -143,7 +127,7 @@ export default function Navbar(props){
         navbarLinkAboutProject.current.innerText = 'О проекте'
         
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
     
 
     return(
@@ -157,18 +141,18 @@ export default function Navbar(props){
                 <div className="menu_and_langs">
                     {/* მენუ */}
                     <div className="nav_menu">
-                        <Link to='./components/Apartments/Apartments'     className="menu_links" style={style} ref={navbarLinkFlats}>ბინები</Link>
-                        <Link to='./components/aboutUsPage/AboutUsPage'   className="menu_links" style={style} ref={navbarLinkAboutUs}>ჩვენ შესახებ</Link>
-                        <Link to='./components/AboutProject/AboutProject' className="menu_links" style={style} ref={navbarLinkAboutProject}>მიმდინარე პროექტი</Link>
+                        <Link to='/components/Apartments/Apartments'     className={`menu_links ${props.activeApartments}`} style={style} ref={navbarLinkFlats}>ბინები</Link>
+                        <Link to='/components/aboutUsPage/AboutUsPage'   className={`menu_links ${props.activeAbout}`} style={style} ref={navbarLinkAboutUs}>ჩვენ შესახებ</Link>
+                        <Link to='/components/AboutProject/AboutProject' className={`menu_links ${props.activeProj}`} style={style} ref={navbarLinkAboutProject}>მიმდინარე პროექტი</Link>
                     </div>
 
                     {/* ენები */}
                     <div className="languages">
-                        <span ref={GeoLanguage} onClick={props.geoLang}>GE</span>
+                        <span ref={GeoLanguage} onClick={makeGEO}>GE</span>
                         <span>/</span>
-                        <span ref={EngLanguage} onClick={props.engLang}>EN</span>
+                        <span ref={EngLanguage} onClick={makeENG}>EN</span>
                         <span>/</span>
-                        <span ref={RusLanguage} onClick={props.rusLang}>RU</span>
+                        <span ref={RusLanguage} onClick={makeRUS}>RU</span>
                     </div>
                 </div>
 
@@ -192,11 +176,11 @@ export default function Navbar(props){
             </div>
 
             <div className="burger_languages">
-                <span ref={GeoLanguageBurger} onClick={props.geoLang}>GE</span>
+                <span ref={GeoLanguageBurger} onClick={makeGEO}>GE</span>
                 <span>/</span>
-                <span ref={EngLanguageBurger} onClick={props.engLang}>EN</span>
+                <span ref={EngLanguageBurger} onClick={makeENG}>EN</span>
                 <span>/</span>
-                <span ref={RusLanguageBurger} onClick={props.rusLang}>RU</span>
+                <span ref={RusLanguageBurger} onClick={makeRUS}>RU</span>
             </div>
         </div>
         </>

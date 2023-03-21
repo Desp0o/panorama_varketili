@@ -1,11 +1,16 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import emailjs from '@emailjs/browser';
 
 import './Contact.css'
 
 import errorIcon from '../../images/errorIcon.png'
+import { LangContext } from "../langContext";
 
 export default function Contact(props){
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)
+
     const form = useRef();
     const contactHeaderRef = useRef()
     const contactParagraphRef = useRef()
@@ -38,7 +43,7 @@ export default function Contact(props){
             contactHeaderRef.current.innerText = 'Leave your Contact Info'
             contactHeaderRef.current.classList.remove('rusFontDecrease')
             contactHeaderRef.current.style.fontSize = ''
-            contactParagraphRef.current.innerText = 'Find the perfect apartment <br/> with the help of our expert representatives.'
+            contactParagraphRef.current.innerHTML = 'Find the perfect apartment <br/> with the help of our expert representatives.'
             inputSendref.current.innerText = 'Send'
 
             //კონტაქტის ფორმა
@@ -68,7 +73,7 @@ export default function Contact(props){
             
         }
 
-    },[props.iseng, props.isrus, props.isgeo])
+    },[isGeo, isRus, isEng])
 
     
     const sendEmail = (e) => {

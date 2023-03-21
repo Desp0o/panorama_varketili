@@ -1,12 +1,11 @@
-import {React, useEffect, useState, useRef} from "react";
+import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
-import logo from '../../../images/logo.png'
+import Navbar from "../../navbar";
 import './ApartmentInnerCSS.css'
 import m102inner from '../../../images/innerRenders/m90inner.png'
-import burgerClose from '../../../images/burgerClose.png'
-import burgerStick from '../../../images/sticks.png'
 import toBackimg from '../../../images/toback.png'
+import { LangContext } from "../../langContext";
 
 const pointerStyle6 ={
     left: '30%',
@@ -43,6 +42,10 @@ const styleENG={
 }
 
 export default function Apartment90(props) {
+
+    const {isEng} = useContext(LangContext)
+    const {isGeo} = useContext(LangContext)
+    const {isRus} = useContext(LangContext)  
 
     const [style, setStyle] = useState(styleENG)
     const [roomGeo, setRoomGeo] = useState(null)
@@ -86,7 +89,7 @@ export default function Apartment90(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[props.isEng, props.isGeo, props.isRus])
+    },[isEng, isGeo, isRus])
 
 
     const roomsArr = [
@@ -153,6 +156,7 @@ export default function Apartment90(props) {
 
     return(
         <>
+        <Navbar activeApartments="active_page"/>
 
         <div className="apartment_main">
 
@@ -307,7 +311,7 @@ export default function Apartment90(props) {
             </div>
         </div>
 
-        <Footer iseng={props.isEng} isgeo={props.isGeo} isrus={props.isRus}/>
+        <Footer styleeng={style}/>
         </>
     )
 }
