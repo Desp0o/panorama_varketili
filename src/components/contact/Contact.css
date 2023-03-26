@@ -11,6 +11,13 @@
     gap: 100px;
 }
 
+@media (min-width:1600px) {
+    .contact{
+        padding-left: 270px;
+    padding-right: 270px;
+    }
+}
+
 .contact_left{
     display: flex;
     flex-direction: column;

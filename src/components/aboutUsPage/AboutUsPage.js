@@ -1,7 +1,7 @@
 import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import Navbar from '../navbar'
-import aboutimage from '../../images/aboutimage.png'
+import aboutimage from '../../images/aboutimage.webp'
 import '../../styles/navbar.css'
 import toBackimg from '../../images/toback.png'
 

@@ -16,7 +16,6 @@
     line-height: 23px;
 
     display: flex;
-    gap: 0px;
 
     color: #171F17;
 }
@@ -58,6 +57,7 @@
     width: 50%;
     display: flex;
     padding-bottom: 7px;
+    padding-right: 15px;
 }
 
 .aboutImage{
@@ -125,12 +125,7 @@
         box-shadow: 0px 0px 25px 10px rgba(2, 159, 160, 0.5);
     }
     .about_inner{
-        gap: 160px;
-    }
-}
-
-@media (min-width:1400px) {
-    .about_inner{
-        gap: 109px;
+        padding-left: 330px;
+        padding-right: 330px;
     }
 }
