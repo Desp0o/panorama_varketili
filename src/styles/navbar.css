@@ -1,6 +1,6 @@
 .Navbar{
   position: fixed;
-  z-index: 5;
+  z-index: 6;
 
   padding-left: 75px;
   padding-right: 75px;
@@ -95,7 +95,7 @@
     position: fixed;
     background-color: #ffffff;
     top: -200%;
-    z-index: 4;
+    z-index: 5;
     margin-top: 88px;
     padding-top: 102px;
 

@@ -257,7 +257,7 @@ export default function AboutProject(props){
                 <p ref={proTimelineparagraphRef} style={style}>ვარკეთილის მიმდინარე პროექტი დასრულდება 2024 წლის დეკემბერში.<br/> ბინები ბარდება მწვანე კარკასის კონდიციით.</p>
             </div>
 
-            <div className="rangesDiv">
+            <div className="rangesDiv respHidden">
 
                 <span ref={circle1Ref} className="circle1"><img className="line1" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt1" style={style} ref={projStartRef}>პროექტის დაწყება</p>

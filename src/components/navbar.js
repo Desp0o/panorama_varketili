@@ -2,7 +2,7 @@ import { useRef, useState, useEffect, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { LangContext } from './langContext'
 
-import logo from '../images/logo.png'
+import logo from '../images/logo.webp'
 import burgerStick from '../images/sticks.png'
 import burgerClose from '../images/burgerClose.png'
 

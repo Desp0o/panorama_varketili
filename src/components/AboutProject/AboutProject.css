@@ -64,6 +64,7 @@
 }
 
 iframe{
+    background-color: #FFFFFF;
     border: none;
 }
 
@@ -507,6 +508,10 @@ iframe{
         padding-right: 0px;
 
         color: #000000;
+    }
+
+    .respHidden{
+        display: none;
     }
 
     .rangesDiv{

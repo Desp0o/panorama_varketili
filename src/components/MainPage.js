@@ -18,7 +18,7 @@ import slider2 from '../images/slider2.webp'
 import slider3 from '../images/slider3.webp'
 import slider4 from '../images/slider4.webp'
 import xMark from '../images/close.png'
-import floatClif from '../images/floatClif.png'
+import floatClif from '../images/floatClif.webp'
 import info from '../images/info.png'
 
 import callFloatBtn from '../images/callFloatBtn.png'
@@ -368,7 +368,7 @@ export default function MainPage(props) {
                     <Link to='/components/AboutProject/AboutProject'><p className="why_panorama_btn_paragraph" ref={whyPanoramaParagraphRef4}>გაიგე დეტალურად პროექტის შესახებ</p></Link>
                 </div>
 
-                <Link to='/components/AboutProject/AboutProject'>
+                <Link to='/components/AboutProject/AboutProject' aria-label="Read more about panorama Varketili">
                     <div className="why_panorama_btn_responsive">
                         <p className="why_panorama_btn_paragraph_responsive" ref={responsiveSeeMoreBtn} style={style}>დეტალურად</p>
                     </div>
