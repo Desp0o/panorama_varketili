@@ -1,8 +1,8 @@
 import {React, useEffect, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
-import renderB02 from '../../images/RenderB02.webp'
-import renderB04 from '../../images/RenderB04.webp'
-import renderB03 from '../../images/RenderB03.webp'
+import renderB02 from '../../images/render90.webp'
+import renderB04 from '../../images/render71.webp'
+import renderB03 from '../../images/render76.webp'
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
 import leftArrow from '../../images/leftArrow.png'
@@ -32,7 +32,8 @@ const renderArr =[
         image: `${renderB04}`,
         text1: '/ 71.5 M2',
         text2: '/ 2',
-        link: '/components/Apartments/apartmentsInner/Apartment71Sec'
+        link: '/components/Apartments/apartmentsInner/Apartment71Sec',
+        class: 'personalStyle'
     },
 
     {
@@ -93,7 +94,7 @@ export default function Flats(props){
                                 <div className="card" key={render.id}>
                                 <Link to={render.link}>
                                     <div className="card_inner_top">
-                                        <img className="card_render_main_screen" src={render.image} alt='mc icon'/>
+                                        <img className={`card_render_main_screen ${render.class}`} src={render.image} alt='mc icon'/>
                                     </div>
 
                                     <div className="card_inner_bottom">
@@ -164,7 +165,7 @@ export default function Flats(props){
                                 <div  className="card" >
                                     <Link to='/components/Apartments/apartmentsInner/Apartment71Sec'>
                                         <div className="card_inner_top">
-                                            <img className="card_render_main_screen" src={renderB04} alt='render'/>
+                                            <img className="card_render_main_screen personalStyle" src={renderB04} alt='render'/>
                                         </div>
 
                                         <div className="card_inner_bottom">

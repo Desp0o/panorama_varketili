@@ -103,7 +103,7 @@ export default function Apartments(props){
                             <div className="card cardinpage" key={render.id}>
                                 <Link to={render.link}>
                                 <div className="card_inner_top">
-                                    <img className="card_render_main_screen" src={render.image} alt='render'/>
+                                    <img className="card_render_main_screen outerRender" src={render.image} alt='render'/>
                                 </div>
 
                                 <div className="card_inner_bottom">

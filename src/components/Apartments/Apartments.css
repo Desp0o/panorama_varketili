@@ -35,6 +35,15 @@
     padding-right: 15px;
 }
 
+.outerRender{
+    width: 420px;
+    height: 260px;
+    margin-top: 33px;
+    object-position: center center;
+    object-fit:scale-down;
+    transition: all 0.4s ease;
+}
+
 @media (max-width:1400px) {
     .apartment_list{
         gap: 110px 30px;
@@ -52,6 +61,8 @@
 @media (max-width:769px) {
     .cardinpage{
         box-shadow: 0px 0px 15px 2px rgba(2, 159, 160, 0.4);
+        width: 330px !important;
+        height: 340px !important;
     }
     .apartments_page{
         padding-top: 0px;
@@ -77,10 +88,20 @@
         justify-content: center;
     }
     .apartment_header{
+        margin-bottom: 70px;
         font-size: 18px;
         font-family: 'BPG Nino Mtavruli';
+        font-weight: 700;
         justify-content: center;
         padding-left: 0px;
+    }
+    .outerRender{
+        width: 315px !important;
+        height: 209px !important;
+        margin-top: 33px;
+        object-position: center center;
+        object-fit:scale-down;
+        transition: all 0.4s ease;
     }
 }
 

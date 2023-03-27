@@ -86,12 +86,16 @@
 }
 
 .card_render_main_screen{
-    width: 482.59px;
-    height: 321.73px;
+    width: 420px;
+    height: 260px;
     margin-top: 33px;
     object-position: center center;
     object-fit:scale-down;
     transition: all 0.4s ease;
+}
+
+.personalStyle{
+    margin-right: 30px;
 }
 
 .card_inner_bottom_left,
@@ -262,6 +266,9 @@
         height: 209px;
         object-fit: scale-down;
         margin-top: 30px;
+    }
+    .personalStyle{
+        margin-right: 30px;
     }
     .card_inner_bottom{
         padding-bottom: 50px;
