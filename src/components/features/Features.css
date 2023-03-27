@@ -29,37 +29,28 @@
 }
 
 .feature_bg img{
-    width: 95%;
+    width: 1026.03px;
     box-shadow: 0px 0px 75px 10px #A9C1A9;
     border-radius: 20px;
 }
 
-/******************************/
+/***************
+***************
+***************
+***************
+***************
+***************
+***************/
 
-
+.svgExpand{
+    cursor: pointer;
+}
 .expandMSG{
     position: absolute;
     display: flex;
     align-items: center;
     gap: 10.95px;
 }
-
-.firstMSG{
-    left:35%;
-    top:15%;
-}
-
-.secondMSG{
-    left: 50%;
-}
-.activeMSG2{
-    left: calc(50% + 50px);
-}
-
-.svgExpand{
-    cursor: pointer;
-}
-
 .messagebox{
     padding: 0;
     background-color: #171F17;
@@ -72,16 +63,170 @@
     justify-content: center;
     overflow: hidden;
     width: 0;
+    height: 0;
     transition: all 0.4s ease;
     position: absolute;
+    z-index: 2;
     opacity: 1;
+    transform-origin: left center;
 }
-
 .activeMSG{
     padding: 14px 32px;
     width: fit-content;
+    height: fit-content;
+    transition: all 0.4s ease;
 }
 
+
+/**1**/
+.firstMSG{
+    left:23%;
+    top:23%;
+}
+
+@media (min-width:1600px) {
+    .firstMSG{
+    left:29%;
+    top:23%;
+}
+}
+.activeMSG1{
+    left: calc(23% + 50px);
+    top: 1px;
+}
+
+/**2**/
+.secondMSG{
+    left: 27%;
+    bottom: 8%;
+}
+@media (min-width:1600px) {
+    .secondMSG{
+        left: 32%;
+        bottom: 8%;
+    }
+}
+.activeMSG2{
+    left: calc(27% + 50px);
+    transition: all 0.4s ease;
+}
+
+/**3**/
+.thirdMSG{
+    left: 31%;
+    bottom: 35%;
+}
+@media (min-width:1600px) {
+    .thirdMSG{
+        left: 35%;
+        bottom: 35%;
+    }
+}
+
+/**4**/
+.fourthdMSG{
+    left: 57%;
+    bottom: 24.5%;
+}
+@media (min-width:1600px) {
+    .fourthdMSG{
+        left: 55%;
+        bottom: 24.5%;
+    }
+}
+/**5**/
+.fifthdMSG{
+    top:23%;
+    left: 63%;
+}
+@media (min-width:1600px) {
+    .fifthdMSG{
+        top:23%;
+        left: 60%;
+    }
+}
+/**6**/
+.sixthdMSG{
+    bottom: 55%;
+    left: 45%;
+}
+@media (min-width:1600px) {
+    .sixthdMSG{
+        bottom: 55%;
+        left: 46%;
+    }
+}
+/**7**/
+.seventhMSG{
+    top: 8%;
+    left: 45%;
+}
+@media (min-width:1600px) {
+    .seventhMSG{
+        top: 8%;
+        left: 46%;
+    }
+}
+
+
+/******* ტექსტები  ***/
+
+.msgText1{
+    font-family: 'BPG Nino Mtavruli';
+    text-align: center;
+    width: 140px;
+    opacity: 0;
+}
+
+.msgText2{
+    font-family: 'BPG Nino Mtavruli';
+    width:182.78px;
+    text-align: center;
+    opacity: 0;
+}
+
+.msgText3{
+    font-family: 'BPG Nino Mtavruli';
+    width:212px;
+    text-align: center;
+    opacity: 0;
+}
+
+.msgText4{
+    font-family: 'BPG Nino Mtavruli';
+    width:226px;
+    text-align: center;
+    opacity: 0;
+}
+
+.msgText5{
+    font-family: 'BPG Nino Mtavruli';
+    width:142.72px;
+    text-align: center;
+    opacity: 0;
+}
+
+.msgText6{
+    font-family: 'BPG Nino Mtavruli';
+    width:180px;
+    text-align: center;
+    opacity: 0;
+}
+
+.msgText7{
+    font-family: 'BPG Nino Mtavruli';
+    width:180px;
+    text-align: center;
+    opacity: 0;
+}
+
+
+
+.activeTXT{
+    opacity: 1;
+    transition: all 0.4s ease;
+    transition-delay: 0.05s;
+}
 
 @media (max-width:769px) {
     .features{
