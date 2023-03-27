@@ -30,8 +30,8 @@ const imgArr = [
         id:1,
         image: `${slider1}`,
         text: 'შენს საჭირობებზე მორგებული გარემო',
-        textEng: 'Tbilisi at your fingertips',
-        textRus: 'Вид Тбилиси на ладони'
+        textEng: 'A customized environment that caters to your specific needs',
+        textRus: 'Окружающая среда, созданная с учетом ваших потребностей'
     },
   
     {

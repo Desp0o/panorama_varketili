@@ -13,13 +13,43 @@ export default function Features(props) {
 
     const featuresHeaderRef = useRef()
 
+    const txt1 = useRef()
+    const txt2 = useRef()
+    const txt3 = useRef()
+    const txt4 = useRef()
+    const txt5 = useRef()
+    const txt6 = useRef()
+    const txt7 = useRef()
+
     useEffect(()=>{
         featuresHeaderRef.current.innerText = 'უპირატესობები'
+
+        txt1.current.innerText = "100 კვ.მ გამწვანება"
+        txt2.current.innerText = "მიწისქვეშა და მიწისზედა პარკინგი"
+        txt3.current.innerText = "დაცვისა და უსაფრთხოების სისტემები"
+        txt4.current.innerText = "2000კვმ კომერციული და საოფისე ფართები (სასურსათო მაღაზიები, ბანკი, აფთიაქი...)"
+        txt5.current.innerText = "ბინების რემონტის სერვისი"
+        txt6.current.innerText = "ხანძარსაწინააღმდეგო სისტემები"
+        txt7.current.innerText = "მაღალხარისხიანი სამგზავრო ლიფტები"
     if(localStorage.language === 'eng'){
         featuresHeaderRef.current.innerText = 'Advantages'
+        txt1.current.innerText = "100 square meters of lush greenery, providing a serene and refreshing atmosphere"
+        txt2.current.innerText = "Ample parking options with both underground and surface parking available"
+        txt3.current.innerText = "Comprehensive protection and security systems"
+        txt4.current.innerText = "A vast expanse of 2000 square meters dedicated to commercial and office spaces, including grocery stores, banks, and pharmacies, among others"
+        txt5.current.innerText = "Convenient apartment repair service"
+        txt6.current.innerText = "Fire protection systems"
+        txt7.current.innerText = "High-quality passenger elevators"
         
     }else if(localStorage.language === 'rus'){
         featuresHeaderRef.current.innerText = 'Преимущества'
+        txt1.current.innerText = "100 квадратных метров зелени"
+        txt2.current.innerText = "Подземная и наземная парковки"
+        txt3.current.innerText = "Системы защиты и безопасности"
+        txt4.current.innerText = "2000 квадратных метров коммерческих и офисных помещений (магазины, банки, аптеки и т.д.)"
+        txt5.current.innerText = "Сервис по ремонту квартир"
+        txt6.current.innerText = "Системы противопожарной защиты"
+        txt7.current.innerText = "Качественные пассажирские лифты"
     }
 },[isEng, isGeo, isRus])
 
@@ -54,7 +84,7 @@ export default function Features(props) {
 
                 <div className="parent1">
                     <div className={expand === 1 ? "messagebox activeMSG activeMSG1" : "messagebox activeMSG1"}>
-                        <p className={expand === 1 ? "msgText1 activeTXT" : "msgText1"}>100 კვ.მ გამწვანება</p>
+                        <p ref={txt1} className={expand === 1 ? "msgText1 activeTXT" : "msgText1"} style={props.styleeng}>100 კვ.მ გამწვანება</p>
                     </div>
                 </div>
                 {/* ************** */}
@@ -78,7 +108,7 @@ export default function Features(props) {
 
                 <div className="parent2">
                     <div className={expand === 2 ? "messagebox activeMSG activeMSG2 responsiveText" : "messagebox activeMSG2"}>
-                        <p className={expand === 2 ? "msgText2 activeTXT" : "msgText2"}>მიწისქვეშა და მიწისზედა პარკინგი</p>
+                        <p ref={txt2} className={expand === 2 ? "msgText2 activeTXT" : "msgText2"} style={props.styleeng}>მიწისქვეშა და მიწისზედა პარკინგი</p>
                     </div>
                 </div>
                 {/* ********** */}
@@ -102,7 +132,7 @@ export default function Features(props) {
 
                 <div className="parent3">
                     <div className={expand === 3 ? "messagebox activeMSG activeMSG2" : "messagebox activeMSG2"}>
-                        <p className={expand === 3 ? "msgText3 activeTXT" : "msgText3"}>დაცვისა და უსაფრთხოების სისტემები</p>
+                        <p ref={txt3} className={expand === 3 ? "msgText3 activeTXT" : "msgText3"} style={props.styleeng}>დაცვისა და უსაფრთხოების სისტემები</p>
                     </div>
                 </div>
                 {/* ********* */}
@@ -125,7 +155,7 @@ export default function Features(props) {
 
                 <div className="parent4">
                     <div className={expand === 4 ? "messagebox activeMSG" : "messagebox"}>
-                        <p className={expand === 4 ? "msgText4 activeTXT" : "msgText4"}>2000კვმ კომერციული და საოფისე ფართები (სასურსათო მაღაზიები, ბანკი, აფთიაქი...)</p>
+                        <p ref={txt4} className={expand === 4 ? "msgText4 activeTXT" : "msgText4"} style={props.styleeng}>2000კვმ კომერციული და საოფისე ფართები (სასურსათო მაღაზიები, ბანკი, აფთიაქი...)</p>
                     </div>
                 </div>
 
@@ -148,7 +178,7 @@ export default function Features(props) {
 
                 <div className="parent5">
                     <div className={expand === 5 ? "messagebox activeMSG activeMSG2" : "messagebox activeMSG2"}>
-                        <p className={expand === 5 ? "msgText5 activeTXT" : "msgText5"}>ბინების რემონტის სერვისი</p>
+                        <p ref={txt5} className={expand === 5 ? "msgText5 activeTXT" : "msgText5"} style={props.styleeng}>ბინების რემონტის სერვისი</p>
                     </div>
                 </div>
 
@@ -171,7 +201,7 @@ export default function Features(props) {
 
                 <div className="parent6">
                     <div className={expand === 6 ? "messagebox activeMSG activeMSG2" : "messagebox activeMSG2"}>
-                        <p className={expand === 6 ? "msgText6 activeTXT" : "msgText6"}>ხანძარსაწინააღმდეგო სისტემები</p>
+                        <p ref={txt6} className={expand === 6 ? "msgText6 activeTXT" : "msgText6"} style={props.styleeng}>ხანძარსაწინააღმდეგო სისტემები</p>
                     </div>
                 </div>
 
@@ -194,7 +224,7 @@ export default function Features(props) {
 
                 <div className="parent7">
                     <div className={expand === 7 ? "messagebox activeMSG activeMSG2 responsiveText" : "messagebox activeMSG2 responsiveText"}>
-                        <p className={expand === 7 ? "msgText7 activeTXT" : "msgText7"}>მაღალხარისხიანი სამგზავრო ლიფტები</p>
+                        <p ref={txt7} className={expand === 7 ? "msgText7 activeTXT" : "msgText7"} style={props.styleeng}>მაღალხარისხიანი სამგზავრო ლიფტები</p>
                     </div>
                 </div>
 
