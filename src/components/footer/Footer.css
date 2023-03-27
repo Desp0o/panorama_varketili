@@ -116,6 +116,7 @@
   }
 
   .copyright{
+    margin-right: 25px;
     font-family: 'Roboto';
     font-size: 12px;
     line-height: 14px;
@@ -148,5 +149,8 @@
       flex-grow: 0;
       justify-content: flex-start;
       margin-top: -30px;
+    }
+    .copyright{
+      margin-right: 0px;
     }
   }

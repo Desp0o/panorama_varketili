@@ -29,7 +29,7 @@ const imgArr = [
     {
         id:1,
         image: `${slider1}`,
-        text: 'თბილისის ხედი შენი ხელის გულზე',
+        text: 'შენს საჭირობებზე მორგებული გარემო',
         textEng: 'Tbilisi at your fingertips',
         textRus: 'Вид Тбилиси на ладони'
     },
@@ -45,7 +45,7 @@ const imgArr = [
     {
         key:'3',
         image: `${slider3}`,
-        text: 'გამოცდილებით დაგეგმილი',
+        text: 'კრეატიულად განხორციელებული',
         textEng: 'Masterfully designed',
         textRus: 'Идеально спроектировано'
     },
@@ -53,7 +53,7 @@ const imgArr = [
     {
         key:'4',
         image: `${slider4}`,
-        text: 'კრეატიულად განხორციელებული',
+        text: 'გამოცდილებით დაგეგმილი',
         textEng: 'Flawlessly implemented',
         textRus: 'безупречно реализовано'
     }

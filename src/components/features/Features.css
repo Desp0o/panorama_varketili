@@ -53,7 +53,6 @@
 }
 .messagebox{
     padding: 0;
-    background-color: #171F17;
     background: #E2E1D7;
     opacity: 0.95;
     border-radius: 20px;
@@ -84,87 +83,175 @@
     top:23%;
 }
 
+.parent1{
+    position: absolute;
+    z-index: 4;
+    left: calc(23% + 60px);
+    top: 23%;
+    transition: all 0.4s ease;
+}
+
 @media (min-width:1600px) {
     .firstMSG{
-    left:29%;
-    top:23%;
-}
-}
-.activeMSG1{
-    left: calc(23% + 50px);
-    top: 1px;
+        left:29%;
+        top:23%;
+    }
+    .parent1{
+        position: absolute;
+        left: calc(29% + 60px);
+        top: 23%;
+        transition: all 0.4s ease;
+    }
 }
 
 /**2**/
 .secondMSG{
-    left: 27%;
-    bottom: 8%;
+    left: 25%;
+    top: 84%;
 }
+
+.parent2{
+    position: absolute;
+    top: 84%;
+    z-index: 4;
+    left: calc(25% + 60px);
+    transition: all 0.4s ease;
+}
+
 @media (min-width:1600px) {
     .secondMSG{
         left: 32%;
-        bottom: 8%;
+        top: 84%;
     }
-}
-.activeMSG2{
-    left: calc(27% + 50px);
-    transition: all 0.4s ease;
+    .parent2{
+        position: absolute;
+        top: 84%;
+        left: calc(32% + 60px);
+        transition: all 0.4s ease;
+    }
 }
 
 /**3**/
 .thirdMSG{
-    left: 31%;
-    bottom: 35%;
+    left: 29%;
+    top: 59%;
+}
+.parent3{
+    display: flex;
+    z-index: 4;
+    position: absolute;
+    top: 59%;
+    left: calc(29% + 60px);
 }
 @media (min-width:1600px) {
     .thirdMSG{
         left: 35%;
-        bottom: 35%;
+        top: 59%;
+    }
+    .parent3{
+        display: flex;
+        position: absolute;
+        top: 59%;
+        left: calc(35% + 60px);
     }
 }
 
 /**4**/
 .fourthdMSG{
     left: 57%;
-    bottom: 24.5%;
+    top: 69%;
 }
+
+.parent4{
+    position: absolute;
+    z-index: 4;
+    left: calc(57% + 60px);
+    top: 69%;
+}
+
 @media (min-width:1600px) {
     .fourthdMSG{
         left: 55%;
-        bottom: 24.5%;
+        top: 69%;
+    }
+    .parent4{
+        position: absolute;
+        left: calc(55% + 60px);
+        top: 69%;
     }
 }
+
+
 /**5**/
 .fifthdMSG{
     top:23%;
     left: 63%;
+}
+
+.parent5{
+    position: absolute;
+    z-index: 4;
+    left: calc(63% + 60px);
+    top: 23%;
 }
 @media (min-width:1600px) {
     .fifthdMSG{
         top:23%;
         left: 60%;
     }
+    .parent5{
+        position: absolute;
+        left: calc(60% + 60px);
+        top: 23%;
+    }
 }
+
+
+
 /**6**/
 .sixthdMSG{
-    bottom: 55%;
+    top: 38%;
     left: 45%;
+}
+.parent6{
+    position: absolute;
+    z-index: 4;
+    left: calc(45% + 60px);
+    top: 38%;
 }
 @media (min-width:1600px) {
     .sixthdMSG{
         bottom: 55%;
         left: 46%;
     }
+    .parent6{
+        position: absolute;
+        left: calc(46% + 60px);
+        top: 38%;
+    }
 }
+
+
 /**7**/
 .seventhMSG{
     top: 8%;
     left: 45%;
 }
+.parent7{
+    position: absolute;
+    z-index: 4;
+    top: 8%;
+    left: calc(45% + 60px);
+}
 @media (min-width:1600px) {
     .seventhMSG{
         top: 8%;
         left: 46%;
+    }
+    .parent7{
+        position: absolute;
+        top: 8%;
+        left: calc(46% + 60px);
     }
 }
 
@@ -237,13 +324,15 @@
         overflow: hidden;
     }
 
+   
+
     .feature_bg{
         width: 100%;
+        max-width: 100%;
         padding-left: 0;
         padding-right: 0;
         padding-left: 5px;
         padding-right: 5px;
-
         margin-top: 58px;
     }
     .feature_bg img{
@@ -259,11 +348,89 @@
         width: 30px;
         height: 30px;
     }
-    .activeMSG2{
-        left: 50%;
-        top:50%;
 
-        transform: translate(-50%,-50%);
+    .parent1,
+    .parent2,
+    .parent3
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        right: 50%;
+        top: 50%;
+        transform: translateX(50%);
     }
-    
+
+    .parent4{
+        background-color: red;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parent5{
+        width: 100%;
+        left: 0;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parent6{
+        width: 100%;
+        left: 0;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .parent7{
+        width: 100%;
+        left: 0;
+        top: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .firstMSG{
+        left:10%;
+        top:27%;
+    }
+
+    .secondMSG{
+        left: 13%;
+        top: 84%;
+    }
+
+    .thirdMSG{
+        left: 24%; 
+        top: 57%;
+    }
+
+    .fourthdMSG{
+        left: 57%;
+        top: 63%;
+    }
+
+    .fifthdMSG{
+        top:19%;
+        left: 65%;
+    }
+
+    .sixthdMSG{
+        top: 33%;
+        left: 41%;
+    }
+
+    .seventhMSG{
+        top: 6%;
+        left: 48%;
+    }
 }
