@@ -17,7 +17,7 @@
 
     font-family: 'bpg web 001';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 25px;
     line-height: 29px;
     color: #171F17;
@@ -122,4 +122,8 @@
 
 .positioningOuterRender{
     margin-left: 39px;
+}
+
+.position71sec{
+    margin-right: 24px;
 }
