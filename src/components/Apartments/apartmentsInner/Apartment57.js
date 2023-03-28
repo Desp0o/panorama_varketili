@@ -3,7 +3,7 @@ import {Link} from  "react-router-dom";
 import Navbar from "../../navbar";
 import Footer from '../../footer/Footer'
 import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/innerRenders/m57inner.png'
+import m102inner from '../../../images/innerRenders/m57inner.webp'
 import toBackimg from '../../../images/toback.png'
 import { LangContext } from "../../langContext";
 

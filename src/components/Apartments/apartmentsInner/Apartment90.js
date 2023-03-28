@@ -3,38 +3,38 @@ import {Link} from  "react-router-dom";
 import Footer from '../../footer/Footer'
 import Navbar from "../../navbar";
 import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/innerRenders/m90inner.png'
+import m102inner from '../../../images/innerRenders/m90inner.webp'
 import toBackimg from '../../../images/toback.png'
 import { LangContext } from "../../langContext";
 
 const pointerStyle6 ={
     left: '30%',
-    top: '64%'
+    top: '75%'
 }
 
 const pointerStyle5 ={
-    left: '40%',
+    left: '30%',
     top: '33%'
 }
 
 const pointerStyle4 ={
     right: '38%',
-    top: '53%'
+    top: '48%'
 }
 
 const pointerStyle3 ={
     right: '57%',
-    top: '50%'
+    top: '55%'
 }
 
 const pointerStyle2 ={
-    right: '38%',
-    top: '26%'
+    right: '52%',
+    top: '20%'
 }
 
 const pointerStyle1 ={
-    right: '30%',
-    top: '35%'
+    right: '40%',
+    top: '15%'
 }
 
 const styleENG={

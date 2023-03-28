@@ -14,10 +14,15 @@ import Apartment71Sec from './components/Apartments/apartmentsInner/Apartment71S
 import Apartment60 from './components/Apartments/apartmentsInner/Apartment60';
 import Apartment57 from './components/Apartments/apartmentsInner/Apartment57';
 import './App.css';
+import React, { useEffect } from "react";
+
+
 
 function App() {
 
-  
+  // useEffect(() => {
+  //   document.title = "Your Long Page Title Here";
+  // }, []);
   
   return (
     <div className="App">
