@@ -126,7 +126,7 @@ if(localStorage.language === 'eng'){
                         <img src={linkedin} alt="footer social icon" />
                     </div>
 
-                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=info@twins.com.ge' target='_blank' rel="noreferrer"><div className="footer_icon">
+                    <a href='https://mail.google.com/mail/?view=cm&fs=1&to=sales@twins.com.ge' target='_blank' rel="noreferrer"><div className="footer_icon">
                         <img src={email} alt="footer social icon" />
                     </div></a>
 
