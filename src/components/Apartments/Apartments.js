@@ -100,8 +100,9 @@ export default function Apartments(props){
                 {
                     ApartmentsArr.map((render)=>{
                         return(
-                            <div className="card cardinpage" key={render.id}>
-                                <Link to={render.link}>
+                            <Link to={render.link} key={render.id}>
+                            <div className="card cardinpage" >
+                                
                                 <div className="card_inner_top">
                                     <img className={`card_render_main_screen outerRender ${render.class}`} src={render.image} alt='render'/>
                                 </div>
@@ -117,8 +118,9 @@ export default function Apartments(props){
                                         <p className="card_inner_bottom_p">{render.text2}</p>
                                     </div>
                                 </div>
-                                </Link>
+                                
                             </div>  
+                            </Link>
                         )
                     })
                 }
