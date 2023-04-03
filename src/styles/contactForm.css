@@ -32,6 +32,28 @@
     color: #171F17;
 }
 
+.sale_Header{
+    margin-bottom: 30px;
+
+    text-align: center;
+    font-size: 35px;
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 900;
+    font-size: 35px;
+
+    color: #171F17;
+}
+
+.leave_contact_small{
+    margin-bottom: 50px;
+
+    text-align: center;
+    font-family: 'BPG Nino Mtavruli';
+    font-weight: 700;
+    font-size: 20px;
+
+    color: #171F17;
+}
 
 
 @media (max-width:769px) {
@@ -59,6 +81,15 @@
         color: #171F17;
     }
 
+    .sale_Header{
+        margin-top: 75px;
+        font-size: 29px;
+    }
+    
+    .leave_contact_small{
+        font-size: 16px;
+    }
+
     .placeholder_number_error_rus_contactFrom{
         bottom: -20px !important;
         right: 0px !important;
@@ -67,3 +98,5 @@
     }
     
 }
+
+

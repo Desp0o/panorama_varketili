@@ -114,13 +114,13 @@ if(localStorage.language === 'eng'){
 
             <div className="footer_bottom">
                 <div className="footer_bottom_icons">
-                    <div className="footer_icon">
+                    <a href="https://www.facebook.com/twinsdevelop" target='_blank' rel="noreferrer" className="footer_icon">
                         <img src={facebook} alt="footer social icon" />
-                    </div>
+                    </a>
 
-                    <div className="footer_icon">
+                    <a href="https://instagram.com/twins_development" target='_blank' rel="noreferrer" className="footer_icon">
                         <img src={instagram} alt="footer social icon" />
-                    </div>
+                    </a>
 
                     <div className="footer_icon">
                         <img src={linkedin} alt="footer social icon" />

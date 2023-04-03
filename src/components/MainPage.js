@@ -6,6 +6,7 @@ import Features from "./features/Features";
 import Contact from './contact/Contact'
 import Footer from "./footer/Footer";
 import Form from "./contacForm";
+import PopUpModule from "./popUpModule";
 import Navbar from "./navbar";
 import '../styles/navbar.css'
 import '../styles/slider.css'
@@ -108,6 +109,17 @@ export default function MainPage(props) {
 
     // Email send Functionality
     const [popUp, setPopUp] = useState('pop_up_msg')
+    const [modalPopUp, setModalPopUp] = useState('modal_PopUp')
+
+    useEffect(()=>{
+
+        const modalTimer = setTimeout(()=>{
+            setModalPopUp('modal_PopUp modal_PopUp_active')
+            overFlow()
+            clearTimeout(modalTimer)
+        }, 3000)
+
+    }, [])
 
     
     // End Of Email Functionality
@@ -260,6 +272,17 @@ export default function MainPage(props) {
     return(
         <>
         <Navbar/>
+
+        <div className={modalPopUp}>
+            <div className="overlay" onClick={()=>{setModalPopUp('modal_PopUp'); overFlowAvailable()}}></div>
+            
+            <div className="form_outer">
+                <img className="close" alt="close" src={xMark} onClick={()=>{setModalPopUp('modal_PopUp');overFlowAvailable()}}/>
+                <PopUpModule styleeng={style}/>
+            </div>
+        </div>
+
+        
         
         
         <div className={popUp}>
