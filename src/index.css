@@ -91,3 +91,13 @@ a{
 ::selection {
   background-color: #029FA0;
 }
+
+
+@media screen and (max-width: 768px) {
+  #fb-customer-chat {
+    display: none !important;
+  }
+  .fb-customerchat{
+    display: none;
+ }
+}

@@ -40,11 +40,11 @@
 }
 
 .call_float_btn{
-    width: 50px;
-    height: 50px;
+    width: 44px;
+    height: 44px;
     position: fixed;
-    bottom: 30px;
-    right: 31.5px;
+    bottom: 24px;
+    right: 80px;
     opacity: 0;
     transition: all 0.4s ease;
     cursor: pointer;
@@ -102,7 +102,11 @@
     }
 }
 
-
+/* @media (max-width:1000px) {
+    .call_float_btn{
+        right: 31px;
+    }
+} */
 
 
 

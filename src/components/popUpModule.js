@@ -29,7 +29,7 @@ export default function PopUpModule(props){
             
 
     useEffect(()=>{
-        saleHader.current.innerText = 'გაყიდვები დაიწყება 24 აპრილიდან'
+        saleHader.current.innerText = 'გაყიდვები დაიწყება 20 აპრილიდან'
         comtactFormHeaderRef.current.innerText = 'დაგვიტოვე საკონტაქტო'
         comtactFormNameRef.current.innerText = 'სახელი *'
         contactFormNumberRef.current.innerText = 'ნომერი *'
@@ -42,7 +42,7 @@ export default function PopUpModule(props){
         
         
     if(localStorage.language === 'eng'){
-        saleHader.current.innerText = 'Sales will start from April 24'
+        saleHader.current.innerText = 'Sales will start from April 20'
         comtactFormHeaderRef.current.innerText = 'Leave your contact Info'
         comtactFormNameRef.current.innerText = 'Name *'
         contactFormNumberRef.current.innerText = 'Number *'
@@ -55,7 +55,7 @@ export default function PopUpModule(props){
         
         
     }else if(localStorage.language === 'rus'){
-        saleHader.current.innerText = 'Продажи начнутся с 24 апреля'
+        saleHader.current.innerText = 'Продажи начнутся с 20 апреля'
         comtactFormHeaderRef.current.innerText = 'Оставьте свою контактную информацию'
         comtactFormNameRef.current.innerText = 'имя *'
         contactFormNumberRef.current.innerText = 'номер *'
@@ -212,7 +212,7 @@ export default function PopUpModule(props){
     return(
         <>
 
-        <p className="sale_Header" ref={saleHader} style={props.styleeng}>გაყიდვები დაიწყება 24 აპრილიდანნ</p>
+        <p className="sale_Header" ref={saleHader} style={props.styleeng}>გაყიდვები დაიწყება 20 აპრილიდანნ</p>
         <p className="leave_contact_small" ref={comtactFormHeaderRef} style={props.styleeng}>დაგვიტოვე საკონტაქტო</p>
 
         <form ref={form} onSubmit={sendEmail}>
