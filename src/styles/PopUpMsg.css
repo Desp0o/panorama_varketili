@@ -100,14 +100,12 @@
     .form_outer .error_icon{
         top:10px;
     }
-}
 
-/* @media (max-width:1000px) {
     .call_float_btn{
-        right: 31px;
+        bottom: 80px;
+        right: 24px;
     }
-} */
-
+}
 
 
 .modal_PopUp{
@@ -126,3 +124,4 @@
 .modal_PopUp_active{
     display: flex;
 }
+
