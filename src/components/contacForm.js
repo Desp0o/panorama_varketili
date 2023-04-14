@@ -221,13 +221,13 @@ export default function Form(props){
                             <div className="input1_label1">
                                 
                                 <label htmlFor="user_name1" className="placeholder_name" ref={comtactFormNameRef} style={props.styleeng}>სახელი *</label>
-                                <input ref={inputNameRef} id="user_name1" className='upper_input' type="text" name="user_name" onChange={nameHandler}/>
+                                <input ref={inputNameRef} id="name_user1" className='upper_input' type="text" name="user_name" onChange={nameHandler}/>
                             </div>
 
                             <div className="input2_label2">
                                 <img ref={numberErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                                 <label htmlFor="user_number1" className="placeholder_number" ref={contactFormNumberRef} style={props.styleeng}>ნომერი *</label>
-                                <input ref={inputNumberRef} className='upper_input' type="text" id="user_number1" name="user_number" onChange={numberHandler}/>
+                                <input ref={inputNumberRef} className='upper_input' type="text" id="number_user" name="user_number" onChange={numberHandler}/>
                                 <span ref={numberInputErrorMsg} className="placeholder_number_error" style={props.styleeng}>მიუთითეთ ნომრის სწორი ფორმატი</span>
                             </div>
                             
@@ -237,7 +237,7 @@ export default function Form(props){
                         <div className="input_fields_bottom">
                             <img ref={mailErrorIconRef} className="error_icon" src={errorIcon} alt='errorIcon'/>
                             <label htmlFor="user_email1" className="placeholder_email" ref={contactFormEmailRef} style={props.styleeng}>ელ-ფოსტა *</label>
-                            <input ref={inputMailRef} className='email_for_form'  type="text" id="user_email1" name="user_email" onChange={mailHandler}/>
+                            <input ref={inputMailRef} className='email_for_form'  type="text" id="email_user" name="user_email" onChange={mailHandler}/>
                             <span ref={emailInputErrorMsg} className="placeholder_email_error" style={props.styleeng}>მიუთითეთ ელ-ფოსტის სწორი ფორმატი</span>
                             <span ref={emailInputOKMsg} className="placeholder_email_ok" style={props.styleeng}>მოთხოვნა მიღებულია! მალე დაგიკავშირდებით.</span>
                         </div>

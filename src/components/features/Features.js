@@ -24,7 +24,7 @@ export default function Features(props) {
     useEffect(()=>{
         featuresHeaderRef.current.innerText = 'უპირატესობები'
 
-        txt1.current.innerText = "100 კვ.მ გამწვანება"
+        txt1.current.innerText = "800 კვ.მ გამწვანება"
         txt2.current.innerText = "მიწისქვეშა და მიწისზედა პარკინგი"
         txt3.current.innerText = "დაცვისა და უსაფრთხოების სისტემები"
         txt4.current.innerText = "2000კვმ კომერციული და საოფისე ფართები (სასურსათო მაღაზიები, ბანკი, აფთიაქი...)"
@@ -33,7 +33,7 @@ export default function Features(props) {
         txt7.current.innerText = "მაღალხარისხიანი სამგზავრო ლიფტები"
     if(localStorage.language === 'eng'){
         featuresHeaderRef.current.innerText = 'Advantages'
-        txt1.current.innerText = "100 square meters of lush greenery, providing a serene and refreshing atmosphere"
+        txt1.current.innerText = "800 square meters of lush greenery, providing a serene and refreshing atmosphere"
         txt2.current.innerText = "Ample parking options with both underground and surface parking available"
         txt3.current.innerText = "Comprehensive protection and security systems"
         txt4.current.innerText = "A vast expanse of 2000 square meters dedicated to commercial and office spaces, including grocery stores, banks, and pharmacies, among others"
@@ -43,7 +43,7 @@ export default function Features(props) {
         
     }else if(localStorage.language === 'rus'){
         featuresHeaderRef.current.innerText = 'Преимущества'
-        txt1.current.innerText = "100 квадратных метров зелени"
+        txt1.current.innerText = "800 квадратных метров зелени"
         txt2.current.innerText = "Подземная и наземная парковки"
         txt3.current.innerText = "Системы защиты и безопасности"
         txt4.current.innerText = "2000 квадратных метров коммерческих и офисных помещений (магазины, банки, аптеки и т.д.)"
