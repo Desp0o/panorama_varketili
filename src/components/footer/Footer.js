@@ -133,7 +133,7 @@ if(localStorage.language === 'eng'){
                 </div>
 
                 <div className="footer_bottom_number_adrees" style={props.styleeng}>
-                    <p className="footer_number" style={props.styleeng}>0322 73 24 19</p>
+                    <p className="footer_number" style={props.styleeng}>577 11 09 09</p>
                     <p className="footer_adress" style={props.styleeng} ref={footerAdressRef}>გაყიდვების ოფისი-მისამართი</p>
                 </div>
 

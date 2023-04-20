@@ -144,7 +144,7 @@ export default function Navbar(props){
                         <Link to='/components/Apartments/Apartments'     className={`menu_links ${props.activeApartments}`} style={style} ref={navbarLinkFlats}>ბინები</Link>
                         <Link to='/components/aboutUsPage/AboutUsPage'   className={`menu_links ${props.activeAbout}`} style={style} ref={navbarLinkAboutUs}>ჩვენ შესახებ</Link>
                         <Link to='/components/AboutProject/AboutProject' className={`menu_links ${props.activeProj}`} style={style} ref={navbarLinkAboutProject}>მიმდინარე პროექტი</Link>
-                        <p className='menu_links' style={{color:"#029FA0"}}>0322 73 24 19</p>
+                        <p className='menu_links' style={{color:"#029FA0"}}>577 11 09 09</p>
                     </div>
 
                     {/* ენები */}
@@ -176,7 +176,7 @@ export default function Navbar(props){
                 <Link to='/components/AboutProject/AboutProject' onClick={burgerHandler} ref={burgerProj} style={style}>მიმდინარე პროექტი</Link>
             </div>
             <div className="burgerMenu_link">
-            <p className='menu_links' style={{color:"#029FA0"}}>0322 73 24 19</p>
+            <p className='menu_links' style={{color:"#029FA0"}}>577 11 09 09</p>
             </div>
 
             <div className="burger_languages">

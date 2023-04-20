@@ -109,17 +109,19 @@ export default function MainPage(props) {
 
     // Email send Functionality
     const [popUp, setPopUp] = useState('pop_up_msg')
-    const [modalPopUp, setModalPopUp] = useState('modal_PopUp')
+    // const [modalPopUp, setModalPopUp] = useState('modal_PopUp')
 
-    useEffect(()=>{
 
-        const modalTimer = setTimeout(()=>{
-            setModalPopUp('modal_PopUp modal_PopUp_active')
-            overFlow()
-            clearTimeout(modalTimer)
-        }, 3000)
+    //modal timer
+    // useEffect(()=>{
 
-    }, [])
+    //     const modalTimer = setTimeout(()=>{
+    //         setModalPopUp('modal_PopUp modal_PopUp_active')
+    //         overFlow()
+    //         clearTimeout(modalTimer)
+    //     }, 3000)
+
+    // }, [])
 
     
     // End Of Email Functionality
@@ -273,14 +275,14 @@ export default function MainPage(props) {
         <>
         <Navbar/>
 
-        <div className={modalPopUp}>
+        {/* <div className={modalPopUp}>
             <div className="overlay" onClick={()=>{setModalPopUp('modal_PopUp'); overFlowAvailable()}}></div>
             
             <div className="form_outer">
                 <img className="close" alt="close" src={xMark} onClick={()=>{setModalPopUp('modal_PopUp');overFlowAvailable()}}/>
                 <PopUpModule styleeng={style}/>
             </div>
-        </div>
+        </div> */}
 
         
         
