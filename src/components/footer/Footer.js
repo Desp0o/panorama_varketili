@@ -20,7 +20,7 @@ const rusRuningText = useRef()
 const footerAdressRef = useRef()
 
 const calculateTimeLeft = () => {
-    const difference = +new Date("2023-12-28T00:00:00+04:00") - +new Date();
+    const difference = +new Date("2024-12-25T00:00:00+04:00") - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
@@ -80,34 +80,35 @@ if(localStorage.language === 'eng'){
             <div className="running_text_outter">
                 <div ref={geoRuningText}>
                     <div className="running_text">
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
-                        <h1>დარჩენილია 54 ბინა და {timeLeft.days} დღე დასრულებამდე.</h1>
+                    
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
+                        <h1>მშენებლობის დასრულებამდე დარჩა {timeLeft.days} დღე.</h1>
                     </div>
                 </div>
 
                 <div ref={engRuningText}>
                     <div className="running_text">
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
-                        <h1 style={props.styleeng}><span>55 apartments and {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
+                        <h1 style={props.styleeng}><span> {timeLeft.days} </span>days remaining until completion.</h1>
                     </div>
                 </div>
 
                 <div ref={rusRuningText}>
                     <div className="running_text">
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
-                        <h1 style={props.styleeng}>55 квартир и {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
+                        <h1 style={props.styleeng}> {timeLeft.days} дней осталось до завершения.</h1>
                     </div>
                 </div>
             </div>
@@ -118,7 +119,7 @@ if(localStorage.language === 'eng'){
                         <img src={facebook} alt="footer social icon" />
                     </a>
 
-                    <a href="https://instagram.com/twins_development" target='_blank' rel="noreferrer" className="footer_icon">
+                    <a href="https://www.instagram.com/twins.development/" target='_blank' rel="noreferrer" className="footer_icon">
                         <img src={instagram} alt="footer social icon" />
                     </a>
 

@@ -84,10 +84,10 @@ export default function AboutProject(props){
 
         
 
-        februaryRef.current.innerText = 'თებერვალი 2023'
-        marchRef.current.innerText = 'მარტი 2023'
-        aprilRef.current.innerText = 'აპრილი 2023'
-        octomberRef.current.innerText = 'ოქტომბერი 2023'
+        februaryRef.current.innerText = 'დეკემბერი 2022'
+        marchRef.current.innerText = 'იანვარი 2023'
+        aprilRef.current.innerText = 'მარტი 2023'
+        octomberRef.current.innerText = 'დეკემბერი 2023'
 
        
 
@@ -121,10 +121,10 @@ export default function AboutProject(props){
         
 
 
-        februaryRef.current.innerText = 'February 2023'
-        marchRef.current.innerText = 'March 2023'
-        aprilRef.current.innerText = 'April 2023'
-        octomberRef.current.innerText = 'Octomber 2023'
+        februaryRef.current.innerText = 'December 2022'
+        marchRef.current.innerText = 'January 2023'
+        aprilRef.current.innerText = 'March 2023'
+        octomberRef.current.innerText = 'December 2023'
 
 
         firstSectionHeaderRef.current.innerText = 'Location'
@@ -158,10 +158,10 @@ export default function AboutProject(props){
         
 
 
-        februaryRef.current.innerText = 'Февраль 2023'
-        marchRef.current.innerText = 'Mарт 2023'
-        aprilRef.current.innerText = 'Aпреля 2023'
-        octomberRef.current.innerText = 'Октябрь 2023'
+        februaryRef.current.innerText = 'Декабрь 2022'
+        marchRef.current.innerText = 'январь 2023'
+        aprilRef.current.innerText = 'Март 2023'
+        octomberRef.current.innerText = 'Декабрь 2023'
 
         
 
@@ -261,12 +261,12 @@ export default function AboutProject(props){
 
                 <span ref={circle1Ref} className="circle1"><img className="line1" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt1" style={style} ref={projStartRef}>პროექტის დაწყება</p>
-                    <div className="range_msg_box msgBox1"><p className="msgBoxText" ref={februaryRef} style={style}>თებერვალი 2023</p></div>
+                    <div className="range_msg_box msgBox1"><p className="msgBoxText" ref={februaryRef} style={style}>დეკემბერი 2022</p></div>
                 
 
                 <span className="circle2"><img className="line2" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt2" style={style} ref={projFoundationRef}>საძირკველი</p>
-                    <div ref={rangeboxMarch} className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>მარტი 2023</p></div>
+                    <div ref={rangeboxMarch} className="range_msg_box msgBox2"><p className="msgBoxText" ref={marchRef} style={style}>იანვარი 2023</p></div>
                 
 
                 <span className="circle3"><img className="line3" src={line29} alt='line'/></span>
@@ -276,7 +276,7 @@ export default function AboutProject(props){
 
                 <span className="circle4"><img className="line4" src={line29} alt='line'/></span>
                     <p className="circleTXT circle_txt4" style={style} ref={projBlackFrame}>შავი კარკასი</p>
-                    <div ref={rangeboxOctomber} className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>ოქტომბერი 2023</p></div>
+                    <div ref={rangeboxOctomber} className="range_msg_box msgBox4"><p className="msgBoxText" ref={octomberRef} style={style}>დეკემბერი 2023</p></div>
 
                 <input className="backRange" type='range' min='0' max='0' step='1' disabled/>
                 {/* <input ref={rangeThumbRef} className="inputRange" type='range' min='0' max='300' step='1' value={data} onChange={(e)=> setData(e.target.value)} /> */}
