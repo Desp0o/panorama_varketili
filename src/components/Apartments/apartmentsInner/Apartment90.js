@@ -99,7 +99,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'ჰოლი',
             roomTypeEng: 'Hall',
             roomTypeRus: 'холл',
-            m2: '12.4 M2',
+            m2: '7.9 M2',
             forBold: `${ball1txt}`   
         },
     
@@ -109,7 +109,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'სააბაზანო',
             roomTypeEng: 'Bathroom',
             roomTypeRus: 'Ванная',
-            m2: '5.1 M2',
+            m2: '4.8 M2',
             forBold: `${ball2txt}`
         },
     
@@ -119,7 +119,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'საძინებელი 1',
             roomTypeEng: 'Bedroom 1',
             roomTypeRus: 'Спальная 1',
-            m2: '13.4 M2',
+            m2: '13.7 M2',
             forBold: `${ball3txt}`
         },
     
@@ -129,7 +129,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'საძინებელი 2',
             roomTypeEng: 'Bedroom 2',
             roomTypeRus: 'Спальная 2',
-            m2: '14 M2',
+            m2: '15.4 M2',
             forBold: `${ball4txt}`
         },
     
@@ -139,7 +139,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'სტუდიო',
             roomTypeEng: 'Studio',
             roomTypeRus: 'Студиo',
-            m2: '30.6 M2',
+            m2: '19.6 M2',
             forBold: `${ball5txt}`
         },
     
@@ -149,7 +149,7 @@ export default function Apartment90(props) {
             roomTypeGeo: 'აივანი',
             roomTypeEng: 'Balcony',
             roomTypeRus: 'Балкон',
-            m2: '27.3 M2',
+            m2: '28.8 M2',
             forBold: `${ball6txt}`
         }
     ]

@@ -34,14 +34,6 @@ export const ApartmentsArr =[
     },
 
     {
-        id: 4,
-        image: `${render76}`,
-        text1: '/ 76.6 M2',
-        text2: '/ 1',
-        link: '/components/Apartments/apartmentsInner/Apartment76'
-    },
-
-    {
         id: 5,
         image: `${render75}`,
         text1: '/ 75 M2',
@@ -64,15 +56,6 @@ export const ApartmentsArr =[
         text1: '/ 71.5 M2',
         text2: '/ 2',
         link: '/components/Apartments/apartmentsInner/Apartment71'
-    },
-
-    {
-        id: 8,
-        image: `${render60}`,
-        text1: '/ 60.6 M2',
-        text2: '/ 2',
-        link: '/components/Apartments/apartmentsInner/Apartment60',
-        class: 'positioningOuterRender'
     },
 
     {
