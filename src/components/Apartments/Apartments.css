@@ -77,10 +77,7 @@
         padding-left: 15px !important;
         justify-items: flex-start;
     }
-    
-    .apartment_list{
-        padding-left: 0px;
-    }
+
     .apartment_list{
         width: 99%;
         justify-content: center;
