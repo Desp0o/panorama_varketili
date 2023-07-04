@@ -1,34 +1,39 @@
 import {React, useEffect, useState, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
-import Navbar from "../../navbar";
 import Footer from '../../footer/Footer'
+import Navbar from "../../navbar";
 import './ApartmentInnerCSS.css'
-import render38 from '../../../images/render38.webp'
+import m102inner from '../../../images/render62.webp'
 import toBackimg from '../../../images/toback.png'
 import { LangContext } from "../../langContext";
 
+const pointerStyle6 ={
+    left: '56%',
+    top: '63%',
+}
+
 const pointerStyle5 ={
-    left: '48%',
-    top: '70%'
+    left: '45%',
+    top: '80%'
 }
 
 const pointerStyle4 ={
-    right: '65%',
-    top: '62%'
-}
-
-const pointerStyle3 ={
-    right: '37%',
-    top: '50%'
-}
-
-const pointerStyle2 ={
-    right: '53%',
+    right: '40%',
     top: '48%'
 }
 
+const pointerStyle3 ={
+    right: '22%',
+    top: '48%'
+}
+
+const pointerStyle2 ={
+    right: '65%',
+    top: '58%'
+}
+
 const pointerStyle1 ={
-    right: '34%',
+    right: '82%',
     top: '24%'
 }
 
@@ -36,7 +41,7 @@ const styleENG={
     fontFamily: 'Roboto'
 }
 
-export default function Apartment57(props) {
+export default function Apartment71(props) {
 
     const {isEng} = useContext(LangContext)
     const {isGeo} = useContext(LangContext)
@@ -50,6 +55,7 @@ export default function Apartment57(props) {
     const [ball3txt, setBall3txt] = useState(null)
     const [ball4txt, setBall4txt] = useState(null)
     const [ball5txt, setBall5txt] = useState(null)
+    const [ball6txt, setBall6txt] = useState(null)
     const [roomGeo, setRoomGeo] = useState(null)
     const [roomEng, setRoomEng] = useState(null)
     const [roomRus, setRoomRus] = useState(null)
@@ -83,7 +89,9 @@ export default function Apartment57(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[isEng,isGeo, isRus])
+    },[isEng, isGeo, isRus])
+
+    
 
     const roomsArr = [
     
@@ -93,50 +101,59 @@ export default function Apartment57(props) {
             roomTypeGeo: 'სააბაზანო',
             roomTypeEng: 'Bathroom',
             roomTypeRus: 'Ванная',
-            m2: '3.5 M2',
-            forBold: `${ball1txt}` 
+            m2: '5 M2',
+            forBold: `${ball1txt}`   
         },
     
         {
             id: 2,
             number:2,
-            roomTypeGeo: 'საძინებელი',
-            roomTypeEng: 'Bedroom ',
+            roomTypeGeo: 'საძინებელი 1',
+            roomTypeEng: 'Bedroom',
             roomTypeRus: 'Спальная',
-            m2: '10.2 M2',
-            forBold: `${ball2txt}` 
+            m2: '15.8 M2',
+            forBold: `${ball2txt}`   
         },
     
         {
             id: 3,
             number:3,
-            roomTypeGeo: 'სტუდიო',
-            roomTypeEng: 'Studio',
-            roomTypeRus: 'Студиo',
-            m2: '16.5 M2',
-            forBold: `${ball3txt}` 
+            roomTypeGeo: 'საძინებელი 2',
+            roomTypeEng: 'Bedroom 2',
+            roomTypeRus: 'Спальная 2',
+            m2: '6.9 M2',
+            forBold: `${ball3txt}`   
         },
     
         {
             id: 4,
             number:4,
+            roomTypeGeo: 'სტუდიო',
+            roomTypeEng: 'Studio',
+            roomTypeRus: 'Студиo',
+            m2: '25.2 M2',
+            forBold: `${ball4txt}`   
+        },
+    
+        {
+            id: 5,
+            number:5,
             roomTypeGeo: 'აივანი',
             roomTypeEng: 'Balcony',
             roomTypeRus: 'Балкон',
-            m2: '8 M2',
-            forBold: `${ball4txt}` 
+            m2: '8.3 M2',
+            forBold: `${ball5txt}`   
         }
     ]
 
 
-    
     return(
         <>
         <Navbar activeApartments="active_page"/>
-
+        
         <div className="apartment_main">
 
-            <div className="apartment_main_inner fixInnerPaddingForNewApartments">
+            <div className="apartment_main_inner">
 
                 <div className="to_back">
                     <img src={toBackimg} alt="back arrow" />
@@ -144,8 +161,25 @@ export default function Apartment57(props) {
                 </div>
 
                 <div className="apartment_main_inner_left">
-                    <img src={render38} alt="m102inner" style={{scale:'0.7'}}/>
+                    <img src={m102inner} alt="m102inner" />
 
+                    <span style={pointerStyle5} className="pointers"
+                        onClick={()=>{
+                            if(ballNumber === 5){
+                                setBallNumber(null)
+                                setBall5txt('default')
+                            }else{
+                                setBallNumber(5)
+                                setBall5txt('bold')
+
+                                setBall1txt('default')
+                                setBall2txt('default')
+                                setBall3txt('default')
+                                setBall4txt('default')
+                                setBall6txt('default')
+                            }
+                        }}
+                    >5</span>
 
                     <span style={pointerStyle4} className="pointers"
                         onClick={()=>{
@@ -160,6 +194,7 @@ export default function Apartment57(props) {
                                 setBall2txt('default')
                                 setBall3txt('default')
                                 setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }}
                     >4</span>
@@ -177,6 +212,7 @@ export default function Apartment57(props) {
                                 setBall2txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }}
                     >3</span>
@@ -194,6 +230,7 @@ export default function Apartment57(props) {
                             setBall3txt('default')
                             setBall4txt('default')
                             setBall5txt('default')
+                            setBall6txt('default')
                         }
                     }}
                     >2</span>
@@ -213,6 +250,7 @@ export default function Apartment57(props) {
                                 setBall3txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
+                                setBall6txt('default')
                             }
                         }
                             
@@ -221,7 +259,7 @@ export default function Apartment57(props) {
                 </div>
 
                 <div className="apartment_main_inner_right">
-                    <div className="apHeader">38.9 M2</div>
+                    <div className="apHeader">62.3 M2</div>
 
                     {
                         roomsArr.map((room)=>{

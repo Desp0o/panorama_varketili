@@ -13,6 +13,7 @@ import Apartment71 from './components/Apartments/apartmentsInner/Apartment71';
 import Apartment71Sec from './components/Apartments/apartmentsInner/Apartment71Sec';
 import Apartment38 from './components/Apartments/apartmentsInner/Apartment38';
 import Apartment57 from './components/Apartments/apartmentsInner/Apartment57';
+import Apartment62 from './components/Apartments/apartmentsInner/Apartment62';
 import './App.css';
 import React, { useEffect } from "react";
 
@@ -35,6 +36,7 @@ function App() {
       <Route exact path="/components/Apartments/apartmentsInner/Apartment71Sec" element={<Apartment71Sec  />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment38"    element={<Apartment38     />} />
       <Route exact path="/components/Apartments/apartmentsInner/Apartment57"    element={<Apartment57     />} />
+      <Route exact path="/components/Apartments/apartmentsInner/Apartment62"    element={<Apartment62     />} />
       </Routes>
     </div>
   );
