@@ -10,6 +10,10 @@
     padding-bottom: 154px;
 }
 
+.fixInnerPaddingForNewApartments{
+    padding-bottom: 10px;
+}
+
 .apartment_main_inner_left{
     box-sizing: border-box;
     width: 50%;
@@ -169,6 +173,11 @@
         padding-left: 0px;
         margin-left:0px;
     }
+
+    .fixInnerPaddingForNewApartments{
+        padding-bottom: 154px;
+    }
+
     .apartment_main_inner_right{
         width: 100%;
         padding-left: 0;

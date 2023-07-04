@@ -3,54 +3,37 @@ import {Link} from  "react-router-dom";
 import Navbar from "../../navbar";
 import Footer from '../../footer/Footer'
 import './ApartmentInnerCSS.css'
-import m102inner from '../../../images/innerRenders/m76inner.webp'
+import render34 from '../../../images/innerRenders/m34inner.webp'
 import toBackimg from '../../../images/toback.png'
 import { LangContext } from "../../langContext";
 
-const pointerStyle6 ={
-    left: '45%',
-    top: '77%'
-}
-
-const pointerStyle5 ={
-    left: '33%',
-    top: '53%'
-}
-
-const pointerStyle4 ={
-    right: '25%',
-    top: '40%'
-}
 
 const pointerStyle3 ={
-    right: '41%',
-    top: '47%'
+    right: '33%',
+    top: '67%'
 }
 
 const pointerStyle2 ={
-    right: '44%',
-    top: '18%'
+    right: '43%',
+    top: '47%'
 }
 
 const pointerStyle1 ={
-    right: '62%',
-    top: '28%'
+    right: '58%',
+    top: '24%'
 }
 
 const styleENG={
     fontFamily: 'Roboto'
 }
 
-export default function Apartment76(props) {
+export default function Apartment57(props) {
 
     const {isEng} = useContext(LangContext)
     const {isGeo} = useContext(LangContext)
     const {isRus} = useContext(LangContext)  
 
     const [style, setStyle] = useState(styleENG)
-    const [roomGeo, setRoomGeo] = useState(null)
-    const [roomEng, setRoomEng] = useState(null)
-    const [roomRus, setRoomRus] = useState(null)
 
     const [ballNumber, setBallNumber] = useState(null)
     const [ball1txt, setBall1txt] = useState(null)
@@ -58,7 +41,9 @@ export default function Apartment76(props) {
     const [ball3txt, setBall3txt] = useState(null)
     const [ball4txt, setBall4txt] = useState(null)
     const [ball5txt, setBall5txt] = useState(null)
-    const [ball6txt, setBall6txt] = useState(null)
+    const [roomGeo, setRoomGeo] = useState(null)
+    const [roomEng, setRoomEng] = useState(null)
+    const [roomRus, setRoomRus] = useState(null)
 
     const toBack = useRef()
 
@@ -89,143 +74,59 @@ export default function Apartment76(props) {
 
         toBack.current.innerText = 'назад'
     }
-    },[isEng, isGeo, isRus])
+    },[isEng,isGeo, isRus])
 
-  
+    const roomsArr = [
+        
+    
+        {   
+            id: 1,
+            number:1,
+            roomTypeGeo: 'სააბაზანო',
+            roomTypeEng: 'Bathroom',
+            roomTypeRus: 'Ванная',
+            m2: '4.1 M2',
+            forBold: `${ball1txt}` 
+        },
+    
+        {
+            id: 2,
+            number:2,
+            roomTypeGeo: 'სტუდიო',
+            roomTypeEng: 'Studio',
+            roomTypeRus: 'Студиo',
+            m2: '24.1 M2',
+            forBold: `${ball2txt}` 
+        },
+    
+        {
+            id: 3,
+            number:3,
+            roomTypeGeo: 'აივანი',
+            roomTypeEng: 'Balcony',
+            roomTypeRus: 'Балкон',
+            m2: '6 M2',
+            forBold: `${ball3txt}` 
+        }
+    ]
+
 
     
-const roomsArr = [
-    {   
-        id: 1,
-        number:1,
-        roomTypeGeo: 'ჰოლი',
-        roomTypeEng: 'Hall',
-        roomTypeRus: 'холл',
-        m2: '5.4 M2',
-        forBold: `${ball1txt}`       
-    },
-
-    {   
-        id: 2,
-        number:2,
-        roomTypeGeo: 'სააბაზანო',
-        roomTypeEng: 'Bathroom',
-        roomTypeRus: 'Ванная',
-        m2: '5 M2',
-        forBold: `${ball2txt}` 
-    },
-
-    {
-        id: 3,
-        number:3,
-        roomTypeGeo: 'საძინებელი',
-        roomTypeEng: 'Bedroom',
-        roomTypeRus: 'Спальная',
-        m2: '19.3 M2',
-        forBold: `${ball3txt}` 
-    },
-
-    {
-        id: 4,
-        number:4,
-        roomTypeGeo: 'გარდერობი',
-        roomTypeEng: 'Wardrobe',
-        roomTypeRus: 'Гардероб',
-        m2: '6.9 M2',
-        forBold: `${ball4txt}` 
-    },
-
-    {
-        id: 5,
-        number:5,
-        roomTypeGeo: 'სტუდიო',
-        roomTypeEng: 'Studio',
-        roomTypeRus: 'Студиo',
-        m2: '25s.9 M2',
-        forBold: `${ball5txt}` 
-    },
-
-    {
-        id: 6,
-        number:6,
-        roomTypeGeo: 'აივანი',
-        roomTypeEng: 'Balcony',
-        roomTypeRus: 'Балкон',
-        m2: '10.3 M2',
-        forBold: `${ball6txt}` 
-    }
-]
-
-
     return(
         <>
         <Navbar activeApartments="active_page"/>
 
         <div className="apartment_main">
 
-            <div className="apartment_main_inner">
+            <div className="apartment_main_inner fixInnerPaddingForNewApartments">
 
-            <   div className="to_back">
+                <div className="to_back">
                     <img src={toBackimg} alt="back arrow" />
                     <Link to='/components/Apartments/Apartments'><p style={style} ref={toBack}>უკან</p></Link>
                 </div>
 
                 <div className="apartment_main_inner_left">
-                    <img src={m102inner} alt="m102inner" />
-
-                    <span style={pointerStyle6} className="pointers"
-                        onClick={()=>{
-                            if(ballNumber === 6){
-                                setBallNumber(null)
-                                setBall6txt('default')
-                            }else{
-                                setBallNumber(6)
-                                setBall6txt('bold')
-
-                                setBall1txt('default')
-                                setBall2txt('default')
-                                setBall3txt('default')
-                                setBall4txt('default')
-                                setBall5txt('default')
-                            }
-                        }}
-                    >6</span>
-
-                    <span style={pointerStyle5} className="pointers"
-                        onClick={()=>{
-                            if(ballNumber === 5){
-                                setBallNumber(null)
-                                setBall5txt('default')
-                            }else{
-                                setBallNumber(5)
-                                setBall5txt('bold')
-
-                                setBall1txt('default')
-                                setBall2txt('default')
-                                setBall3txt('default')
-                                setBall4txt('default')
-                                setBall6txt('default')
-                            }
-                        }}
-                    >5</span>
-
-                    <span style={pointerStyle4} className="pointers"
-                        onClick={()=>{
-                            if(ballNumber === 4){
-                                setBallNumber(null)
-                                setBall4txt('default')
-                            }else{
-                                setBallNumber(4)
-                                setBall4txt('bold')
-
-                                setBall1txt('default')
-                                setBall2txt('default')
-                                setBall3txt('default')
-                                setBall5txt('default')
-                                setBall6txt('default')
-                            }
-                        }}
-                    >4</span>
+                    <img src={render34} alt="m102inner" style={{scale:'0.7'}} />
 
                     <span style={pointerStyle3} className="pointers"
                         onClick={()=>{
@@ -240,7 +141,6 @@ const roomsArr = [
                                 setBall2txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
-                                setBall6txt('default')
                             }
                         }}
                     >3</span>
@@ -258,7 +158,6 @@ const roomsArr = [
                             setBall3txt('default')
                             setBall4txt('default')
                             setBall5txt('default')
-                            setBall6txt('default')
                         }
                     }}
                     >2</span>
@@ -278,7 +177,6 @@ const roomsArr = [
                                 setBall3txt('default')
                                 setBall4txt('default')
                                 setBall5txt('default')
-                                setBall6txt('default')
                             }
                         }
                             
@@ -287,7 +185,7 @@ const roomsArr = [
                 </div>
 
                 <div className="apartment_main_inner_right">
-                    <div className="apHeader">76.6 M2</div>
+                    <div className="apHeader">34.5 M2</div>
 
                     {
                         roomsArr.map((room)=>{

@@ -2,7 +2,8 @@ import {React, useEffect, useRef, useContext} from "react";
 import {Link} from  "react-router-dom";
 import renderB02 from '../../images/render90.webp'
 import renderB04 from '../../images/render71.webp'
-import renderB03 from '../../images/render76.webp'
+// import renderB03 from '../../images/render76.webp'
+import render57 from '../../images/render57.webp'
 import meterCoub from '../../images/meterCoube.png'
 import bed from '../../images/bed.png'
 import leftArrow from '../../images/leftArrow.png'
@@ -38,11 +39,11 @@ const renderArr =[
 
     {
         id: 3,
-        image: `${renderB03}`,
-        text1: '/ 76.6 M2',
+        image: `${render57}`,
+        text1: '/ 57.6 M2',
         text2: '/ 1',
-        link: '/components/Apartments/apartmentsInner/Apartment76'
-    }
+        link: '/components/Apartments/apartmentsInner/Apartment57'
+    },
 ]
 
 export default function Flats(props){
@@ -191,15 +192,15 @@ export default function Flats(props){
                         <SwiperSlide>
                             <div className="card_outer_div">
                                 <div  className="card" >
-                                    <Link to='/components/Apartments/apartmentsInner/Apartment76'>
+                                    <Link to='/components/Apartments/apartmentsInner/Apartment57'>
                                         <div className="card_inner_top">
-                                            <img className="card_render_main_screen" src={renderB03} alt='render'/>
+                                            <img className="card_render_main_screen" src={render57} alt='render'/>
                                         </div>
 
                                         <div className="card_inner_bottom">
                                             <div className="card_inner_bottom_left">
                                                 <img className="mc_Icon" src={meterCoub} alt='mc icon'/>
-                                                <p className="card_inner_bottom_p">/ 76.6 M2</p>
+                                                <p className="card_inner_bottom_p">/ 57.6 M2</p>
                                             </div>
 
                                             <div className="card_inner_bottom_right">
