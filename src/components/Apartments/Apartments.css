@@ -43,6 +43,10 @@
     transition: all 0.4s ease;
 }
 
+.boldFont{
+    font-weight: 900;
+}
+
 @media (max-width:1399px) {
     .apartment_list{
         gap: 110px 30px;

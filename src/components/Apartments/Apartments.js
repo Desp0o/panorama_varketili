@@ -100,7 +100,7 @@ export default function Apartments(props){
                 {
                     ApartmentsArr.map((render)=>{
                         return(
-                            <Link to={render.link} key={render.id}>
+                            <Link to={`/components/Apartments/SingleAppartment/${render.id}`} key={render.id}>
                             <div className="card cardinpage" >
                                 
                                 <div className="card_inner_top">
