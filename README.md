@@ -1,1 +1,1 @@
-https://desp0o.github.io/panorama_varketili/
+https://twins.com.ge/
